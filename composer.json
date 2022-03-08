@@ -18,7 +18,9 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.5.10",
+        "browser-sync": "^2.26.5",
+        "browser-sync-webpack-plugin": "^2.0.1"
     },
     "autoload": {
         "psr-4": {
