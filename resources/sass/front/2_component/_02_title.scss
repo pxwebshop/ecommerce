@@ -5,5 +5,20 @@ title
 /*
 ------------------------------------------------------------*/
 .c-title1 {
-
+    $root: &;
+    border-bottom: 1px solid $colorGrey;
+    max-width: 670px;
+    margin: 0 auto 50px;
+    width: 100%;
+    text-align: center;
+    &__txt {
+        font-size: 3rem;
+        line-height: 1.5;
+        font-weight: 600;
+        position: relative;
+        top: 20px;
+        background-color: $colorWhite;
+        display: inline-block;
+        padding: 0 15px;
+    }
 }

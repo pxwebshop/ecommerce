@@ -1,3 +1,211 @@
 /*------------------------------------------------------------
-list
+list1
 ------------------------------------------------------------*/
+.c-list1 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__item {
+        width: 25%;
+        padding-left: 24px;
+        @include sp {
+            width: 50%;
+        }
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__wrap {
+        margin-bottom: 30px;
+        &:hover {
+            #{$root}__actionList {
+                display: block;
+                height: auto;
+            }
+            #{$root}__tag {
+                background-color: $colorRed1;
+            }
+            #{$root}__price {
+                color: $colorRed1;
+            }
+        }
+    }
+    &__img {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__tag {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 15px 10px;
+        background-color: $colorBlue1;
+        border-radius: 100px;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        transition: 0.5s
+    }
+    &__actionList {
+        position: absolute;
+        bottom: 0;
+        padding: 15px;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        display: none;
+        bottom: 10px;
+    }
+    &__actionItem {
+        display: inline-block;      
+        margin-right: 10px;
+        background-color: $colorWhite;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 1s ease-in-out;
+        &:hover {
+            background-color: $colorBlue1;
+            a {
+                color: $colorWhite;
+            }
+        }
+        a {
+            font-size: 1.6rem;
+            line-height: 2.5;
+            color: $colorBlue1;
+            opacity: 1;
+        }
+    }
+    &__content {
+        margin-top: 25px;
+    }
+    &__name {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    &__rate {
+        margin-bottom: 12px;
+        font-size: 1.6rem;
+        li {
+            display: inline;
+            color: $colorYellow1;
+        }
+    }
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+}
+
+.c-list2 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__item {
+        width: 50%;
+        padding-left: 24px;
+        margin-bottom: 30px;
+        transition: 1s;
+        @include sp {
+            width: 100%;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            #{$root}__price--discount {
+                background-color: $colorBlue1;
+            }
+        }
+    }
+    &__wrap {
+        background-color: $colorPink;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 35px 25px;
+        height: 100%;
+        &--reserve {
+            flex-direction: row-reverse;
+            background-color: $colorBlue2;
+        }
+    }
+    &__img, &__content {
+        width: 50%;
+        padding: 12px;
+        @include max-w(992px) {
+            width: 100%;
+        }      
+    }
+    &__content {
+        &--width {
+            width: 66.66667%;
+            @include max-w(992px) {
+                width: 100%;
+            }
+        }
+    }
+    &__img {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        &--width {
+            width: 33.33333%;
+            @include max-w(992px) {
+                width: 100%;
+            }
+        }
+    }
+    &__title {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: $colorGrey2;
+        line-height: 1.8;
+    }
+    &__price {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: $colorRed1;
+        font-weight: 600;
+        &--discount {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            display: inline-block;
+            background-color: $colorRed1;
+            color: $colorWhite;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin: 15px 0 20px;
+            transition: 0.5s;
+        }
+    }
+    &__btn {
+        color: $colorBlack;
+        font-size: 1.6rem;
+        border-bottom: 1px solid $colorBlack;
+        text-decoration: none;
+    }
+}
