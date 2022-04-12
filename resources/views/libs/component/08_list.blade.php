@@ -4,9 +4,10 @@ list
 <div class="c-dev-title1">list</div>
 
 <?php /*----------------------------------------*/ ?>
+<?php /*----------------------------------------*/ ?>
+<div class="c-dev-title2">c-list1</div>
 
 <div class="l-container">
-    <h1>list 1</h1>
     <div class="c-list1">
         <div class="c-list1__list">
             <div class="c-list1__item">
@@ -163,7 +164,10 @@ list
             </div>
         </div>
     </div>
-    <h1>list 2</h1>
+</div>
+
+<div class="c-dev-title2">c-list2</div>
+<div class="l-container">
     <div class="c-list2">
         <div class="c-list2__list">
             <div class="c-list2__item">
