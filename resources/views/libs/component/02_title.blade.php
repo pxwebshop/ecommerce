@@ -13,3 +13,8 @@ title
     </div>
 </div>
 
+
+<div class="c-dev-title2">title2</div>
+<div class="l-container">
+    <h3 class="c-title2">Smart Watch</h3>
+</div>

@@ -1,3 +1,74 @@
 /*------------------------------------------------------------
 other
 ------------------------------------------------------------*/
+.c-rate1 {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    li {
+        display: inline;
+        color: $colorYellow1;
+    }
+}
+
+.c-price1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.5s;
+    margin-bottom: 15px;
+    &--colorRed {
+        color: $colorRed1;
+        display: inline;
+    }
+    &--lineThrough {
+        text-decoration: line-through;
+        display: inline;
+        color: $colorGrey2;
+        margin-left: 12px;
+    }
+}
+
+.c-price2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: $colorRed1;
+    font-weight: 600;
+    &--discount {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        display: inline-block;
+        background-color: $colorRed1;
+        color: $colorWhite;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin: 15px 0 20px;
+        transition: 0.5s;
+    }
+}
+
+.c-tag1 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 15px 10px;
+    background-color: $colorBlue1;
+    border-radius: 100px;
+    color: $colorWhite;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: 0.5s;
+}
+
+.c-tag2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 25px 15px;
+    background-color: $colorRed1;
+    border-radius: 50%;
+    color: $colorWhite;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: 0.5s;
+}

@@ -18,7 +18,7 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
                             </figure>
                         </a>
-                        <div class="c-list1__tag">New</div>
+                        <div class="c-tag1">New</div>
                         <ul class="c-list1__actionList">
                             <li class="c-list1__actionItem">
                                 <a href="#">
@@ -36,15 +36,15 @@ list
                         </ul>
                     </div>
                     <div class="c-list1__content">
-                        <h3 class="c-list1__name">Smart Watch</h3>
-                        <ul class="c-list1__rate">
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                         </ul>
-                        <p class="c-list1__price">3.636.363 <sup>đ</sup> </p>
+                        <p class="c-price1">3.636.363 <sup>đ</sup> </p>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
                             </figure>
                         </a>
-                        <div class="c-list1__tag">New</div>
+                        <div class="c-tag1">New</div>
                         <ul class="c-list1__actionList">
                             <li class="c-list1__actionItem">
                                 <a href="#">
@@ -74,15 +74,15 @@ list
                         </ul>
                     </div>
                     <div class="c-list1__content">
-                        <h3 class="c-list1__name">Smart Watch</h3>
-                        <ul class="c-list1__rate">
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                         </ul>
-                        <p class="c-list1__price">3.636.363 <sup>đ</sup> </p>
+                        <p class="c-price1">3.636.363 <sup>đ</sup> </p>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
                             </figure>
                         </a>
-                        <div class="c-list1__tag">New</div>
+                        <div class="c-tag1">New</div>
                         <ul class="c-list1__actionList">
                             <li class="c-list1__actionItem">
                                 <a href="#">
@@ -112,15 +112,15 @@ list
                         </ul>
                     </div>
                     <div class="c-list1__content">
-                        <h3 class="c-list1__name">Smart Watch</h3>
-                        <ul class="c-list1__rate">
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                         </ul>
-                        <p class="c-list1__price">3.636.363 <sup>đ</sup> </p>
+                        <p class="c-price1">3.636.363 <sup>đ</sup> </p>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
                             </figure>
                         </a>
-                        <div class="c-list1__tag">New</div>
+                        <div class="c-tag1">New</div>
                         <ul class="c-list1__actionList">
                             <li class="c-list1__actionItem">
                                 <a href="#">
@@ -150,15 +150,15 @@ list
                         </ul>
                     </div>
                     <div class="c-list1__content">
-                        <h3 class="c-list1__name">Smart Watch</h3>
-                        <ul class="c-list1__rate">
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                         </ul>
-                        <p class="c-list1__price">3.636.363 <sup>đ</sup> </p>
+                        <p class="c-price1">3.636.363 <sup>đ</sup> </p>
                     </div>
                 </div>
             </div>
@@ -176,9 +176,9 @@ list
                         <img src="https://templates.envytheme.com/ejon/default/assets/img/overview/overview-1.png" alt="">
                     </figure>
                     <div class="c-list2__content">
-                        <h3 class="c-list2__title">Special Discount Offer</h3>
+                        <h3 class="c-title2">Special Discount Offer</h3>
                         <p class="c-list2__txt">for 12-12 Festival</p>
-                        <p class="c-list2__price">19.990.000 <sup>đ</sup></p>
+                        <p class="c-price2">19.990.000 <sup>đ</sup></p>
                         <a href="#" class="c-btn1">
                             <i class="fa-solid fa-cart-shopping"></i>
                             Shop Now
@@ -193,8 +193,8 @@ list
                     </figure>
                     <div class="c-list2__content c-list2__content--width">
                         <p class="c-list2__txt">Featured</p>
-                        <h3 class="c-list2__title">Best Price & Great Quality</h3>
-                        <p class="c-list2__price c-list2__price--discount">-50% Off</p><br>
+                        <h3 class="c-title2">Best Price & Great Quality</h3>
+                        <p class="c-price2 c-price2--discount">-50% Off</p><br>
                         <a href="#" class="c-list2__btn">
                             View Product
                         </a>
@@ -217,16 +217,16 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/offer-products/offer-products-1.png" alt="">
                             </figure>
                         </a>
-                        <div class="c-list3__tag">-50%</div>
+                        <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
                         <p class="c-list3__txt">Gadget</p>
-                        <h3 class="c-list3__name">Smart Watch</h3>
-                        <div class="c-list3__price">
-                            <p class="c-list3__promotionPrice"> 9.990.000 <sup>đ</sup></p>
-                            <p class="c-list3__cost">19.990.000 <sup>đ</sup></p>
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <div class="c-price1">
+                            <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
+                            <p class="c-price1--lineThrough">19.990.000 <sup>đ</sup></p>
                         </div>
-                        <ul class="c-list3__rate">
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
@@ -244,16 +244,16 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/offer-products/offer-products-1.png" alt="">
                             </figure>
                         </a>
-                        <div class="c-list3__tag">-50%</div>
+                        <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
                         <p class="c-list3__txt">Gadget</p>
-                        <h3 class="c-list3__name">Smart Watch</h3>
-                        <div class="c-list3__price">
-                            <p class="c-list3__promotionPrice"> 9.990.000 <sup>đ</sup></p>
-                            <p class="c-list3__cost">19.990.000 <sup>đ</sup></p>
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <div class="c-price1">
+                            <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
+                            <p class="c-price1--lineThrough">19.990.000 <sup>đ</sup></p>
                         </div>
-                        <ul class="c-list3__rate">
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
@@ -271,16 +271,16 @@ list
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/offer-products/offer-products-3.png" alt="">
                             </figure>
                         </a>
-                        <div class="c-list3__tag">-50%</div>
+                        <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
                         <p class="c-list3__txt">Gadget</p>
-                        <h3 class="c-list3__name">Smart Watch</h3>
-                        <div class="c-list3__price">
-                            <p class="c-list3__promotionPrice"> 9.990.000 <sup>đ</sup></p>
-                            <p class="c-list3__cost">19.990.000 <sup>đ</sup></p>
+                        <h3 class="c-title2">Smart Watch</h3>
+                        <div class="c-price1">
+                            <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
+                            <p class="c-price1--lineThrough">19.990.000 <sup>đ</sup></p>
                         </div>
-                        <ul class="c-list3__rate">
+                        <ul class="c-rate1">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>

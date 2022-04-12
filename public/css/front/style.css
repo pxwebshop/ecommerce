@@ -378,6 +378,11 @@ title
   padding: 0 15px;
 }
 
+.c-title2 {
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+
 /*------------------------------------------------------------
 icon
 ------------------------------------------------------------*/
@@ -430,10 +435,10 @@ list1
   display: block;
   height: auto;
 }
-.c-list1__wrap:hover .c-list1__tag {
+.c-list1__wrap:hover .c-tag1 {
   background-color: #ed1d24;
 }
-.c-list1__wrap:hover .c-list1__price {
+.c-list1__wrap:hover .c-price1 {
   color: #ed1d24;
 }
 .c-list1__img {
@@ -446,19 +451,6 @@ list1
 }
 .c-list1__img:hover img {
   transform: scale(1.1);
-}
-.c-list1__tag {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 15px 10px;
-  background-color: #113366;
-  border-radius: 100px;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.5;
-  transition: 0.5s;
 }
 .c-list1__actionList {
   position: absolute;
@@ -493,24 +485,11 @@ list1
   opacity: 1;
 }
 .c-list1__content {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .c-list1__name {
   font-size: 2.2rem;
   margin-bottom: 10px;
-}
-.c-list1__rate {
-  margin-bottom: 12px;
-  font-size: 1.6rem;
-}
-.c-list1__rate li {
-  display: inline;
-  color: #ffb607;
-}
-.c-list1__price {
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: 0.5s;
 }
 
 .c-list2__list {
@@ -587,23 +566,6 @@ list1
   color: #656565;
   line-height: 1.8;
 }
-.c-list2__price {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #ed1d24;
-  font-weight: 600;
-}
-.c-list2__price--discount {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  display: inline-block;
-  background-color: #ed1d24;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 5px;
-  margin: 15px 0 20px;
-  transition: 0.5s;
-}
 .c-list2__btn {
   color: #292929;
   font-size: 1.6rem;
@@ -622,7 +584,7 @@ list1
   padding-left: 24px;
   margin-bottom: 30px;
 }
-.c-list3__item:hover .c-list3__tag {
+.c-list3__item:hover .c-tag2 {
   background-color: #113366;
 }
 @media screen and (max-width: 767px) {
@@ -648,19 +610,6 @@ list1
   max-width: 100%;
   height: 100%;
 }
-.c-list3__tag {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 25px 15px;
-  background-color: #ed1d24;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.5;
-  transition: 0.5s;
-}
 .c-list3__content {
   margin-top: 25px;
 }
@@ -671,30 +620,6 @@ list1
 .c-list3__name {
   font-size: 2.2rem;
   margin: 10px 0;
-}
-.c-list3__rate {
-  font-size: 1.6rem;
-}
-.c-list3__rate li {
-  display: inline;
-  color: #ffb607;
-}
-.c-list3__price {
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: 0.5s;
-  margin-bottom: 15px;
-}
-.c-list3__promotionPrice, .c-list3__cost {
-  display: inline-block;
-  margin-right: 8px;
-}
-.c-list3__promotionPrice {
-  color: #ed1d24;
-}
-.c-list3__cost {
-  color: #656565;
-  text-decoration: line-through;
 }
 
 .c-list4__list {
@@ -871,6 +796,78 @@ MV
 /*------------------------------------------------------------
 other
 ------------------------------------------------------------*/
+.c-rate1 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+.c-rate1 li {
+  display: inline;
+  color: #ffb607;
+}
+
+.c-price1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+.c-price1--colorRed {
+  color: #ed1d24;
+  display: inline;
+}
+.c-price1--lineThrough {
+  text-decoration: line-through;
+  display: inline;
+  color: #656565;
+  margin-left: 12px;
+}
+
+.c-price2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ed1d24;
+  font-weight: 600;
+}
+.c-price2--discount {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  display: inline-block;
+  background-color: #ed1d24;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin: 15px 0 20px;
+  transition: 0.5s;
+}
+
+.c-tag1 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 15px 10px;
+  background-color: #113366;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: 0.5s;
+}
+
+.c-tag2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px 15px;
+  background-color: #ed1d24;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: 0.5s;
+}
+
 /*------------------------------------------------------------
 Page Top
 ------------------------------------------------------------*/

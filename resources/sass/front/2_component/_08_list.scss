@@ -25,10 +25,10 @@ list1
                 display: block;
                 height: auto;
             }
-            #{$root}__tag {
+            .c-tag1 {
                 background-color: $colorRed1;
             }
-            #{$root}__price {
+            .c-price1 {
                 color: $colorRed1;
             }
         }
@@ -45,19 +45,6 @@ list1
                 transform: scale(1.1);
             }
         }
-    }
-    &__tag {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        padding: 15px 10px;
-        background-color: $colorBlue1;
-        border-radius: 100px;
-        color: $colorWhite;
-        font-size: 1.6rem;
-        font-weight: 600;
-        line-height: 1.5;
-        transition: 0.5s;
     }
     &__actionList {
         position: absolute;
@@ -92,24 +79,11 @@ list1
         }
     }
     &__content {
-        margin-top: 25px;
+        margin-top: 15px;
     }
     &__name {
         font-size: 2.2rem;
         margin-bottom: 10px;
-    }
-    &__rate {
-        margin-bottom: 12px;
-        font-size: 1.6rem;
-        li {
-            display: inline;
-            color: $colorYellow1;
-        }
-    }
-    &__price {
-        font-size: 1.6rem;
-        font-weight: 600;
-        transition: 0.5s;
     }
 }
 
@@ -186,23 +160,6 @@ list1
         color: $colorGrey2;
         line-height: 1.8;
     }
-    &__price {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        color: $colorRed1;
-        font-weight: 600;
-        &--discount {
-            font-size: 1.6rem;
-            line-height: 1.5;
-            display: inline-block;
-            background-color: $colorRed1;
-            color: $colorWhite;
-            padding: 5px 15px;
-            border-radius: 5px;
-            margin: 15px 0 20px;
-            transition: 0.5s;
-        }
-    }
     &__btn {
         color: $colorBlack;
         font-size: 1.6rem;
@@ -224,7 +181,7 @@ list1
         padding-left: 24px;
         margin-bottom: 30px;
         &:hover {
-            #{$root}__tag {
+            .c-tag2 {
                 background-color: $colorBlue1;
             }
         }
@@ -248,19 +205,6 @@ list1
             height: 100%;
         }
     }
-    &__tag {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 25px 15px;
-        background-color: $colorRed1;
-        border-radius: 50%;
-        color: $colorWhite;
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1.5;
-        transition: 0.5s;
-    }
     &__content {
         margin-top: 25px;
     }
@@ -271,31 +215,6 @@ list1
     &__name {
         font-size: 2.2rem;
         margin: 10px 0;
-    }
-    &__rate {
-        font-size: 1.6rem;
-        li {
-            display: inline;
-            color: $colorYellow1;
-        }
-    }
-    &__price {
-        font-size: 1.6rem;
-        font-weight: 600;
-        transition: 0.5s;
-        margin-bottom: 15px;
-    }
-    &__promotionPrice,
-    &__cost {
-        display: inline-block;
-        margin-right: 8px;
-    }
-    &__promotionPrice {
-        color: $colorRed1;
-    }
-    &__cost {
-        color: $colorGrey2;
-        text-decoration: line-through;
     }
 }
 
