@@ -5,5 +5,104 @@ footer
 /*
 ------------------------------------------------------------*/
 .c-footer {
-
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__wrap {
+        width: 25%;
+        padding-left: 24px;
+        margin-bottom: 30px;
+        @include max-w(991px) {
+            width: 50%;
+        }
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__item {
+        .c-text1 {
+            margin-bottom: 0;
+        }
+    }
+    &__content {
+        padding: 100px 0 70px;
+    }
+    &__title {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: $colorBlack;
+    }
+    &__txtBold {
+        font-weight: 600;
+        color: $colorBlack;
+        font-size: 1.8rem;
+    }
+    &__social {
+        margin-top: 20px;
+    }
+    &__socialItem {
+        display: inline;
+        font-size: 2rem;
+        padding: 6px 8px;
+        margin-right: 12px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $colorGrey;
+        border-radius: 50%;
+        cursor: pointer;
+        a {
+            opacity: 1;
+        }
+        &:hover {
+            background-color: $colorBlue1;
+            i {
+                color: $colorWhite;
+                opacity: 1;
+            }
+        }
+    }
+    &__single {
+        font-size: 1.6rem;
+    }
+    &__singleItem {
+        padding-bottom: 10px;
+        a {
+            color: $colorGrey2;
+            transition: 0.5s;
+            line-height: 1.5;
+            &:hover {
+                color: $colorRed1;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    &__form {
+        margin-top: 20px;
+        input {
+            color: $colorGrey2;
+            height: 60px;
+            font-size: 1.6rem;
+            padding-left: 15px;
+            width: 100%;
+            border: 1px solid $colorGrey;
+        }
+    }
+    &__btn {
+        margin-top: 10px;
+        background-color: $colorBlack;
+        color: $colorWhite;
+        padding: 10px 35px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        border: none;
+        cursor: pointer;
+    }
+    &__footing {
+        padding-top: 30px;
+        border-top: 1px solid $colorGrey;
+        text-align: center;
+    }
 }

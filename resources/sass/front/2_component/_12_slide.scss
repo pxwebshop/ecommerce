@@ -49,12 +49,4 @@ video
             font-size: 3rem;
         }
     }
-    &__txt {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-        color: $colorGrey2;
-        @include max-w(991px) {
-            font-size: 1.5rem;
-        }
-    }
 }

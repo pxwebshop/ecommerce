@@ -159,6 +159,8 @@ img {
 
 a {
 	transition: 0.3s ease-in-out;
+	text-decoration: none;
+	color: $colorBlack;
 }
 a:hover {
 	opacity: 0.8;

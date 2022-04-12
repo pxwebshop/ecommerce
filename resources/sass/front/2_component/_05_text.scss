@@ -4,3 +4,12 @@ text
 
 /*
 ------------------------------------------------------------*/
+.c-text1 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: $colorGrey2;
+    line-height: 1.8;
+    @include max-w(991px) {
+        font-size: 1.5rem;
+    }
+}

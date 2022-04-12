@@ -12,7 +12,7 @@ slide
             <div class="c-slide1__text">
                 <p class="c-slide1__bold">Big Sale Offer</p>
                 <h1 class="c-slide1__title">The Drone has an Attractive Gift Free</h1>
-                <p class="c-slide1__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a href="#" class="c-btn1">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Shop Now

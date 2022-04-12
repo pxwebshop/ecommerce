@@ -208,10 +208,6 @@ list1
     &__content {
         margin-top: 25px;
     }
-    &__txt {
-        font-size: 1.6rem;
-        color: $colorGrey2;
-    }
     &__name {
         font-size: 2.2rem;
         margin: 10px 0;
@@ -299,5 +295,71 @@ list1
     }
     &__txt1, &__title, &__txt2 {
         color: $colorBlack;
+    }
+}
+
+.c-list6 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item {
+        font-size: 1.6rem;
+        margin: 0 10px 10px;
+        font-weight: 600;
+        color: $colorBlack;
+        &:hover {
+            cursor: pointer;
+            color: $colorRed1;
+        }
+        
+    }
+    .is-active {
+        border-bottom: 1px solid $colorRed1;
+        padding-bottom: 5px;
+        color: $colorRed1;
+    }
+}
+
+.c-list7 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__wrap {
+        width: 33.33%;
+        padding-left: 24px;
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__item {
+        &:hover {
+            .c-title2 {
+                color: $colorRed1;
+            }
+        }
+    }
+    &__img {
+        overflow: hidden;
+        width: 100%;
+        cursor: pointer;
+        img {
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__content {
+        margin-top: 25px;
+        .c-title2 {
+            cursor: pointer;
+            transition: 0.5s;
+        }
     }
 }

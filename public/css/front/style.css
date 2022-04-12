@@ -159,6 +159,8 @@ img {
 
 a {
   transition: 0.3s ease-in-out;
+  text-decoration: none;
+  color: #292929;
 }
 
 a:hover {
@@ -293,6 +295,108 @@ footer
 ------------------------------------------------------------*/
 /*
 ------------------------------------------------------------*/
+.c-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+}
+.c-footer__wrap {
+  width: 25%;
+  padding-left: 24px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+  .c-footer__wrap {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .c-footer__wrap {
+    width: 100%;
+  }
+}
+.c-footer__item .c-text1 {
+  margin-bottom: 0;
+}
+.c-footer__content {
+  padding: 100px 0 70px;
+}
+.c-footer__title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #292929;
+}
+.c-footer__txtBold {
+  font-weight: 600;
+  color: #292929;
+  font-size: 1.8rem;
+}
+.c-footer__social {
+  margin-top: 20px;
+}
+.c-footer__socialItem {
+  display: inline;
+  font-size: 2rem;
+  padding: 6px 8px;
+  margin-right: 12px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.c-footer__socialItem a {
+  opacity: 1;
+}
+.c-footer__socialItem:hover {
+  background-color: #113366;
+}
+.c-footer__socialItem:hover i {
+  color: #fff;
+  opacity: 1;
+}
+.c-footer__single {
+  font-size: 1.6rem;
+}
+.c-footer__singleItem {
+  padding-bottom: 10px;
+}
+.c-footer__singleItem a {
+  color: #656565;
+  transition: 0.5s;
+  line-height: 1.5;
+}
+.c-footer__singleItem a:hover {
+  color: #ed1d24;
+  letter-spacing: 1px;
+}
+.c-footer__form {
+  margin-top: 20px;
+}
+.c-footer__form input {
+  color: #656565;
+  height: 60px;
+  font-size: 1.6rem;
+  padding-left: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.c-footer__btn {
+  margin-top: 10px;
+  background-color: #292929;
+  color: #fff;
+  padding: 10px 35px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+}
+.c-footer__footing {
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
 /*------------------------------------------------------------
 header
 ------------------------------------------------------------*/
@@ -377,10 +481,23 @@ title
   display: inline-block;
   padding: 0 15px;
 }
+.c-title1--left {
+  text-align: left;
+}
 
 .c-title2 {
   font-size: 2.2rem;
   margin: 10px 0;
+}
+
+.c-title3 {
+  font-size: 1.6rem;
+  color: #656565;
+}
+.c-title3--colorGrey {
+  color: #ccc;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 /*------------------------------------------------------------
@@ -398,6 +515,18 @@ text
 ------------------------------------------------------------*/
 /*
 ------------------------------------------------------------*/
+.c-text1 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #656565;
+  line-height: 1.8;
+}
+@media screen and (max-width: 991px) {
+  .c-text1 {
+    font-size: 1.5rem;
+  }
+}
+
 /*------------------------------------------------------------
 navi
 ------------------------------------------------------------*/
@@ -613,10 +742,6 @@ list1
 .c-list3__content {
   margin-top: 25px;
 }
-.c-list3__txt {
-  font-size: 1.6rem;
-  color: #656565;
-}
 .c-list3__name {
   font-size: 2.2rem;
   margin: 10px 0;
@@ -706,6 +831,63 @@ list1
   color: #292929;
 }
 
+.c-list6__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.c-list6__item {
+  font-size: 1.6rem;
+  margin: 0 10px 10px;
+  font-weight: 600;
+  color: #292929;
+}
+.c-list6__item:hover {
+  cursor: pointer;
+  color: #ed1d24;
+}
+.c-list6 .is-active {
+  border-bottom: 1px solid #ed1d24;
+  padding-bottom: 5px;
+  color: #ed1d24;
+}
+
+.c-list7__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+}
+.c-list7__wrap {
+  width: 33.33%;
+  padding-left: 24px;
+}
+@media screen and (max-width: 576px) {
+  .c-list7__wrap {
+    width: 100%;
+  }
+}
+.c-list7__item:hover .c-title2 {
+  color: #ed1d24;
+}
+.c-list7__img {
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+.c-list7__img img {
+  transition: 0.5s;
+}
+.c-list7__img img:hover {
+  transform: scale(1.1);
+}
+.c-list7__content {
+  margin-top: 25px;
+}
+.c-list7__content .c-title2 {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
 /*------------------------------------------------------------
 table
 ------------------------------------------------------------*/
@@ -775,16 +957,6 @@ video
 @media screen and (max-width: 767px) {
   .c-slide1__title {
     font-size: 3rem;
-  }
-}
-.c-slide1__txt {
-  font-size: 1.6rem;
-  margin-bottom: 30px;
-  color: #656565;
-}
-@media screen and (max-width: 991px) {
-  .c-slide1__txt {
-    font-size: 1.5rem;
   }
 }
 

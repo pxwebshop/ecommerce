@@ -220,7 +220,7 @@ list
                         <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
-                        <p class="c-list3__txt">Gadget</p>
+                        <p class="c-title3">Gadget</p>
                         <h3 class="c-title2">Smart Watch</h3>
                         <div class="c-price1">
                             <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
@@ -247,7 +247,7 @@ list
                         <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
-                        <p class="c-list3__txt">Gadget</p>
+                        <p class="c-title3">Gadget</p>
                         <h3 class="c-title2">Smart Watch</h3>
                         <div class="c-price1">
                             <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
@@ -274,7 +274,7 @@ list
                         <div class="c-tag2">-50%</div>
                     </div>
                     <div class="c-list3__content">
-                        <p class="c-list3__txt">Gadget</p>
+                        <p class="c-title3">Gadget</p>
                         <h3 class="c-title2">Smart Watch</h3>
                         <div class="c-price1">
                             <p class="c-price1--colorRed"> 9.990.000 <sup>đ</sup></p>
@@ -351,6 +351,77 @@ list
                 <figure class="c-list5__img">
                     <img src="https://templates.envytheme.com/ejon/default/assets/img/collection/collection-2.png" alt="">
                 </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="c-dev-title2">list6</div>
+<div class="l-container">
+    <div class="c-list6">
+        <ul class="c-list6__list">
+            <li class="c-list6__item is-active">Smartphones</li>
+            <li class="c-list6__item">TV</li>
+            <li class="c-list6__item">Cameras</li>
+            <li class="c-list6__item">Audio</li>
+            <li class="c-list6__item">Computers</li>
+            <li class="c-list6__item"> Accessories</li>
+            <li class="c-list6__item">Laptop</li>
+            <li class="c-list6__item">Watches</li>
+            <li class="c-list6__item">Mobile</li>
+            <li class="c-list6__item">Headphone</li>
+        </ul>
+    </div>
+</div>
+
+<div class="c-dev-title2">list7</div>
+<div class="l-container">
+    <div class="c-list7">
+        <div class="c-list7__list">
+            <div class="c-list7__wrap">
+                <div class="c-list7__item">
+                    <div class="c-list7__img">
+                        <figure class="c-list7__image">
+                            <a href=""><img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt=""></a>
+                        </figure>
+                    </div>
+                    <div class="c-list7__content">
+                        <h4 class="c-title3">eCommerce</h4>
+                        <a href="#"><h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3></a>
+                        <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
+                        <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-list7__wrap">
+                <div class="c-list7__item">
+                    <div class="c-list7__img">
+                        <figure class="c-list7__image">
+                            <img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="c-list7__content">
+                        <h4 class="c-title3">eCommerce</h4>
+                        <a href="#"><h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3></a>
+                        <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
+                        <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-list7__wrap">
+                <div class="c-list7__item">
+                    <div class="c-list7__img">
+                        <figure class="c-list7__image">
+                            <img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="c-list7__content">
+                        <h4 class="c-title3">eCommerce</h4>
+                        <a href="#"><h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3></a>
+                        <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
+                        <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
