@@ -57,7 +57,7 @@ list1
         font-size: 1.6rem;
         font-weight: 600;
         line-height: 1.5;
-        transition: 0.5s
+        transition: 0.5s;
     }
     &__actionList {
         position: absolute;
@@ -70,7 +70,7 @@ list1
         bottom: 10px;
     }
     &__actionItem {
-        display: inline-block;      
+        display: inline-block;
         margin-right: 10px;
         background-color: $colorWhite;
         width: 40px;
@@ -146,12 +146,13 @@ list1
             background-color: $colorBlue2;
         }
     }
-    &__img, &__content {
+    &__img,
+    &__content {
         width: 50%;
         padding: 12px;
         @include max-w(992px) {
             width: 100%;
-        }      
+        }
     }
     &__content {
         &--width {
@@ -207,5 +208,177 @@ list1
         font-size: 1.6rem;
         border-bottom: 1px solid $colorBlack;
         text-decoration: none;
+    }
+}
+
+.c-list3 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+        justify-content: space-around;
+    }
+    &__item {
+        width: 33.33%;
+        padding-left: 24px;
+        margin-bottom: 30px;
+        &:hover {
+            #{$root}__tag {
+                background-color: $colorBlue1;
+            }
+        }
+        @include sp {
+            width: 50%;
+        }
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__wrap {
+        padding: 20px;
+        border: 1px solid $colorBlack;
+        height: 100%;
+    }
+    &__img {
+        position: relative;
+        text-align: center;
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 25px 15px;
+        background-color: $colorRed1;
+        border-radius: 50%;
+        color: $colorWhite;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        transition: 0.5s;
+    }
+    &__content {
+        margin-top: 25px;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        color: $colorGrey2;
+    }
+    &__name {
+        font-size: 2.2rem;
+        margin: 10px 0;
+    }
+    &__rate {
+        font-size: 1.6rem;
+        li {
+            display: inline;
+            color: $colorYellow1;
+        }
+    }
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: 0.5s;
+        margin-bottom: 15px;
+    }
+    &__promotionPrice,
+    &__cost {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    &__promotionPrice {
+        color: $colorRed1;
+    }
+    &__cost {
+        color: $colorGrey2;
+        text-decoration: line-through;
+    }
+}
+
+.c-list4 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 0 24px;
+    }
+    &__wrap {
+        width: 25%;
+        border-left: 1px solid $colorGrey;
+        padding: 0 24px;
+        @include max-w(500px) {
+            width: 50%;
+            border-left: none;
+            margin-bottom: 30px;
+        }
+        &:nth-child(1) {
+            border-left: none;
+        }
+    }
+    &__item {
+        text-align: center;
+        i {
+            font-size: 3.5rem;
+            color: $colorGrey2;
+            margin-bottom: 5px;
+        }
+    }
+    &__txt {
+        margin-left: 10px;
+        color: $colorBlack;
+        font-size: 1.5rem;
+        font-weight: 500;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+}
+
+.c-list5 {
+    $root: &;
+    background-color: $colorBlue3;
+    padding: 12px;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        width: 33.33%;
+        &--flex {
+            display: flex;
+        }
+    }
+    &__img {
+        text-align: center;
+        margin: auto;
+        img {
+            max-width: 100%;
+            display: inline-block;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    &__content {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+    &__txt1 {
+        font-size: 3rem;
+    }
+    &__title {
+        font-size: 4.5rem;
+        margin: 15px 0;
+    }
+    &__txt2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        letter-spacing: 5px;
+    }
+    &__txt1, &__title, &__txt2 {
+        color: $colorBlack;
     }
 }
