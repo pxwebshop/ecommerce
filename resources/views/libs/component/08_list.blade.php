@@ -203,7 +203,10 @@ list
             </div>
         </div>
     </div>
-    <h1>list 3</h1>
+</div>
+
+<div class="c-dev-title2">list3</div>
+<div class="l-container">
     <div class="c-list3">
         <div class="c-list3__list">
             <div class="c-list3__item">
@@ -289,7 +292,11 @@ list
             </div>
         </div>
     </div>
-    <h1>list 4</h1>
+</div>
+
+
+<div class="c-dev-title2">list4</div>
+<div class="l-container">
     <div class="c-list4">
         <div class="c-list4__list">
             <div class="c-list4__wrap">
@@ -318,7 +325,10 @@ list
             </div>
         </div>
     </div>
-    <h1>list 5</h1>
+</div>
+
+<div class="c-dev-title2">list5</div>
+<div class="l-container">
     <div class="c-list5">
         <div class="c-list5__list">
             <div class="c-list5__item">
@@ -345,5 +355,3 @@ list
         </div>
     </div>
 </div>
-
-<div class="c-dev-title2"></div>

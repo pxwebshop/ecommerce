@@ -5,7 +5,7 @@ slide
 
 <?php /*----------------------------------------*/ ?>
 
-
+<div class="c-dev-title2">slide1</div>
 <div class="c-slide1">
     <div class="l-container">
         <div class="c-slide1__content">
@@ -27,4 +27,3 @@ slide
 </div>
 
 
-<div class="c-dev-title2"></div>
