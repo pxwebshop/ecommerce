@@ -2,7 +2,7 @@ jQuery(function ($) {
     'use strict';
 
 	// Home Slides
-	$('.c-slide1').owlCarousel({
+	$('').owlCarousel({
 		loop: true,
 		nav: true,
 		dots: false,
