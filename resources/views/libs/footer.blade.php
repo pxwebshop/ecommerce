@@ -92,5 +92,6 @@
     </div>
 </footer>
 
-</body>
-</html>
+<script type="text/javascript" src="{{ URL::asset('js/front/wow.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/front/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/front/main.js') }}"></script>
