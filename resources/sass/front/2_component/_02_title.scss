@@ -40,3 +40,18 @@ title
         margin-bottom: 12px;
     }
 }
+
+.c-title4 {
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $colorGrey;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        border: 1px solid $colorBlue1;
+        width: 100px;
+        bottom: 0;
+        left: 0;
+    }
+}

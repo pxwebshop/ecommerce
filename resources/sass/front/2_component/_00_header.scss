@@ -5,5 +5,248 @@ header
 /*
 ------------------------------------------------------------*/
 .c-header {
+    $root: &;
+    &__heading {
+        background-color: $colorBlue1;
+        padding: 15px 0;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    &__content1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include max-w(670px) {
+            justify-content: center;
+        }
+    }
+    i {
+        margin: 0 5px;
+    }
+    &__txt {
+        text-align: center;
+        i {
+            margin-right: 5px;
+            margin-left: 0 !important;
+        }
+    }
+    &__option {
+        display: flex;
+    }
+    &__language {
+        cursor: pointer;
+        position: relative;
+        &:hover  {
+            #{$root}__languageList {
+                display: block;
+            }
+        }
+    }
+    &__languageItem {
+        font-size: 1.6rem;
+        color: $colorWhite;
+    }
+    &__authen {
+        padding-left: 7px;
+        margin-left: 8px;
+        border-left: 1px solid $colorWhite;
+        a {
+            color: $colorWhite;
+            opacity: 1;
+            &:hover {
+                color: $colorRed1;
+            }
+        }
+    }
+    // end: heading
 
+    // middle
+    &__middle {
+        background-color: $colorBlue4;
+    }
+    &__content2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: $colorWhite;
+        padding: 20px 0;
+    }
+    &__logo {
+        margin: auto 0;
+        flex-grow: 3;
+        @include max-w(912px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__search {
+        flex-grow: 6;
+        // display: flex;
+        margin: 0 auto;
+        @include max-w(912px) {
+            width: 100%;
+            margin: 20px 0 5px;
+        }
+    }
+    &__category{
+        display: flex;
+        width: 100%;
+        background-color: $colorBlue3;
+        padding: 2px 0 2px 5px;
+        border-radius: 10px;
+        @include max-w(555px) {
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+    }
+    &__catSelected {
+        width: 30%;
+        margin: auto;
+        height: 55px;
+        padding: 15px 5px 15px 15px;
+        background-color: $colorBlue1;
+        border-radius: 5px;
+        cursor: pointer;
+        @include max-w(555px) {
+            width: 100%;
+        }
+        &:hover {
+            #{$root}__catList {
+                display: block;
+            }
+        }
+    }
+    &__catList {
+        display: none;
+        background-color: $colorWhite;
+        margin-top: 20px;
+        color: $colorBlack;
+        padding: 10px 0;
+        overflow-y: scroll;
+        box-shadow: 0 0 5px $colorBlack;
+        height: 300px;
+        @include max-w(555px) {
+            padding-top: 60px;
+        }
+    }
+    &__catItem {
+        padding: 10px 15px;
+        &:hover {
+            background-color: $colorBlue1;
+            color: $colorWhite;
+        }
+    }
+    &__input {
+        position: relative;
+        margin-left: 20px;
+        width: 70%;
+        @include max-w(555px) {
+            width: 100%;
+            margin-left: 0;
+        }
+        input {
+            border-radius: 10px;
+            border: none;
+            background-color: $colorWhite;
+            padding: 8px 15px;
+            height: 55px;
+            width: 100%;
+            font-size: 1.6rem;
+            color: $colorBlack;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+    }
+    &__btnSearch {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+        background-color: $colorBlue1;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        margin-right: 5px;
+        cursor: pointer;
+        i {
+            position: absolute;
+            top: 14px;
+            right: 10px;
+        }
+    }
+    &__purchase {
+        flex-grow: 3;
+        text-align: right;
+        margin: auto;
+        @include max-w(912px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__wishlist, &__cart, &__price {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+            color: $colorRed1;
+        }
+    }
+    // end: middle
+    
+    // navbar
+    &__sticky {
+        background-color: grey;
+        z-index: 10;
+    }
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        height: 54px;
+        font-size: 1.6rem;
+    }
+    &__menuList {
+        font-size: 0;
+    }
+    &__menuItem {
+        display: inline-block;
+        font-size: 1.6rem;
+        position: relative;
+        a {
+            display: inline-block;
+            line-height: 3.375;
+            font-weight: 600;
+            padding: 0 20px;
+            i {
+                margin-left: 10px;
+            }
+            &:hover {
+                background-color: $colorBlue1;
+                color: $colorWhite;
+                opacity: 1;
+            }
+        }
+        
+    }
+    &__phone {
+        line-height: 3.375;
+        font-weight: 600;
+        span {
+            color: $colorRed1;
+        }
+        a:hover {
+            color: $colorRed1;
+        }
+    }
+    &__childList {
+        position: absolute;
+        background-color: $colorWhite;
+        box-shadow: 0 0 3px $colorBlack;
+        width: 250px;
+    }   
+    &__itemChild {
+        width: 100%;
+        
+    }
 }

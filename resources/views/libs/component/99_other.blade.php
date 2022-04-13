@@ -36,3 +36,11 @@ other
 <div class="l-container">
     <div class="c-tag2">-50%</div>
 </div>
+
+<div class="c-dev-title2">c-group</div>
+<div class="l-container">
+    <div class="c-group">
+        <label for="" class="c-text1">Your Name*</label><br>
+        <input type="text" class="c-input" placeholder="Input your name">
+    </div>
+</div>

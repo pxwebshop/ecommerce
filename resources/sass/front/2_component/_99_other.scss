@@ -72,3 +72,24 @@ other
     line-height: 1.5;
     transition: 0.5s;
 }
+
+.c-group {
+    label {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+.c-input {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 18px 15px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid $colorGrey;
+    background-color: $colorWhite;
+    color: $colorBlack;
+    &:focus {
+        border: 1px solid $colorBlue1;
+    }
+}
