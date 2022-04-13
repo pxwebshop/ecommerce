@@ -410,7 +410,10 @@ header
   padding: 15px 0;
   color: #fff;
   font-size: 1.6rem;
-  line-height: 2;
+  height: 100%;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10;
 }
 .c-header__content1 {
   display: flex;
@@ -439,11 +442,28 @@ header
   cursor: pointer;
   position: relative;
 }
-.c-header__language:hover .c-header__languageList {
-  display: block;
-}
 .c-header__languageItem {
   font-size: 1.6rem;
+  color: #fff;
+}
+.c-header__languageList {
+  display: none;
+  position: absolute;
+  top: 36px;
+  height: 200px;
+  background-color: #fff;
+  color: #656565;
+  box-shadow: 0 0 1px #292929;
+  overflow-y: scroll;
+}
+.c-header__languageItem {
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+  color: #292929;
+  border-bottom: 1px solid #ccc;
+}
+.c-header__languageItem:hover {
+  background-color: #113366;
   color: #fff;
 }
 .c-header__authen {
@@ -471,19 +491,19 @@ header
 }
 .c-header__logo {
   margin: auto 0;
-  flex-grow: 3;
+  width: 25%;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
   .c-header__logo {
     width: 100%;
     text-align: center;
   }
 }
 .c-header__search {
-  flex-grow: 6;
+  width: 50%;
   margin: 0 auto;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
   .c-header__search {
     width: 100%;
     margin: 20px 0 5px;
@@ -516,9 +536,6 @@ header
   .c-header__catSelected {
     width: 100%;
   }
-}
-.c-header__catSelected:hover .c-header__catList {
-  display: block;
 }
 .c-header__catList {
   display: none;
@@ -583,11 +600,11 @@ header
   right: 10px;
 }
 .c-header__purchase {
-  flex-grow: 3;
+  width: 25%;
   text-align: right;
   margin: auto;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 992px) {
   .c-header__purchase {
     width: 100%;
     text-align: center;
@@ -605,6 +622,9 @@ header
 .c-header__sticky {
   background-color: #e3efed;
   z-index: 10;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 @media screen and (max-width: 767px) {
   .c-header__sticky {
@@ -708,6 +728,10 @@ header
   background-color: #e3efed;
   font-size: 1.6rem;
   display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 @media screen and (max-width: 767px) {
   .c-header__nav {

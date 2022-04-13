@@ -36,4 +36,22 @@ $(document).ready(function () {
             $(submenu).slideUp(200);
         }
     });
+	$(".c-header__language").on("click", function (e) {
+        e.preventDefault();
+        var submenu = $(this).children(".c-header__languageList");
+        if ($(submenu).is(":hidden")) {
+            $(submenu).slideDown(200);
+        } else {
+            $(submenu).slideUp(200);
+        }
+    });
+	$(".c-header__catSelected").on("click", function (e) {
+        e.preventDefault();
+        var submenu = $(this).children(".c-header__catList");
+        if ($(submenu).is(":hidden")) {
+            $(submenu).slideDown(200);
+        } else {
+            $(submenu).slideUp(200);
+        }
+    });
 });

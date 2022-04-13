@@ -13,7 +13,10 @@ header
         padding: 15px 0;
         color: $colorWhite;
         font-size: 1.6rem;
-        line-height: 2;
+        height: 100%;
+        line-height: 1.5;
+        position: relative;
+        z-index: 10;
     }
     &__content1 {
         display: flex;
@@ -39,15 +42,30 @@ header
     &__language {
         cursor: pointer;
         position: relative;
-        &:hover  {
-            #{$root}__languageList {
-                display: block;
-            }
-        }
     }
     &__languageItem {
         font-size: 1.6rem;
         color: $colorWhite;
+    }
+    &__languageList {
+        display: none;
+        position: absolute;
+        top: 36px;
+        height: 200px;
+        background-color: $colorWhite;
+        color: $colorGrey2;
+        box-shadow: 0 0 1px $colorBlack;
+        overflow-y: scroll;
+    }
+    &__languageItem {
+        padding: 10px 40px 10px 20px;
+        cursor: pointer;
+        color: $colorBlack;
+        border-bottom: 1px solid $colorGrey;
+        &:hover {
+            background-color: $colorBlue1;
+            color: $colorWhite;
+        }
     }
     &__authen {
         padding-left: 7px;
@@ -77,17 +95,17 @@ header
     }
     &__logo {
         margin: auto 0;
-        flex-grow: 3;
-        @include max-w(912px) {
+        width: 25%;
+        @include max-w(992px) {
             width: 100%;
             text-align: center;
         }
     }
     &__search {
-        flex-grow: 6;
+        width: 50%;
         // display: flex;
         margin: 0 auto;
-        @include max-w(912px) {
+        @include max-w(992px) {
             width: 100%;
             margin: 20px 0 5px;
             z-index: 1;
@@ -114,11 +132,6 @@ header
         cursor: pointer;
         @include max-w(555px) {
             width: 100%;
-        }
-        &:hover {
-            #{$root}__catList {
-                display: block;
-            }
         }
     }
     &__catList {
@@ -180,10 +193,10 @@ header
         }
     }
     &__purchase {
-        flex-grow: 3;
+        width: 25%;
         text-align: right;
         margin: auto;
-        @include max-w(912px) {
+        @include max-w(992px) {
             width: 100%;
             text-align: center;
         }
@@ -203,6 +216,8 @@ header
     &__sticky {
         background-color: $colorBlue3;
         z-index: 10;
+        position: sticky;
+        top: 0;
         @include sp {
             display: none;
         }
@@ -295,6 +310,9 @@ header
     &__nav {
         background-color: $colorBlue3;font-size: 1.6rem;
         display: none;
+        position: sticky;
+        top: 0;
+        z-index: 10;
         @include sp {
             display: block;
         }

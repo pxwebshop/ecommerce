@@ -23,9 +23,16 @@
                     </div>
                     <div class="c-header__option">
                         <div class="c-header__language">
-                            <a href="#" class="c-header__languageItem">ENG</a>
-                            <span>/</span>
-                            <a href="#" class="c-header__languageItem">VIE</a>
+                            <span>English</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <ul class="c-header__languageList">
+                                <li class="c-header__languageItem">English</li>
+                                <li class="c-header__languageItem">Vietnamese</li>
+                                <li class="c-header__languageItem">Laos</li>
+                                <li class="c-header__languageItem">Portugal</li>
+                                <li class="c-header__languageItem">Chinese</li>
+                                <li class="c-header__languageItem">Japanese</li>
+                            </ul>
                         </div>
                         <div class="c-header__authen">
                             <i class="fa-solid fa-lock"></i>
@@ -45,13 +52,13 @@
                             </figure>
                         </a>
                     </div>
-                    <div class="c-header__search">
+                    <form action="" method="GET" class="c-header__search">
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
                                 <span>All Category</span>
                                 <i class="fa-solid fa-caret-down"></i>
                                 <ul class="c-header__catList">
-                                    <li class="c-header__catItem">Laptop</li>
+                                    <li data-value="1" class="c-header__catItem">Laptop</li>
                                     <li class="c-header__catItem">Computer</li>
                                     <li class="c-header__catItem">Audio</li>
                                     <li class="c-header__catItem">Gear</li>
@@ -72,8 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </form>
                     <div class="c-header__purchase">
                         <div class="c-header__wishlist">
                             <i class="fa-solid fa-heart"></i>
@@ -135,72 +141,72 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="c-header__nav__menu">
-        <div class="c-header__nav__position">
-            <div class="l-container">
-                <ul class="c-header__nav__list">
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">Home</a>
-                    </li>
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">
-                            <span>Computer</span>
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                        </a>
-                        <ul class="c-header__nav__subMenu">
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Gaming</span></a>
-                            </li>
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Office</span></a>
-                            </li>
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Old</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">
-                            <span>Laptop</span>
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                        </a>
-                        <ul class="c-header__nav__subMenu">
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Gaming</span></a>
-                            </li>
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Office</span></a>
-                            </li>
-                            <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Old</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">
-                            <span>Gear</span>
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                        </a>
-                    </li>
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">
-                            <span>Monitor</span>
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                        </a>
-                    </li>
-                    <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">
-                            <span>Network</span>
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                        </a>
-                    </li>
-                </ul>
+        <div class="c-header__nav__menu">
+            <div class="c-header__nav__position">
+                <div class="l-container">
+                    <ul class="c-header__nav__list">
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">Home</a>
+                        </li>
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">
+                                <span>Computer</span>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                            <ul class="c-header__nav__subMenu">
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Gaming</span></a>
+                                </li>
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Office</span></a>
+                                </li>
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Old</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">
+                                <span>Laptop</span>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                            <ul class="c-header__nav__subMenu">
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Gaming</span></a>
+                                </li>
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Office</span></a>
+                                </li>
+                                <li class="c-header__nav__subItem">
+                                    <a href="#"><span>PC Old</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">
+                                <span>Gear</span>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                        </li>
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">
+                                <span>Monitor</span>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                        </li>
+                        <li class="c-header__nav__item">
+                            <a href="#" class="c-header__nav__link">
+                                <span>Network</span>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
