@@ -38,6 +38,11 @@ header
     }
     &__option {
         display: flex;
+        @include max-w(369px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
     }
     &__language {
         cursor: pointer;

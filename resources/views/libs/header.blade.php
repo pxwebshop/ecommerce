@@ -23,7 +23,7 @@
                     </div>
                     <div class="c-header__option">
                         <div class="c-header__language">
-                            <span>English</span>
+                            <span class="c-header__currentLanguage">English</span>
                             <i class="fa-solid fa-caret-down"></i>
                             <ul class="c-header__languageList">
                                 <li class="c-header__languageItem">English</li>
@@ -55,10 +55,11 @@
                     <form action="" method="GET" class="c-header__search">
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
-                                <span>All Category</span>
+                                <span class="c-header__currentCat">All Category</span>
                                 <i class="fa-solid fa-caret-down"></i>
                                 <ul class="c-header__catList">
-                                    <li data-value="1" class="c-header__catItem">Laptop</li>
+                                    <li data-value="1" class="c-header__catItem">All Category</li>
+                                    <li data-value="2" class="c-header__catItem">Laptop</li>
                                     <li class="c-header__catItem">Computer</li>
                                     <li class="c-header__catItem">Audio</li>
                                     <li class="c-header__catItem">Gear</li>

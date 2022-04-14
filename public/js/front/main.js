@@ -54,4 +54,13 @@ $(document).ready(function () {
             $(submenu).slideUp(200);
         }
     });
+
+    $(".c-header__languageItem").click(function(){
+        // console.log($(this).text());
+        $(".c-header__currentLanguage").text($(this).text());
+    })
+    $(".c-header__catItem").click(function(){
+        // console.log($(this).text());
+        $(".c-header__currentCat").text($(this).text());
+    })
 });

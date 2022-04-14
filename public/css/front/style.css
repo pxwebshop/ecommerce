@@ -438,6 +438,12 @@ header
 .c-header__option {
   display: flex;
 }
+@media screen and (max-width: 369px) {
+  .c-header__option {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .c-header__language {
   cursor: pointer;
   position: relative;
