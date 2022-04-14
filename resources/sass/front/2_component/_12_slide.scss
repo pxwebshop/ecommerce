@@ -14,6 +14,9 @@ video
         display: flex;
         align-items: center;
         height: 100%;
+        @include sp() {
+            padding: 0 10px;
+        }
     }
     &__text {
         width: 50%;

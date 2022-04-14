@@ -287,6 +287,7 @@ body.is-fixed {
 @media screen and (max-width: 767px) {
   .l-container {
     max-width: 100%;
+    padding: 0 15px;
   }
 }
 
@@ -739,7 +740,6 @@ header
   }
 }
 .c-header__nav {
-  background-color: #e3efed;
   font-size: 1.6rem;
   display: none;
   position: -webkit-sticky;
@@ -1106,6 +1106,11 @@ list1
   flex-wrap: wrap;
   margin-left: -24px;
 }
+@media screen and (max-width: 767px) {
+  .c-list2__list {
+    margin-left: 0;
+  }
+}
 .c-list2__item {
   width: 50%;
   padding-left: 24px;
@@ -1115,6 +1120,7 @@ list1
 @media screen and (max-width: 767px) {
   .c-list2__item {
     width: 100%;
+    padding-left: 0px;
   }
 }
 .c-list2__item:hover {
@@ -1424,6 +1430,11 @@ video
   align-items: center;
   height: 100%;
 }
+@media screen and (max-width: 767px) {
+  .c-slide1 .l-container {
+    padding: 0 10px;
+  }
+}
 .c-slide1__text {
   width: 50%;
   padding-right: 12px;
@@ -1639,11 +1650,26 @@ Page Top
   padding-top: 120px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 767px) {
+  .p-home__overview {
+    padding-top: 60px;
+  }
+}
 .p-home__arrivals {
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .p-home__arrivals {
+    padding-top: 40px;
+  }
+}
 .p-home__specialOffer {
   padding-top: 70px;
+}
+@media screen and (max-width: 767px) {
+  .p-home__specialOffer {
+    padding-top: 35px;
+  }
 }
 .p-home__collection {
   padding-top: 50px;
@@ -1651,11 +1677,21 @@ Page Top
 .p-home__bestseller {
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .p-home__bestseller {
+    padding-top: 50px;
+  }
+}
 .p-home__bestseller .c-list1 {
   margin-top: 20px;
 }
 .p-home__news {
   padding-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .p-home__news {
+    padding-top: 30px;
+  }
 }
 .p-home__slideBot {
   padding-top: 70px;
