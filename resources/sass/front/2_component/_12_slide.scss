@@ -10,6 +10,11 @@ video
         display: flex;
         flex-wrap: wrap;
     }
+    .l-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
     &__text {
         width: 50%;
         padding-right: 12px;
@@ -17,6 +22,10 @@ video
             width: 100%;
             padding: 0;
         }
+    }
+    &__item {
+        background: linear-gradient(to bottom, #99b9da, #aac4e0, #bbcfe6, #ccdbec, #dce6f2);
+        height: 730px;
     }
     &__img {
         width: 50%;

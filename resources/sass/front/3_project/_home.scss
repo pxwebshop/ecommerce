@@ -5,4 +5,23 @@ Page Top
 /*
 ------------------------------------------------------------*/
 .p-home {
+    &__overview {
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+    &__arrivals {
+        padding-top: 100px;
+    }
+    &__specialOffer {
+        padding-top: 70px;
+    }
+    &__collection {
+        padding-top: 50px;
+    }
+    &__bestseller {
+        padding-top: 100px;
+    }
+    &__news {
+        padding-top: 50px;
+    }
 }
