@@ -946,5 +946,83 @@
             </div>
         </div>
     </section>
+    <section class="p-home__slideBot">
+        <div class="c-slide2">
+            <div class="l-container">
+                <div class="c-slide2__list owl-carousel">
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="c-slide2__item">
+                        <a href="#" class="c-slide2__link">
+                            <figure class="c-slide2__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/partner/partner-5.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 @endsection

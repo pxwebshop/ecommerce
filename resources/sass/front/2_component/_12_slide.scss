@@ -59,3 +59,14 @@ video
         }
     }
 }
+
+.c-slide2 {
+    background-color: $colorGrey5;
+    padding: 100px 0;
+    &__img {
+        img {
+            width: auto !important;
+            margin: 0 auto;
+        }
+    }
+}

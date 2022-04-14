@@ -15,6 +15,32 @@ jQuery(function ($) {
 			"<i class='flaticon-right-arrow'></i>"
 		],
 	});
+    $('.c-slide2__list').owlCarousel({
+        loop: true,
+		nav: false,
+		dots: false,
+		smartSpeed: 500,
+		margin: 30,
+		autoplayHoverPause: true,
+		autoplay: true,
+		responsive: {
+			0: {
+				items: 2
+			},
+			576: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			},
+			1200: {
+				items: 5
+			}
+		}
+    });
 }(jQuery));
 
 $(document).ready(function () {
@@ -62,5 +88,10 @@ $(document).ready(function () {
     $(".c-header__catItem").click(function(){
         // console.log($(this).text());
         $(".c-header__currentCat").text($(this).text());
+    })
+    $(".c-list6__item").click(function(){
+        // console.log($(this).text());
+       $('.c-list6__item').removeClass('is-active');
+       $(this).addClass('is-active');
     })
 });

@@ -1476,6 +1476,15 @@ video
   }
 }
 
+.c-slide2 {
+  background-color: #f2f2f2;
+  padding: 100px 0;
+}
+.c-slide2__img img {
+  width: auto !important;
+  margin: 0 auto;
+}
+
 /*------------------------------------------------------------
 MV
 ------------------------------------------------------------*/
@@ -1644,4 +1653,7 @@ Page Top
 }
 .p-home__news {
   padding-top: 50px;
+}
+.p-home__slideBot {
+  padding-top: 70px;
 }
