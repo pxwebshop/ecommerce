@@ -23,7 +23,6 @@ slide
             </figure>
         </div>
     </div>
-
 </div>
 
 

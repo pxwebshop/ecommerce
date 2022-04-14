@@ -241,7 +241,8 @@ layout
 ------------------------------------------------------------*/
 body {
   width: 100%;
-  padding: 80px 0 0;
+  padding: 0 0 0;
+  background-color: #f9f9f9;
 }
 @media screen and (max-width: 767px) {
   body {
@@ -520,7 +521,7 @@ header
 .c-header__category {
   display: flex;
   width: 100%;
-  background-color: #e3efed;
+  background-color: #f6f6f6;
   padding: 2px 0 2px 5px;
   border-radius: 10px;
 }
@@ -627,10 +628,11 @@ header
   color: #ed1d24;
 }
 .c-header__sticky {
-  background-color: #e3efed;
+  background-color: #fff;
   z-index: 10;
   position: -webkit-sticky;
   position: sticky;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   top: 0;
 }
 @media screen and (max-width: 767px) {
@@ -923,7 +925,7 @@ title
   font-weight: 600;
   position: relative;
   top: 20px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   display: inline-block;
   padding: 0 15px;
 }
@@ -1609,11 +1611,3 @@ Page Top
 ------------------------------------------------------------*/
 /*
 ------------------------------------------------------------*/
-.p-home {
-  margin: 200px;
-}
-@media screen and (max-width: 767px) {
-  .p-home {
-    margin: 10px;
-  }
-}
