@@ -1651,6 +1651,9 @@ Page Top
 .p-home__bestseller {
   padding-top: 100px;
 }
+.p-home__bestseller .c-list1 {
+  margin-top: 20px;
+}
 .p-home__news {
   padding-top: 50px;
 }
