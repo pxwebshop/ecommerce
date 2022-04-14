@@ -2,7 +2,7 @@ jQuery(function ($) {
     'use strict';
 
 	// Home Slides
-	$('').owlCarousel({
+	$('.c-slide1').owlCarousel({
 		loop: true,
 		nav: true,
 		dots: false,
@@ -11,10 +11,23 @@ jQuery(function ($) {
 		smartSpeed: 100,
 		autoplay: false,
 		navText: [
-			"<i class='flaticon-left-arrow'></i>",
-			"<i class='flaticon-right-arrow'></i>"
+			"<i class='fa-solid fa-angle-left'></i>",
+			"<i class='fa-solid fa-angle-right'></i>"
 		],
 	});
+    $(".c-slide1").on("translate.owl.carousel", function(){
+		$(".c-slide1__content b").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
+		$(".c-slide1__content h1").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
+		$(".c-slide1__content p").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
+		$(".c-slide1__content a").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
+	});
+	$(".c-slide1").on("translated.owl.carousel", function(){
+		$(".c-slide1__content b").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
+		$(".c-slide1__content h1").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
+		$(".c-slide1__content p").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
+		$(".c-slide1__content a").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
+	});
+
     $('.c-slide2__list').owlCarousel({
         loop: true,
 		nav: false,
