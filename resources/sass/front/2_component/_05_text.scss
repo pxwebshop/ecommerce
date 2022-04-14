@@ -13,3 +13,16 @@ text
         font-size: 1.5rem;
     }
 }
+.c-text2 {
+    &__link, &__important {
+        font-size: 1.5rem;
+        color: $colorGrey2;
+    }
+    &__link {
+        font-weight: 600;
+        opacity: 1;
+        &:hover {
+            color: $colorRed1;
+        }
+    }
+}

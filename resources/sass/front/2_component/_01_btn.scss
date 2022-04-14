@@ -14,7 +14,7 @@ btn1
     text-decoration: none;
     position: relative;
     z-index: 1;
-
+    cursor: pointer;
     &:after {
         content: "";
         position: absolute;
@@ -40,12 +40,61 @@ btn1
     }
     &:hover {
         color: $colorBlue1;
+        opacity: 1;
         &:before {
             width: 100%;
         }
     }
     i {
         margin-right: 5px;
+    }
+    &--hoverRed {
+        &:hover {
+            background-color: $colorRed1;
+            color: $colorWhite;
+        }
+        &:before, &:after {
+            content: none;
+        }
+    }
+    &--hoverBlack {
+        &::before {
+            background-color: $colorBlack;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--noneBorderRadius {
+        border-radius: 0;
+        &:before, &:after {
+            border-radius: 0;
+        }
+        &::before {
+            background-color: $colorBlack;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--colorBlack {
+        &:after {
+            background-color: $colorBlack;
+        }
+        &:before {
+            background-color: $colorBlue1;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--border {
+        border-radius: 0;
+        &:before, &:after {
+            border-radius: 0;
+        }
+        padding: 12px 30px;
+        border: 1px solid $colorBlue1;
     }
 }
 /*

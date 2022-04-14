@@ -81,15 +81,63 @@ other
 }
 
 .c-input {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     padding: 18px 15px;
     border-radius: 5px;
     width: 100%;
-    border: 1px solid $colorGrey;
+    box-sizing: border-box;
+    border: 1px solid $colorGrey3;
     background-color: $colorWhite;
     color: $colorBlack;
     &:focus {
         border: 1px solid $colorBlue1;
+    }
+}
+
+.c-formCheck {
+    font-size: 1.5rem;
+    color: $colorGrey2;
+    label, &__input {
+        cursor: pointer;
+    }
+}
+
+.c-lostPassword {
+    font-size: 1.5rem;
+    a {
+        color: $colorGrey2;
+        border-bottom: 1px solid $colorGrey3;
+        opacity: 1;
+        &:hover {
+            border-bottom-color: $colorRed1;
+        }
+    }
+}
+
+// login form
+.c-authen {
+    $root: &;
+    max-width: 650px;
+    background-color: transparent;
+    padding: 40px 45px;
+    margin: 0 auto;
+    border-radius: 5px;
+    &__btn {
+        width: 100%;
+    }
+    &__form {
+        margin: 30px 0 15px;
+    }
+    &__group {
+        margin-bottom: 25px;
+    }
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    &__text {
+        text-align: center;
     }
 }

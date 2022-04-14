@@ -44,3 +44,87 @@ other
         <input type="text" class="c-input" placeholder="Input your name">
     </div>
 </div>
+
+<div class="c-dev-title2">c-formCheck</div>
+<div class="l-container">
+    <div class="c-formCheck">
+        <input type="checkbox" class="c-formCheck__input">
+        <label for="check">Show password?</label>
+    </div>
+</div>
+<div class="c-dev-title2">c-lostPassword</div>
+<div class="l-container">
+    <div class="c-lostPassword">
+        <a href="#">Forgot your password?</a>
+    </div>
+</div>
+
+<div class="c-dev-title2">c-login</div>
+<div class="l-container">
+    <div class="c-authen">
+        <h2 class="c-title4">Login</h2>
+        <form action="" class="c-authen__form">
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Username">
+            </div>
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Email or Phone">
+            </div>
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Password">
+            </div>
+            <div class="c-authen__option">
+                <div class="c-formCheck">
+                    <input type="checkbox" class="c-formCheck__input" id="check">
+                    <label for="check">Show password?</label>
+                </div>
+                <div class="c-lostPassword">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+            <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
+                Login
+            </button>
+        </form>
+        <div class="c-text2">
+        <p class="c-text2__important c-authen__text">Don't have an account?
+            <a href="#" class="c-text2__link">Register now!</a>
+        </p>
+    </div>
+    </div>
+</div>
+
+<div class="c-dev-title2">c-register</div>
+<div class="l-container">
+    <div class="c-authen">
+        <h2 class="c-title4">Register</h2>
+        <form action="" class="c-authen__form">
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Name">
+            </div>
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Email">
+            </div>
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Phone">
+            </div>
+            <div class="c-group c-authen__group">
+                <input type="text" class="c-input" placeholder="Password">
+            </div>
+            <div class="c-authen__option">
+                <div class="c-formCheck">
+                    <input type="checkbox" class="c-formCheck__input" id="check">
+                    <label for="check">Show password?</label>
+                </div>
+            </div>
+            <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
+                Register
+            </button>
+        </form>
+        <div class="c-text2">
+        <p class="c-text2__important c-authen__text">Already have an account?
+            <a href="#" class="c-text2__link">Login now!</a>
+        </p>
+    </div>
+    </div>
+</div>
