@@ -318,6 +318,7 @@ header
         display: none;
         position: sticky;
         top: 0;
+        background-color: #ffff;
         z-index: 10;
         @include sp {
             display: block;
