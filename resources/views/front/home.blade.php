@@ -1677,5 +1677,15 @@
             </div>
         </div>
     </section>
+
+    @push('scripts')
+        <!-- Owl Carousel JS -->
+        <script src="{{ asset('js/front/owl.carousel.min.js')}} "></script>
+         <!-- Wow JS -->
+        <script src="{{ asset('js/front/wow.min.js')}} "></script>
+
+        <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+
+    @endpush
 </main>
 @endsection

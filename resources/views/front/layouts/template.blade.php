@@ -17,13 +17,11 @@
 </head>
 
 <body>
-    @include('libs.header' )
+    @include('front.layouts.header')
+
     @yield('content')
 
-
-    @include('libs.footer' )
-
-    @stack('scripts')
+    @include('front.layouts.footer')
 
      <!-- Jquery Slim JS -->
      <script src="{{ asset('js/front/jquery.min.js')}} "></script>
@@ -31,8 +29,7 @@
     <!-- <script src="{{ asset('js/front/bootstrap.bundle.min.js')}} "></script> -->
     <!-- Meanmenu JS -->
     <!-- <script src="{{ asset('js/front/jquery.meanmenu.js')}} "></script> -->
-    <!-- Owl Carousel JS -->
-    <script src="{{ asset('js/front/owl.carousel.min.js')}} "></script>
+  
     <!-- Magnific Popup JS -->
     <!-- <script src="{{ asset('js/front/jquery.magnific-popup.min.js')}} "></script> -->
     <!-- Nice Select JS -->
@@ -51,8 +48,9 @@
     <!-- <script src="{{ asset('js/front/form-validator.min.js')}} "></script> -->
     <!-- Contact JS -->
     <!-- <script src="{{ asset('js/front/contact-form-script.js')}} "></script> -->
-    <!-- Wow JS -->
-    <script src="{{ asset('js/front/wow.min.js')}} "></script>
+
+    @stack('scripts')
+   
 </body>
 
 </html>
