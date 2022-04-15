@@ -51,31 +51,35 @@
                 </p>
             </div>
         </div>
+    </section>
 
-        <div class="c-list4">
-            <div class="c-list4__list">
-                <div class="c-list4__wrap">
-                    <div class="c-list4__item">
-                        <i class="fa-solid fa-truck"></i>
-                        <p class="c-list4__txt">Free Shipping Worldwide</p>
+    <section class="p-login__sc3">
+        <div class="l-container">
+            <div class="c-list4">
+                <div class="c-list4__list">
+                    <div class="c-list4__wrap">
+                        <div class="c-list4__item">
+                            <i class="fa-solid fa-truck"></i>
+                            <p class="c-list4__txt">Free Shipping Worldwide</p>
+                        </div>
                     </div>
-                </div>
-                <div class="c-list4__wrap">
-                    <div class="c-list4__item">
-                        <i class="fa-solid fa-rotate-left"></i>
-                        <p class="c-list4__txt">30 Days Money Returns</p>
+                    <div class="c-list4__wrap">
+                        <div class="c-list4__item">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <p class="c-list4__txt">30 Days Money Returns</p>
+                        </div>
                     </div>
-                </div>
-                <div class="c-list4__wrap">
-                    <div class="c-list4__item">
-                        <i class="fa-solid fa-wallet"></i>
-                        <p class="c-list4__txt">100% Secure Payment</p>
+                    <div class="c-list4__wrap">
+                        <div class="c-list4__item">
+                            <i class="fa-solid fa-wallet"></i>
+                            <p class="c-list4__txt">100% Secure Payment</p>
+                        </div>
                     </div>
-                </div>
-                <div class="c-list4__wrap">
-                    <div class="c-list4__item">
-                        <i class="fa-solid fa-headset"></i>
-                        <p class="c-list4__txt">24/7 Customer Support</p>
+                    <div class="c-list4__wrap">
+                        <div class="c-list4__item">
+                            <i class="fa-solid fa-headset"></i>
+                            <p class="c-list4__txt">24/7 Customer Support</p>
+                        </div>
                     </div>
                 </div>
             </div>
