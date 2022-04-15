@@ -123,6 +123,9 @@ other
     padding: 40px 45px;
     margin: 0 auto;
     border-radius: 5px;
+    @include sp() {
+        padding: 20px 15px;
+    }
     &__btn {
         width: 100%;
     }

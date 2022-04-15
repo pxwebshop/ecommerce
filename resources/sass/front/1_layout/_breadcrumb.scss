@@ -19,4 +19,8 @@ breadcrumb
             color: $colorBlack;
         }
     }
+    &__current {
+        color: rgb(66 64 64 / 80%);
+        font-size: 1.6rem;
+    }
 }
