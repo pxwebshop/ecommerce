@@ -100,7 +100,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="p-home__support">
         <div class="l-container">
             <div class="c-list4">
@@ -145,7 +145,7 @@
                     <div class="c-list1__item">
                         <div class="c-list1__wrap">
                             <div class="c-list1__img">
-                                <a href="#">
+                                <a href="/product-detail">
                                     <figure class="c-list1__image">
                                         <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
                                     </figure>
@@ -444,6 +444,9 @@
             </div>
         </div>
         <div class="l-container">
+            <p class="p-home__txt">
+
+            </p>
             <div class="c-list1 p-home__bestsellerList p-home__bestsellerList0">
                 <div class="c-list1__list">
                     <div class="c-list1__item">
@@ -1366,6 +1369,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="c-list1 p-home__bestsellerList p-home__bestsellerList3">
+                <div class="c-text3">
+                    <p class="c-text3__txt">
+                        This category has no product now. Go back later.
+                    </p>
                 </div>
             </div>
         </div>

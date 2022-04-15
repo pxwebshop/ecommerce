@@ -13,3 +13,11 @@ text
     </div>
 </div>
 
+<div class="c-dev-title2">c-text3</div>
+<div class="l-container">
+    <div class="c-text3">
+        <p class="c-text3__txt">
+            This category has no product now. Go back later.
+        </p>
+    </div>
+</div>

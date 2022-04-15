@@ -111,7 +111,7 @@
                         </ul>
                     </li>
                     <li class="c-header__menuItem">
-                        <a href="#" class="c-header__link">Laptop<i class="fa-solid fa-caret-down"></i></a>
+                        <a href="/product-list" class="c-header__link">Laptop<i class="fa-solid fa-caret-down"></i></a>
                         <ul class="c-header__childList">
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Gaming</a></li>
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Office</a></li>

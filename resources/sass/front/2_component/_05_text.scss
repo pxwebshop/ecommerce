@@ -26,3 +26,11 @@ text
         }
     }
 }
+
+.c-text3 {
+    &__txt {
+        font-size: 1.6rem;
+        color: $colorGrey2;
+        text-align: center;
+    }
+}

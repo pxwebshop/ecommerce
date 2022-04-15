@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Front\HomeController@index');
+Route::get('/product-list', 'Front\ProductListController@index');
+Route::get('/product-detail', 'Front\ProductDetailController@index');
 
 
 Route::get('/component', function () {

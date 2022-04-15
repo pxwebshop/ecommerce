@@ -17,6 +17,9 @@ list1
         @include max-w(576px) {
             width: 100%;
         }
+        &--col3 {
+            width: 33.33%;
+        }
     }
     &__wrap {
         margin-bottom: 30px;

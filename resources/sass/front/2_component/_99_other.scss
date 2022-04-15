@@ -141,3 +141,70 @@ other
         text-align: center;
     }
 }
+
+.c-filter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: $colorGrey2;
+    &__current {
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    &__sort {
+        i {
+            margin-left: 40px;
+        }
+        position: relative;
+        width: 250px;
+        text-align: right;
+    }
+    &__sortList {
+        background-color: $colorWhite;
+        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+        padding: 10px 0;
+        margin-top: 10px;
+        display: none;
+        width: 250px;
+        text-align: left;
+        position: absolute;
+    }
+    &__sortItem {
+        color: $colorGrey2;
+        line-height: 2.5;
+        padding: 0 25px 0 15px;
+        cursor: pointer;
+        &:hover {
+            background-color: $colorBlue1;
+            color: $colorWhite;
+        }
+    }
+}
+
+.c-paginate {
+    &__link {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+        display: inline-block;
+        background-color: $colorWhite;
+        line-height: 35px;
+        color: $colorBlack;
+        box-shadow: 0 2px 10px 0 $colorGrey;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 50px;
+        text-align: center;
+        opacity: 1;
+        &:hover {
+            background-color: $colorBlue1;
+            color: $colorWhite;
+            opacity: 1;
+        }
+    }
+    &__current {
+        background-color: $colorBlue1;
+        color: $colorWhite;
+    }
+}

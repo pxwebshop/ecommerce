@@ -117,4 +117,18 @@ $(document).ready(function () {
 			$('.p-home__bestsellerList'+i).show();
 		}
 	}
+
+	
+	$(".c-filter__sort").on("click", function (e) {
+        var sortList = $(this).children(".c-filter__sortList");
+        if ($(sortList).is(":hidden")) {
+            $(sortList).slideDown(200);
+        } else {
+            $(sortList).slideUp(200);
+        }
+    });
+	$(".c-filter__sortItem").click(function(){
+        // console.log($(this).text());
+        $(".c-filter__current").text($(this).text());
+    })
 });
