@@ -107,4 +107,13 @@ $(document).ready(function () {
        $('.c-list6__item').removeClass('is-active');
        $(this).addClass('is-active');
     })
+
+	var tabList = document.getElementsByClassName('c-list6__item');
+	for (let i = 0; i < tabList.length; i++) {
+		tabList[i].onclick = function() {
+			$('.p-home__bestsellerList').hide();
+			$('.p-home__bestsellerList'+i).show();
+		}
+	}
+	console.log(tabList);
 });

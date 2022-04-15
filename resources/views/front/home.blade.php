@@ -302,7 +302,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    New Arrivals
+                    Special Offer
                 </h2>
             </div>
             <div class="c-list3">
@@ -425,7 +425,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    New Arrivals
+                    Bestsellers
                 </h2>
             </div>
             <div class="c-list6">
@@ -435,7 +435,7 @@
                     <li class="c-list6__item">Cameras</li>
                     <li class="c-list6__item">Audio</li>
                     <li class="c-list6__item">Computers</li>
-                    <li class="c-list6__item"> Accessories</li>
+                    <li class="c-list6__item">Accessories</li>
                     <li class="c-list6__item">Laptop</li>
                     <li class="c-list6__item">Watches</li>
                     <li class="c-list6__item">Mobile</li>
@@ -444,7 +444,7 @@
             </div>
         </div>
         <div class="l-container">
-            <div class="c-list1">
+            <div class="c-list1 p-home__bestsellerList p-home__bestsellerList0">
                 <div class="c-list1__list">
                     <div class="c-list1__item">
                         <div class="c-list1__wrap">
@@ -718,6 +718,622 @@
                                 <a href="#">
                                     <figure class="c-list1__image">
                                         <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-list1 p-home__bestsellerList p-home__bestsellerList1">
+                <div class="c-list1__list">
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/special-products/special-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-2.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-list1 p-home__bestsellerList p-home__bestsellerList2">
+                <div class="c-list1__list">
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="c-tag1">New</div>
+                                <ul class="c-list1__actionList">
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-list1__actionItem">
+                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-list1__content">
+                                <h3 class="c-title2">Smart Watch</h3>
+                                <ul class="c-rate1">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-list1__item">
+                        <div class="c-list1__wrap">
+                            <div class="c-list1__img">
+                                <a href="#">
+                                    <figure class="c-list1__image">
+                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/bestsellers-products/bestsellers-products-7.jpg" alt="">
                                     </figure>
                                 </a>
                                 <div class="c-tag1">New</div>
@@ -923,7 +1539,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    New Arrivals
+                    Latest News
                 </h2>
             </div>
             <div class="c-list7">
