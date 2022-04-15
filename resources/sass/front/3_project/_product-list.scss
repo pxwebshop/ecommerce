@@ -1,0 +1,14 @@
+.p-productList {
+    &__breadcrumb {
+        padding: 35px;
+        background-color: $colorGrey6;
+    }
+    &__list {
+        padding-top: 50px;
+    }
+    &__filter {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 10;
+    }
+}

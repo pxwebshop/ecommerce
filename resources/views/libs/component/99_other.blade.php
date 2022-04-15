@@ -128,3 +128,38 @@ other
     </div>
     </div>
 </div>
+
+<div class="c-dev-title2">product filter</div>
+<div class="l-container">
+    <div class="c-filter">
+        <div class="c-filter__total">
+            <p class="c-filter__txt">Showing 1-18 of 100</p>
+        </div>
+        <div class="c-filter__sort">
+            <span class="c-filter__current">
+                Sort by price: low to high 
+            </span>
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="c-filter__sortList">
+                <li class="c-filter__sortItem">Sort by price: low to high</li>
+                <li class="c-filter__sortItem">Default sorting</li>
+                <li class="c-filter__sortItem">Sort by popularity</li>
+                <li class="c-filter__sortItem">Sort by average rating</li>
+                <li class="c-filter__sortItem">Sort by latest</li>
+                <li class="c-filter__sortItem">Sort by price: high to low</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="c-dev-title2">c-paginate</div>
+<div class="l-container">
+    <div class="c-paginate">
+        <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#" class="c-paginate__link c-paginate__current">1</a>
+        <a href="#" class="c-paginate__link">2</a>
+        <a href="#" class="c-paginate__link">3</a>
+        <a href="#" class="c-paginate__link">4</a>
+        <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</div>

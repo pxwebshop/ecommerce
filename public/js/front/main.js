@@ -107,4 +107,28 @@ $(document).ready(function () {
        $('.c-list6__item').removeClass('is-active');
        $(this).addClass('is-active');
     })
+
+	var tabList = document.getElementsByClassName('c-list6__item');
+	$('.p-home__bestsellerList').hide();
+	$('.p-home__bestsellerList0').show();
+	for (let i = 0; i < tabList.length; i++) {
+		tabList[i].onclick = function() {
+			$('.p-home__bestsellerList').hide();
+			$('.p-home__bestsellerList'+i).show();
+		}
+	}
+
+	
+	$(".c-filter__sort").on("click", function (e) {
+        var sortList = $(this).children(".c-filter__sortList");
+        if ($(sortList).is(":hidden")) {
+            $(sortList).slideDown(200);
+        } else {
+            $(sortList).slideUp(200);
+        }
+    });
+	$(".c-filter__sortItem").click(function(){
+        // console.log($(this).text());
+        $(".c-filter__current").text($(this).text());
+    })
 });
