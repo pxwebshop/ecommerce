@@ -14,7 +14,7 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
-        return view('front/product/list');
+        return view('front/product/index');
     }
 
     public function detail(Request $request)
