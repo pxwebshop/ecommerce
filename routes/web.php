@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Front\HomeController@index');
-Route::get('/product-list', 'Front\ProductListController@index');
-Route::get('/product-detail', 'Front\ProductDetailController@index');
 
+Route::group(['prefix' => 'product'], function () {
+    Route::get('/list', 'Front\ProductController@index');
+    Route::get('/detail', 'Front\ProductController@detail');
+});
 
 Route::get('/component', function () {
     return view('component');
