@@ -1372,7 +1372,7 @@
     </section>
     <section class="p-home__specialOffer">
         <div class="l-container">
-            <div class="c-title1 c-title1--left">
+            <div class="c-title1 c-title1">
                 <h2 class="c-title1__txt">
                     Special Products
                 </h2>

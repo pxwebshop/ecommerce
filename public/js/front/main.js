@@ -109,11 +109,12 @@ $(document).ready(function () {
     })
 
 	var tabList = document.getElementsByClassName('c-list6__item');
+	$('.p-home__bestsellerList').hide();
+	$('.p-home__bestsellerList0').show();
 	for (let i = 0; i < tabList.length; i++) {
 		tabList[i].onclick = function() {
 			$('.p-home__bestsellerList').hide();
 			$('.p-home__bestsellerList'+i).show();
 		}
 	}
-	console.log(tabList);
 });
