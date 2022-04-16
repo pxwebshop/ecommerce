@@ -1694,8 +1694,9 @@
          <!-- Wow JS -->
         <script src="{{ asset('js/front/wow.min.js')}} "></script>
 
-        <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+        <script src="{{ asset('js/front/slick.min.js')}} "></script>
 
+        <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
     @endpush
 </main>
 @endsection

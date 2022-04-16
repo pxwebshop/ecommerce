@@ -189,27 +189,28 @@ jQuery(function () {
     });
 
 	var tabList = document.getElementsByClassName("c-block2__tabItem");
-    $(".c-block2__description").show();
-    $(".c-block2__review").hide();
-    $(".c-block2__infoShip").hide();
-    tabList[0].onclick = function () {
+    if (tabList.length > 0) {
         $(".c-block2__description").show();
         $(".c-block2__review").hide();
         $(".c-block2__infoShip").hide();
-    };
-    tabList[1].onclick = function () {
-        $(".c-block2__description").hide();
-        $(".c-block2__review").show();
-        $(".c-block2__infoShip").hide();
-    };
-    tabList[2].onclick = function () {
-        $(".c-block2__description").hide();
-        $(".c-block2__review").hide();
-        $(".c-block2__infoShip").show();
-    };
-    $(".c-block2__link").click(function () {
-        // console.log($(this).text());
-        $(".c-block2__link").removeClass("c-block2__active");
-        $(this).addClass("c-block2__active");
-    });
+        tabList[0].onclick = function () {
+            $(".c-block2__description").show();
+            $(".c-block2__review").hide();
+            $(".c-block2__infoShip").hide();
+        };
+        tabList[1].onclick = function () {
+            $(".c-block2__description").hide();
+            $(".c-block2__review").show();
+            $(".c-block2__infoShip").hide();
+        };
+        tabList[2].onclick = function () {
+            $(".c-block2__description").hide();
+            $(".c-block2__review").hide();
+            $(".c-block2__infoShip").show();
+        };
+        $(".c-block2__link").click(function () {
+            $(".c-block2__link").removeClass("c-block2__active");
+            $(this).addClass("c-block2__active");
+        });
+    }
 });
