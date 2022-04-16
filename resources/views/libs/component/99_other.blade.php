@@ -168,21 +168,29 @@ other
 <div class="l-container">
     <div class="c-block1">
         <div class="c-block1__left">
-            <div class="c-block1__imgList">
-                <figure class="c-block1__imgItem">
-                    <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
-                </figure>
-                <figure class="c-block1__imgItem">
-                    <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
-                </figure>
-            </div>
-            <div class="c-block1__slider">
-                <figure class="c-block1__img">
-                    <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
-                </figure>
-                <figure class="c-block1__img">
-                    <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
-                </figure>
+            <div class="c-block1__content">
+                <div class="c-block1__imgList">
+                    <figure class="c-block1__imgItem">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                    </figure>
+                    <figure class="c-block1__imgItem">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                    </figure>
+                    <figure class="c-block1__imgItem">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="c-block1__slider">
+                    <figure class="c-block1__img">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                    </figure>
+                    <figure class="c-block1__img">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                    </figure>
+                    <figure class="c-block1__img">
+                        <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                    </figure>
+                </div>
             </div>
         </div>
         <div class="c-block1__right">

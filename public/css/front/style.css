@@ -1907,26 +1907,18 @@ other
     margin-bottom: 25px;
   }
 }
-.c-block1__img {
-  width: 100% !important;
-  height: auto !important;
-}
-.c-block1__imgList {
-  height: 200px !important;
-}
-.c-block1__imgItem {
-  width: 50px !important;
-  margin-bottom: 5px;
+.c-block1__left .c-block1__imgList {
+  width: 50px;
+  float: left;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
-.c-block1__imgList, .c-block1__img {
-  padding-left: 5px;
+.c-block1__content {
+  width: 100%;
 }
-.c-block1__imgList .slick-track {
-  width: 50px !important;
-}
-.c-block1__slider .slick-track {
-  width: 100% !important;
+.c-block1__content .slick-track {
+  width: 100%;
 }
 
 .c-block2__tabList {

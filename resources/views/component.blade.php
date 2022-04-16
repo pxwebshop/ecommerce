@@ -10,7 +10,7 @@
     <link href="{{ asset('css/front/animate.min.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/front/owl.carousel.min.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/front/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" >
-
+    <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
     <script type="text/javascript" src="{{ URL::asset('js/front/jquery.min.js') }}"></script>
 
 

@@ -322,33 +322,20 @@ other
         @include sp {
             margin-bottom: 25px;
         }
-    }
-    &__img {
-        width: 100% !important;
-        height: auto !important;
-    }
-    &__imgList {
-        height: 200px !important;
-    }
-    &__imgItem {
-        width: 50px !important;
-        margin-bottom: 5px;
-        cursor: pointer;
-    }
-    &__imgList, &__img {
-        padding-left: 5px;
-    }
-    &__imgList {
-        .slick-track {
-            width: 50px !important;
+        #{$root}__imgList {
+            width: 50px;
+            float: left;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
     }
-    &__slider {
+    &__content {
+        width: 100%;
         .slick-track {
-            width: 100% !important;
+            width: 100%;
         }
     }
-    
 }
 
 .c-block2 {

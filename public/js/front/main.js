@@ -162,7 +162,10 @@ $(document).ready(function () {
         slidesToScroll: 1,
         asNavFor: ".c-block1__slider",
         dots: false,
-        focusOnSelect: true,
+		arrows: false,
+		focusOnSelect: true,
+		verticalSwiping: true,
+		vertical: true
     });
 
     // $("a[data-slide]").click(function (e) {
