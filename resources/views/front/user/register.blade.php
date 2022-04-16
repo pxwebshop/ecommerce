@@ -1,34 +1,37 @@
-@section('title','Đăng nhập')
+@section('title','Đăng ký')
 @extends('front.layouts.template')
 
 @section('content')
-<main class="p-login">
-    <section class="p-login__sc1">
+<main class="p-register">
+    <section class="p-register__sc1">
         <div class="l-container">
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Login
+                        Register
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
                     <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Đăng nhập</a>
+                    <span class="c-breadcrumb1__current">/ Đăng ký</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="p-login__sc2">
+    <section class="p-register__sc2">
         <div class="l-container">
             <div class="c-authen">
-                <h2 class="c-title4">Login</h2>
+                <h2 class="c-title4">Register</h2>
                 <form action="" class="c-authen__form">
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Username">
+                        <input type="text" class="c-input" placeholder="Name">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Email or Phone">
+                        <input type="text" class="c-input" placeholder="Email">
+                    </div>
+                    <div class="c-group c-authen__group">
+                        <input type="text" class="c-input" placeholder="Phone">
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" class="c-input" placeholder="Password">
@@ -38,24 +41,21 @@
                             <input type="checkbox" class="c-formCheck__input" id="check">
                             <label for="check">Show password?</label>
                         </div>
-                        <div class="c-lostPassword">
-                            <a href="#">Forgot your password?</a>
-                        </div>
                     </div>
                     <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
-                        Login
+                        Register
                     </button>
                 </form>
                 <div class="c-text2">
-                    <p class="c-text2__important c-authen__text">Don't have an account?
-                        <a href="#" class="c-text2__link">Register now!</a>
+                    <p class="c-text2__important c-authen__text">Already have an account?
+                        <a href="#" class="c-text2__link">Login now!</a>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="p-login__sc3">
+    <section class="p-register__sc3">
         <div class="l-container">
             <div class="c-list4">
                 <div class="c-list4__list">

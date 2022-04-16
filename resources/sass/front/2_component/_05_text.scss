@@ -12,6 +12,10 @@ text
     @include max-w(991px) {
         font-size: 1.5rem;
     }
+    &--bold {
+        font-weight: 600;
+        color: $colorBlack;
+    }
 }
 .c-text2 {
     &__link, &__important {

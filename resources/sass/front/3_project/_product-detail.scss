@@ -1,6 +1,12 @@
 .p-productDetail {
-    &__breadcrumb {
+    &__sc1 {
         padding: 35px;
         background-color: $colorGrey6;
+    }
+    &__sc3 {
+        padding-top: 50px;
+    }
+    &__sc4 {
+        padding: 50px 0;
     }
 }

@@ -16,4 +16,9 @@ class UserController extends Controller
     {
         return view('front/user/login');
     }
+
+    public function register(Request $request)
+    {
+        return view('front/user/register');
+    }
 }

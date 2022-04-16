@@ -20,7 +20,7 @@
                     </div>
                     <div class="c-header__authen">
                         <i class="fa-solid fa-lock"></i>
-                        <a href="/login">Login</a> Or <a href="#">Resgister</a>
+                        <a href="/login">Login</a> Or <a href="/register">Resgister</a>
                     </div>
                 </div>
             </div>

@@ -211,3 +211,274 @@ other
         color: $colorWhite;
     }
 }
+
+.c-block1 {
+    $root: &;
+    display: flex;
+    margin-left: -24px;
+    @include sp {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    &__left, &__right {
+        width: 50%;
+        padding-left: 24px;
+        @include sp {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__price, &__price2 {
+        font-size: 1.8rem;
+    }
+    &__price1 {
+        margin-left: 0;
+        font-size: 1.8rem;
+    }
+    &__txt {
+        margin-bottom: 0;
+    }
+    &__info {
+        margin-top: 12px;
+    }
+    &__color1, &__color2, &__color3, &__color4, &__color5{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+    }
+    &__color1 {
+        background-color: $colorBlue1;
+    }
+    &__color2 {
+        background-color: $colorBlue2;
+    }
+    &__color3 {
+        background-color: $colorBlue3;
+    }
+    &__color4 {
+        background-color: $colorBlue4;
+    }
+    &__color5 {
+        background-color: $colorGrey2;
+    }
+    &__quantity {
+        margin: 20px 0;
+    }
+    &__counter {
+        display: flex;
+        max-width: 130px;
+        input {
+            height: 25px;
+            color: #292929;
+            outline: 0;
+            display: block;
+            border: none;
+            background-color: $colorBg;
+            text-align: center;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        i {
+            font-size: 2.5rem;
+            color: $colorGrey;
+        }
+    }
+    &__plus, &__minus {
+        cursor: pointer;
+    }
+    &__share {
+        margin-top: 25px;
+    }
+    &__social {
+        li {
+            display: inline;
+        }
+        a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 2;
+            border-radius: 50%;
+            background-color: #113366;
+            color: #ffffff;
+            border: 1px solid #113366;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 2px;
+            &:hover {
+                background-color: $colorWhite;
+                color: $colorBlue1
+            }
+        }
+    }
+    &__left {
+        display: flex;
+        // margin-left: -5px;
+        @include sp {
+            margin-bottom: 25px;
+        }
+    }
+    &__img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    &__imgList {
+        height: 200px !important;
+    }
+    &__imgItem {
+        width: 50px !important;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    &__imgList, &__img {
+        padding-left: 5px;
+    }
+    &__imgList {
+        .slick-track {
+            width: 50px !important;
+        }
+    }
+    &__slider {
+        .slick-track {
+            width: 100% !important;
+        }
+    }
+    
+}
+
+.c-block2 {
+    &__tabList {
+        border-bottom: 1px solid $colorGrey;
+        margin-bottom: 30px;
+    }
+    &__tabItem {
+        display: inline-block;
+        margin-right: 30px;
+        padding-bottom: 8px;
+    }
+    &__link {
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 0;
+        padding-bottom: 8px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $colorBlack;
+        transition: 0;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 3px solid $colorBlue1;
+            opacity: 1;
+        }
+    }
+    &__active {
+        border-bottom: 3px solid $colorBlue1;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__description {
+        ul {
+            list-style-type: disc;
+            padding-left: 15px;
+        }
+    }
+    &__rate {
+        display: flex;
+        justify-content: space-between;
+        color: $colorBlack;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 14px;
+    }
+    &__rateLeft {
+        width: 15%;
+    }
+    &__rateMiddle {
+        width: 75%;
+    }
+    &__rateRight {
+        width: 15%;
+        text-align: right;
+    }
+    &__rateContainer {
+        height: 100%;
+        width: 100%;
+        background-color: $colorGrey3;
+        border-radius: 5px;
+    }
+    &__rateBar {
+        height: 100%;
+        background-color: $colorBlue1;
+        border-radius: 5px;
+        &--5star {
+            width: 80%;
+        }
+        &--4star {
+            width: 12%;
+        }
+        &--3star {
+            width: 5%;
+        }
+        &--2star {
+            width: 2%;
+        }
+        &--1star {
+            width: 1%;
+        }
+    }
+
+    &__customer {
+        margin-top: 45px;
+    }
+    &__cusTitle {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            margin: auto 0;
+        }
+    }
+    &__cusComment {
+        margin-top: 35px;
+    }
+    &__cusReview {
+        margin-top: 35px;
+        padding-top: 45px;
+        border-top: 1px solid $colorGrey3;
+    }
+    &__title2 {
+        font-size: 1.8rem;
+    }
+
+    &__formName {
+        display: flex;
+        margin-left: -30px;
+        .c-group {
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+    .c-group {
+        margin-bottom: 30px;
+    }
+    .c-input {
+        background-color: $colorGrey7;
+        font-weight: 600;
+        &:focus {
+            background-color: $colorWhite;
+        }
+    }
+
+    &__infoShip {
+        span {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $colorBlack;
+        }
+    }
+}
