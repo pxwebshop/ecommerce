@@ -28,7 +28,7 @@
                     <span class="c-filter__current">
                         Sort by price: low to high
                     </span>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                     <ul class="c-filter__sortList">
                         <li class="c-filter__sortItem">Sort by price: low to high</li>
                         <li class="c-filter__sortItem">Default sorting</li>

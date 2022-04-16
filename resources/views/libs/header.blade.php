@@ -28,7 +28,7 @@
                     <div class="c-header__option">
                         <div class="c-header__language">
                             <span class="c-header__currentLanguage">English</span>
-                            <i class="fa-solid fa-caret-down"></i>
+                            <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__languageList">
                                 <li class="c-header__languageItem">English</li>
                                 <li class="c-header__languageItem">Vietnamese</li>
@@ -60,7 +60,7 @@
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
                                 <span class="c-header__currentCat">All Category</span>
-                                <i class="fa-solid fa-caret-down"></i>
+                                <i class="fa-solid fa-angle-down"></i>
                                 <ul class="c-header__catList">
                                     <li data-value="1" class="c-header__catItem">All Category</li>
                                     <li data-value="2" class="c-header__catItem">Laptop</li>
@@ -107,7 +107,7 @@
                 <ul class="c-header__menuList">
                     <li class="c-header__menuItem"><a href="#" class="c-header__link">Home</a></li>
                     <li class="c-header__menuItem">
-                        <a href="#" class="c-header__link">Computer<i class="fa-solid fa-caret-down"></i></a>
+                        <a href="#" class="c-header__link">Computer<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="c-header__childList">
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">PC Gaming</a></li>
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">PC Office</a></li>
@@ -115,16 +115,16 @@
                         </ul>
                     </li>
                     <li class="c-header__menuItem">
-                        <a href="/product-list" class="c-header__link">Laptop<i class="fa-solid fa-caret-down"></i></a>
+                        <a href="/product-list" class="c-header__link">Laptop<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="c-header__childList">
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Gaming</a></li>
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Office</a></li>
                             <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Old</a></li>
                         </ul>
                     </li>
-                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Gear<i class="fa-solid fa-caret-down"></i></a></li>
-                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Monitor<i class="fa-solid fa-caret-down"></i></a></li>
-                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Network<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Gear<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Monitor<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="c-header__menuItem"><a href="#" class="c-header__link">Network<i class="fa-solid fa-angle-down"></i></a></li>
                     <li class="c-header__menuItem"><a href="#" class="c-header__link">Contact</a></li>
                 </ul>
                 <div class="c-header__phone">
