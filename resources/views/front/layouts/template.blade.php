@@ -14,6 +14,8 @@
     <link href="{{ asset('css/front/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" >
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
 </head>
 
 <body>

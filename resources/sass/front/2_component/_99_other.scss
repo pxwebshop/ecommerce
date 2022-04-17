@@ -98,7 +98,8 @@ other
 .c-formCheck {
     font-size: 1.5rem;
     color: $colorGrey2;
-    label, &__input {
+    label,
+    &__input {
         cursor: pointer;
     }
 }
@@ -154,7 +155,7 @@ other
         font-weight: 600;
         cursor: pointer;
     }
-    
+
     &__sort {
         i {
             margin-left: 40px;
@@ -212,6 +213,37 @@ other
     }
 }
 
+.c-plusMinus {
+    &__quantity {
+        margin: 20px 0;
+    }
+    &__counter {
+        display: flex;
+        max-width: 130px;
+        input {
+            height: 25px;
+            color: #292929;
+            outline: 0;
+            display: block;
+            border: none;
+            background-color: $colorBg;
+            text-align: center;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 600;
+            min-width: 20px;
+        }
+        i {
+            font-size: 2.5rem;
+            color: $colorGrey;
+        }
+    }
+    &__plus,
+    &__minus {
+        cursor: pointer;
+    }
+}
+
 .c-block1 {
     $root: &;
     display: flex;
@@ -220,7 +252,8 @@ other
         flex-wrap: wrap;
         margin: 0;
     }
-    &__left, &__right {
+    &__left,
+    &__right {
         width: 50%;
         padding-left: 24px;
         @include sp {
@@ -231,7 +264,8 @@ other
     &__title {
         margin-bottom: 15px;
     }
-    &__price, &__price2 {
+    &__price,
+    &__price2 {
         font-size: 1.8rem;
     }
     &__price1 {
@@ -244,7 +278,11 @@ other
     &__info {
         margin-top: 12px;
     }
-    &__color1, &__color2, &__color3, &__color4, &__color5{
+    &__color1,
+    &__color2,
+    &__color3,
+    &__color4,
+    &__color5 {
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -266,30 +304,11 @@ other
         background-color: $colorGrey2;
     }
     &__quantity {
-        margin: 20px 0;
-    }
-    &__counter {
         display: flex;
-        max-width: 130px;
-        input {
-            height: 25px;
-            color: #292929;
-            outline: 0;
-            display: block;
-            border: none;
-            background-color: $colorBg;
-            text-align: center;
-            width: 100%;
-            font-size: 18px;
-            font-weight: 600;
+        margin-top: 20px;
+        span {
+            margin-right: 10px;
         }
-        i {
-            font-size: 2.5rem;
-            color: $colorGrey;
-        }
-    }
-    &__plus, &__minus {
-        cursor: pointer;
     }
     &__share {
         margin-top: 25px;
@@ -312,7 +331,7 @@ other
             margin-left: 2px;
             &:hover {
                 background-color: $colorWhite;
-                color: $colorBlue1
+                color: $colorBlue1;
             }
         }
     }
@@ -445,9 +464,17 @@ other
     &__formName {
         display: flex;
         margin-left: -30px;
+        @include sp {
+            flex-wrap: wrap;
+            margin-left: 0;
+        }
         .c-group {
             width: 50%;
             padding-left: 30px;
+            @include sp {
+                width: 100%;
+                padding: 0;
+            }
         }
     }
     .c-group {
@@ -467,5 +494,180 @@ other
             font-weight: 600;
             color: $colorBlack;
         }
+    }
+}
+
+.c-block3 {
+    $root: &;
+    display: flex;
+    margin-left: -24px;
+    @include max-w(1024px) {
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    &__left {
+        width: 70%;
+        padding-left: 24px;
+        @include max-w(1024px) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    &__right {
+        width: 30%;
+        padding-left: 24px;
+        @include max-w(1024px) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    &__headList {
+        display: flex;
+        justify-content: space-between;
+        background-color: $colorWhite;
+        font-weight: 600;
+        color: $colorBlack;
+        border-bottom: 2px solid $colorBlue1;
+    }
+    &__contentList {
+        border-bottom: 1px solid $colorGrey;
+    }
+    &__product,
+    &__name,
+    &__unitPrice,
+    &__quantity,
+    &__total {
+        padding: 35px 20px;
+        color: $colorBlack;
+        font-size: 1.6rem;
+        // font-weight: 600;
+        text-align: center;
+        margin: auto 0;
+    }
+    &__product {
+        width: 30%;
+        display: flex;
+        .c-remove {
+            color: $colorGrey;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: auto 10px auto 0;
+            @include sp {
+                font-size: 2rem;
+                width: 40%;
+            }
+        }
+    }
+    &__name {
+        width: 30%;
+        @include sp {
+            display: none;
+        }
+    }
+    &__unitPrice {
+        width: 30%;
+        @include sp {
+            display: none;
+        }
+    }
+    &__quantity {
+        width: 25%;
+        @include sp {
+            width: 20%;
+            margin-right: 5px;
+            i {
+                font-size: 2rem;
+            }
+            input {
+                height: 20px;
+            }
+        }
+    }
+    &__total {
+        width: 35%;
+        @include sp {
+            width: 40%;
+        }
+    }
+    &__img {
+        width: 80px;
+        @include max-w(400px) {
+            width: 60px;
+        }
+    }
+    &__contentList {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @include max-w(576px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__input {
+        width: 70%;
+        height: 54px;
+        border-radius: 0;
+        @include max-w(423px) {
+            width: 60%;
+        }
+    }
+    &__apply {
+        width: 30%;
+        @include max-w(423px) {
+            width: 40%;
+        }
+    }
+    &__coupon {
+        width: 70%;
+        display: flex;
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__update {
+        width: 30%;
+        text-align: right;
+        @include max-w(576px) {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.c-cartTotal {
+    padding: 30px;
+    background-color: $colorWhite;
+    color: $colorBlack;
+    @include max-w(1024px) {
+        margin-top: 30px;
+    }
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    &__item {
+        font-size: 1.6rem;
+        // font-weight: 600;
+        padding: 10px 0 15px 0;
+        border-bottom: 1px solid $colorGrey;
+        span {
+            float: right;
+        }
+        &--size {
+            font-size: 1.8rem;
+            color: $colorBlack !important;
+            font-weight: 600;
+        }
+    }
+    &__btnCheckout {
+        margin-top: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
     }
 }

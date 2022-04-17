@@ -67,10 +67,10 @@
                 </form>
                 <div class="c-header__purchase">
                     <div class="c-header__wishlist">
-                        <i class="fa-solid fa-heart"></i>
+                        <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
                     </div>
                     <div class="c-header__cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <div class="c-header__price">
                         10.900.000 <sup>đ</sup>

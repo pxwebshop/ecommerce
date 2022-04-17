@@ -59,6 +59,22 @@ other
     </div>
 </div>
 
+<div class="c-dev-title2">c-plusMinus</div>
+<div class="l-container">
+    <div class="c-plusMinus">
+        <div class="c-plusMinus__counter">
+            <div class="c-plusMinus__minus">
+                <i class="fa-solid fa-circle-minus"></i>
+            </div>
+            <input type="text" value="1">
+            <div class="c-plusMinus__plus">
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="c-dev-title2">c-login</div>
 <div class="l-container">
     <div class="c-authen">
@@ -223,14 +239,14 @@ other
                 <a href="#" class="c-block1__color4"></a>
                 <a href="#" class="c-block1__color5"></a>
             </div>
-            <div class="c-block1__quantity">
-                <span class="c-text1 c-text1--bold">Quantities</span>
-                <div class="c-block1__counter">
-                    <div class="c-block1__minus">
+            <div class="c-plusMinus c-block1__quantity">
+                <span class="c-text1 c-text1--bold">Quantities: </span>
+                <div class="c-plusMinus__counter">
+                    <div class="c-plusMinus__minus">
                         <i class="fa-solid fa-circle-minus"></i>
                     </div>
                     <input type="text" value="1">
-                    <div class="c-block1__plus">
+                    <div class="c-plusMinus__plus">
                         <i class="fa-solid fa-circle-plus"></i>
                     </div>
                 </div>
@@ -272,15 +288,15 @@ other
         <div class="c-block2__content">
             <div class="c-block2__description">
                 <h3 class="c-title6 c-block2__title">Mô tả</h2>
-                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</p>
-                <ul class="c-text1">
-                    <li>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
-                    <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</li>
-                    <li>Various versions have evolved over the years, sometimes by accident sometimes on purpose.</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</li>
-                </ul>
+                    <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</p>
+                    <ul class="c-text1">
+                        <li>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
+                        <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
+                        <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</li>
+                        <li>Various versions have evolved over the years, sometimes by accident sometimes on purpose.</li>
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</li>
+                    </ul>
             </div>
             <div class="c-block2__review">
                 <h3 class="c-title6 c-block2__title">Đánh giá</h3>
@@ -435,7 +451,7 @@ other
                                 </div>
                             </div>
                             <div class="c-group">
-                                    <input type="text" class="c-input" placeholder="Nhập tiêu đề đánh giá">
+                                <input type="text" class="c-input" placeholder="Nhập tiêu đề đánh giá">
                             </div>
                             <div class="c-group">
                                 <textarea type="text" class="c-input" placeholder="Viết đánh giá"></textarea>
@@ -453,6 +469,154 @@ other
                     <li><span> Phone: </span>+1 (514) 321-4567</li>
                     <li><span> Email: </span>hello@ejon.com</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="c-dev-title2">c-block3</div>
+<div class="l-container">
+    <div class="c-block3">
+        <div class="c-block3__left">
+            <form class="c-block3__form">
+                <div class="c-block3__list">
+                    <div class="c-block3__head">
+                        <ul class="c-block3__headList">
+                            <li class="c-block3__product">Product</li>
+                            <li class="c-block3__name">Name</li>
+                            <li class="c-block3__unitPrice">Unit Price</li>
+                            <li class="c-block3__quantity">Quantity</li>
+                            <li class="c-block3__total">Total</li>
+                        </ul>
+                    </div>
+                    <div class="c-block3__content">
+                        <ul class="c-block3__contentList">
+                            <li class="c-block3__product">
+                                <a href="#" class="c-remove"><i class="fa-solid fa-circle-minus"></i></i></a>
+                                <a href="/product/detail">
+                                    <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                                </a>
+                            </li>
+                            <li class="c-block3__name">
+                                <a href="/product/detail">Bluetooth Headphone</a>
+                            </li>
+                            <li class="c-block3__unitPrice">
+                                <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-block3__quantity">
+                                <div class="c-plusMinus">
+                                    <div class="c-plusMinus__counter">
+                                        <div class="c-plusMinus__minus">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                        </div>
+                                        <input type="text" value="1">
+                                        <div class="c-plusMinus__plus">
+                                            <i class="fa-solid fa-circle-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-block3__total">
+                                <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
+                            </li>
+                        </ul>
+                        <ul class="c-block3__contentList">
+                            <li class="c-block3__product">
+                                <a href="#" class="c-remove"><i class="fa-solid fa-circle-minus"></i></i></a>
+                                <a href="/product/detail">
+                                    <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                                </a>
+                            </li>
+                            <li class="c-block3__name">
+                                <a href="/product/detail">Bluetooth Headphone</a>
+                            </li>
+                            <li class="c-block3__unitPrice">
+                                <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-block3__quantity">
+                                <div class="c-plusMinus">
+                                    <div class="c-plusMinus__counter">
+                                        <div class="c-plusMinus__minus">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                        </div>
+                                        <input type="text" value="1">
+                                        <div class="c-plusMinus__plus">
+                                            <i class="fa-solid fa-circle-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-block3__total">
+                                <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
+                            </li>
+                        </ul>
+                        <ul class="c-block3__contentList">
+                            <li class="c-block3__product">
+                                <a href="#" class="c-remove"><i class="fa-solid fa-circle-minus"></i></i></a>
+                                <a href="/product/detail">
+                                    <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                                </a>
+                            </li>
+                            <li class="c-block3__name">
+                                <a href="/product/detail">Bluetooth Headphone</a>
+                            </li>
+                            <li class="c-block3__unitPrice">
+                                <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-block3__quantity">
+                                <div class="c-plusMinus">
+                                    <div class="c-plusMinus__counter">
+                                        <div class="c-plusMinus__minus">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                        </div>
+                                        <input type="text" value="1">
+                                        <div class="c-plusMinus__plus">
+                                            <i class="fa-solid fa-circle-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c-block3__total">
+                                <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="c-block3__btn">
+                    <div class="c-block3__coupon">
+                        <input type="text" class="c-input c-block3__input" placeholder="Coupon Code">
+                        <button href="#" class="c-btn1 c-btn1--colorBlack c-btn1--noneBorderRadius c-block3__apply">
+                            Apply
+                        </button>
+                    </div>
+                    <div class="c-block3__update">
+                        <button href="#" class="c-btn1 c-btn1--colorBlack c-btn1--noneBorderRadius">
+                            Update Cart
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="c-block3__right">
+            <div class="c-cartTotal">
+                <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
+                <ul class="c-cartTotal__list">
+                    <li class="c-cartTotal__item">Subtotal
+                        <span>9.990.000 <sup>đ</sup></span>
+                    </li>
+                    <li class="c-cartTotal__item">Shipping
+                        <span>0 <sup>đ</sup></span>
+                    </li>
+                    <li class="c-cartTotal__item">Total
+                        <span>9.990.000 <sup>đ</sup></span>
+                    </li>
+                    <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
+                        <span>9.990.000 <sup>đ</sup></span>
+                    </li>
+                </ul>
+                <a href="/checkout" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">
+                    Process to Checkout
+                </a>
             </div>
         </div>
     </div>

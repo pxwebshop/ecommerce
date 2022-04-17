@@ -178,13 +178,13 @@ $(document).ready(function () {
 
 jQuery(function () {
     var n = 1;
-    $(".c-block1__counter input").val(n);
-    $(".c-block1__plus").on("click", function () {
-        $(".c-block1__counter input").val(++n);
+    $(".c-plusMinus__counter input").val(n);
+    $(".c-plusMinus__plus").on("click", function () {
+        $(".c-plusMinus__counter input").val(++n);
     });
-    $(".c-block1__minus").on("click", function () {
+    $(".c-plusMinus__minus").on("click", function () {
         if (n >= 1) {
-            $(".c-block1__counter input").val(--n);
+            $(".c-plusMinus__counter input").val(--n);
         }
     });
 

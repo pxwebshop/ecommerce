@@ -20,6 +20,8 @@ Route::group(['prefix' => 'product'], function () {
     Route::get('/', 'Front\ProductController@index');
     Route::get('/detail', 'Front\ProductController@detail');
 });
+Route::get('/cart', 'Front\CartController@index');
+Route::get('/wishlist', 'Front\WishlistController@index');
 
 Route::get('/component', function () {
     return view('component');
