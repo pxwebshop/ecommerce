@@ -180,11 +180,11 @@ jQuery(function () {
     var n = 1;
     $(".c-plusMinus__counter input").val(n);
     $(".c-plusMinus__plus").on("click", function () {
-        $(this).prev().val(++n);
+        $(this).prev("input").val(++n);
     });
     $(".c-plusMinus__minus").on("click", function () {
         if (n >= 1) {
-            $(this).next().val(--n);
+            $(this).next("input").val(--n);
         }
     });
 
