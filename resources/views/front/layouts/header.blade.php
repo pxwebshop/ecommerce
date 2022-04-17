@@ -105,7 +105,7 @@
                 <li class="c-header__menuItem"><a href="#" class="c-header__link">Gear<i class="fa-solid fa-angle-down"></i></i></a></li>
                 <li class="c-header__menuItem"><a href="#" class="c-header__link">Monitor<i class="fa-solid fa-angle-down"></i></i></a></li>
                 <li class="c-header__menuItem"><a href="#" class="c-header__link">Network<i class="fa-solid fa-angle-down"></i></i></a></li>
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Contact</a></li>
+                <li class="c-header__menuItem"><a href="/contact" class="c-header__link">Contact</a></li>
             </ul>
             <div class="c-header__phone">
                 <span>Hotline: <a href="tel:0123456789">0123456789</a></span>

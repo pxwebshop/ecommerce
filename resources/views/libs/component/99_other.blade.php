@@ -621,3 +621,178 @@ other
         </div>
     </div>
 </div>
+
+
+<div class="c-dev-title2">c-block4</div>
+<div class="l-container">
+    <div class="c-block4">
+        <div class="c-block4__title">
+            <h2 class="c-title5">My Wishlist</h2>
+        </div>
+        <ul class="c-block4__list">
+            <li class="c-block4__product">
+                <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
+                <a href="/product/detail">
+                    <figure class="c-block4__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                </a>
+            </li>
+            <li class="c-block4__name">
+                <a href="/product/detail">Bluetooth Headphone</a>
+            </li>
+            <li class="c-block4__unitPrice">
+                <span class="c-block4__productPrice">1.990.000 <sup>đ</sup></span>
+            </li>
+            <li class="c-block4__stock">
+                <span class="c-block4__stockTxt">In Stock</span>
+            </li>
+            <li class="c-block4__btn">
+                <a href="#" class="c-btn1">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </a>
+            </li>
+        </ul>
+        <ul class="c-block4__list">
+            <li class="c-block4__product">
+                <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
+                <a href="/product/detail">
+                    <figure class="c-block4__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                </a>
+            </li>
+            <li class="c-block4__name">
+                <a href="/product/detail">Bluetooth Headphone</a>
+            </li>
+            <li class="c-block4__unitPrice">
+                <span class="c-block4__productPrice">1.990.000 <sup>đ</sup></span>
+            </li>
+            <li class="c-block4__stock">
+                <span class="c-block4__stockTxt">In Stock</span>
+            </li>
+            <li class="c-block4__btn">
+                <a href="#" class="c-btn1">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </a>
+            </li>
+        </ul>
+        <ul class="c-block4__list">
+            <li class="c-block4__product">
+                <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
+                <a href="/product/detail">
+                    <figure class="c-block4__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
+                </a>
+            </li>
+            <li class="c-block4__name">
+                <a href="/product/detail">Bluetooth Headphone</a>
+            </li>
+            <li class="c-block4__unitPrice">
+                <span class="c-block4__productPrice">1.990.000 <sup>đ</sup></span>
+            </li>
+            <li class="c-block4__stock">
+                <span class="c-block4__stockTxt">In Stock</span>
+            </li>
+            <li class="c-block4__btn">
+                <a href="#" class="c-btn1">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="c-dev-title2">c-block4</div>
+<div class="l-container">
+    <div class="c-block5">
+        <form action="" class="c-block5__form">
+            <div class="c-block5__area">
+                <div class="c-block5__left">
+                    <div class="c-block5__actionLogin">
+
+                    </div>
+                    <div class="c-block5__actionCoupon">
+
+                    </div>
+                    <div class="c-block5__content">
+                        <h3 class="c-title4 c-block5__title">Chi Tiết Thanh Toán</h3>
+                        <div class="c-block5__name">
+                            <div class="c-group">
+                                <label for="" class="c-text1">Tên*</label><br>
+                                <input type="text" class="c-input">
+                            </div>
+                            <div class="c-group">
+                                <label for="" class="c-text1">Họ*</label><br>
+                                <input type="text" class="c-input">
+                            </div>
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Đơn Vị</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Email*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Số điện thoại*</label><br>
+                            <input type="number" class="c-input"></input>
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Quốc gia*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Địa chỉ*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Tỉnh / Thành Phố*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Quận / Huyện*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Postcode / Zip*</label><br>
+                            <input type="text" class="c-input">
+                        </div>
+                        <div class="c-group">
+                            <label for="" class="c-text1">Ghi chú*</label><br>
+                            <textarea type="text" class="c-input" placeholder="Ghi chú đơn hàng"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-block5__right">
+                    <div class="c-cartTotal">
+                        <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
+                        <ul class="c-cartTotal__list">
+                            <li class="c-cartTotal__item">Subtotal
+                                <span>9.990.000 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-cartTotal__item">Shipping
+                                <span>0 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-cartTotal__item">Total
+                                <span>9.990.000 <sup>đ</sup></span>
+                            </li>
+                            <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
+                                <span>9.990.000 <sup>đ</sup></span>
+                            </li>
+                        </ul>
+                        <a href="/checkout" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">
+                            Process to Cart
+                        </a>
+                    </div>
+                    <div class="c-block5__payment">
+                        <h3 class="c-title4 c-cartTotal__title">Phương thức thanh toán</h3>
+                        <a href="#" class="c-btn1">
+                            Đặt hàng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

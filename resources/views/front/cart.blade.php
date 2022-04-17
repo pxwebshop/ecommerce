@@ -66,7 +66,7 @@
                                 </ul>
                                 <ul class="c-block3__contentList">
                                     <li class="c-block3__product">
-                                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></i></i></a>
+                                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
                                         <a href="/product/detail">
                                             <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
                                         </a>

@@ -22,6 +22,8 @@ Route::group(['prefix' => 'product'], function () {
 });
 Route::get('/cart', 'Front\CartController@index');
 Route::get('/wishlist', 'Front\WishlistController@index');
+Route::get('/checkout', 'Front\CheckoutController@index');
+Route::get('/contact', 'Front\ContactController@index');
 
 Route::get('/component', function () {
     return view('component');
