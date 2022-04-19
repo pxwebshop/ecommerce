@@ -25,7 +25,7 @@
                 <h2 class="c-title4">Register</h2>
                 <form action="" class="c-authen__form">
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Name">
+                        <input type="text" class="c-input" placeholder="UserName">
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" class="c-input" placeholder="Email">

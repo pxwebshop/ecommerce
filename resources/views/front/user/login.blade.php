@@ -22,16 +22,17 @@
     <section class="p-login__sc2">
         <div class="l-container">
             <div class="c-authen">
-                <h2 class="c-title4">Login</h2>
-                <form action="" class="c-authen__form">
+                <h2 class="c-title4">{{ trans('login.title') }}</h2>
+                <form action="" method="post" class="c-authen__form">
+                    @csrf
+                    <!-- <div class="c-group c-authen__group">
+                        <input type="text" name="username" class="c-input" placeholder="Username Or Email">
+                    </div> -->
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Username">
+                        <input type="text" name="email" class="c-input" placeholder="Email">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Email or Phone">
-                    </div>
-                    <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Password">
+                        <input type="text" name="password" class="c-input" placeholder="Password">
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">

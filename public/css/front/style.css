@@ -214,6 +214,16 @@ for develop
   font-size: 8px;
 }
 
+.toast {
+  font-family: Lato();
+  opacity: 1 !important;
+}
+
+.toast-title, .toast-message {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
 @media screen and (min-width: 768px) {
   .sp-only {
     display: none !important;

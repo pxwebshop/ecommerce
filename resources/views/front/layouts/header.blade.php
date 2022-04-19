@@ -10,9 +10,9 @@
                         <span class="c-header__currentLanguage">English</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <ul class="c-header__languageList">
-                            <li class="c-header__languageItem">English</li>
-                            <li class="c-header__languageItem">Vietnamese</li>
-                            <li class="c-header__languageItem">Laos</li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['en']) !!}">English</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['vi']) !!}">Vietnam</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Laos</a></li>
                             <li class="c-header__languageItem">Portugal</li>
                             <li class="c-header__languageItem">Chinese</li>
                             <li class="c-header__languageItem">Japanese</li>

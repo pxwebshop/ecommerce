@@ -94,7 +94,7 @@ $(document).ready(function () {
         }
     });
     $(".c-header__language").on("click", function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         var submenu = $(this).children(".c-header__languageList");
         if ($(submenu).is(":hidden")) {
             $(submenu).slideDown(200);
