@@ -28,12 +28,4 @@ class LoginRequest extends FormRequest
             'password' => 'required|min:8|max:50',
         ];
     }
-
-    // public function message()
-    // {
-    //     return [
-    //         'email.required' => 'Email',
-    //         'password' => 'required|min:8|max:50',
-    //     ];
-    // }
 }
