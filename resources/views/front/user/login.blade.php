@@ -32,7 +32,7 @@
                         @enderror
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
+                        <input type="password" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
                         @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
