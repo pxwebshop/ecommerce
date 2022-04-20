@@ -8,6 +8,7 @@ use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
+use App\Http\Requests\LoginRequest;
 
 class UserController extends Controller
 {
@@ -20,25 +21,19 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        // $password = \Hash::make('yourpassword');
-        // var_dump($password);die;
         return view('front/user/login');
     }
 
-    public function postLogin(Request $request)
+    public function postLogin(LoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:8',
-        ]);
-
+        $credentials = $request->only("email", "password");
         if (Auth::attempt($credentials)) {
-            Toastr::success('Bạn đã đăng nhập thành công','Success');
+            Toastr::success(trans('login.success'),'Success');
 			return redirect()->route('home');
         }
 
         return back()->withErrors([
-            Toastr::error('Bạn đã đăng nhập thất bại','Error'),
+            Toastr::error(trans('login.error'),'Error'),
         ])->withInput();
     }
 

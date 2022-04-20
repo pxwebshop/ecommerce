@@ -23,5 +23,7 @@ return [
         'label-new-account' => "I don't have an account yet",
         'register-account' => 'Register now'
     ],
-    'breadcrumb' => 'login'
+    'breadcrumb' => 'login',
+    'error' => 'You have failed to login',
+    'success' => 'Successful login',
 ];

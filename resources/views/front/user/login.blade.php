@@ -27,9 +27,15 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('login.form.email') }}">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
+                        @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">
