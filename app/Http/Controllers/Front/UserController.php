@@ -25,12 +25,6 @@ class UserController extends Controller
         return view('front/user/login');
     }
 
-    //muốn thay trường username login thi them cai nay vo
-    // public function username()
-    // {
-    //     return 'username';
-    // }
-    //gan cho anh cais toast thông báo nha
     public function postLogin(Request $request)
     {
         $credentials = $request->validate([
@@ -88,5 +82,4 @@ class UserController extends Controller
 
         return redirect('/');
     }
-    
 }
