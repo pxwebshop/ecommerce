@@ -9,6 +9,7 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\ResgisterRequest;
 
 class UserController extends Controller
 {
@@ -16,11 +17,14 @@ class UserController extends Controller
 
     public function __construct(User $user)
     {
-        $this->user = $user;    
+        $this->user = $user;
     }
 
     public function login(Request $request)
     {
+        if ( Auth::check() )   {
+            return redirect()->route('home');
+        }
         return view('front/user/login');
     }
 
@@ -28,12 +32,12 @@ class UserController extends Controller
     {
         $credentials = $request->only("email", "password");
         if (Auth::attempt($credentials)) {
-            Toastr::success(trans('login.success'),'Success');
-			return redirect()->route('home');
+            Toastr::success(trans('login.success'));
+            return redirect()->route('home');
         }
 
         return back()->withErrors([
-            Toastr::error(trans('login.error'),'Error'),
+            Toastr::error(trans('login.error')),
         ])->withInput();
     }
 
@@ -42,39 +46,25 @@ class UserController extends Controller
         return view('front/user/register');
     }
 
-    public function postRegister(Request $request)
+    public function postRegister(ResgisterRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required'
-        ]);
- 
-        $user = User::create([
-            'name' => trim($request->input('name')),
-            'email' => strtolower($request->input('email')),
-            'password' => bcrypt($request->input('password')),
-        ]);
-        Toastr::success('Bạn đã đăng ký tài khoản thành công','Success');
-       
-        return redirect()->route('login');
+        try {
+            $input = $request->all();
+            $input['password'] = bcrypt($input['password']);
+            User::create($input);
 
-        // $input = $request->all();
-        // $input['password'] = bcrypt($input['password']);
-        // $user = User::create($input);
-        // Toastr::success('Bạn đã đăng ký tài khoản thành công','Success');
-       
-        // return redirect()->route('login');
+            Toastr::success(trans('register.success'));
+    
+            return redirect()->route('login');
+        } catch (\Exception $e) {
+            Toastr::error(trans('register.error'));
+            return redirect()->route('register');
+        }
     }
 
     public function logout(Request $request)
     {
         Auth::logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
         return redirect('/');
     }
 }

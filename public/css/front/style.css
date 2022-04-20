@@ -316,6 +316,13 @@ body.is-fixed {
   }
 }
 
+.c-alert {
+  padding: 15px;
+  font-size: 1.5rem;
+  color: #ed1d24;
+  font-size: Lato();
+}
+
 /*------------------------------------------------------------
 side
 ------------------------------------------------------------*/
@@ -489,11 +496,10 @@ header
   display: none;
   position: absolute;
   top: 36px;
-  height: 200px;
+  height: auto;
   background-color: #fff;
   color: #656565;
   box-shadow: 0 0 1px #292929;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 .c-header__languageItem {

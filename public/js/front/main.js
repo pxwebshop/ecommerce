@@ -223,4 +223,13 @@ jQuery(function () {
             $(this).addClass("c-block2__active");
         });
     }
+
+    //show/hide pass
+    $('#check').click(function(){
+        if('password' == $('.c-input__password').attr('type')){
+             $('.c-input__password').prop('type', 'text');
+        }else{
+             $('.c-input__password').prop('type', 'password');
+        }
+    });
 });

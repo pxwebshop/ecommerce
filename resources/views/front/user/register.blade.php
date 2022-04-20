@@ -32,7 +32,13 @@
                         <input type="text" name="email" class="c-input" placeholder="Email">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" name="password" class="c-input" placeholder="Password">
+                        <input type="text" name="phone" class="c-input" placeholder="Phone">
+                        @error('phone')
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="c-group c-authen__group">
+                        <input type="password" name="password" class="c-input c-input__password" placeholder="Password">
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">

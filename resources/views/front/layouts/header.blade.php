@@ -21,11 +21,7 @@
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['en']) !!}">English</a></li>
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['vi']) !!}">Vietnam</a></li>
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Laos</a></li>
-                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Portugal</a></li>
-                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Chinese</a></li>
-                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Japanese</a></li>
                         </ul>
-                        
                     </div>
                     <div class="c-header__authen">
                         @auth 
@@ -34,11 +30,11 @@
                             <ul class="c-header__accountList">
                                 <li class="c-header__accountItem"><a href="#">My Account</a></li>
                                 <li class="c-header__accountItem"><a href="#">Change Password</a></li>
-                                <li class="c-header__accountItem"><a href="/logout">Logout</a></li>
+                                <li class="c-header__accountItem"><a href="/user/logout">Logout</a></li>
                             </ul>
                         @else
                             <i class="fa-solid fa-lock"></i>
-                            <a href="/login">Login</a> Or <a href="/user/register">Resgister</a>
+                            <a href="/login">Login</a> Or <a href="/register">Resgister</a>
                         @endif
                     </div>
                 </div>

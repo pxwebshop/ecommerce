@@ -19,7 +19,7 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('/', 'Front\HomeController@index')->name("home");
 
     // account
-    Route::get('/register', 'Front\UserController@register');
+    Route::get('/register', 'Front\UserController@register')->name('register');
     Route::post('/register', 'Front\UserController@postRegister');
     Route::get('/login', 'Front\UserController@login')->name("login");
     Route::post('/login', 'Front\UserController@postLogin');

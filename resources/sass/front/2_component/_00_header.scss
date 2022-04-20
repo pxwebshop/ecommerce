@@ -56,11 +56,11 @@ header
         display: none;
         position: absolute;
         top: 36px;
-        height: 200px;
+        height: auto;
         background-color: $colorWhite;
         color: $colorGrey2;
         box-shadow: 0 0 1px $colorBlack;
-        overflow-y: scroll;
+        // overflow-y: scroll;
         overflow-x: hidden;
     }
     &__languageItem {

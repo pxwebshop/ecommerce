@@ -28,13 +28,13 @@
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('login.form.email') }}">
                         @error('email')
-                            <div class="alert alert-danger">{{ $message }}</div>
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
                         @enderror
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="password" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
+                        <input type="password" name="password" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
                         @error('password')
-                            <div class="alert alert-danger">{{ $message }}</div>
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
                         @enderror
                     </div>
                     <div class="c-authen__option">
