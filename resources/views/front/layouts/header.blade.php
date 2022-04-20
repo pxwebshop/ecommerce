@@ -7,7 +7,15 @@
                 </div>
                 <div class="c-header__option">
                     <div class="c-header__language">
-                        <span class="c-header__currentLanguage">English</span>
+                        <span class="c-header__currentLanguage">
+                            @if ( Config::get('app.locale') == 'en')
+                                {{ 'English' }}
+                            @elseif ( Config::get('app.locale') == 'vi' )
+                                {{ 'Vietnam' }}
+                            @elseif ( Config::get('app.locale') == 'lo' )
+                                {{ 'Laos' }}
+                            @endif
+                        </span>
                         <i class="fa-solid fa-angle-down"></i>
                         <ul class="c-header__languageList">
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['en']) !!}">English</a></li>
@@ -17,6 +25,7 @@
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Chinese</a></li>
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Japanese</a></li>
                         </ul>
+                        
                     </div>
                     <div class="c-header__authen">
                         @auth 
