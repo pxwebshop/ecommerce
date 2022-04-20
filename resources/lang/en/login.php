@@ -22,5 +22,6 @@ return [
         'button' => 'Login',
         'label-new-account' => "I don't have an account yet",
         'register-account' => 'Register now'
-    ]
+    ],
+    'breadcrumb' => 'login'
 ];

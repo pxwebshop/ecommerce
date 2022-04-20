@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Login
+                    {{ trans('login.title') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Đăng nhập</a>
+                    <a href="/" class="c-breadcrumb1__link">{{ trans('common.breadcrumb') }}</a>
+                    <span class="c-breadcrumb1__current">/ {{ trans('login.breadcrumb') }}</a>
                 </div>
             </div>
         </div>

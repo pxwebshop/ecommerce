@@ -13,15 +13,5 @@ return [
     |
     */
 
-    'title' => 'Đăng nhập',
-    'form' => [
-        'email' => 'Vui lòng nhập địa chỉ email',
-        'password' => 'Vui lòng nhập mật khẩu',
-        'show-password' => 'Hiển thị mật khẩu',
-        'lost-password' => 'Quên mật khẩu',
-        'button' => 'Đăng nhập',
-        'label-new-account' => 'Tôi chưa tài khoản',
-        'register-account' => 'Đăng ký'
-    ],
-    'breadcrumb' => 'đăng nhập'
+    'breadcrumb' => 'Trang chủ',
 ];

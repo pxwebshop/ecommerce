@@ -17,5 +17,11 @@ return [
     'form' => [
         'email' => 'ກະລຸນາໃສ່ອີເມວ',
         'password' => 'ກະລຸນາໃສ່ລະຫັດຜ່ານ',
-    ]
+        'show-password' => 'ສະແດງລະຫັດຜ່ານຂອງທ່ານ',
+        'lost-password' => 'ລືມລະຫັດຜ່ານ',
+        'button' => 'Login',
+        'label-new-account' => "ຂ້ອຍຍັງບໍ່ມີບັນຊີເທື່ອ",
+        'register-account' => 'ລົງ​ທະ​ບຽນ​ດຽວ​ນີ້'
+    ],
+    'breadcrumb' => 'ເຂົ້າ​ສູ່​ລະ​ບົບ'
 ];
