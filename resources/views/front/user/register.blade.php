@@ -23,18 +23,16 @@
         <div class="l-container">
             <div class="c-authen">
                 <h2 class="c-title4">Register</h2>
-                <form action="" class="c-authen__form">
+                <form action="" method="post" class="c-authen__form">
+                    @csrf
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="UserName">
+                        <input type="text" name="name" class="c-input" placeholder="Name">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Email">
+                        <input type="text" name="email" class="c-input" placeholder="Email">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Phone">
-                    </div>
-                    <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Password">
+                        <input type="text" name="password" class="c-input" placeholder="Password">
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">

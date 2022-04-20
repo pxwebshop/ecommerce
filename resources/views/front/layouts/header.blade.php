@@ -13,14 +13,24 @@
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['en']) !!}">English</a></li>
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['vi']) !!}">Vietnam</a></li>
                             <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Laos</a></li>
-                            <li class="c-header__languageItem">Portugal</li>
-                            <li class="c-header__languageItem">Chinese</li>
-                            <li class="c-header__languageItem">Japanese</li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Portugal</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Chinese</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">Japanese</a></li>
                         </ul>
                     </div>
                     <div class="c-header__authen">
-                        <i class="fa-solid fa-lock"></i>
-                        <a href="/login">Login</a> Or <a href="/register">Resgister</a>
+                        @auth 
+                            <span href="/auth/login">My Account ({{Auth::user()->name}})</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                            <ul class="c-header__accountList">
+                                <li class="c-header__accountItem"><a href="#">My Account</a></li>
+                                <li class="c-header__accountItem"><a href="#">Change Password</a></li>
+                                <li class="c-header__accountItem"><a href="/auth/logout">Logout</a></li>
+                            </ul>
+                        @else
+                            <i class="fa-solid fa-lock"></i>
+                            <a href="/auth/login">Login</a> Or <a href="/auth/register">Resgister</a>
+                        @endif
                     </div>
                 </div>
             </div>

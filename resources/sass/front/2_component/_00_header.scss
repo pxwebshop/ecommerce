@@ -61,15 +61,21 @@ header
         color: $colorGrey2;
         box-shadow: 0 0 1px $colorBlack;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     &__languageItem {
-        padding: 10px 40px 10px 20px;
-        cursor: pointer;
         color: $colorBlack;
         border-bottom: 1px solid $colorGrey;
-        &:hover {
-            background-color: $colorBlue1;
-            color: $colorWhite;
+        a {
+            display: inline-block;
+            padding: 10px 40px 10px 20px;
+            width: 100%;
+            color: $colorBlack;
+            &:hover {
+                background-color: $colorBlue1;
+                color: $colorWhite !important;
+                opacity: 1;
+            }
         }
     }
     &__authen {
@@ -83,6 +89,39 @@ header
                 color: $colorRed1;
             }
         }
+        p {
+            cursor: pointer;
+        }
+        span {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        
+    }
+    &__accountList {
+        display: none;
+        position: absolute;
+        top: 36px;
+        height: auto;
+        background-color: $colorWhite;
+        color: $colorGrey2;
+        box-shadow: 0 0 1px $colorBlack;
+        overflow: hidden;
+    }
+    &__accountItem {
+        border-bottom: 1px solid $colorGrey;
+        a {
+            display: inline-block;
+            padding: 10px 40px 10px 20px;
+            width: 100%;
+            color: $colorBlack !important;
+            &:hover {
+                background-color: $colorBlue1;
+                color: $colorWhite !important;
+                opacity: 1;
+            }
+        }
+        
     }
     // end: heading
 

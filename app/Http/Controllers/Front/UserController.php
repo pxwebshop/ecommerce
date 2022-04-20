@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
@@ -33,8 +34,8 @@ class UserController extends Controller
     public function postLogin(Request $request)
     {
         $credentials = $request->validate([
-            'username' => ['required'],
-            'password' => ['required'],
+            'email' => 'required|email',
+            'password' => 'required|min:8',
         ]);
 
         if (Auth::attempt($credentials)) {
@@ -43,14 +44,49 @@ class UserController extends Controller
         }
 
         return back()->withErrors([
-            Toastr::error('Bạn nhập sai tên tài khoản hoặc mật khẩu','Đăng nhập thất bại'),
-            //'error' => 'Bạn nhập sai tên tài khoản hoặc mật khẩu',
-        ]);
+            Toastr::error('Bạn đã đăng nhập thất bại','Error'),
+        ])->withInput();
     }
 
     public function register(Request $request)
     {
         return view('front/user/register');
+    }
+
+    public function postRegister(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+ 
+        $user = User::create([
+            'name' => trim($request->input('name')),
+            'email' => strtolower($request->input('email')),
+            'password' => bcrypt($request->input('password')),
+        ]);
+        Toastr::success('Bạn đã đăng ký tài khoản thành công','Success');
+       
+        return redirect()->route('login');
+
+        // $input = $request->all();
+        // $input['password'] = bcrypt($input['password']);
+        // $user = User::create($input);
+        // Toastr::success('Bạn đã đăng ký tài khoản thành công','Success');
+       
+        // return redirect()->route('login');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
     
 }

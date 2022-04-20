@@ -21,11 +21,17 @@ Route::group(['middleware' => 'locale'], function () {
         ->name('user.change-language');
 
     Route::get('/', 'Front\HomeController@index')->name("home");
-    Route::get('/login', 'Front\UserController@login');
-    Route::post('/login', 'Front\UserController@postLogin');
 
+    Route::group(['prefix' => 'auth'], function () {
+        Route::get('/register', 'Front\UserController@register');
+        Route::post('/register', 'Front\UserController@postRegister');
+        Route::get('/login', 'Front\UserController@login')->name("login");
+        Route::post('/login', 'Front\UserController@postLogin');
+        Route::get('/logout', 'Front\UserController@logout');
+    });
 
-    Route::get('/register', 'Front\UserController@register');
+    
+
     Route::group(['prefix' => 'product'], function () {
         Route::get('/', 'Front\ProductController@index');
         Route::get('/detail', 'Front\ProductController@detail');

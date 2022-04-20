@@ -29,15 +29,15 @@
                         <input type="text" name="username" class="c-input" placeholder="Username Or Email">
                     </div> -->
                     <div class="c-group c-authen__group">
-                        <input type="text" name="email" class="c-input" placeholder="Email">
+                        <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="Email">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" name="password" class="c-input" placeholder="Password">
+                        <input type="text" name="password" class="c-input" value="{{ old('password') }}" placeholder="Password">
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">
                             <input type="checkbox" class="c-formCheck__input" id="check">
-                            <label for="check">Show password?</label>
+                            <label for="check" >Show password?</label>
                         </div>
                         <div class="c-lostPassword">
                             <a href="#">Forgot your password?</a>

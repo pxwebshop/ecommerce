@@ -494,16 +494,22 @@ header
   color: #656565;
   box-shadow: 0 0 1px #292929;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .c-header__languageItem {
-  padding: 10px 40px 10px 20px;
-  cursor: pointer;
   color: #292929;
   border-bottom: 1px solid #ccc;
 }
-.c-header__languageItem:hover {
+.c-header__languageItem a {
+  display: inline-block;
+  padding: 10px 40px 10px 20px;
+  width: 100%;
+  color: #292929;
+}
+.c-header__languageItem a:hover {
   background-color: #113366;
-  color: #fff;
+  color: #fff !important;
+  opacity: 1;
 }
 .c-header__authen {
   padding-left: 7px;
@@ -516,6 +522,37 @@ header
 }
 .c-header__authen a:hover {
   color: #ed1d24;
+}
+.c-header__authen p {
+  cursor: pointer;
+}
+.c-header__authen span {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.c-header__accountList {
+  display: none;
+  position: absolute;
+  top: 36px;
+  height: auto;
+  background-color: #fff;
+  color: #656565;
+  box-shadow: 0 0 1px #292929;
+  overflow: hidden;
+}
+.c-header__accountItem {
+  border-bottom: 1px solid #ccc;
+}
+.c-header__accountItem a {
+  display: inline-block;
+  padding: 10px 40px 10px 20px;
+  width: 100%;
+  color: #292929 !important;
+}
+.c-header__accountItem a:hover {
+  background-color: #113366;
+  color: #fff !important;
+  opacity: 1;
 }
 .c-header__middle {
   background-color: #15407f;
