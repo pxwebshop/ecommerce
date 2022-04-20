@@ -29,16 +29,16 @@
                     </div>
                     <div class="c-header__authen">
                         @auth 
-                            <span href="/auth/login">My Account ({{Auth::user()->name}})</span>
+                            <span href="/login">My Account ({{Auth::user()->name}})</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__accountList">
                                 <li class="c-header__accountItem"><a href="#">My Account</a></li>
                                 <li class="c-header__accountItem"><a href="#">Change Password</a></li>
-                                <li class="c-header__accountItem"><a href="/auth/logout">Logout</a></li>
+                                <li class="c-header__accountItem"><a href="/logout">Logout</a></li>
                             </ul>
                         @else
                             <i class="fa-solid fa-lock"></i>
-                            <a href="/auth/login">Login</a> Or <a href="/auth/register">Resgister</a>
+                            <a href="/login">Login</a> Or <a href="/user/register">Resgister</a>
                         @endif
                     </div>
                 </div>

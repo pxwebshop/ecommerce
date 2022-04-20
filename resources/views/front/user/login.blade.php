@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Login
+                    {{ trans('login.title') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Đăng nhập</a>
+                    <a href="/" class="c-breadcrumb1__link">{{ trans('common.breadcrumb') }}</a>
+                    <span class="c-breadcrumb1__current">/ {{ trans('login.breadcrumb') }}</a>
                 </div>
             </div>
         </div>
@@ -27,9 +27,15 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('login.form.email') }}">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
+                        <input type="password" name="password" class="c-input" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
+                        @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">

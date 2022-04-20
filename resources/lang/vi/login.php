@@ -22,5 +22,8 @@ return [
         'button' => 'Đăng nhập',
         'label-new-account' => 'Tôi chưa tài khoản',
         'register-account' => 'Đăng ký'
-    ]
+    ],
+    'breadcrumb' => 'đăng nhập',
+    'error' => 'Bạn đã đăng nhập thất bại',
+    'success' => 'Bạn đã đăng nhập thành công',
 ];
