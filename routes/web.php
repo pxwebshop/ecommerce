@@ -26,6 +26,8 @@ Route::group(['middleware' => 'locale'], function () {
     
     Route::group(['prefix' => 'user'], function () {
         Route::get('/logout', 'Front\UserController@logout');
+        Route::get('/change-password', 'Front\UserController@changePassword');
+        Route::post('/change-password', 'Front\UserController@changePasswordPost');
     });
 
     Route::group(['prefix' => 'product'], function () {

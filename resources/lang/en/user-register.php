@@ -13,17 +13,18 @@ return [
     |
     */
 
-    'title' => 'Login',
+    'title' => 'Register',
     'form' => [
+        'name' => 'Please enter name',
         'email' => 'Please enter email',
+        'phone' => 'Please enter phone',
         'password' => 'Please enter password',
         'show-password' => 'Show your password',
-        'lost-password' => 'Forgot password',
-        'button' => 'Login',
-        'label-new-account' => "I don't have an account yet",
-        'register-account' => 'Register now'
+        'button' => 'Register',
+        'label-already-account' => "Already have an account?",
+        'login-account' => 'Login now!'
     ],
-    'breadcrumb' => 'login',
+    'breadcrumb' => 'Register',
     'error' => 'You have failed to register',
     'success' => 'Successful register',
 ];
