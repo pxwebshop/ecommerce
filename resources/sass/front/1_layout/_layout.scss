@@ -46,8 +46,8 @@ body {
 
 
 .c-alert {
-    padding: 7px 0;
-    font-size: 1.5rem;
+    padding: 3px 0 0 0;
+    font-size: 1.4rem;
     color: $colorRed1;
-    font-family: Lato();
+    @include Lato();
 }

@@ -317,10 +317,10 @@ body.is-fixed {
 }
 
 .c-alert {
-  padding: 7px 0;
-  font-size: 1.5rem;
+  padding: 3px 0 0 0;
+  font-size: 1.4rem;
   color: #ed1d24;
-  font-family: Lato();
+  font-family: "Lato", sans-serif;
 }
 
 /*------------------------------------------------------------
