@@ -29,7 +29,7 @@
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__accountList">
                                 <li class="c-header__accountItem"><a href="#">{{trans('header.heading.my-acc')}}</a></li>
-                                <li class="c-header__accountItem"><a href="#">{{trans('header.heading.change-pass')}}</a></li>
+                                <li class="c-header__accountItem"><a href="/user/change-password">{{trans('header.heading.change-pass')}}</a></li>
                                 <li class="c-header__accountItem"><a href="/user/logout">{{trans('header.heading.logout')}}</a></li>
                             </ul>
                         @else
@@ -57,7 +57,7 @@
                             <span class="c-header__currentCat">{{trans('header.middle.all-cate')}}</span>
                             <i class="fa-solid fa-angle-down icon-down"></i></i>
                             <ul class="c-header__catList">
-                                <li data-value="1" class="c-header__catItem">All Category</li>
+                                <li data-value="1" class="c-header__catItem">{{trans('header.middle.all-cate')}}</li>
                                 <li data-value="2" class="c-header__catItem">Gaming</li>
                                 <li class="c-header__catItem">Macbook</li>
                                 <li class="c-header__catItem">Văn phòng</li>
@@ -173,7 +173,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="c-header__nav__tel">
-                <span class="c-header__phone"><span>{{trans('header.navbar.hotline')}}: </span><a href="tel:1234567890">0123456789</a></span>
+                <span class="c-header__phone"><span>{{trans('header.navbar.hotline')}}: </span><a href="tel:1234567890">020 28266650</a></span>
             </div>
         </div>
     </div>

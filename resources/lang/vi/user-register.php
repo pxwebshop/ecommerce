@@ -13,17 +13,18 @@ return [
     |
     */
 
-    'title' => 'Login',
+    'title' => 'Đăng ký',
     'form' => [
-        'email' => 'Please enter email',
-        'password' => 'Please enter password',
-        'show-password' => 'Show your password',
-        'lost-password' => 'Forgot password',
-        'button' => 'Login',
-        'label-new-account' => "I don't have an account yet",
-        'register-account' => 'Register now'
+        'name' => 'Nhập tên',
+        'email' => 'Nhập email',
+        'phone' => 'Nhập số điện thoại',
+        'password' => 'Nhập mật khẩu',
+        'show-password' => 'Hiển thị mật khẩu',
+        'button' => 'Đăng ký',
+        'label-already-account' => "Bạn đã có tài khoản?",
+        'login-account' => 'Đăng nhập ngay!'
     ],
-    'breadcrumb' => 'login',
-    'error' => 'Đăng ký tài khoản thất bại',
-    'success' => 'Đăng ký tài khoản thành công',
+    'breadcrumb' => 'Đăng ký',
+    'error' => 'Đăng ký thất bại',
+    'success' => 'Đăng ký thành công',
 ];
