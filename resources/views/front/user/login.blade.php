@@ -11,10 +11,7 @@
                     {{ trans('login.title') }}
                     </h2>
                 </div>
-                <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">{{ trans('common.breadcrumb') }}</a>
-                    <span class="c-breadcrumb1__current">/ {{ trans('login.breadcrumb') }}</a>
-                </div>
+                {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
             </div>
         </div>
     </section>

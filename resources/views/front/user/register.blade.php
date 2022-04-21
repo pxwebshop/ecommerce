@@ -11,10 +11,7 @@
                         {{trans('user-register.breadcrumb')}}
                     </h2>
                 </div>
-                <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">{{trans('common.breadcrumb')}}</a>
-                    <span class="c-breadcrumb1__current">/ {{trans('user-register.breadcrumb')}}</a>
-                </div>
+                {{ Breadcrumbs::render(__('breadcrumbs.register')) }}</a>
             </div>
         </div>
     </section>
