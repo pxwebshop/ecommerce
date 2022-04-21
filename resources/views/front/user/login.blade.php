@@ -66,25 +66,25 @@
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-truck"></i>
-                            <p class="c-list4__txt">Free Shipping Worldwide</p>
+                            <p class="c-list4__txt">{{trans('list.list4.txt1')}}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-rotate-left"></i>
-                            <p class="c-list4__txt">30 Days Money Returns</p>
+                            <p class="c-list4__txt">{{trans('list.list4.txt2')}}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-wallet"></i>
-                            <p class="c-list4__txt">100% Secure Payment</p>
+                            <p class="c-list4__txt">{{trans('list.list4.txt3')}}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-headset"></i>
-                            <p class="c-list4__txt">24/7 Customer Support</p>
+                            <p class="c-list4__txt">{{trans('list.list4.txt4')}}</p>
                         </div>
                     </div>
                 </div>

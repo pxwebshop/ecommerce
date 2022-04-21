@@ -25,7 +25,7 @@ class ResgisterRequest extends FormRequest
     {
         return [
             'name' => 'required|max:50',
-            'phone' => 'required|numeric|min:8|max:15',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:8|max:15|unique:users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:8|max:50'
         ];

@@ -30,6 +30,9 @@
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" name="email" class="c-input" placeholder="Email">
+                        @error('email')
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" name="phone" class="c-input" placeholder="Phone">
