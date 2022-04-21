@@ -23,18 +23,25 @@
         <div class="l-container">
             <div class="c-authen">
                 <h2 class="c-title4">Register</h2>
-                <form action="" class="c-authen__form">
+                <form action="" method="post" class="c-authen__form">
+                    @csrf
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Name">
+                        <input type="text" name="name" class="c-input" placeholder="Name">
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Email">
+                        <input type="text" name="email" class="c-input" placeholder="Email">
+                        @error('email')
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Phone">
+                        <input type="text" name="phone" class="c-input" placeholder="Phone">
+                        @error('phone')
+                            <div class="c-alert"><i class="fa-solid fa-circle-exclamation"></i> {{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="c-group c-authen__group">
-                        <input type="text" class="c-input" placeholder="Password">
+                        <input type="password" name="password" class="c-input c-input__password" placeholder="Password">
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">
@@ -87,5 +94,15 @@
             </div>
         </div>
     </section>
+    @push('scripts')
+        <!-- Owl Carousel JS -->
+        <script src="{{ asset('js/front/owl.carousel.min.js')}} "></script>
+         <!-- Wow JS -->
+        <script src="{{ asset('js/front/wow.min.js')}} "></script>
+
+        <script src="{{ asset('js/front/slick.min.js')}} "></script>
+
+        <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+    @endpush
 </main>
 @endsection

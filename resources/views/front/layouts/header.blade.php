@@ -3,24 +3,39 @@
         <div class="l-container">
             <div class="c-header__content1">
                 <div class="c-header__text">
-                    <p class="c-header__txt"><i class="fa-solid fa-check"></i>Miễn phí giao hàng cho tất cả hóa đơn trên 1 triệu.</p>
+                    <p class="c-header__txt"><i class="fa-solid fa-check"></i>{{trans('header.heading.free-info')}}</p>
                 </div>
                 <div class="c-header__option">
                     <div class="c-header__language">
-                        <span class="c-header__currentLanguage">English</span>
+                        <span class="c-header__currentLanguage">
+                            @if ( Config::get('app.locale') == 'en')
+                            {{trans('header.heading.en')}}
+                            @elseif ( Config::get('app.locale') == 'vi' )
+                            {{trans('header.heading.vi')}}
+                            @elseif ( Config::get('app.locale') == 'lo' )
+                            {{trans('header.heading.lo')}}
+                            @endif
+                        </span>
                         <i class="fa-solid fa-angle-down"></i>
                         <ul class="c-header__languageList">
-                            <li class="c-header__languageItem">English</li>
-                            <li class="c-header__languageItem">Vietnamese</li>
-                            <li class="c-header__languageItem">Laos</li>
-                            <li class="c-header__languageItem">Portugal</li>
-                            <li class="c-header__languageItem">Chinese</li>
-                            <li class="c-header__languageItem">Japanese</li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['en']) !!}">{{trans('header.heading.en')}}</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['vi']) !!}">{{trans('header.heading.vi')}}</a></li>
+                            <li class="c-header__languageItem"><a href="{!! route('user.change-language', ['lo']) !!}">{{trans('header.heading.lo')}}</a></li>
                         </ul>
                     </div>
                     <div class="c-header__authen">
-                        <i class="fa-solid fa-lock"></i>
-                        <a href="/login">Login</a> Or <a href="/register">Resgister</a>
+                        @auth 
+                            <span href="/login">{{trans('header.heading.my-acc')}} ({{Auth::user()->name}})</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                            <ul class="c-header__accountList">
+                                <li class="c-header__accountItem"><a href="#">{{trans('header.heading.my-acc')}}</a></li>
+                                <li class="c-header__accountItem"><a href="#">{{trans('header.heading.change-pass')}}</a></li>
+                                <li class="c-header__accountItem"><a href="/user/logout">{{trans('header.heading.logout')}}</a></li>
+                            </ul>
+                        @else
+                            <i class="fa-solid fa-lock"></i>
+                            <a href="/login">{{trans('header.heading.login')}}</a>	&#45; <a href="/register">{{trans('header.heading.register')}}</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -39,26 +54,19 @@
                 <form action="" method="GET" class="c-header__search">
                     <div class="c-header__category">
                         <div class="c-header__catSelected">
-                            <span class="c-header__currentCat">All Category</span>
+                            <span class="c-header__currentCat">{{trans('header.middle.all-cate')}}</span>
                             <i class="fa-solid fa-angle-down icon-down"></i></i>
                             <ul class="c-header__catList">
                                 <li data-value="1" class="c-header__catItem">All Category</li>
-                                <li data-value="2" class="c-header__catItem">Laptop</li>
-                                <li class="c-header__catItem">Computer</li>
-                                <li class="c-header__catItem">Audio</li>
-                                <li class="c-header__catItem">Gear</li>
-                                <li class="c-header__catItem">Laptop</li>
-                                <li class="c-header__catItem">Computer</li>
-                                <li class="c-header__catItem">Audio</li>
-                                <li class="c-header__catItem">Gear</li>
-                                <li class="c-header__catItem">Laptop</li>
-                                <li class="c-header__catItem">Computer</li>
-                                <li class="c-header__catItem">Audio</li>
-                                <li class="c-header__catItem">Gear</li>
+                                <li data-value="2" class="c-header__catItem">Gaming</li>
+                                <li class="c-header__catItem">Macbook</li>
+                                <li class="c-header__catItem">Văn phòng</li>
+                                <li class="c-header__catItem">Đồ họa</li>
+                                <li class="c-header__catItem">Cao cấp</li>
                             </ul>
                         </div>
                         <div class="c-header__input">
-                            <input type="search" name="s" placeholder="Tìm kiếm">
+                            <input type="search" name="s" placeholder="{{trans('header.middle.search')}}">
                             <div class="c-header__btnSearch">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
@@ -67,10 +75,10 @@
                 </form>
                 <div class="c-header__purchase">
                     <div class="c-header__wishlist">
-                        <i class="fa-solid fa-heart"></i>
+                        <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
                     </div>
                     <div class="c-header__cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <div class="c-header__price">
                         10.900.000 <sup>đ</sup>
@@ -85,30 +93,73 @@
     <div class="l-container">
         <div class="c-header__navbar">
             <ul class="c-header__menuList">
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Home</a></li>
+                <li class="c-header__menuItem"><a href="#" class="c-header__link">{{trans('header.navbar.home')}}</a></li>
                 <li class="c-header__menuItem">
-                    <a href="#" class="c-header__link">Computer<i class="fa-solid fa-angle-down"></i></i></a>
+                    <a href="#" class="c-header__link">Gaming<i class="fa-solid fa-angle-down"></i></i></a>
                     <ul class="c-header__childList">
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">PC Gaming</a></li>
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">PC Office</a></li>
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">PC Old</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Asus</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Hp</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Lenovo</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Acer</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Dell</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">MSI</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Surface</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">LG</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Gigabyte</a></li>
                     </ul>
                 </li>
                 <li class="c-header__menuItem">
-                    <a href="#" class="c-header__link">Laptop<i class="fa-solid fa-angle-down"></i></i></a>
+                    <a href="#" class="c-header__link">Macbook<i class="fa-solid fa-angle-down"></i></i></a>
                     <ul class="c-header__childList">
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Gaming</a></li>
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Office</a></li>
-                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Laptop Old</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Air M1</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Pro 13 inch</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Pro 14 inch</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Pro 16 inch</a></li>
                     </ul>
                 </li>
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Gear<i class="fa-solid fa-angle-down"></i></i></a></li>
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Monitor<i class="fa-solid fa-angle-down"></i></i></a></li>
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Network<i class="fa-solid fa-angle-down"></i></i></a></li>
-                <li class="c-header__menuItem"><a href="#" class="c-header__link">Contact</a></li>
+                <li class="c-header__menuItem"><a href="#" class="c-header__link">{{trans('header.navbar.office')}}<i class="fa-solid fa-angle-down"></i></i></a>
+                    <ul class="c-header__childList">
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Asus</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Hp</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Lenovo</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Acer</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Dell</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">MSI</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Surface</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">LG</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Gigabyte</a></li>
+                    </ul>
+                </li>
+                <li class="c-header__menuItem"><a href="#" class="c-header__link">{{trans('header.navbar.graphics')}}<i class="fa-solid fa-angle-down"></i></i></a>
+                    <ul class="c-header__childList">
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Asus</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Hp</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Lenovo</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Acer</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Dell</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">MSI</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Surface</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">LG</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Gigabyte</a></li>
+                    </ul>
+                </li>
+                <li class="c-header__menuItem"><a href="#" class="c-header__link">{{trans('header.navbar.luxury')}}<i class="fa-solid fa-angle-down"></i></i></a>
+                    <ul class="c-header__childList">
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Asus</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Hp</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Lenovo</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Acer</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Dell</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">MSI</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Surface</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">LG</a></li>
+                        <li class="c-header__childItem"><a href="#" class="c-header__childLink">Gigabyte</a></li>
+                    </ul>
+                </li>
+                <li class="c-header__menuItem"><a href="/contact" class="c-header__link">{{trans('header.navbar.contact')}}</a></li>
             </ul>
             <div class="c-header__phone">
-                <span>Hotline: <a href="tel:0123456789">0123456789</a></span>
+                <span>{{trans('header.navbar.hotline')}}: <a href="tel:0123456789">0123456789</a></span>
 
             </div>
         </div>
@@ -122,7 +173,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="c-header__nav__tel">
-                <span class="c-header__phone"><span>Hotline: </span><a href="tel:1234567890">0123456789</a></span>
+                <span class="c-header__phone"><span>{{trans('header.navbar.hotline')}}: </span><a href="tel:1234567890">0123456789</a></span>
             </div>
         </div>
     </div>
@@ -131,63 +182,176 @@
             <div class="l-container">
                 <ul class="c-header__nav__list">
                     <li class="c-header__nav__item">
-                        <a href="#" class="c-header__nav__link">Home</a>
+                        <a href="#" class="c-header__nav__link">{{trans('header.navbar.hotline')}}</a>
                     </li>
                     <li class="c-header__nav__item">
                         <a href="#" class="c-header__nav__link">
-                            <span>Computer</span>
+                            <span>Gaming</span>
                             <i class="fa-solid fa-plus"></i>
                             <i class="fa-solid fa-minus"></i>
                         </a>
                         <ul class="c-header__nav__subMenu">
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Gaming</span></a>
+                                <a href="#"><span>Asus</span></a>
                             </li>
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Office</span></a>
+                                <a href="#"><span>Hp</span></a>
                             </li>
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Old</span></a>
+                                <a href="#"><span>Lenovo</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Acer</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Dell</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>MSI</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Surface</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>LG</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Gigabyte</span></a>
                             </li>
                         </ul>
                     </li>
                     <li class="c-header__nav__item">
                         <a href="#" class="c-header__nav__link">
-                            <span>Laptop</span>
+                            <span>Macbook</span>
                             <i class="fa-solid fa-plus"></i>
                             <i class="fa-solid fa-minus"></i>
                         </a>
                         <ul class="c-header__nav__subMenu">
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Gaming</span></a>
+                                <a href="#"><span>Air M1</span></a>
                             </li>
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Office</span></a>
+                                <a href="#"><span>Pro 13 inch</span></a>
                             </li>
                             <li class="c-header__nav__subItem">
-                                <a href="#"><span>PC Old</span></a>
+                                <a href="#"><span>Pro 14 inch</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Pro 16 inch</span></a>
                             </li>
                         </ul>
                     </li>
                     <li class="c-header__nav__item">
                         <a href="#" class="c-header__nav__link">
-                            <span>Gear</span>
+                            <span>{{trans('header.navbar.office')}}</span>
                             <i class="fa-solid fa-plus"></i>
                             <i class="fa-solid fa-minus"></i>
                         </a>
+                        <ul class="c-header__nav__subMenu">
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Asus</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Hp</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Lenovo</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Acer</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Dell</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>MSI</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Surface</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>LG</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Gigabyte</span></a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="c-header__nav__item">
                         <a href="#" class="c-header__nav__link">
-                            <span>Monitor</span>
+                            <span>{{trans('header.navbar.graphics')}}</span>
                             <i class="fa-solid fa-plus"></i>
                             <i class="fa-solid fa-minus"></i>
                         </a>
+                        <ul class="c-header__nav__subMenu">
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Asus</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Hp</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Lenovo</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Acer</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Dell</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>MSI</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Surface</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>LG</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Gigabyte</span></a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="c-header__nav__item">
                         <a href="#" class="c-header__nav__link">
-                            <span>Network</span>
+                            <span>{{trans('header.navbar.luxury')}}</span>
                             <i class="fa-solid fa-plus"></i>
                             <i class="fa-solid fa-minus"></i>
+                        </a>
+                        <ul class="c-header__nav__subMenu">
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Asus</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Hp</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Lenovo</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Acer</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Dell</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>MSI</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Surface</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>LG</span></a>
+                            </li>
+                            <li class="c-header__nav__subItem">
+                                <a href="#"><span>Gigabyte</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="c-header__nav__item">
+                        <a href="#" class="c-header__nav__link">
+                            <span>{{trans('header.navbar.contact')}}</span>
                         </a>
                     </li>
                 </ul>

@@ -23,21 +23,29 @@
         <div class="l-container">
             <div class="c-block1">
                 <div class="c-block1__left">
-                    <div class="c-block1__imgList">
-                        <figure class="c-block1__imgItem">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
-                        </figure>
-                        <figure class="c-block1__imgItem">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="c-block1__slider">
-                        <figure class="c-block1__img">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
-                        </figure>
-                        <figure class="c-block1__img">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
-                        </figure>
+                    <div class="c-block1__content">
+                        <div class="c-block1__imgList">
+                            <figure class="c-block1__imgItem">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                            </figure>
+                            <figure class="c-block1__imgItem">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                            </figure>
+                            <figure class="c-block1__imgItem">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="c-block1__slider">
+                            <figure class="c-block1__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                            </figure>
+                            <figure class="c-block1__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                            </figure>
+                            <figure class="c-block1__img">
+                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                            </figure>
+                        </div>
                     </div>
                 </div>
                 <div class="c-block1__right">
@@ -70,14 +78,14 @@
                         <a href="#" class="c-block1__color4"></a>
                         <a href="#" class="c-block1__color5"></a>
                     </div>
-                    <div class="c-block1__quantity">
-                        <span class="c-text1 c-text1--bold">Quantities</span>
-                        <div class="c-block1__counter">
-                            <div class="c-block1__minus">
+                    <div class="c-plusMinus c-block1__quantity">
+                        <span class="c-text1 c-text1--bold">Quantities:</span>
+                        <div class="c-plusMinus__counter">
+                            <div class="c-plusMinus__minus">
                                 <i class="fa-solid fa-circle-minus"></i>
                             </div>
                             <input type="text" value="1">
-                            <div class="c-block1__plus">
+                            <div class="c-plusMinus__plus">
                                 <i class="fa-solid fa-circle-plus"></i>
                             </div>
                         </div>
@@ -112,7 +120,7 @@
                         <span href="#" class="c-block2__link">Đánh giá</span>
                     </li>
                     <li class="c-block2__tabItem">
-                        <span href="#" class="c-block2__link">Thông tin vận chuyển</span>
+                        <span href="#" class="c-block2__link">Vận chuyển</span>
                     </li>
                 </ul>
                 <div class="c-block2__content">
@@ -502,13 +510,14 @@
         </div>
     </section>
     @push('scripts')
-    <!-- Owl Carousel JS -->
-    <script src="{{ asset('js/front/owl.carousel.min.js')}} "></script>
-    <!-- Wow JS -->
-    <script src="{{ asset('js/front/wow.min.js')}} "></script>
+        <!-- Owl Carousel JS -->
+        <script src="{{ asset('js/front/owl.carousel.min.js')}} "></script>
+         <!-- Wow JS -->
+        <script src="{{ asset('js/front/wow.min.js')}} "></script>
 
-    <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+        <script src="{{ asset('js/front/slick.min.js')}} "></script>
 
+        <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
     @endpush
 </main>
 @endsection

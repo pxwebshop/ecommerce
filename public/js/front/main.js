@@ -94,7 +94,7 @@ $(document).ready(function () {
         }
     });
     $(".c-header__language").on("click", function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         var submenu = $(this).children(".c-header__languageList");
         if ($(submenu).is(":hidden")) {
             $(submenu).slideDown(200);
@@ -102,6 +102,16 @@ $(document).ready(function () {
             $(submenu).slideUp(200);
         }
     });
+    $(".c-header__authen").on("click", function (e) {
+        // e.preventDefault();
+        var submenu = $(this).children(".c-header__accountList");
+        if ($(submenu).is(":hidden")) {
+            $(submenu).slideDown(200);
+        } else {
+            $(submenu).slideUp(200);
+        }
+    });
+
     $(".c-header__catSelected").on("click", function (e) {
         e.preventDefault();
         var submenu = $(this).children(".c-header__catList");
@@ -178,13 +188,13 @@ $(document).ready(function () {
 
 jQuery(function () {
     var n = 1;
-    $(".c-block1__counter input").val(n);
-    $(".c-block1__plus").on("click", function () {
-        $(".c-block1__counter input").val(++n);
+    $(".c-plusMinus__counter input").val(n);
+    $(".c-plusMinus__plus").on("click", function () {
+        $(this).prev("input").val(++n);
     });
-    $(".c-block1__minus").on("click", function () {
+    $(".c-plusMinus__minus").on("click", function () {
         if (n >= 1) {
-            $(".c-block1__counter input").val(--n);
+            $(this).next("input").val(--n);
         }
     });
 
@@ -213,4 +223,13 @@ jQuery(function () {
             $(this).addClass("c-block2__active");
         });
     }
+
+    //show/hide pass
+    $('#check').click(function(){
+        if('password' == $('.c-input__password').attr('type')){
+             $('.c-input__password').prop('type', 'text');
+        }else{
+             $('.c-input__password').prop('type', 'password');
+        }
+    });
 });

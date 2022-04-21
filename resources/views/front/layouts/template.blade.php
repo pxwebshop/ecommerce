@@ -14,6 +14,12 @@
     <link href="{{ asset('css/front/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" >
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
+
+    <!-- toastr -->
+    <!-- <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">  -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
 </head>
 
 <body>
@@ -48,9 +54,11 @@
     <!-- <script src="{{ asset('js/front/form-validator.min.js')}} "></script> -->
     <!-- Contact JS -->
     <!-- <script src="{{ asset('js/front/contact-form-script.js')}} "></script> -->
-
     @stack('scripts')
-   
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
+
+
 </body>
 
 </html>
