@@ -24,7 +24,7 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{trans('forgot-password.form.email')}}">
-                        @include('front.layouts.alert', ['field' => 'email'])
+                        @include('front._partials.alert', ['field' => 'email'])
                     </div>
                     <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
                     {{trans('forgot-password.form.btn-send-link')}}
