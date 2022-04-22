@@ -6,12 +6,15 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ChangePasswordRequest;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\ForgotPasswordRequest;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\ResgisterRequest;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -24,7 +27,7 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        if ( Auth::check() )   {
+        if (Auth::check()) {
             return redirect()->route('home');
         }
         return view('front/user/login');
@@ -43,6 +46,12 @@ class UserController extends Controller
         ])->withInput();
     }
 
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/');
+    }
+
     public function register(Request $request)
     {
         return view('front/user/register');
@@ -59,22 +68,25 @@ class UserController extends Controller
             return redirect()->route('register');
         }
         Toastr::success(trans('user-register.success'));
-    
+
         return redirect()->route('login');
     }
 
-    public function changePassword(Request $request) {
+    
+    public function changePassword(Request $request)
+    {
         return view('front/user/change-password');
     }
 
-    public function changePasswordPost(ChangePasswordRequest $request) {
+    public function changePasswordPost(ChangePasswordRequest $request)
+    {
         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
             // The passwords matches
             Toastr::error(trans('change-password.error-current'));
             return redirect()->back();
         }
 
-        if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
+        if (strcmp($request->get('current-password'), $request->get('new-password')) == 0) {
             // Current password and new password same
             Toastr::error(trans('change-password.error-new-pass'));
             return redirect()->back();
@@ -89,9 +101,70 @@ class UserController extends Controller
         return redirect()->route('login');
     }
 
-    public function logout(Request $request)
+    // start: forgot password
+    public function forgotPassword()
     {
-        Auth::logout();
-        return redirect('/');
+        return view('front.user.forgot-password');
     }
+
+    public function postForgotPassword(Request $request)
+    {
+        try {
+            $request->validate([
+                'email' => 'required|email|exists:users',
+            ]);
+    
+            $token = Str::random(64);
+    
+            DB::table('password_resets')->insert([
+                'email' => $request->email,
+                'token' => $token,
+                'created_at' => Carbon::now()
+            ]);
+    
+            \Mail::send('front.user.email.forgetPassword', ['token' => $token], function ($message) use ($request) {
+                $message->to($request->email);
+                $message->subject('Reset Password');
+            });
+        } catch (\Exception $e) {
+            Toastr::error(trans('forgot-password.error-send-link'));
+            return back();
+        }
+        Toastr::success(trans('forgot-password.success-send-link'));
+        return back();
+    }
+
+    public function resetPassword($token)
+    {
+        //dd($token);
+        return view('front.user.reset-password', ['token' => $token]);
+    }
+
+    public function postResetPassword(ForgotPasswordRequest $request)
+    {
+        try {
+            $updatePassword = DB::table('password_resets')
+                ->where([
+                    'email' => $request->email,
+                    'token' => $request->token
+                ])
+                ->first();
+    
+            if (!$updatePassword) {
+                return back()->withInput()->with('error', 'Invalid token!');
+            }
+    
+            $user = User::where('email', $request->email)
+                ->update(['password' => Hash::make($request->password)]);
+    
+            DB::table('password_resets')->where(['email' => $request->email])->delete();
+        }
+        catch(\Exception $e) {
+            Toastr::error(trans('forgot-password.error-reset-pass'));
+            return back();
+        }
+        Toastr::success(trans('forgot-password.success-reset-pass'));
+        return redirect('/login')->with('message', 'Your password has been changed!');
+    }
+    //end: forgot password
 }

@@ -1,8 +1,10 @@
 <?php
 
 return [
-
-    'home' => '/',
-    'login' => 'đăng nhập',
-    'register' => 'register'
+    'home' => 'Home', 
+    'forgot-password' => 'Forgot Password',
+    'login' => 'Login',
+    'reset-password' => 'Reset Password',
+    'register' => 'Register',
+    'change-password' => 'Change Password',
 ];

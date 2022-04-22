@@ -1,8 +1,10 @@
 <?php
 
 return [
-
     'home' => 'Trang chủ',
+    'forgot-password' => 'Quên mật khẩu',
     'login' => 'Đăng nhập',
-    'register' => 'Đăng ký'
+    'reset-password' => 'Reset mật khẩu',
+    'register' => 'Đăng ký',
+    'change-password' => 'Thay đổi mật khẩu',
 ];

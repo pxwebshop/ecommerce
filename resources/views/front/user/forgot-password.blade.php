@@ -1,4 +1,4 @@
-@section('title','Đăng nhập')
+@section('title','PXWebShop')
 @extends('front.layouts.template')
 
 @section('content')
@@ -8,10 +8,10 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                    {{ trans('login.title') }}
+                    {{trans('forgot-password.title-forgot')}}
                     </h2>
                 </div>
-                {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
+                <a>{{ Breadcrumbs::render(__('breadcrumbs.forgot-password')) }}</a>
             </div>
         </div>
     </section>
@@ -19,33 +19,20 @@
     <section class="p-login__sc2">
         <div class="l-container">
             <div class="c-authen">
-                <h2 class="c-title4">{{ trans('login.title') }}</h2>
+                <h2 class="c-title4">{{trans('forgot-password.title-forgot')}}</h2>
                 <form action="" method="post" class="c-authen__form">
                     @csrf
                     <div class="c-group c-authen__group">
-                        <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('login.form.email') }}">
+                        <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{trans('forgot-password.form.email')}}">
                         @include('front.layouts.alert', ['field' => 'email'])
                     </div>
-                    <div class="c-group c-authen__group">
-                        <input type="password" name="password" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
-                        @include('front.layouts.alert', ['field' => 'password'])
-                    </div>
-                    <div class="c-authen__option">
-                        <div class="c-formCheck">
-                            <input type="checkbox" class="c-formCheck__input" id="check">
-                            <label for="check" >{{ trans('login.form.show-password') }}?</label>
-                        </div>
-                        <div class="c-lostPassword">
-                            <a href="forgot-password">{{ trans('login.form.lost-password') }}?</a>
-                        </div>
-                    </div>
                     <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
-                    {{ trans('login.form.button') }}
+                    {{trans('forgot-password.form.btn-send-link')}}
                     </button>
                 </form>
                 <div class="c-text2">
-                    <p class="c-text2__important c-authen__text">{{ trans('login.form.label-new-account') }}?
-                        <a href="/register" class="c-text2__link">{{ trans('login.form.register-account') }}</a>
+                    <p class="c-text2__important c-authen__text">
+                        <a href="/login" class="c-text2__link">{{trans('forgot-password.form.btn-return-login')}}</a>
                     </p>
                 </div>
             </div>

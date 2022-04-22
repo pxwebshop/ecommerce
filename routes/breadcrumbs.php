@@ -18,3 +18,19 @@ Breadcrumbs::for(__('breadcrumbs.register'), function ($trail) {
     $trail->parent(__('breadcrumbs.home'));
     $trail->push(__('breadcrumbs.register'), route('register'));
 });
+
+// Home > Change Password
+Breadcrumbs::for(__('breadcrumbs.change-password'), function ($trail) {
+    $trail->parent(__('breadcrumbs.home'));
+    $trail->push(__('breadcrumbs.change-password'), route('change-password'));
+});
+// Home > Forgot Password
+Breadcrumbs::for(__('breadcrumbs.forgot-password'), function ($trail) {
+    $trail->parent(__('breadcrumbs.home'));
+    $trail->push(__('breadcrumbs.forgot-password'), route('forgot.password.get'));
+});
+//Home > reset password
+Breadcrumbs::for(__('breadcrumbs.reset-password'), function ($trail) {
+    $trail->parent(__('breadcrumbs.home'));
+    $trail->push(__('breadcrumbs.reset-password'), route('reset.password.get'));
+});
