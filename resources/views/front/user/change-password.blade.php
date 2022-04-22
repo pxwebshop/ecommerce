@@ -27,15 +27,15 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="password" name="current-password" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('change-password.form.current-pass') }}">
-                        @include('front.layouts.alert', ['field' => 'current-password'])
+                        @include('front._partials.alert', ['field' => 'current-password'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="new-password" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{ trans('change-password.form.new-pass') }}">
-                        @include('front.layouts.alert', ['field' => 'new-password'])
+                        @include('front._partials.alert', ['field' => 'new-password'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="new-password_confirmation" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{ trans('change-password.form.confirm-pass') }}">
-                        @include('front.layouts.alert', ['field' => 'new-password_confirmation'])
+                        @include('front._partials.alert', ['field' => 'new-password_confirmation'])
                     </div>
                     <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">
                         {{ trans('change-password.form.button') }}
