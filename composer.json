@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.1|^8.0",
+        "barryvdh/laravel-debugbar": "^3.6",
         "brian2694/laravel-toastr": "^5.57",
         "davejamesmiller/laravel-breadcrumbs": "5.3.2",
         "fruitcake/laravel-cors": "^2.0",
@@ -57,7 +58,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "thecodingmachine/discovery": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

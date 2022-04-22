@@ -11,7 +11,7 @@
                     {{trans('forgot-password.title-reset')}}
                     </h2>
                 </div>
-                {{ Breadcrumbs::render(__('breadcrumbs.reset-password')) }}</a>
+                {{ Breadcrumbs::render(__('breadcrumbs.reset-p')) }}</a>
             </div>
         </div>
     </section>
@@ -25,11 +25,11 @@
                     <input type="hidden" name="token" value="{{ $token }}">
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{trans('forgot-password.form.email')}}">
-                        @include('front.layouts.alert', ['field' => 'email'])
+                        @include('front._partials.alert', ['field' => 'email'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="password" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{trans('forgot-password.form.new-pass')}}">
-                        @include('front.layouts.alert', ['field' => 'password'])
+                        @include('front._partials.alert', ['field' => 'password'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="password_confirmation" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{trans('forgot-password.form.confirm-pass')}}">
