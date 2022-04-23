@@ -11,7 +11,8 @@
                     {{trans('forgot-password.title-reset')}}
                     </h2>
                 </div>
-                {{ Breadcrumbs::render(__('breadcrumbs.reset-password')) }}</a>
+                <!-- cái này em để breadcrumbs của login để cho nó chạy -->
+                {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
             </div>
         </div>
     </section>

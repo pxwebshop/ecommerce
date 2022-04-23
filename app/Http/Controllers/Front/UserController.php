@@ -86,7 +86,7 @@ class UserController extends Controller
             return redirect()->back();
         }
 
-        if (strcmp($request->get('current-password'), $request->get('new-password')) == 0) {
+        if ( $request->get('current-password') === $request->get('new-password') ) {
             // Current password and new password same
             Toastr::error(trans('change-password.error-new-pass'));
             return redirect()->back();
@@ -136,7 +136,6 @@ class UserController extends Controller
 
     public function resetPassword($token)
     {
-        //dd($token);
         return view('front.user.reset-password', ['token' => $token]);
     }
 
