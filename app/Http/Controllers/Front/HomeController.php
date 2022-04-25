@@ -16,24 +16,22 @@ class HomeController extends Controller
     private $article;
     private $category;
 
-    public function __construct(Slider $slider, Product $product, Article $article, Category $category)
+    public function __construct()
     {  
-        $this->slider = $slider;
-        $this->product = $product;
-        $this->article = $article;
-        $this->category = $category;
+      
     }
 
     public function index(Request $request)
     {
+        var_dump(Slider::where('active',1)->orderBy('sort')->get());die;
         return view('front/home', [
-            'sliders' => $this->slider::where('active',1)->orderBy('sort')->get(),
-            'arrivals' => $this->product::where('active',1)->orderBy('id')->paginate(4),
-            'special_offers' => $this->product::where('active',1)->orderBy('id')->paginate(3),
-            'bestsellers' => $this->product::where('active',1)->orderBy('id')->paginate(8),
-            'special_products' => $this->product::where('active',1)->where('special',1)->orderBy('id')->paginate(4),
-            'articles' => $this->article::where('active',1)->orderBy('id')->paginate(3),
-            'categories' => $this->category::select('id', 'name')->where('parent_id',0)->orderBy('id')->get(),
+            'sliders' => Slider::where('active',1)->orderBy('sort')->get(),
+            'arrivals' => Product::where('active',1)->orderBy('id')->paginate(4),
+            'special_offers' => Product::where('active',1)->orderBy('id')->paginate(3),
+            'bestsellers' => Product::where('active',1)->orderBy('id')->paginate(8),
+            'special_products' => Product::where('active',1)->where('special',1)->orderBy('id')->paginate(4),
+            'articles' => Article::where('active',1)->orderBy('id')->paginate(3),
+            'categories' => Category::select('id', 'name')->where('parent_id',0)->orderBy('id')->get(),
         ]);
     }
 
