@@ -39,16 +39,18 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('/reset-password/{token}', 'Front\UserController@resetPassword')->name('reset.password.get');
     Route::post('/reset-password', 'Front\UserController@postResetPassword')->name('reset.password.post');
 
-    //
+    //product
     Route::group(['prefix' => 'product'], function () {
-        Route::get('/', 'Front\ProductController@index');
+        Route::get('/{category_name}', 'Front\ProductController@index');
         Route::get('/detail/{id}', 'Front\ProductController@detail');
     });
-    
+
     //
     Route::get('/cart', 'Front\CartController@index');
     Route::get('/wishlist', 'Front\WishlistController@index');
-    Route::get('/checkout', 'Front\CheckoutController@index');
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/checkout', 'Front\CheckoutController@index');
+    });
     Route::get('/contact', 'Front\ContactController@index');
 
     //front end

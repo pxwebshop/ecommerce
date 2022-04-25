@@ -21,7 +21,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->text(20),
             'description' => $this->faker->text(200),
             'category_id' => 1,
-            'thumb' =>  $this->faker->imageUrl(300, 300),
+            'thumb' =>  'https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg',
             'import_price' => $this->faker->numberBetween(80000000, 100000000),
             'price' => $this->faker->numberBetween(80000000, 100000000),
             'sale_price' => $this->faker->numberBetween(60000000, 90000000),

@@ -165,7 +165,7 @@
                         <div class="c-list3__item">
                             <div class="c-list3__wrap">
                                 <div class="c-list3__img">
-                                    <a href="#">
+                                    <a href="/product/detail/{{$special_offer->id}}">
                                         <figure class="c-list3__image">
                                             <img src="{{ $special_offer->thumb }}" alt="">
                                         </figure>
@@ -255,7 +255,7 @@
                         <div class="c-list1__item">
                             <div class="c-list1__wrap">
                                 <div class="c-list1__img">
-                                    <a href="#">
+                                    <a href="/product/detail/{{$bestseller->id}}">
                                         <figure class="c-list1__image">
                                             <img src="{{ $bestseller->thumb }}" alt="">
                                         </figure>
@@ -931,7 +931,7 @@
                         <div class="c-list1__item">
                             <div class="c-list1__wrap">
                                 <div class="c-list1__img">
-                                    <a href="#">
+                                    <a href="/product/detail/{{$special_product->id}}">
                                         <figure class="c-list1__image">
                                             <img src="{{ $special_product->thumb }}" alt="">
                                         </figure>
@@ -962,7 +962,7 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $special_product->sku }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ $special_product->sale_price }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div> 
