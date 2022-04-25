@@ -12,7 +12,7 @@
                     </h2>
                 </div>
                 <!-- cái này em để breadcrumbs của login để cho nó chạy -->
-                {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
+                {{ Breadcrumbs::render(__('breadcrumbs.reset-password'), $token) }}</a>
             </div>
         </div>
     </section>

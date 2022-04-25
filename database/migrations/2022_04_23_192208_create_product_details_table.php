@@ -18,7 +18,7 @@ class CreateProductDetailsTable extends Migration
             $table->integer('product_id');
             $table->integer('stock');
             $table->string('sku');
-            $table->string('specification');
+            $table->longText('specification');
             $table->string('image');
             $table->string('info_delivery');
             $table->timestamps();
