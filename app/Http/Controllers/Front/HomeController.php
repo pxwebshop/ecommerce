@@ -23,7 +23,6 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        var_dump(Slider::where('active',1)->orderBy('sort')->get());die;
         return view('front/home', [
             'sliders' => Slider::where('active',1)->orderBy('sort')->get(),
             'arrivals' => Product::where('active',1)->orderBy('id')->paginate(4),
