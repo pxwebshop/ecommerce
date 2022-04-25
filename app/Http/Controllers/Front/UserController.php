@@ -115,7 +115,7 @@ class UserController extends Controller
             ]);
     
             $token = Str::random(64);
-    
+            
             DB::table('password_resets')->insert([
                 'email' => $request->email,
                 'token' => $token,

@@ -32,5 +32,5 @@ Breadcrumbs::for(__('breadcrumbs.forgot-password'), function ($trail) {
 //Home > reset password
 Breadcrumbs::for(__('breadcrumbs.reset-password'), function ($trail, $token) {
     $trail->parent(__('breadcrumbs.home'));
-    $trail->push(__('breadcrumbs.reset-password'), route('reset.password.get', $token));
+    $trail->push(__('breadcrumbs.reset-password'), route('reset.password.get', ['token' => $token]));
 });
