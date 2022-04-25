@@ -112,7 +112,7 @@
                         <div class="c-list1__item">
                             <div class="c-list1__wrap">
                                 <div class="c-list1__img">
-                                    <a href="/product-detail">
+                                    <a href="/product/detail/{{$arrival->id}}">
                                         <figure class="c-list1__image">
                                             <img src="{{ $arrival->thumb }}" alt="">
                                         </figure>
@@ -981,57 +981,25 @@
             </div>
             <div class="c-list7">
                 <div class="c-list7__list">
-                    <div class="c-list7__wrap">
-                        <div class="c-list7__item">
-                            <div class="c-list7__img">
-                                <figure class="c-list7__image">
-                                    <a href=""><img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt=""></a>
-                                </figure>
-                            </div>
-                            <div class="c-list7__content">
-                                <h4 class="c-title3">eCommerce</h4>
-                                <a href="#">
-                                    <h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3>
-                                </a>
-                                <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
-                                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-list7__wrap">
-                        <div class="c-list7__item">
-                            <div class="c-list7__img">
-                                <figure class="c-list7__image">
-                                    <img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="c-list7__content">
-                                <h4 class="c-title3">eCommerce</h4>
-                                <a href="#">
-                                    <h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3>
-                                </a>
-                                <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
-                                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    @foreach ($articles as $article)
+                        <div class="c-list7__wrap">
+                            <div class="c-list7__item">
+                                <div class="c-list7__img">
+                                    <figure class="c-list7__image">
+                                        <a href=""><img src="{{ $article->thumb }}" alt=""></a>
+                                    </figure>
+                                </div>
+                                <div class="c-list7__content">
+                                    <h4 class="c-title3">{{ $article->tag }}</h4>
+                                    <a href="#">
+                                        <h3 class="c-title2">{{ $article->title }}</h3>
+                                    </a>
+                                    <h4 class="c-title3 c-title3--colorGrey">{{ $article->author }} / {{ $article->created_at }}</h4>
+                                    <p class="c-text1">{{ $article->description }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="c-list7__wrap">
-                        <div class="c-list7__item">
-                            <div class="c-list7__img">
-                                <figure class="c-list7__image">
-                                    <img src="https://templates.envytheme.com/ejon/default/assets/img/blog/blog-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="c-list7__content">
-                                <h4 class="c-title3">eCommerce</h4>
-                                <a href="#">
-                                    <h3 class="c-title2">The Factory is Making its Own Mobile Chipset</h3>
-                                </a>
-                                <h4 class="c-title3 c-title3--colorGrey">Admin / 12 April 2022</h4>
-                                <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

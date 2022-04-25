@@ -95,7 +95,7 @@
             <ul class="c-header__menuList">
                 <li class="c-header__menuItem"><a href="#" class="c-header__link">{{trans('header.navbar.home')}}</a></li>
                 <li class="c-header__menuItem">
-                    <a href="#" class="c-header__link">Gaming<i class="fa-solid fa-angle-down"></i></i></a>
+                    <a href="/product" class="c-header__link">Gaming<i class="fa-solid fa-angle-down"></i></i></a>
                     <ul class="c-header__childList">
                         <li class="c-header__childItem"><a href="#" class="c-header__childLink">Asus</a></li>
                         <li class="c-header__childItem"><a href="#" class="c-header__childLink">Hp</a></li>

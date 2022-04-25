@@ -8,13 +8,11 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Products Details
+                        {{ trans('common.product_detail') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <a href="/" class="c-breadcrumb1__link">/ Product</a>
-                    <span class="c-breadcrumb1__current">/ Detail</a>
+                    {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
                 </div>
             </div>
         </div>
@@ -49,7 +47,7 @@
                     </div>
                 </div>
                 <div class="c-block1__right">
-                    <h3 class="c-title6 c-block1__title">Bluetooth Headphones</h3>
+                    <h3 class="c-title6 c-block1__title">{{ $product->name }}</h3>
                     <ul class="c-rate1">
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -58,16 +56,16 @@
                         <li><i class="fa-solid fa-star"></i></li>
                     </ul>
                     <div class="c-price1 c-block1__price">
-                        <span class="c-price1--lineThrough c-block1__price1">19.990.000<sup>đ</sup></span>
-                        <span class="c-price1 c-block1__price2">9.990.000<sup>đ</sup></span>
+                        <span class="c-price1--lineThrough c-block1__price1">{{ $product->price }}<sup>đ</sup></span>
+                        <span class="c-price1 c-block1__price2">{{ $product->sale_price }}<sup>đ</sup></span>
                     </div>
-                    <p class="c-text1 c-block1__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.</p>
+                    <p class="c-text1 c-block1__txt">{{ $product->description }}</p>
                     <ul class="c-block1__info">
                         <li class="c-block1__stock">
-                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">Availability: </span> In stock</p>
+                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">Availability: </span> {{ $productDetail->stock }}</p>
                         </li>
                         <li class="c-block1__stock">
-                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">SKU: </span> L458-25</p>
+                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">SKU: </span> {{ $productDetail->sku }}</p>
                         </li>
                     </ul>
                     <div class="c-block1__color">
@@ -126,15 +124,7 @@
                 <div class="c-block2__content">
                     <div class="c-block2__description">
                         <h3 class="c-title6 c-block2__title">Mô tả</h2>
-                            <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <p class="c-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</p>
-                            <ul class="c-text1">
-                                <li>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
-                                <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                                <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</li>
-                                <li>Various versions have evolved over the years, sometimes by accident sometimes on purpose.</li>
-                                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.</li>
-                            </ul>
+                            <p class="c-text1">{{ $productDetail->specification }}</p>
                     </div>
                     <div class="c-block2__review">
                         <h3 class="c-title6 c-block2__title">Đánh giá</h3>
@@ -303,9 +293,10 @@
                     </div>
                     <div class="c-block2__infoShip">
                         <ul class="c-text1">
-                            <li><span> Address: </span>4848 Hershell Hollow Road, Bothell, WA 89076</li>
+                            {{-- <li><span> Address: </span>4848 Hershell Hollow Road, Bothell, WA 89076</li>
                             <li><span> Phone: </span>+1 (514) 321-4567</li>
-                            <li><span> Email: </span>hello@ejon.com</li>
+                            <li><span> Email: </span>hello@ejon.com</li> --}}
+                            <li>{{ $productDetail->info_delivery }}</li>
                         </ul>
                     </div>
                 </div>
@@ -321,158 +312,46 @@
             </div>
             <div class="c-list1">
                 <div class="c-list1__list">
-                    <div class="c-list1__item">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="/product-detail">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-list1__item">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
+                    @foreach ($productRelateds as $productRelated)
+                        <div class="c-list1__item">
+                            <div class="c-list1__wrap">
+                                <div class="c-list1__img">
+                                    <a href="/product-detail">
+                                        <figure class="c-list1__image">
+                                            <img src="{{ $productRelated->thumb }}" alt="">
+                                        </figure>
+                                    </a>
+                                    <div class="c-tag1">New</div>
+                                    <ul class="c-list1__actionList">
+                                        <li class="c-list1__actionItem">
+                                            <a href="#">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </a>
+                                        </li>
+                                        <li class="c-list1__actionItem">
+                                            <a href="#">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li class="c-list1__actionItem">
+                                            <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-list1__content">
+                                    <h3 class="c-title2">{{ $productRelated->name }}</h3>
+                                    <ul class="c-rate1">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                    <p class="c-price1">{{ $productRelated->sale_price }} <sup>đ</sup> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="c-list1__item">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-list1__item">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

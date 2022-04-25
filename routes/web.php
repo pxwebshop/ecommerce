@@ -42,7 +42,7 @@ Route::group(['middleware' => 'locale'], function () {
     //
     Route::group(['prefix' => 'product'], function () {
         Route::get('/', 'Front\ProductController@index');
-        Route::get('/detail', 'Front\ProductController@detail');
+        Route::get('/detail/{id}', 'Front\ProductController@detail');
     });
     
     //
