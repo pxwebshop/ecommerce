@@ -688,6 +688,7 @@ header
   background-color: #113366;
   height: 45px;
   width: 45px;
+  border-color: #113366;
   border-radius: 50%;
   margin-right: 5px;
   cursor: pointer;
@@ -696,6 +697,7 @@ header
   position: absolute;
   top: 14px;
   right: 10px;
+  color: #fff;
 }
 .c-header__purchase {
   width: 25%;

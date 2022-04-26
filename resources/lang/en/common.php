@@ -15,4 +15,5 @@ return [
 
     'breadcrumb' => 'Home',
     'product_detail' => 'Product detail',
+    'search' => 'Search',
 ];

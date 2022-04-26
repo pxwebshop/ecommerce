@@ -39,4 +39,12 @@ class HomeController extends Controller
         \Session::put('website_language', $language);
         return redirect()->back();
     }
+
+    public function search(Request $request) {
+        $res = $request->s;
+        $products = Product::where('name', 'like', '%'.$res.'%')->paginate(8);
+        return view('front/product/search', [
+            'products' => $products,
+        ]);
+    }
 }

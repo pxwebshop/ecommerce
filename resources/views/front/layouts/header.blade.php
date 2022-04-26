@@ -57,7 +57,8 @@
                             </figure>
                         </a>
                     </div>
-                    <form action="" method="GET" class="c-header__search">
+                    <form action="/search" method="post" class="c-header__search">
+                        @csrf
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
                                 <span class="c-header__currentCat">{{ trans('header.middle.all-cate') }}</span>
@@ -73,9 +74,9 @@
                             </div>
                             <div class="c-header__input">
                                 <input type="search" name="s" placeholder="{{ trans('header.middle.search') }}">
-                                <div class="c-header__btnSearch">
+                                <button type="submit" class="c-header__btnSearch">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -15,5 +15,5 @@ return [
 
     'breadcrumb' => 'Trang chủ',
     'product_detail' => 'Chi tiết sản phẩm',
-
+    'search' => 'Tìm kiếm',
 ];
