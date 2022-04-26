@@ -143,7 +143,7 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $arrival->sale_price }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ number_format($arrival->sale_price) }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div>
@@ -176,8 +176,8 @@
                                     <p class="c-title3">Gadget</p>
                                     <h3 class="c-title2">{{ $special_offer->name }}</h3>
                                     <div class="c-price1">
-                                        <p class="c-price1--colorRed"> {{ $special_offer->sale_price }} <sup>đ</sup></p>
-                                        <p class="c-price1--lineThrough">{{ $special_offer->price }} <sup>đ</sup></p>
+                                        <p class="c-price1--colorRed"> {{ number_format($special_offer->sale_price) }} <sup>đ</sup></p>
+                                        <p class="c-price1--lineThrough">{{ number_format($special_offer->price) }} <sup>đ</sup></p>
                                     </div>
                                     <ul class="c-rate1">
                                         <li><i class="fa-solid fa-star"></i></li>
@@ -286,7 +286,7 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $bestseller->sale_price }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ number_format($bestseller->sale_price) }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div>
@@ -962,7 +962,7 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $special_product->sale_price }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ number_format($special_product->sale_price) }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div> 

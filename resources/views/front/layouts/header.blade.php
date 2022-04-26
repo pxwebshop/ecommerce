@@ -114,7 +114,8 @@
                             @if (!$menuItem->children->isEmpty())
                                 <ul class="c-header__childList">
                                     @foreach ( $menuItem->children as $subMenuItem )
-                                        <li class="c-header__childItem"><a href="/product/{{ $menuItem->id }}/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li>
+                                        {{-- <li class="c-header__childItem"><a href="/product/{{ $menuItem->id }}/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li> --}}
+                                        <li class="c-header__childItem"><a href="/product/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li>
                                     @endforeach
                                 </ul>
                             @endif

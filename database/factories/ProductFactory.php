@@ -20,7 +20,7 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->text(20),
             'description' => $this->faker->text(200),
-            'category_id' => 1,
+            'category_id' => $this->faker->numberBetween(1, 18),
             'thumb' =>  'https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg',
             'import_price' => $this->faker->numberBetween(80000000, 100000000),
             'price' => $this->faker->numberBetween(80000000, 100000000),

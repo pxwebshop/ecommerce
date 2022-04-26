@@ -56,8 +56,8 @@
                         <li><i class="fa-solid fa-star"></i></li>
                     </ul>
                     <div class="c-price1 c-block1__price">
-                        <span class="c-price1--lineThrough c-block1__price1">{{ $product->price }}<sup>đ</sup></span>
-                        <span class="c-price1 c-block1__price2">{{ $product->sale_price }}<sup>đ</sup></span>
+                        <span class="c-price1--lineThrough c-block1__price1">{{ number_format($product->price) }}<sup>đ</sup></span>
+                        <span class="c-price1 c-block1__price2">{{ number_format($product->sale_price) }}<sup>đ</sup></span>
                     </div>
                     <p class="c-text1 c-block1__txt">{{ $product->description }}</p>
                     <ul class="c-block1__info">

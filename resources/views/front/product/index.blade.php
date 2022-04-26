@@ -77,11 +77,12 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $product->sale_price }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ number_format($product->sale_price) }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div>
                     @endforeach 
+                    
                 </div>
             </div>
             {{-- chưa biết nên bỏ hay không? --}}
@@ -204,6 +205,7 @@
                 </div>
             </div> --}}
             <div class="c-paginate">
+                {{-- {{ $products->link() }} --}}
                 <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
                 <a href="#" class="c-paginate__link c-paginate__current">1</a>
                 <a href="#" class="c-paginate__link">2</a>

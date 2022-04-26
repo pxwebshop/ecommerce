@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductDetail;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -17,8 +18,20 @@ class ProductController extends Controller
 
     public function index(Request $request, $category_id = '')
     {
+        $parent_id = Category::select('parent_id')->where('id', $category_id)->first()->parent_id;
         $category = Category::where('id', $category_id)->first();
-        $products = Product::where('category_id', $category_id)->where('active', 1)->orderBy('id', 'desc')->paginate(16);
+
+        if($parent_id == 0) {
+            $products = DB::table('products')
+            ->join('categories', 'products.category_id', '=', 'categories.id')
+            ->where('categories.parent_id', $category_id)->orWhere('categories.id', $category_id)->where('products.active', 1)
+            ->select('products.*')
+            ->paginate(16);
+        }
+        else {
+            $products = Product::where('category_id', $category_id)->where('active', 1)->orderBy('id', 'desc')->paginate(16);
+        }
+        
         return view('front/product/index', [
             'products' => $products,
             'category' => $category,
