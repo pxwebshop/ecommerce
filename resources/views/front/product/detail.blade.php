@@ -12,7 +12,7 @@
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
+                    {{-- {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a> --}}
                 </div>
             </div>
         </div>

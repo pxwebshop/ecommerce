@@ -241,7 +241,7 @@ other
                 background-color: $colorBlue1;
                 color: $colorWhite;
             }
-            div>span>span[aria-disabled="true"]{
+            div>span>span[aria-label="Next &raquo;"], div>span>span[aria-label="&laquo; Previous"]{
                 display: none;
             }
             div>span>a {
@@ -264,7 +264,7 @@ other
                     opacity: 1;
                 }
             }
-            div>span>a[rel="next"] {
+            div>span>a[rel="next"], div>span>a[rel="prev"] {
                 display: none;
             }
         }

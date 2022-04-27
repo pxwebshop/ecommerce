@@ -1904,7 +1904,7 @@ other
   background-color: #113366;
   color: #fff;
 }
-.c-paginate nav > div:last-child div > span > span[aria-disabled=true] {
+.c-paginate nav > div:last-child div > span > span[aria-label="Next &raquo;"], .c-paginate nav > div:last-child div > span > span[aria-label="&laquo; Previous"] {
   display: none;
 }
 .c-paginate nav > div:last-child div > span > a {
@@ -1927,7 +1927,7 @@ other
   color: #fff;
   opacity: 1;
 }
-.c-paginate nav > div:last-child div > span > a[rel=next] {
+.c-paginate nav > div:last-child div > span > a[rel=next], .c-paginate nav > div:last-child div > span > a[rel=prev] {
   display: none;
 }
 
