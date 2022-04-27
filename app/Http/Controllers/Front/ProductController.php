@@ -29,6 +29,7 @@ class ProductController extends Controller
             ->paginate(16);
         }
         else {
+            
             $products = Product::categoryId($category_id)->active()->orderDescId()->paginate(16);
         }
         
