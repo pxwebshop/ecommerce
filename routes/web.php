@@ -54,6 +54,7 @@ Route::group(['middleware' => 'locale'], function () {
     });
     Route::get('/contact', 'Front\ContactController@index');
 
+    
     //front end
     Route::get('/component', function () {
         return view('component');
