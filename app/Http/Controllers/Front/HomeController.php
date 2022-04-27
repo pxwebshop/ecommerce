@@ -10,7 +10,6 @@ use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Support\Facades\DB;
 
-
 class HomeController extends Controller
 {
     private $slider;
@@ -44,15 +43,14 @@ class HomeController extends Controller
     public function search(Request $request) {
         $res = $request->s;
         $cat = $request->cat;
-        $cat_id = DB::table('categories')->where('name', $cat)->first()->id;
-        if($cat_id == null) {
-            dd(1234);
+        
+        $category = DB::table('categories')->where('name', $cat)->first();
+
+        if($category == null) {
             $products = Product::where('name', 'like', '%'.$res.'%')->paginate(8);
         }
         else {
-            
-            dd(12345);
-            $cat_id = DB::table('categories')->where('name', $cat)->select('id');
+            $cat_id = DB::table('categories')->where('name', $cat)->first()->id;
             // $parent_id = Category::select('parent_id')->whereId($cat_id)->first()->parent_id;
             // dd($parent_id);
             $products = DB::table('products')

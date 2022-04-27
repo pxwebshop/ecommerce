@@ -206,13 +206,7 @@
                 </div>
             </div> --}}
                 <div class="c-paginate">
-                    {{-- {{ $products->link() }} --}}
-                    <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
-                    <a href="#" class="c-paginate__link c-paginate__current">1</a>
-                    <a href="#" class="c-paginate__link">2</a>
-                    <a href="#" class="c-paginate__link">3</a>
-                    <a href="#" class="c-paginate__link">4</a>
-                    <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-right"></i></a>
+                    {{ $products->links() }}
                 </div>
             </div>
             </div>
