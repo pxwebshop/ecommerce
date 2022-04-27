@@ -8,6 +8,8 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Slider;
+use Illuminate\Support\Facades\DB;
+
 
 class HomeController extends Controller
 {
@@ -41,7 +43,30 @@ class HomeController extends Controller
 
     public function search(Request $request) {
         $res = $request->s;
-        $products = Product::where('name', 'like', '%'.$res.'%')->paginate(8);
+        $cat = $request->cat;
+        $cat_id = DB::table('categories')->where('name', $cat)->first()->id;
+        if($cat_id == null) {
+            dd(1234);
+            $products = Product::where('name', 'like', '%'.$res.'%')->paginate(8);
+        }
+        else {
+            
+            dd(12345);
+            $cat_id = DB::table('categories')->where('name', $cat)->select('id');
+            // $parent_id = Category::select('parent_id')->whereId($cat_id)->first()->parent_id;
+            // dd($parent_id);
+            $products = DB::table('products')
+            ->join('categories', 'products.category_id', '=', 'categories.id')
+            ->where('categories.parent_id', $cat_id)
+            ->orWhere('categories.id', $cat_id)
+            ->where('products.active', 1)
+            ->where('products.name', 'like', '%'.$res.'%')
+            ->select('products.*')
+            ->paginate(8);
+
+            //$products = Product::where('name', 'like', '%'.$res.'%')->where('category_id', $cat_id)->paginate(8);
+        }
+
         return view('front/product/search', [
             'products' => $products,
         ]);

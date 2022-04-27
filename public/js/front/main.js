@@ -129,6 +129,7 @@ $(document).ready(function () {
     $(".c-header__catItem").click(function () {
         // console.log($(this).text());
         $(".c-header__currentCat").text($(this).text());
+        $(".c-header__catSelected input").attr('value', $(this).text());
     });
     $(".c-list6__item").click(function () {
         // console.log($(this).text());

@@ -62,9 +62,10 @@
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
                                 <span class="c-header__currentCat">{{ trans('header.middle.all-cate') }}</span>
+                                <input type="hidden" name="cat" value="0">
                                 <i class="fa-solid fa-angle-down icon-down"></i></i>
                                 <ul class="c-header__catList">
-                                        <li data-value="1" class="c-header__catItem">{{ trans('header.middle.all-cate') }}</li>
+                                        <li class="c-header__catItem">{{ trans('header.middle.all-cate') }}</li>
                                     @foreach (App\Models\Category::where(['active'=> 1, 'parent_id' => 0])->orderBy('id', 'asc')->get() as $menuItem)
                                         <li class="c-header__catItem">{{ $menuItem->name }}</li>
                                     @endforeach
