@@ -714,6 +714,7 @@ header
   display: inline-block;
   font-size: 2rem;
   padding: 5px;
+  position: relative;
 }
 .c-header__wishlist a, .c-header__cart a, .c-header__price a {
   opacity: 1;
@@ -722,6 +723,12 @@ header
 .c-header__wishlist a:hover, .c-header__cart a:hover, .c-header__price a:hover {
   opacity: 1;
   color: #ed1d24;
+}
+.c-header__wTxt, .c-header__cartTxt {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 1.6rem;
 }
 .c-header__sticky {
   background-color: #fff;

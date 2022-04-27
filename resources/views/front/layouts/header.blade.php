@@ -82,9 +82,11 @@
                     <div class="c-header__purchase">
                         <div class="c-header__wishlist">
                             <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
+                            <span class="c-header__wTxt">8</span>
                         </div>
                         <div class="c-header__cart">
                             <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <span class="c-header__cartTxt">1</span>
                         </div>
                         <div class="c-header__price">
                             10.900.000 <sup>đ</sup>
