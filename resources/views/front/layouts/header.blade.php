@@ -64,12 +64,10 @@
                                 <span class="c-header__currentCat">{{ trans('header.middle.all-cate') }}</span>
                                 <i class="fa-solid fa-angle-down icon-down"></i></i>
                                 <ul class="c-header__catList">
-                                    <li data-value="1" class="c-header__catItem">{{ trans('header.middle.all-cate') }}</li>
-                                    <li data-value="2" class="c-header__catItem">Gaming</li>
-                                    <li class="c-header__catItem">Macbook</li>
-                                    <li class="c-header__catItem">Văn phòng</li>
-                                    <li class="c-header__catItem">Đồ họa</li>
-                                    <li class="c-header__catItem">Cao cấp</li>
+                                        <li data-value="1" class="c-header__catItem">{{ trans('header.middle.all-cate') }}</li>
+                                    @foreach (App\Models\Category::where(['active'=> 1, 'parent_id' => 0])->orderBy('id', 'asc')->get() as $menuItem)
+                                        <li class="c-header__catItem">{{ $menuItem->name }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="c-header__input">

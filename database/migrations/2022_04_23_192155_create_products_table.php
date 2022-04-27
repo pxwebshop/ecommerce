@@ -23,7 +23,8 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->integer('sale_price');
             $table->integer('quantity');
-            $table->integer('special');
+            $table->integer('special_offer');
+            $table->integer('special_product');
             $table->integer('active');
             $table->timestamps();
         });

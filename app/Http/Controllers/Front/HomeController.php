@@ -24,13 +24,12 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         return view('front/home', [
-            'sliders' => Slider::where('active',1)->orderBy('sort')->get(),
-            'arrivals' => Product::where('active',1)->orderBy('id')->paginate(4),
-            'special_offers' => Product::where('active',1)->orderBy('id')->paginate(3),
-            'bestsellers' => Product::where('active',1)->orderBy('id')->paginate(8),
-            'special_products' => Product::where('active',1)->where('special',1)->orderBy('id')->paginate(4),
-            'articles' => Article::where('active',1)->orderBy('id')->paginate(3),
-            'categories' => Category::select('id', 'name')->where('parent_id',0)->orderBy('id')->get(),
+            'sliders' => Slider::active()->sort()->get(),
+            'arrivals' => Product::active()->orderDescId()->paginate(4),
+            'bestsellers' => Product::active()->orderDescId()->paginate(8),
+            'special_products' => Product::active()->specialProduct()->orderDescId()->paginate(4),
+            'special_offers' => Product::active()->specialOffer()->orderDescId()->paginate(3),
+            'articles' => Article::active()->sort()->paginate(3),
         ]);
     }
 

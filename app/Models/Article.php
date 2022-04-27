@@ -11,4 +11,11 @@ class Article extends Model
     protected $fillable = [
         'title', 'thumb', 'tag', 'author', 'description', 'content', 'active'
     ];
+
+    public function scopeActive($query) {
+        return $query->where('active', 1);
+    }
+    public function scopeSort($query) {
+        return $query->orderBy('id');
+    }
 }

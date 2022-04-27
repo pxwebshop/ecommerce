@@ -22,6 +22,32 @@ class Product extends Model
         'active',
     ];
 
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
+
+    public function scopeWhereId($query, $id) {
+        return $query->where('id', $id);
+    }
+
+    public function scopeCategoryId($query, $id)
+    {
+        return $query->where('category_id', $id);
+    }
+
+    public function scopeOrderDescId($query) {
+        return $query->orderBy('id', 'desc');
+    }
+
+    public function scopeSpecialOffer($query) {
+        return $query->where('special_offer', 1);
+    }
+
+    public function scopeSpecialProduct($query) {
+        return $query->where('special_product', 1);
+    }
+
     public function productDetail() {
         return $this->hasOne(ProductDetail::class);
     }

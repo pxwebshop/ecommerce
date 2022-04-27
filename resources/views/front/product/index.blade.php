@@ -23,7 +23,7 @@
         <div class="l-container">
             <div class="c-filter p-productList__filter">
                 <div class="c-filter__total">
-                    <p class="c-filter__txt">Showing 1-15 of 100</p>
+                    {{-- <p class="c-filter__txt">Showing 1-15 of 100</p> --}}
                 </div>
                 <div class="c-filter__sort">
                     <span class="c-filter__current">
@@ -205,13 +205,13 @@
                 </div>
             </div> --}}
             <div class="c-paginate">
-                {{-- {{ $products->link() }} --}}
-                <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
+                {{ $products->links() }}
+                {{-- <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
                 <a href="#" class="c-paginate__link c-paginate__current">1</a>
                 <a href="#" class="c-paginate__link">2</a>
                 <a href="#" class="c-paginate__link">3</a>
                 <a href="#" class="c-paginate__link">4</a>
-                <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-right"></i></a> --}}
             </div>
         </div>
         </div>

@@ -1872,6 +1872,64 @@ other
   background-color: #113366;
   color: #fff;
 }
+.c-paginate svg {
+  display: none;
+}
+.c-paginate nav {
+  font-size: 1.5rem;
+}
+.c-paginate nav > div:first-child {
+  display: none;
+}
+.c-paginate nav > div:last-child {
+  margin: 30px 0;
+}
+.c-paginate nav > div:last-child div {
+  margin: 15px 0;
+}
+.c-paginate nav > div:last-child div > span > span {
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  display: inline-block;
+  background-color: #fff;
+  line-height: 35px;
+  color: #292929;
+  box-shadow: 0 2px 10px 0 #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  opacity: 1;
+  background-color: #113366;
+  color: #fff;
+}
+.c-paginate nav > div:last-child div > span > span[aria-disabled=true] {
+  display: none;
+}
+.c-paginate nav > div:last-child div > span > a {
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  display: inline-block;
+  background-color: #fff;
+  line-height: 35px;
+  color: #292929;
+  box-shadow: 0 2px 10px 0 #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  opacity: 1;
+}
+.c-paginate nav > div:last-child div > span > a:hover {
+  background-color: #113366;
+  color: #fff;
+  opacity: 1;
+}
+.c-paginate nav > div:last-child div > span > a[rel=next] {
+  display: none;
+}
 
 .c-plusMinus__quantity {
   margin: 20px 0;

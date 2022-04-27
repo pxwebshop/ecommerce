@@ -312,13 +312,13 @@
             </div>
             <div class="c-list1">
                 <div class="c-list1__list">
-                    @foreach ($productRelateds as $productRelated)
+                    @foreach ($relatedProducts as $relatedProduct)
                         <div class="c-list1__item">
                             <div class="c-list1__wrap">
                                 <div class="c-list1__img">
                                     <a href="/product-detail">
                                         <figure class="c-list1__image">
-                                            <img src="{{ $productRelated->thumb }}" alt="">
+                                            <img src="{{ $relatedProduct->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag1">New</div>
@@ -339,7 +339,7 @@
                                     </ul>
                                 </div>
                                 <div class="c-list1__content">
-                                    <h3 class="c-title2">{{ $productRelated->name }}</h3>
+                                    <h3 class="c-title2">{{ $relatedProduct->name }}</h3>
                                     <ul class="c-rate1">
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
@@ -347,7 +347,7 @@
                                         <li><i class="fa-solid fa-star"></i></li>
                                         <li><i class="fa-solid fa-star"></i></li>
                                     </ul>
-                                    <p class="c-price1">{{ $productRelated->sale_price }} <sup>đ</sup> </p>
+                                    <p class="c-price1">{{ $relatedProduct->sale_price }} <sup>đ</sup> </p>
                                 </div>
                             </div>
                         </div>
@@ -397,6 +397,32 @@
         <script src="{{ asset('js/front/slick.min.js')}} "></script>
 
         <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+        <script>
+            export default {
+                data() {
+                    return {
+                      users: {},
+                    }
+                },
+                methods: {
+                    getSortProductByPrice(){
+                        axios.get('/list', {
+                            params: {
+                                foo: 'bar'
+                            }
+                        }).then((response)=>{
+
+                            this.users = response.data.users
+                        })
+                        .catch()
+
+                        }
+                },
+                created() {
+                    this.getUser()
+                }
+            }
+        </script> 
     @endpush
 </main>
 @endsection

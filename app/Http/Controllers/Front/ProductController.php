@@ -18,7 +18,7 @@ class ProductController extends Controller
 
     public function index(Request $request, $category_id = '')
     {
-        $parent_id = Category::select('parent_id')->where('id', $category_id)->first()->parent_id;
+        $parent_id = Category::select('parent_id')->whereId($category_id)->first()->parent_id;
         $category = Category::where('id', $category_id)->first();
 
         if($parent_id == 0) {
@@ -29,7 +29,7 @@ class ProductController extends Controller
             ->paginate(16);
         }
         else {
-            $products = Product::where('category_id', $category_id)->where('active', 1)->orderBy('id', 'desc')->paginate(16);
+            $products = Product::categoryId($category_id)->active()->orderDescId()->paginate(16);
         }
         
         return view('front/product/index', [
@@ -40,13 +40,26 @@ class ProductController extends Controller
 
     public function detail($id = '')
     {
-        $product = Product::where('id', $id)->where('active',1)->firstOrFail();
-        $productDetail = ProductDetail::where('id', $id)->firstOrFail();
-        $productRelateds = Product::where('active',1)->where('category_id',$product->category_id)->paginate(4);
+        $product = Product::whereId($id)->active()->firstOrFail();
+        $productDetail = ProductDetail::whereId($id)->firstOrFail();
+        $relatedProducts = Product::where(['active' => 1, 'category_id' => $product->category_id])->paginate(4);
         return view('front/product/detail', [
             'product' => $product,
             'productDetail' => $productDetail,
-            'productRelateds' => $productRelateds,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
+
+
+    public function sort(Request $request)
+    {
+        $id = $request->get('id');
+        $data = 1;//query scope
+
+        return response()->json([
+            'data' => $data
+        ], \Response::HTTP_OK);
+    }
+
+
 }

@@ -17,8 +17,6 @@
 
     <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
 
-    <!-- toastr -->
-    <!-- <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">  -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
 </head>
 
