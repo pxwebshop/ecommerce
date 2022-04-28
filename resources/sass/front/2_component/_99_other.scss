@@ -786,22 +786,18 @@ other
         }
     }
     &__name {
-        width: 25%;
+        width: 30%;
         @include sp {
             width: 30%;
         }
         
     }
     &__unitPrice {
-        width: 20%;
-        
-    }
-    &__stock {
-        width: 15%;
+        width: 25%;
         
     }
     &__btn {
-        width: 35%;
+        width: 30%;
         @include sp {
             width: 40%;
             .c-btn1 {

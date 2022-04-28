@@ -82,7 +82,10 @@
                     <div class="c-header__purchase">
                         <div class="c-header__wishlist">
                             <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
-                            <span class="c-header__wTxt">8</span>
+                            @php
+                                $count = App\Models\Wishlist::where('user_id', Auth::user()->id)->count();
+                            @endphp
+                            <span class="c-header__wTxt">{{ $count }} </span>
                         </div>
                         <div class="c-header__cart">
                             <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>

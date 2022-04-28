@@ -49,12 +49,15 @@ Route::group(['middleware' => 'locale'], function () {
     //
     Route::get('/cart', 'Front\CartController@index');
     Route::get('/wishlist', 'Front\WishlistController@index');
-    Route::middleware(['auth'])->group(function(){
-        Route::get('/checkout', 'Front\CheckoutController@index');
-    });
     Route::get('/contact', 'Front\ContactController@index');
 
     
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/checkout', 'Front\CheckoutController@index');
+        Route::get('/wishlist', 'WishlistController@index');
+    });
+
+
     //front end
     Route::get('/component', function () {
         return view('component');

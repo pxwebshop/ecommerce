@@ -24,7 +24,30 @@
                 <div class="c-block4__title">
                     <h2 class="c-title5">My Wishlist</h2>
                 </div>
-                <ul class="c-block4__list">
+                @foreach ($wishlists as  $wishlist)
+                    <ul class="c-block4__list">
+                        <li class="c-block4__product">
+                            <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
+                            <a href="/product/detail/{{$wishlist->id}}">
+                                <figure class="c-block4__img"><img src="{{ $wishlist->thumb }}" alt=""></figure>
+                            </a>
+                        </li>
+                        <li class="c-block4__name">
+                            <a href="/product/detail/{{$wishlist->id}}">{{ $wishlist->name }}</a>
+                        </li>
+                        <li class="c-block4__unitPrice">
+                            <span class="c-block4__productPrice">{{ number_format($wishlist->sale_price) }} <sup>đ</sup></span>
+                        </li>
+                        <li class="c-block4__btn">
+                            <a href="#" class="c-btn1">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </a>
+                        </li>
+                    </ul>
+                @endforeach
+                
+                {{-- <ul class="c-block4__list">
                     <li class="c-block4__product">
                         <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
                         <a href="/product/detail">
@@ -69,30 +92,7 @@
                             Add to Cart
                         </a>
                     </li>
-                </ul>
-                <ul class="c-block4__list">
-                    <li class="c-block4__product">
-                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
-                        <a href="/product/detail">
-                            <figure class="c-block4__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
-                        </a>
-                    </li>
-                    <li class="c-block4__name">
-                        <a href="/product/detail">Bluetooth Headphone</a>
-                    </li>
-                    <li class="c-block4__unitPrice">
-                        <span class="c-block4__productPrice">1.990.000 <sup>đ</sup></span>
-                    </li>
-                    <li class="c-block4__stock">
-                        <span class="c-block4__stockTxt">In Stock</span>
-                    </li>
-                    <li class="c-block4__btn">
-                        <a href="#" class="c-btn1">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </a>
-                    </li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </section>

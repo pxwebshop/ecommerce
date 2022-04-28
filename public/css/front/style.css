@@ -2464,7 +2464,7 @@ other
   }
 }
 .c-block4__name {
-  width: 25%;
+  width: 30%;
 }
 @media screen and (max-width: 767px) {
   .c-block4__name {
@@ -2472,13 +2472,10 @@ other
   }
 }
 .c-block4__unitPrice {
-  width: 20%;
-}
-.c-block4__stock {
-  width: 15%;
+  width: 25%;
 }
 .c-block4__btn {
-  width: 35%;
+  width: 30%;
 }
 @media screen and (max-width: 767px) {
   .c-block4__btn {
