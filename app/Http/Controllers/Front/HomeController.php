@@ -52,13 +52,16 @@ class HomeController extends Controller
         } else {
             $exitsParent = Category::where('parent_id', $category->id)->exists();
             if ($exitsParent) {
-                $products = Category::where("parent_id", $category->id)->join('products', 'products.id', '=', 'categories.id')
+                $products = Category::where("parent_id", $category->id)
+                ->join('products', 'products.id', '=', 'categories.id')
                 ->where('products.active', 1)
                 ->where('products.name', 'like', '%'.$res.'%')
-                ->select('products.*')
-                ->paginate(8);
+                ->select('products.*')->paginate(8);
             } else {
-                $products = Product::where('category_id', $category->id)->where('name', 'like', '%'.$res.'%')->paginate(8);
+                $products = Product::where('category_id', $category->id)
+                ->where('products.active', 1)
+                ->where('products.name', 'like', '%'.$res.'%')
+                ->select('products.*')->paginate(8);
             }
         }
 
