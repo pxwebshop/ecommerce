@@ -125,9 +125,14 @@
                                             </a>
                                         </li>
                                         <li class="c-list1__actionItem">
-                                            <a href="#">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </a>
+                                            <form action="{{route('wishlist.add')}}" id="wishlistForm" method="post">
+                                                @csrf
+                                                <input name="user_id" type="hidden" value="{{Auth::user()->id}}" />
+                                                <input name="product_id" type="hidden" value="{{ $arrival->id }}" />
+                                                <a onclick="document.getElementById('wishlistForm').submit()">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </a>
+                                            </form>
                                         </li>
                                         <li class="c-list1__actionItem">
                                             <a href="#"><i class="fa-solid fa-eye"></i></a>

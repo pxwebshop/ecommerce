@@ -27,7 +27,14 @@
                 @foreach ($wishlists as  $wishlist)
                     <ul class="c-block4__list">
                         <li class="c-block4__product">
-                            <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
+                            <form action="{{route('wishlist.delete')}}" id="wishlistForm" method="post">
+                                @csrf
+                                <input name="id" type="hidden" value="{{ $wishlist->id }}" />
+                                <a onclick="document.getElementById('wishlistForm').submit()" class="c-remove">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </a>
+                            </form>
+                            
                             <a href="/product/detail/{{$wishlist->id}}">
                                 <figure class="c-block4__img"><img src="{{ $wishlist->thumb }}" alt=""></figure>
                             </a>

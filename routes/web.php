@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,7 +55,10 @@ Route::group(['middleware' => 'locale'], function () {
     
     Route::middleware(['auth'])->group(function(){
         Route::get('/checkout', 'Front\CheckoutController@index');
-        Route::get('/wishlist', 'WishlistController@index');
+        
+        Route::get('/wishlist', 'WishlistController@index')->name('wishlist');
+        Route::post('/wishlist', 'WishlistController@add')->name('wishlist.add');
+        Route::post('/wishlist/delete', 'WishlistController@delete')->name('wishlist.delete');
     });
 
 
