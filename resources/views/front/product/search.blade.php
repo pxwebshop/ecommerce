@@ -59,12 +59,16 @@
                                                 </a>
                                             </li>
                                             <li class="c-list1__actionItem">
-                                                <a href="#">
-                                                    <i class="fa-solid fa-heart"></i>
-                                                </a>
+                                                <form action="{{route('wishlist.add')}}" method="post">
+                                                    @csrf
+                                                    <input name="product_id" type="hidden" value="{{ $product->id }}" />
+                                                    <a onclick="$(this).closest('form').submit();">
+                                                        <i class="fa-solid fa-heart"></i>
+                                                    </a>
+                                                </form>
                                             </li>
                                             <li class="c-list1__actionItem">
-                                                <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                                <a href="/product/detail/{{ $product->id }}"><i class="fa-solid fa-eye"></i></a>
                                             </li>
                                         </ul>
                                     </div>

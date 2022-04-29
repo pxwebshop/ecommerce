@@ -59,12 +59,16 @@
                                             </a>
                                         </li>
                                         <li class="c-list1__actionItem">
-                                            <a href="#">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </a>
+                                            <form action="{{route('wishlist.add')}}" method="post">
+                                                @csrf
+                                                <input name="product_id" type="hidden" value="{{ $product->id }}" />
+                                                <a onclick="$(this).closest('form').submit();">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </a>
+                                            </form>
                                         </li>
                                         <li class="c-list1__actionItem">
-                                            <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="/product/detail/{{ $product->id }}"><i class="fa-solid fa-eye"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -85,133 +89,8 @@
                     
                 </div>
             </div>
-            {{-- chưa biết nên bỏ hay không? --}}
-            {{-- <div class="c-list1">
-                <div class="c-list1__list">
-                    <div class="c-list1__item c-list1__item--col3">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-list1__item c-list1__item--col3">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-list1__item c-list1__item--col3">
-                        <div class="c-list1__wrap">
-                            <div class="c-list1__img">
-                                <a href="#">
-                                    <figure class="c-list1__image">
-                                        <img src="https://templates.envytheme.com/ejon/default/assets/img/arrivals-products/arrivals-products-1.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <div class="c-tag1">New</div>
-                                <ul class="c-list1__actionList">
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#">
-                                            <i class="fa-solid fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li class="c-list1__actionItem">
-                                        <a href="#"><i class="fa-solid fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="c-list1__content">
-                                <h3 class="c-title2">Smart Watch</h3>
-                                <ul class="c-rate1">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <p class="c-price1">3.636.363 <sup>đ</sup> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
             <div class="c-paginate">
                 {{ $products->links() }}
-                {{-- <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="#" class="c-paginate__link c-paginate__current">1</a>
-                <a href="#" class="c-paginate__link">2</a>
-                <a href="#" class="c-paginate__link">3</a>
-                <a href="#" class="c-paginate__link">4</a>
-                <a href="#" class="c-paginate__link"><i class="fa-solid fa-arrow-right"></i></a> --}}
             </div>
         </div>
         </div>

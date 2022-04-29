@@ -24,26 +24,26 @@
                 <div class="c-block4__title">
                     <h2 class="c-title5">My Wishlist</h2>
                 </div>
-                @foreach ($wishlists as  $wishlist)
+                @foreach ($wishlists as $wishlist)
                     <ul class="c-block4__list">
                         <li class="c-block4__product">
-                            <form action="{{route('wishlist.delete')}}" id="wishlistForm" method="post">
+                            <form action="{{route('wishlist.delete')}}" method="post">
                                 @csrf
-                                <input name="id" type="hidden" value="{{ $wishlist->id }}" />
-                                <a onclick="document.getElementById('wishlistForm').submit()" class="c-remove">
+                                <input name="id" type="hidden" value="{{ $wishlist->product->id }}" />
+                                <a onclick="$(this).closest('form').submit();" class="c-remove">
                                     <i class="fa-solid fa-circle-xmark"></i>
                                 </a>
                             </form>
                             
-                            <a href="/product/detail/{{$wishlist->id}}">
-                                <figure class="c-block4__img"><img src="{{ $wishlist->thumb }}" alt=""></figure>
+                            <a href="/product/detail/{{$wishlist->product->id}}">
+                                <figure class="c-block4__img"><img src="{{ $wishlist->product->thumb }}" alt=""></figure>
                             </a>
                         </li>
                         <li class="c-block4__name">
-                            <a href="/product/detail/{{$wishlist->id}}">{{ $wishlist->name }}</a>
+                            <a href="/product/detail/{{$wishlist->product->id}}">{{ $wishlist->product->name }}</a>
                         </li>
                         <li class="c-block4__unitPrice">
-                            <span class="c-block4__productPrice">{{ number_format($wishlist->sale_price) }} <sup>đ</sup></span>
+                            <span class="c-block4__productPrice">{{ number_format($wishlist->product->sale_price) }} <sup>đ</sup></span>
                         </li>
                         <li class="c-block4__btn">
                             <a href="#" class="c-btn1">

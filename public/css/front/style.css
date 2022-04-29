@@ -2270,7 +2270,12 @@ other
   color: #ccc;
   font-size: 2.5rem;
   text-align: center;
+  line-height: 3.2;
   margin: auto 10px auto 0;
+  cursor: pointer;
+}
+.c-block3__product .c-remove:hover {
+  color: #ed1d24;
 }
 @media screen and (max-width: 767px) {
   .c-block3__product .c-remove {
@@ -2450,7 +2455,12 @@ other
   color: #ccc;
   font-size: 2.5rem;
   text-align: center;
+  line-height: 3.2;
+  cursor: pointer;
   margin: auto 10px auto 0;
+}
+.c-block4__product .c-remove:hover {
+  color: #ed1d24;
 }
 @media screen and (max-width: 767px) {
   .c-block4__product .c-remove {
