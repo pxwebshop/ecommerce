@@ -83,7 +83,11 @@
                         <div class="c-header__wishlist">
                             <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
                             @php
-                                $count = App\Models\Wishlist::where('user_id', Auth::user()->id)->count();
+                                if (Auth::check()) {
+                                    $count = App\Models\Wishlist::where('user_id', Auth::user()->id)->count();
+                                } else {
+                                    $count = 0;
+                                }
                             @endphp
                             <span class="c-header__wTxt">{{ $count }} </span>
                         </div>

@@ -23,12 +23,15 @@ class WishlistController extends Controller
 
     public function add(Request $request)
     {
-        dd($request->product_id);
-        $data = $request->all();
-        //dd($data);
+        $user_id = Auth::user()->id;
+        $product_id = $request->product_id;
+        // dd($product_id);
         $wishlist = DB::table('wishlists')->where('product_id', $request->product_id)->count();
         if($wishlist == 0) {
-            Wishlist::create($data);
+            Wishlist::create([
+                'user_id' => $user_id,
+                'product_id' => $product_id
+            ]);
             \Toastr::success('Add to wishlist success');
             return  redirect()->route('wishlist');
         } else {
@@ -39,7 +42,7 @@ class WishlistController extends Controller
 
     public function delete(Request $request)
     {
-        dd($request->id);
+        //dd($request->id);
         DB::table('wishlists')->where('id', $request->id)->delete();
         \Toastr::success('Remove to wishlist success');
         return  redirect()->route('wishlist');
