@@ -57,7 +57,7 @@
                             </figure>
                         </a>
                     </div>
-                    <form action="/search" method="post" class="c-header__search">
+                    <form action="/search" method="get" class="c-header__search">
                         @csrf
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
