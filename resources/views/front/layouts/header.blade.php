@@ -57,11 +57,11 @@
                             </figure>
                         </a>
                     </div>
-                    <form action="/search" method="post" class="c-header__search">
+                    <form action="/search" method="get" class="c-header__search">
                         @csrf
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
-                                <span class="c-header__currentCat">{{ trans('header.middle.all-cate') }}</span>
+                                <span class="c-header__currentCat">@php echo request()->cat ? request()->cat : trans('header.middle.all-cate') @endphp</span>
                                 <input type="hidden" name="cat" value="0">
                                 <i class="fa-solid fa-angle-down icon-down"></i></i>
                                 <ul class="c-header__catList">
@@ -72,7 +72,7 @@
                                 </ul>
                             </div>
                             <div class="c-header__input">
-                                <input type="search" name="s" placeholder="{{ trans('header.middle.search') }}">
+                                <input type="search" name="s" value="{{ request()->s }}" placeholder="{{ trans('header.middle.search') }}">
                                 <button type="submit" class="c-header__btnSearch">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>

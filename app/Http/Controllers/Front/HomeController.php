@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Builder;
 
 class HomeController extends Controller
 {
@@ -43,26 +44,25 @@ class HomeController extends Controller
     public function search(Request $request) {
         $res = $request->s;
         $cat = $request->cat;
-        
+
         $category = DB::table('categories')->where('name', $cat)->first();
 
         if($category == null) {
             $products = Product::where('name', 'like', '%'.$res.'%')->paginate(8);
-        }
-        else {
-            $cat_id = DB::table('categories')->where('name', $cat)->first()->id;
-            // $parent_id = Category::select('parent_id')->whereId($cat_id)->first()->parent_id;
-            // dd($parent_id);
-            $products = DB::table('products')
-            ->join('categories', 'products.category_id', '=', 'categories.id')
-            ->where('categories.parent_id', $cat_id)
-            ->orWhere('categories.id', $cat_id)
-            ->where('products.active', 1)
-            ->where('products.name', 'like', '%'.$res.'%')
-            ->select('products.*')
-            ->paginate(8);
-
-            //$products = Product::where('name', 'like', '%'.$res.'%')->where('category_id', $cat_id)->paginate(8);
+        } else {
+            $exitsParent = Category::where('parent_id', $category->id)->exists();
+            if ($exitsParent) {
+                $products = Category::where("parent_id", $category->id)
+                ->join('products', 'products.id', '=', 'categories.id')
+                ->where('products.active', 1)
+                ->where('products.name', 'like', '%'.$res.'%')
+                ->select('products.*')->paginate(8);
+            } else {
+                $products = Product::where('category_id', $category->id)
+                ->where('products.active', 1)
+                ->where('products.name', 'like', '%'.$res.'%')
+                ->select('products.*')->paginate(8);
+            }
         }
 
         return view('front/product/search', [
