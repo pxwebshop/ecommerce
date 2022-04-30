@@ -28,7 +28,7 @@
                     </div>
                     <div class="c-header__authen">
                         @auth
-                            <span href="/login">{{ trans('header.heading.my-acc') }} ({{ Auth::user()->name }})</span>
+                            <span href="/login">{{ trans('header.heading.my-acc') }} ({{ @Auth::user()->name }})</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__accountList">
                                 <li class="c-header__accountItem"><a href="#">{{ trans('header.heading.my-acc') }}</a></li>
@@ -84,7 +84,7 @@
                             <a href="/wishlist"><i class="fa-solid fa-heart"></i></a>
                             @php
                                 if (Auth::check()) {
-                                    $count = App\Models\Wishlist::where('user_id', Auth::user()->id)->count();
+                                    $count = App\Models\Wishlist::where('user_id', @Auth::user()->id)->count();
                                 } else {
                                     $count = 0;
                                 }
@@ -93,7 +93,7 @@
                         </div>
                         <div class="c-header__cart">
                             <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                            <span class="c-header__cartTxt">1</span>
+                            <span class="c-header__cartTxt">{{ count((array) session('cart')) }}</span>
                         </div>
                         <div class="c-header__price">
                             10.900.000 <sup>đ</sup>

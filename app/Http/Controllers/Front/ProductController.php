@@ -61,6 +61,4 @@ class ProductController extends Controller
             'data' => $data
         ], \Response::HTTP_OK);
     }
-
-
 }

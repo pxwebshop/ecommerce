@@ -68,14 +68,14 @@
                             <p class="c-text1 c-block1__txt"><span class="c-text1--bold">SKU: </span> {{ $productDetail->sku }}</p>
                         </li>
                     </ul>
-                    <div class="c-block1__color">
+                    {{-- <div class="c-block1__color">
                         <span class="c-text1 c-text1--bold">Color: </span>
                         <a href="#" class="c-block1__color1"></a>
                         <a href="#" class="c-block1__color2"></a>
                         <a href="#" class="c-block1__color3"></a>
                         <a href="#" class="c-block1__color4"></a>
                         <a href="#" class="c-block1__color5"></a>
-                    </div>
+                    </div> --}}
                     <div class="c-plusMinus c-block1__quantity">
                         <span class="c-text1 c-text1--bold">Quantities:</span>
                         <div class="c-plusMinus__counter">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="c-block1__addCart">
-                        <a href="#" class="c-btn1 c-btn1--border">
+                        <a href="{{ route('add.to.cart', $productDetail->id) }}" class="c-btn1 c-btn1--border">
                             <i class="fa-solid fa-cart-shopping"></i>
                             Add to cart
                         </a>

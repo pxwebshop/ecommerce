@@ -120,7 +120,7 @@
                                     <div class="c-tag1">New</div>
                                     <ul class="c-list1__actionList">
                                         <li class="c-list1__actionItem">
-                                            <a href="#">
+                                            <a href="{{ route('add.to.cart', $arrival->id) }}">
                                                 <i class="fa-solid fa-cart-shopping"></i>
                                             </a>
                                         </li>

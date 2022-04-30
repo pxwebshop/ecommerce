@@ -9,8 +9,8 @@ jQuery(
             dots: false,
             autoplayHoverPause: true,
             items: 1,
-            smartSpeed: 100,
-            autoplay: false,
+            smartSpeed: 1000,
+            autoplay: true,
             navText: [
                 "<i class='fa-solid fa-angle-left'></i>",
                 "<i class='fa-solid fa-angle-right'></i>",
@@ -178,27 +178,9 @@ $(document).ready(function () {
 		verticalSwiping: true,
 		vertical: true
     });
-
-    // $("a[data-slide]").click(function (e) {
-    //     e.preventDefault();
-    //     var slideno = $(this).data("slide");
-    //     $(".c-block1__imgList").slick("slickGoTo", slideno - 1);
-    // });
-    
 });
 
 jQuery(function () {
-    var n = 1;
-    $(".c-plusMinus__counter input").val(n);
-    $(".c-plusMinus__plus").on("click", function () {
-        $(this).prev("input").val(++n);
-    });
-    $(".c-plusMinus__minus").on("click", function () {
-        if (n >= 1) {
-            $(this).next("input").val(--n);
-        }
-    });
-
 	var tabList = document.getElementsByClassName("c-block2__tabItem");
     if (tabList.length > 0) {
         $(".c-block2__description").show();
@@ -234,3 +216,4 @@ jQuery(function () {
         }
     });
 });
+

@@ -1947,16 +1947,19 @@ other
 }
 .c-plusMinus__counter input {
   height: 25px;
-  color: #292929;
+  color: #656565;
   outline: 0;
   display: block;
-  border: none;
+  border: 1px solid #ccc;
   background-color: #f9f9f9;
   text-align: center;
   width: 100%;
   font-size: 18px;
   font-weight: 600;
   min-width: 20px;
+}
+.c-plusMinus__counter input::-webkit-inner-spin-button {
+  opacity: 1;
 }
 .c-plusMinus__counter i {
   font-size: 2.5rem;

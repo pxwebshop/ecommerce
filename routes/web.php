@@ -48,17 +48,22 @@ Route::group(['middleware' => 'locale'], function () {
     });
 
     //
-    Route::get('/cart', 'Front\CartController@index');
-    Route::get('/wishlist', 'Front\WishlistController@index');
     Route::get('/contact', 'Front\ContactController@index');
 
     
     Route::middleware(['auth'])->group(function(){
         Route::get('/checkout', 'Front\CheckoutController@index');
         
-        Route::get('/wishlist', 'WishlistController@index')->name('wishlist');
-        Route::post('/wishlist', 'WishlistController@add')->name('wishlist.add');
-        Route::post('/wishlist/delete', 'WishlistController@delete')->name('wishlist.delete');
+        Route::group(['prefix' => 'wishlist'], function () {
+            Route::get('/', 'Front\WishlistController@index')->name('wishlist');
+            Route::post('/', 'Front\WishlistController@add')->name('wishlist.add');
+            Route::post('/delete', 'Front\WishlistController@delete')->name('wishlist.delete');
+        });
+
+        Route::get('/cart', 'Front\CartController@index')->name('cart');
+        Route::get('/add-to-cart/{id}', 'Front\CartController@addToCart')->name('add.to.cart');
+        Route::patch('/update-cart', 'Front\CartController@updateCart')->name('update.cart');
+        Route::delete('/remove-from-cart', 'Front\CartController@removeCart')->name('remove.from.cart');
     });
 
 
