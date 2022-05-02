@@ -64,6 +64,12 @@ body {
 }
 
 .tt-suggestion {
+    display: flex;
+    margin: 5px;
+    border-bottom: 1px solid $colorGrey5;
+    img {
+        width: 100px;
+    }
     a {
         display: inline-block;
         padding: 8px 15px;
@@ -73,12 +79,9 @@ body {
         color: $colorBlack;
         overflow: hidden;
         opacity: 1;
-        &:hover {
-            color: $colorWhite;
-        }
     }
     &:hover {
-        background-color: $colorBlue4;
+        background-color: $colorBlue2;
     }
 }
 

@@ -208,7 +208,7 @@ $(document).ready(function () {
                 header: [
                 ],
                 suggestion: function (data) {
-                    return '<div><a href="/product/detail/' + data.id + '" class="list-group-item">' + data.name + '</a></div>';
+                    return '<div><figure><img src="' + data.thumb +'" alt=""></figure><a href="/product/detail/' + data.id + '" class="list-group-item">' + data.name + '<br>' + data.sale_price.toLocaleString() + ' đ' + '</a></div>';
                 }
             }
         }, 
