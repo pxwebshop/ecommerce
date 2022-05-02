@@ -46,7 +46,7 @@
                             <span class="c-block4__productPrice">{{ number_format($wishlist->product->sale_price) }} <sup>đ</sup></span>
                         </li>
                         <li class="c-block4__btn">
-                            <a href="#" class="c-btn1">
+                            <a href="{{ route('add.to.cart', $wishlist->product->id) }}" class="c-btn1">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 Add to Cart
                             </a>

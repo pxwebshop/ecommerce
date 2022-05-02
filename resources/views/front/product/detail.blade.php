@@ -82,7 +82,7 @@
                             <div class="c-plusMinus__minus">
                                 <i class="fa-solid fa-circle-minus"></i>
                             </div>
-                            <input type="text" value="1">
+                            <input type="number" value="1" name="qty" class="qty_detail">
                             <div class="c-plusMinus__plus">
                                 <i class="fa-solid fa-circle-plus"></i>
                             </div>
@@ -398,30 +398,47 @@
 
         <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
         <script>
-            export default {
-                data() {
-                    return {
-                      users: {},
-                    }
-                },
-                methods: {
-                    getSortProductByPrice(){
-                        axios.get('/list', {
-                            params: {
-                                foo: 'bar'
-                            }
-                        }).then((response)=>{
+            // export default {
+            //     data() {
+            //         return {
+            //           users: {},
+            //         }
+            //     },
+            //     methods: {
+            //         getSortProductByPrice(){
+            //             axios.get('/list', {
+            //                 params: {
+            //                     foo: 'bar'
+            //                 }
+            //             }).then((response)=>{
 
-                            this.users = response.data.users
-                        })
-                        .catch()
+            //                 this.users = response.data.users
+            //             })
+            //             .catch()
 
+            //             }
+            //     },
+            //     created() {
+            //         this.getUser()
+            //     }
+            // }
+
+            $(document).ready(function() {
+                $('.addToCartBtn').click(function(e) {
+                    var product_qty = $(this).closest('.c-block1__right').find('.qty_detail').val();
+                    $.ajax({
+                        url: '/cart',
+                        method: "post",
+                        data: {
+                            _token: '{{ csrf_token() }}', 
+                            quantity: product_qty,
+                        },
+                        success: function (response) {
+                            window.location.href('/cart');
                         }
-                },
-                created() {
-                    this.getUser()
-                }
-            }
+                    });
+                })
+            })
         </script> 
     @endpush
 </main>

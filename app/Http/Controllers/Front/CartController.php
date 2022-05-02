@@ -15,9 +15,9 @@ class CartController extends Controller
         return view('front/cart');
     }
 
-    public function addToCart($id)
+    public function addToCart($id, Request $request)
     {
-        
+        //dd($request);
         $product = Product::findOrFail($id);
           
         $cart = session()->get('cart', []);

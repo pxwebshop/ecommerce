@@ -21,6 +21,7 @@ Route::group(['middleware' => 'locale'], function () {
     //home
     Route::get('/', 'Front\HomeController@index')->name("home");
     Route::get('/search', 'Front\HomeController@search')->name("search");
+    Route::get('/search/name', 'Front\HomeController@autocomplete');
 
     // account
     Route::get('/register', 'Front\UserController@register')->name('register');
@@ -59,12 +60,13 @@ Route::group(['middleware' => 'locale'], function () {
             Route::post('/', 'Front\WishlistController@add')->name('wishlist.add');
             Route::post('/delete', 'Front\WishlistController@delete')->name('wishlist.delete');
         });
-
-        Route::get('/cart', 'Front\CartController@index')->name('cart');
-        Route::get('/add-to-cart/{id}', 'Front\CartController@addToCart')->name('add.to.cart');
-        Route::patch('/update-cart', 'Front\CartController@updateCart')->name('update.cart');
-        Route::delete('/remove-from-cart', 'Front\CartController@removeCart')->name('remove.from.cart');
     });
+
+    //cart
+    Route::get('/cart', 'Front\CartController@index')->name('cart');
+    Route::get('/add-to-cart/{id}', 'Front\CartController@addToCart')->name('add.to.cart');
+    Route::patch('/update-cart', 'Front\CartController@updateCart')->name('update.cart');
+    Route::delete('/remove-from-cart', 'Front\CartController@removeCart')->name('remove.from.cart');
 
 
     //front end

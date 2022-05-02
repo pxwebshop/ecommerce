@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1170/1170576.png">
     <link href="{{ asset('css/front/style.css') }}" rel="stylesheet" type="text/css" >
 
     <link href="{{ asset('css/front/animate.min.css') }}" rel="stylesheet" type="text/css" >
@@ -29,29 +30,11 @@
 
      <!-- Jquery Slim JS -->
      <script src="{{ asset('js/front/jquery.min.js')}} "></script>
-    <!-- Bootstrap JS -->
-    <!-- <script src="{{ asset('js/front/bootstrap.bundle.min.js')}} "></script> -->
-    <!-- Meanmenu JS -->
-    <!-- <script src="{{ asset('js/front/jquery.meanmenu.js')}} "></script> -->
-  
-    <!-- Magnific Popup JS -->
-    <!-- <script src="{{ asset('js/front/jquery.magnific-popup.min.js')}} "></script> -->
-    <!-- Nice Select JS -->
-    <!-- <script src="{{ asset('js/front/jquery.nice-select.min.js')}} "></script> -->
-    <!-- Slick JS -->
-    <!-- <script src="{{ asset('js/front/slick.min.js')}} "></script> -->
-    <!-- Odometer JS -->
-    <!-- <script src="{{ asset('js/front/odometer.min.js')}} "></script> -->
-    <!-- Appear JS -->
-    <!-- <script src="{{ asset('js/front/jquery.appear.js')}} "></script> -->
-    <!-- Jquery Ui JS -->
+    
     <script src="{{ asset('js/front/jquery-ui.min.js')}} "></script>
-    <!-- Ajaxchimp JS -->
-    <!-- <script src="{{ asset('js/front/jquery.ajaxchimp.min.js')}} "></script> -->
-    <!-- Form Validator JS -->
-    <!-- <script src="{{ asset('js/front/form-validator.min.js')}} "></script> -->
-    <!-- Contact JS -->
-    <!-- <script src="{{ asset('js/front/contact-form-script.js')}} "></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+   
     @stack('scripts')
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     {!! Toastr::message() !!}

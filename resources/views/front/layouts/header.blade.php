@@ -57,7 +57,7 @@
                             </figure>
                         </a>
                     </div>
-                    <form action="/search" method="get" class="c-header__search">
+                    <form action="/search" method="get" class="c-header__search typeahead" role="search">
                         @csrf
                         <div class="c-header__category">
                             <div class="c-header__catSelected">
@@ -72,7 +72,7 @@
                                 </ul>
                             </div>
                             <div class="c-header__input">
-                                <input type="search" name="s" value="{{ request()->s }}" placeholder="{{ trans('header.middle.search') }}">
+                                <input class="form-control search-input" type="search" name="s" value="{{ request()->s }}" placeholder="{{ trans('header.middle.search') }}">
                                 <button type="submit" class="c-header__btnSearch">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>

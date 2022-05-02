@@ -69,4 +69,11 @@ class HomeController extends Controller
             'products' => $products,
         ]);
     }
+
+    public function autocomplete(Request $request)
+    {
+        $products = Product::where('name', 'like', '%' . $request->value . '%')->get();
+
+        return response()->json($products); 
+    }
 }

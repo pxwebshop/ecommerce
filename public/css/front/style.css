@@ -323,6 +323,39 @@ body.is-fixed {
   font-family: "Lato", sans-serif;
 }
 
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-menu {
+  background-color: #fff;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tt-suggestion a {
+  display: inline-block;
+  padding: 8px 15px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  width: 100%;
+  color: #292929;
+  overflow: hidden;
+  opacity: 1;
+}
+.tt-suggestion a:hover {
+  color: #fff;
+}
+.tt-suggestion:hover {
+  background-color: #15407f;
+}
+
+.list-group-item {
+  color: #292929;
+  padding: 8px 15px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
 /*------------------------------------------------------------
 side
 ------------------------------------------------------------*/
@@ -1960,10 +1993,17 @@ other
 }
 .c-plusMinus__counter input::-webkit-inner-spin-button {
   opacity: 1;
+  cursor: pointer;
 }
 .c-plusMinus__counter i {
   font-size: 2.5rem;
   color: #ccc;
+}
+.c-plusMinus__counter .qty_detail {
+  border: none;
+}
+.c-plusMinus__counter .qty_detail::-webkit-inner-spin-button {
+  display: none;
 }
 .c-plusMinus__plus, .c-plusMinus__minus {
   cursor: pointer;

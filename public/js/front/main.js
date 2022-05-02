@@ -178,9 +178,57 @@ $(document).ready(function () {
 		verticalSwiping: true,
 		vertical: true
     });
+
+
+    //autocomplete
+    var engine1 = new Bloodhound({
+        remote: {
+            url: '/search/name?value=%QUERY%',
+            wildcard: '%QUERY%'
+        },
+        datumTokenizer: Bloodhound.tokenizers.whitespace('value'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+    });
+    $(".search-input").typeahead({
+        hint: false,
+        highlight: true,
+        minLength: 1,
+    }, [
+        {
+            limit: 10,
+            source: engine1.ttAdapter(),
+            name: 'products-name',
+            display: function(data) {
+                return data.name;
+            },
+            templates: {
+                empty: [
+                    '<div class="list-group-item">Nothing found.</div>'
+                ],
+                header: [
+                ],
+                suggestion: function (data) {
+                    return '<div><a href="/product/detail/' + data.id + '" class="list-group-item">' + data.name + '</a></div>';
+                }
+            }
+        }, 
+    ]);
+    //end: autocomplete
 });
 
 jQuery(function () {
+
+    var n = 1;
+    $(".c-plusMinus__counter qty_detail").val(n);
+    $(".c-plusMinus__plus").on("click", function () {
+        $(this).prev("input").val(++n);
+    });
+    $(".c-plusMinus__minus").on("click", function () {
+        if (n >= 1) {
+            $(this).next("input").val(--n);
+        }
+    });
+
 	var tabList = document.getElementsByClassName("c-block2__tabItem");
     if (tabList.length > 0) {
         $(".c-block2__description").show();

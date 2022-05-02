@@ -51,3 +51,41 @@ body {
     color: $colorRed1;
     @include Lato();
 }
+
+
+//typeahead
+.twitter-typeahead {
+	width: 100%;
+}
+
+.tt-menu {
+    background-color: $colorWhite;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 0.1);
+}
+
+.tt-suggestion {
+    a {
+        display: inline-block;
+        padding: 8px 15px;
+        line-height: 1.5;
+        font-size: 1.6rem;
+        width: 100%;
+        color: $colorBlack;
+        overflow: hidden;
+        opacity: 1;
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &:hover {
+        background-color: $colorBlue4;
+    }
+}
+
+.list-group-item {
+    color: $colorBlack;
+    padding: 8px 15px;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+// end: typeahead

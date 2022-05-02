@@ -292,11 +292,18 @@ other
             min-width: 20px;
             &::-webkit-inner-spin-button {
                 opacity: 1;
-              }
+                cursor: pointer;
+            }
         }
         i {
             font-size: 2.5rem;
             color: $colorGrey;
+        }
+        .qty_detail {
+            border: none;
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
         }
     }
     &__plus,
