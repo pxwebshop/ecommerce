@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
 
     public function index(Request $request, $category_id = '')
-    {
+    {  
         $parent_id = Category::select('parent_id')->whereId($category_id)->first()->parent_id;
         $category = Category::where('id', $category_id)->first();
 
@@ -25,12 +25,20 @@ class ProductController extends Controller
             $products = DB::table('products')
             ->join('categories', 'products.category_id', '=', 'categories.id')
             ->where('categories.parent_id', $category_id)->orWhere('categories.id', $category_id)->where('products.active', 1)
-            ->select('products.*')
-            ->paginate(16);
+            ->select('products.*');
         }
         else {
-            
-            $products = Product::categoryId($category_id)->active()->orderDescId()->paginate(16);
+            $products = Product::categoryId($category_id)->active();
+        }
+
+        if ($request->sort == 2) {
+            $products = $products->orderBy('id', 'desc')->paginate(16);
+        } elseif ($request->sort == 3) {
+            $products = $products->orderBy('sale_price', 'asc')->paginate(16);
+        } elseif ($request->sort == 4) {
+            $products = $products->orderBy('sale_price', 'desc')->paginate(16);
+        } else {
+            $products = $products->paginate(16);
         }
         
         return view('front/product/index', [

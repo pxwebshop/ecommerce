@@ -44,7 +44,7 @@ Route::group(['middleware' => 'locale'], function () {
 
     //product
     Route::group(['prefix' => 'product'], function () {
-        Route::get('/{category_id}', 'Front\ProductController@index');
+        Route::get('/{category_id}', 'Front\ProductController@index')->name('filter');
         Route::get('/detail/{id}', 'Front\ProductController@detail');
     });
 
@@ -73,4 +73,14 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('/component', function () {
         return view('component');
     });
+
+
+    // --- ADMIN --- //
+    Route::group(['middleware' => 'admin'], function () {
+        Route::group(['prefix' => 'admin'], function () {
+            Route::get('/', 'Admin\HomeController@index');
+            Route::get('/slider', 'Admin\HomeController@slider');
+        });
+    });
+
 });
