@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use App\Models\User;
+use Brian2694\Toastr\Facades\Toastr;
+use Exception;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,17 +16,11 @@ class HomeController extends Controller
         return view('admin.home');
     }
 
+    // start: user
     public function user() {
         $users = User::get();
         return view('admin.user.list', [
             'users' => $users,
-        ]);
-    }
-
-    public function userAdd() {
-        
-        return view('admin.user.add', [
-            
         ]);
     }
 
@@ -32,6 +29,46 @@ class HomeController extends Controller
         // dd($user);
         return view('admin.user.edit', [
             'user' => $user,
+        ]);
+    }
+    public function postUserEdit(Request $request, $id) {
+        try {
+            $user = User::findOrFail($id);
+            $input = $request->all();
+            $user->fill($input)->save();
+            Toastr::success('Update successful');
+            return redirect()->route('user');
+        } 
+        catch(Exception $e) {
+            Toastr::error('Update failed');
+            return redirect()->back();
+        }
+    }
+
+    public function userDelete($id) {
+        try {
+            User::where('id' ,$id)->delete();
+            Toastr::success('Delete successful');
+            return redirect()->back();
+        } 
+        catch (Exception $e) {
+            Toastr::error('Delete failed');
+            return redirect()->back();
+        }
+    }
+    // end: user
+
+    public function slider() {
+        $sliders = Slider::get();
+        return view('admin.slider.list', [
+            'sliders' => $sliders,
+        ]);
+    }
+
+    public function sliderEdit($id) {
+        $slider = Slider::find($id);
+        return view('admin.slider.edit', [
+            'slider' => $slider,
         ]);
     }
 }

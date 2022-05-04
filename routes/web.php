@@ -80,8 +80,13 @@ Route::group(['middleware' => 'locale'], function () {
         Route::group(['prefix' => 'admin'], function () {
             Route::get('/', 'Admin\HomeController@index');
             Route::get('/user', 'Admin\HomeController@user')->name('user');
-            Route::get('/user/add', 'Admin\HomeController@userAdd')->name('user.add');
-            Route::get('/user/edit/{id}', 'Admin\HomeController@userEdit');
+            Route::get('/user/edit/{id}', 'Admin\HomeController@userEdit')->name('user.edit');
+            Route::post('/user/edit/{id}', 'Admin\HomeController@postUserEdit')->name('user.edit.post');
+            Route::get('/user/delete/{id}', 'Admin\HomeController@userDelete')->name('user.delete');
+
+            Route::get('/slider', 'Admin\HomeController@slider')->name('slider');
+            Route::get('/slider/edit/{id}', 'Admin\HomeController@sliderEdit');
+
         });
     });
 
