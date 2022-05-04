@@ -79,7 +79,9 @@ Route::group(['middleware' => 'locale'], function () {
     Route::group(['middleware' => 'admin'], function () {
         Route::group(['prefix' => 'admin'], function () {
             Route::get('/', 'Admin\HomeController@index');
-            Route::get('/slider', 'Admin\HomeController@slider');
+            Route::get('/user', 'Admin\HomeController@user')->name('user');
+            Route::get('/user/add', 'Admin\HomeController@userAdd')->name('user.add');
+            Route::get('/user/edit/{id}', 'Admin\HomeController@userEdit');
         });
     });
 

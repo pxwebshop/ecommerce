@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
+    //sort product latest
+    const SORT_LASTEST = 2;
+    //sort by price low to high
+    const SORT_PRICE_MIN = 3;
+    //sort by price high to low
+    const SORT_PRICE_MAX = 4;
+
     public function __construct()
     {
         

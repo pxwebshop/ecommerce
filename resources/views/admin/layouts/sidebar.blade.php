@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="https://cdn-icons.flaticon.com/png/512/5609/premium/5609195.png?token=exp=1651604866~hmac=a3dc6fc9c8f5b88b206c665faf0908b8"
+        <img src="../../dist/img/AdminLTELogo.png"
             alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Administration</span>
     </a>
@@ -47,13 +47,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{ route('user') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{ route('user.add') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>Add new</p>
                             </a>
