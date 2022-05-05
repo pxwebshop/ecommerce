@@ -87,4 +87,12 @@ class HomeController extends Controller
     
         return redirect()->route('slider');
     }
+
+    public function sliderAdd() {
+        return view('admin.slider.add');
+    }
+
+    public function postSliderAdd(Request $request) {
+        dd($request);
+    }
 }

@@ -70,7 +70,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{ route('slider.add') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>Add new</p>
                             </a>
