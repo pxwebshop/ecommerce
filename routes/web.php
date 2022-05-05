@@ -86,6 +86,7 @@ Route::group(['middleware' => 'locale'], function () {
 
             Route::get('/slider', 'Admin\HomeController@slider')->name('slider');
             Route::get('/slider/edit/{id}', 'Admin\HomeController@sliderEdit');
+            Route::post('/slider/edit/{id}', 'Admin\HomeController@postSliderEdit')->name('slider.edit.post');
 
         });
     });

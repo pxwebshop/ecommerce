@@ -71,4 +71,20 @@ class HomeController extends Controller
             'slider' => $slider,
         ]);
     }
+    public function postSliderEdit(Request $request, $id) {
+        $slider = Slider::find($id);
+        // dd($request->hasFile('image'));
+        if($request->hasFile('image')){
+            $request->validate([
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            $path = $request->file('image')->store('public/images');
+            //dd($path);
+            $slider->image = $path;
+        }
+        $input = $request->all();
+        $slider->fill($input)->save();
+    
+        return redirect()->route('slider');
+    }
 }
