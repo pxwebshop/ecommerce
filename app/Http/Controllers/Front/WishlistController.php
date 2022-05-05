@@ -24,7 +24,10 @@ class WishlistController extends Controller
     {
         $user_id = Auth::user()->id;
         $product_id = $request->product_id;
-        $wishlist = Wishlist::where(['product_id' => $request->product_id, 'user_id'=> $user_id ])->first();
+        $wishlist = Wishlist::where([
+            'product_id' => $request->product_id,
+            'user_id'=> $user_id
+        ])->first();
 
         if(!$wishlist) {
             Wishlist::create([
@@ -42,7 +45,10 @@ class WishlistController extends Controller
     public function delete(Request $request)
     {
         $user_id = Auth::user()->id;
-        Wishlist::where(['product_id' => $request->id, 'user_id' => $user_id])->delete();
+        Wishlist::where([
+            'product_id' => $request->id,
+            'user_id' => $user_id
+        ])->delete();
         Toastr::success('Remove to wishlist success');
         return redirect()->route('wishlist');
     }

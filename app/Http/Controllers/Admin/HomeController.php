@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Slider;
 use App\Models\User;
-use Brian2694\Toastr\Facades\Toastr;
-use Exception;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -39,7 +38,8 @@ class HomeController extends Controller
             Toastr::success('Update successful');
             return redirect()->route('user');
         } 
-        catch(Exception $e) {
+        catch(\Exception $e) {
+            // dịch nó
             Toastr::error('Update failed');
             return redirect()->back();
         }
@@ -51,7 +51,7 @@ class HomeController extends Controller
             Toastr::success('Delete successful');
             return redirect()->back();
         } 
-        catch (Exception $e) {
+        catch (\Exception $e) {
             Toastr::error('Delete failed');
             return redirect()->back();
         }

@@ -4,19 +4,19 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductDetail;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     //sort product latest
     const SORT_LASTEST = 2;
     //sort by price low to high
-    const SORT_PRICE_MIN = 3;
+    const SORT_PRICE_LOW_TO_HIGH = 3;
     //sort by price high to low
-    const SORT_PRICE_MAX = 4;
+    const SORT_PRICE_HIGH_TO_LOW = 4;
 
     public function __construct()
     {
