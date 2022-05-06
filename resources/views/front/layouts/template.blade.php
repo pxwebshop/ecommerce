@@ -19,6 +19,9 @@
     <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
+
+    {{-- botman --}}
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css"> --}}
 </head>
 
 <body>
@@ -39,6 +42,16 @@
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     {!! Toastr::message() !!}
 
+
+    {{-- botman --}}
+    <script>
+        var botmanWidget = {
+	        aboutText: 'for you',
+	        introMessage: "✋ Hi! Can I help you?"
+	    };
+    </script>
+   
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 
 </body>
 

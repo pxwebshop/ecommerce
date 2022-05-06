@@ -93,4 +93,5 @@ Route::group(['middleware' => 'locale'], function () {
         });
     });
 
+    Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 });
