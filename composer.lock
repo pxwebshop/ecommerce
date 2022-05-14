@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87c38bc949f08d80ddf229d324d73c59",
+    "content-hash": "fee049d8ac73df098172108231ad7273",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -228,6 +228,72 @@
             "time": "2022-05-01T09:44:29+00:00"
         },
         {
+            "name": "botman/driver-facebook",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/botman/driver-facebook.git",
+                "reference": "3345db228acf167296a214c5d9da4eb486425ef6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/botman/driver-facebook/zipball/3345db228acf167296a214c5d9da4eb486425ef6",
+                "reference": "3345db228acf167296a214c5d9da4eb486425ef6",
+                "shasum": ""
+            },
+            "require": {
+                "botman/botman": "~2.1|~3.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "botman/studio-addons": "^1.0",
+                "ext-curl": "*",
+                "illuminate/contracts": "^5.5",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "BotMan\\Drivers\\Facebook\\Providers\\FacebookServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BotMan\\Drivers\\Facebook\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "Facebook Messenger driver for BotMan",
+            "homepage": "http://github.com/botman/driver-facebook",
+            "keywords": [
+                "Botman",
+                "Messenger",
+                "bot",
+                "facebook",
+                "facebook messenger"
+            ],
+            "support": {
+                "issues": "https://github.com/botman/driver-facebook/issues",
+                "source": "https://github.com/botman/driver-facebook/tree/1.11.0"
+            },
+            "time": "2020-09-11T02:02:54+00:00"
+        },
+        {
             "name": "botman/driver-web",
             "version": "1.5.1",
             "source": {
@@ -288,6 +354,70 @@
                 "source": "https://github.com/botman/driver-web/tree/1.0"
             },
             "time": "2018-03-27T10:19:41+00:00"
+        },
+        {
+            "name": "botman/studio-addons",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/botman/studio-addons.git",
+                "reference": "1b6cf1b4e6306c25e515613207d767ee967ae129"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/botman/studio-addons/zipball/1b6cf1b4e6306c25e515613207d767ee967ae129",
+                "reference": "1b6cf1b4e6306c25e515613207d767ee967ae129",
+                "shasum": ""
+            },
+            "require": {
+                "botman/botman": "~2.0 || ~3.0",
+                "guzzlehttp/guzzle": "~6.0 || ^7.0.1",
+                "illuminate/console": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "php": "^7.2",
+                "thecodingmachine/discovery": "^1.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.5 || ^4.0 || ^5.0 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BotMan\\Studio\\Providers\\StudioServiceProvider",
+                        "BotMan\\Studio\\Providers\\RouteServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BotMan\\Studio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "BotMan Studio specific addons.",
+            "homepage": "http://github.com/botman/studio-addons",
+            "keywords": [
+                "Botman",
+                "bot",
+                "studio"
+            ],
+            "support": {
+                "issues": "https://github.com/botman/studio-addons/issues",
+                "source": "https://github.com/botman/studio-addons/tree/1.6.1"
+            },
+            "time": "2020-09-10T04:34:01+00:00"
         },
         {
             "name": "brian2694/laravel-toastr",
@@ -6370,6 +6500,68 @@
                 }
             ],
             "time": "2022-03-02T12:42:23+00:00"
+        },
+        {
+            "name": "thecodingmachine/discovery",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/discovery.git",
+                "reference": "c5d15800bdd7ddf8390d00eeb9e570142eb69f10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/discovery/zipball/c5d15800bdd7ddf8390d00eeb9e570142eb69f10",
+                "reference": "c5d15800bdd7ddf8390d00eeb9e570142eb69f10",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "composer/composer": "^1 || ^2",
+                "composer/semver": "^1 || ^2 || ^3",
+                "couscous/couscous": "^1.8",
+                "infection/infection": "^0.17.7 || ^1.18.2",
+                "php-coveralls/php-coveralls": "^2.4.2",
+                "phpunit/phpunit": "^8.5.8",
+                "squizlabs/php_codesniffer": "^2.9.2"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "TheCodingMachine\\Discovery\\DiscoveryPlugin",
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheCodingMachine\\Discovery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Négrier",
+                    "email": "d.negrier@thecodingmachine.com",
+                    "homepage": "http://mouf-php.com"
+                }
+            ],
+            "description": "Publish and discover assets in your PHP projects.",
+            "homepage": "https://github.com/thecodingmachine/discovery",
+            "keywords": [
+                "assets",
+                "discovery"
+            ],
+            "support": {
+                "issues": "https://github.com/thecodingmachine/discovery/issues",
+                "source": "https://github.com/thecodingmachine/discovery/tree/v1.3.0"
+            },
+            "time": "2020-10-27T17:03:21+00:00"
         },
         {
             "name": "tightenco/collect",
