@@ -71,6 +71,7 @@
                                       <div id="image_show">
                                           <a href="{{ $slider->image }}">
                                               <img src="{{ asset(Storage::url($slider->image) )}}" width="100px">
+                                              {{-- <img src="{{ $slider->image }}" width="100px"> --}}
                                           </a>
                                       </div>
                                   </div>

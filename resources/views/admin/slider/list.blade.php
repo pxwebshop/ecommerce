@@ -106,7 +106,8 @@
                             </i>
                             Edit
                         </a>
-                        <a class="btn btn-danger btn-sm" href="#">
+                        <a class="btn btn-danger btn-sm"
+                          onclick="return confirm('Are you sure?')" href="./slider/delete/{{ $slider->id}}">
                             <i class="fas fa-trash">
                             </i>
                             Delete

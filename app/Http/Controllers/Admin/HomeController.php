@@ -73,18 +73,19 @@ class HomeController extends Controller
     }
     public function postSliderEdit(Request $request, $id) {
         $slider = Slider::find($id);
-        // dd($request->hasFile('image'));
         if($request->hasFile('image')){
             $request->validate([
               'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
-            $path = $request->file('image')->store('public/images');
-            //dd($path);
+            // $file = $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs(
+                'public/images/sliders', $request->file('image')->getClientOriginalName()
+            );
             $slider->image = $path;
         }
-        $input = $request->all();
-        $slider->fill($input)->save();
-    
+        // $input = $request->all();
+        $slider->fill($request->input())->save();
+        Toastr::success('Updated successful');
         return redirect()->route('slider');
     }
 
@@ -93,6 +94,28 @@ class HomeController extends Controller
     }
 
     public function postSliderAdd(Request $request) {
-        dd($request);
+        $slider = new Slider;
+
+        if($request->hasFile('image')){
+            $request->validate([
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            // $file = $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs(
+                'public/images/sliders', $request->file('image')->getClientOriginalName()
+            );
+            $slider->image = $path;
+        }
+
+        $slider->fill($request->input())->save();
+        Toastr::success('Added successful');
+        return redirect()->route('slider');
+    }
+
+    public function sliderDelete($id) {
+        $slider = Slider::find($id);
+        Toastr::success('Deleted successful');
+        $slider->delete();
+        return redirect()->route('slider');
     }
 }

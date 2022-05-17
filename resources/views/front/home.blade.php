@@ -19,7 +19,8 @@
                                 </a>
                             </div>
                             <figure class="c-slide1__img">
-                                <img src="{{ $slider->image }}" alt="">
+                                {{-- <img src="{{ $slider->image }}" alt=""> --}}
+                                <img src="{{ asset(Storage::url($slider->image) )}}" alt="">
                             </figure>
                         </div>
                     </div>
