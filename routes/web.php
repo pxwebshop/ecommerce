@@ -91,6 +91,14 @@ Route::group(['middleware' => 'locale'], function () {
             Route::post('slider/add', 'Admin\HomeController@postSliderAdd')->name('slider.add.post');
             Route::get('slider/delete/{id}', 'Admin\HomeController@sliderDelete')->name('slider.delete');
 
+            Route::get('/category', 'Admin\CategoryController@index')->name('category');
+            Route::get('/category/add', 'Admin\CategoryController@create')->name('category.add');
+            Route::post('/category/add', 'Admin\CategoryController@store')->name('category.add.post');
+            Route::get('/category/edit/{id}', 'Admin\CategoryController@show')->name('category.edit');
+            Route::post('/category/edit/{id}', 'Admin\CategoryController@edit')->name('category.edit.post');
+            Route::get('/category/delete/{id}', 'Admin\CategoryController@destroy')->name('category.delete');
+
+            Route::get('/product', 'Admin\ProductController@index')->name('product');
         });
     });
 

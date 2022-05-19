@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Brian2694\Toastr\Facades\Toastr;
+use Exception;
 use Illuminate\Http\Request;
+
 
 class CategoryController extends Controller
 {
@@ -15,7 +18,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::get();
+        $parent_id = 0;
+        return view('admin.category.list', [
+            'categories' => $categories,
+            'parent_id' => $parent_id,
+        ]);
     }
 
     /**
@@ -25,7 +33,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category.add', [
+            'categories' => Category::where('parent_id', 0)->get(),
+        ]);
     }
 
     /**
@@ -36,7 +46,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+        try {
+            $category->fill($request->input())->save();
+            Toastr::success('Added successful');
+            return redirect()->route('category');
+        }
+        catch (Exception $e) {
+            Toastr::error('Added failed');
+            return redirect()->route('category.add');
+        }
     }
 
     /**
@@ -45,9 +64,13 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $category = Category::find($id);
+        return view('admin.category.edit', [
+            'category' => $category,
+            'categories' => Category::where('parent_id', 0)->get(),
+        ]);
     }
 
     /**
@@ -56,9 +79,19 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        try {
+            $category->fill($request->input())->save();
+            Toastr::success('Updated successful');
+            return redirect()->route('category');
+        }
+        catch (Exception $e) {
+            Toastr::error('Updated failed');
+            return redirect()->route('category.edit');
+        }
+        
     }
 
     /**
@@ -79,8 +112,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category, $id)
     {
-        //
+        $category = Category::find($id);
+        Toastr::success('Deleted successful');
+        $category->delete();
+        return redirect()->route('category');
     }
 }

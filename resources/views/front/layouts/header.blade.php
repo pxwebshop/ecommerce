@@ -96,7 +96,15 @@
                             <span class="c-header__cartTxt">{{ count((array) session('cart')) }}</span>
                         </div>
                         <div class="c-header__price">
-                            10.900.000 <sup>đ</sup>
+                            @php $total = 0 @endphp
+                            @if(session('cart'))
+                                {{-- @dd(session('cart')); --}}
+                                @foreach(session('cart') as $id => $details)
+                                    @php $total += $details['price'] * $details['quantity'] @endphp
+                                    {{ number_format($total) }} <sup>đ</sup>
+                                @endforeach
+                            @endif
+                            
                         </div>
                     </div>
                 </div>

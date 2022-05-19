@@ -27,4 +27,6 @@
 
 <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
+<link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">
+
 @yield('head')

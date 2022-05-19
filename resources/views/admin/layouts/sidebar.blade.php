@@ -87,13 +87,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{ route('category') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{ route('category.add') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>Add new</p>
                             </a>
@@ -110,7 +110,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{ route('product') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>List</p>
                             </a>
