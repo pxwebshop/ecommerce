@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Slider;
 use App\Models\User;
@@ -117,5 +118,24 @@ class HomeController extends Controller
         Toastr::success('Deleted successful');
         $slider->delete();
         return redirect()->route('slider');
+    }
+
+    public function cart() {
+        return view('admin.cart.customer', [
+            'customers' => Customer::orderByDesc('id')->paginate(10),
+        ]);
+    }
+
+    public function cartDetail(Customer $customer)
+    {
+        $carts = $customer->cart()
+            ->with(['product' => function ($query) {
+                $query->select('id', 'name', 'thumb');
+            }])->get();
+
+        return view('admin.cart.detail', [
+            'customer' => $customer,
+            'carts' => $carts
+        ]);
     }
 }

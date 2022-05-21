@@ -53,7 +53,9 @@ Route::group(['middleware' => 'locale'], function () {
 
     
     Route::middleware(['auth'])->group(function(){
-        Route::get('/checkout', 'Front\CheckoutController@index');
+        Route::get('/checkout', 'Front\CheckoutController@index')->name('checkout');
+        // order
+        Route::post('/checkout', 'Front\CheckoutController@add')->name('order');
         
         Route::group(['prefix' => 'wishlist'], function () {
             Route::get('/', 'Front\WishlistController@index')->name('wishlist');
@@ -99,6 +101,9 @@ Route::group(['middleware' => 'locale'], function () {
             Route::get('/category/delete/{id}', 'Admin\CategoryController@destroy')->name('category.delete');
 
             Route::get('/product', 'Admin\ProductController@index')->name('product');
+
+            Route::get('cart/customer', 'Admin\HomeController@cart')->name('cart.customer');
+            Route::get('cart/customer/view/{customer}', 'Admin\HomeController@cartDetail')->name('cart.detail');
         });
     });
 

@@ -123,7 +123,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item menu-open">
+                {{-- <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa-solid fa-border-all"></i>
                         <p>
@@ -145,7 +145,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa-solid fa-cart-shopping"></i>
@@ -156,7 +156,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{ route('cart.customer') }}" class="nav-link">
                                 <i class="fa-solid fa-angles-right nav-icon"></i>
                                 <p>List</p>
                             </a>

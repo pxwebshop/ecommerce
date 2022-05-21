@@ -26,6 +26,13 @@ class CreateProductsTable extends Migration
             $table->integer('special_offer');
             $table->integer('special_product');
             $table->integer('active');
+            // detail
+            // $table->integer('stock');
+            // $table->integer('active');
+            // $table->string('sku');
+            // $table->longText('specification');
+            // $table->string('image');
+            // $table->string('info_delivery');
             $table->timestamps();
         });
     }
