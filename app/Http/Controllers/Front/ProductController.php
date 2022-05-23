@@ -54,14 +54,21 @@ class ProductController extends Controller
         ]);
     }
 
+    public function all() {
+        $products = Product::paginate(16);
+        return view ('front/product/all', [
+            'products' => $products,
+        ]);
+    }
+
     public function detail($id = '')
     {
         $product = Product::whereId($id)->active()->firstOrFail();
-        $productDetail = ProductDetail::whereId($id)->firstOrFail();
+        // $productDetail = ProductDetail::whereId($id)->firstOrFail();
         $relatedProducts = Product::where(['active' => 1, 'category_id' => $product->category_id])->paginate(4);
         return view('front/product/detail', [
             'product' => $product,
-            'productDetail' => $productDetail,
+            // 'productDetail' => $productDetail,
             'relatedProducts' => $relatedProducts,
         ]);
     }

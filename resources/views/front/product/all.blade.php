@@ -8,49 +8,19 @@
                 <div class="c-breadcrumb1">
                     <div class="c-breadcrumb1__title">
                         <h2 class="c-breadcrumb1__txt">
-                            {{ $category->name }}
+                            Product List
                         </h2>
                     </div>
                     <div class="c-breadcrumb1__url">
                         <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
                         <span class="c-breadcrumb1__current">/ Product</span>
-                        <span class="c-breadcrumb1__current">/ {{ $category->id }}</span>
+                        <span class="c-breadcrumb1__current">/ All</span>
                     </div>
                 </div>
             </div>
         </section>
         <section class="p-productList__list">
             <div class="l-container">
-                <div class="c-filter p-productList__filter">
-                    <div class="c-filter__total">
-                        {{-- <p class="c-filter__txt">Showing 1-15 of 100</p> --}}
-                    </div>
-                    <form action="{{ route('filter', [$category->id]) }}" method="get">
-                        {{-- <div class="c-filter__sort">
-                            <span class="c-filter__current">
-                                Default sorting
-                            </span>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <ul class="c-filter__sortList">
-                                <li class="c-filter__sortItem">Default sorting</li>
-                                <li class="c-filter__sortItem">Sort by latest</li>
-                                <li class="c-filter__sortItem">Sort by price: low to high</li>   
-                                <li class="c-filter__sortItem">Sort by price: high to low</li>
-                                <li class="c-filter__sortItem">Sort by popularity</li>
-                                <li class="c-filter__sortItem">Sort by average rating</li>
-                            </select>
-                        </div> --}}
-                        <select name="sort" class="c-filter__sortList">
-                            <option value="1" selecte="selected" class="c-filter__sortItem">Default sorting</option>
-                            <option value="2" class="c-filter__sortItem">Sort by latest</option>
-                            <option value="3" class="c-filter__sortItem">Sort by price: low to high</option>
-                            <option value="4" class="c-filter__sortItem">Sort by price: high to low</option>
-                        </select>
-                        <button type="submit" class="c-btn1 c-btn1 c-btn1--hoverBlack c-filter__btn">
-                            Filter
-                        </button>
-                    </form>
-                </div>
                 <div class="c-list1">
                     <div class="c-list1__list">
                         @foreach ($products as $product)

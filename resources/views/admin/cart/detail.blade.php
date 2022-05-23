@@ -69,7 +69,10 @@
                         <td class="column-1">
                             <div class="how-itemcart1">
                                 <a href="/product/detail/{{ $cart->product->id }}">
-                                    <img src="{{ $cart->product->thumb }}" alt="IMG" style="width: 100px">
+                                  @if (Storage::exists($cart->product->thumb))
+                                    <img src="{{ asset(Storage::url($cart->product->thumb)) }}" width="100px">
+                                  @endif
+                                  <img width="100px" src="{{ $cart->product->thumb }}" alt="">
                                 </a>
                             </div>
                         </td>

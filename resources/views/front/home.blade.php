@@ -13,14 +13,17 @@
                                 <b class="c-slide1__bold">Big Sale Offer</b>
                                 <h1 class="c-slide1__title">{{ $slider->title }}</h1>
                                 <p class="c-text1">{{ $slider->content }}</p>
-                                <a href="{{ $slider->url }}" class="c-btn1">
+                                <a href="{{ route('product.all') }}" class="c-btn1">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Shop Now
                                 </a>
                             </div>
                             <figure class="c-slide1__img">
                                 {{-- <img src="{{ $slider->image }}" alt=""> --}}
-                                <img src="{{ asset(Storage::url($slider->image) )}}" alt="">
+                                @if (Storage::exists($slider->image))
+                                    <img src="{{ asset(Storage::url($slider->image)) }}">
+                                @endif
+                                <img src="{{ $slider->image }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -41,7 +44,7 @@
                                 <h3 class="c-title2">Special Discount Offer</h3>
                                 <p class="c-list2__txt">for 12-12 Festival</p>
                                 <p class="c-price2">19.990.000 <sup>đ</sup></p>
-                                <a href="#" class="c-btn1">
+                                <a href="{{ route('product.all') }}" class="c-btn1">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Shop Now
                                 </a>
@@ -57,7 +60,7 @@
                                 <p class="c-list2__txt">Featured</p>
                                 <h3 class="c-title2">Best Price & Great Quality</h3>
                                 <p class="c-price2 c-price2--discount">-50% Off</p><br>
-                                <a href="#" class="c-list2__btn">
+                                <a href="{{ route('product.all') }}" class="c-list2__btn">
                                     View Product
                                 </a>
                             </div>
@@ -115,7 +118,10 @@
                                 <div class="c-list1__img">
                                     <a href="/product/detail/{{$arrival->id}}">
                                         <figure class="c-list1__image">
-                                            <img src="{{ $arrival->thumb }}" alt="">
+                                            @if (Storage::exists($arrival->thumb))
+                                                    <img src="{{ asset(Storage::url($arrival->thumb)) }}">
+                                                @endif
+                                                <img src="{{ $arrival->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag1">New</div>
@@ -172,7 +178,10 @@
                                 <div class="c-list3__img">
                                     <a href="/product/detail/{{$special_offer->id}}">
                                         <figure class="c-list3__image">
-                                            <img src="{{ $special_offer->thumb }}" alt="">
+                                            @if (Storage::exists($special_offer->thumb))
+                                                    <img src="{{ asset(Storage::url($special_offer->thumb)) }}">
+                                                @endif
+                                                <img src="{{ $special_offer->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag2">-50%</div>
@@ -205,7 +214,7 @@
                 <div class="c-list5__list">
                     <div class="c-list5__item">
                         <figure class="c-list5__img">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/collection/collection-1.png" alt="">
+                            <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
                         </figure>
                     </div>
                     <div class="c-list5__item c-list5__item--flex">
@@ -213,7 +222,7 @@
                             <div class="c-list5__txt1">New Arrival</div>
                             <h3 class="c-list5__title">Best Gadget</h3>
                             <div class="c-list5__txt2">Collection</div>
-                            <a href="#" class="c-btn1">
+                            <a href="{{ route('product.all') }}" class="c-btn1">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 Shop Now
                             </a>
@@ -221,7 +230,7 @@
                     </div>
                     <div class="c-list5__item c-list5__item--flex">
                         <figure class="c-list5__img">
-                            <img src="https://templates.envytheme.com/ejon/default/assets/img/collection/collection-2.png" alt="">
+                            <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
                         </figure>
                     </div>
                 </div>
@@ -236,7 +245,7 @@
                 </h2>
             </div>
             <div class="c-list6">
-                <ul class="c-list6__list">
+                {{-- <ul class="c-list6__list">
                     <li class="c-list6__item is-active">Smartphones</li>
                     <li class="c-list6__item">TV</li>
                     <li class="c-list6__item">Cameras</li>
@@ -247,7 +256,7 @@
                     <li class="c-list6__item">Watches</li>
                     <li class="c-list6__item">Mobile</li>
                     <li class="c-list6__item">Headphone</li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
         <div class="l-container">
@@ -262,7 +271,10 @@
                                 <div class="c-list1__img">
                                     <a href="/product/detail/{{$bestseller->id}}">
                                         <figure class="c-list1__image">
-                                            <img src="{{ $bestseller->thumb }}" alt="">
+                                            @if (Storage::exists($bestseller->thumb))
+                                                    <img src="{{ asset(Storage::url($bestseller->thumb)) }}">
+                                                @endif
+                                                <img src="{{ $bestseller->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag1">New</div>
@@ -326,7 +338,10 @@
                                 <div class="c-list1__img">
                                     <a href="/product/detail/{{$special_product->id}}">
                                         <figure class="c-list1__image">
-                                            <img src="{{ $special_product->thumb }}" alt="">
+                                            @if (Storage::exists($special_product->thumb))
+                                                    <img src="{{ asset(Storage::url($special_product->thumb)) }}">
+                                                @endif
+                                                <img src="{{ $special_product->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag1">New</div>

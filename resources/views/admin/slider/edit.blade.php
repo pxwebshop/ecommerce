@@ -69,10 +69,14 @@
                                       <label for="menu">Image</label>
                                       <input type="file" name="image" class="form-control" id="upload">
                                       <div id="image_show">
-                                          <a href="{{ $slider->image }}">
+                                          {{-- <a href="{{ $slider->image }}">
                                               <img src="{{ asset(Storage::url($slider->image) )}}" width="100px">
-                                              {{-- <img src="{{ $slider->image }}" width="100px"> --}}
-                                          </a>
+                                              <img src="{{ $slider->image }}" width="100px">
+                                          </a> --}}
+                                          @if (Storage::exists($slider->image))
+                                                <img src="{{ asset(Storage::url($slider->image)) }}" width="100px">
+                                            @endif
+                                            <img width="100px" src="{{ $slider->image }}" alt="">
                                       </div>
                                   </div>
                                     <div class="form-group">

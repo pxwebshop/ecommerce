@@ -44,6 +44,7 @@ Route::group(['middleware' => 'locale'], function () {
 
     //product
     Route::group(['prefix' => 'product'], function () {
+        Route::get('/all', 'Front\ProductController@all')->name('product.all');
         Route::get('/{category_id}', 'Front\ProductController@index')->name('filter');
         Route::get('/detail/{id}', 'Front\ProductController@detail');
     });
@@ -101,6 +102,11 @@ Route::group(['middleware' => 'locale'], function () {
             Route::get('/category/delete/{id}', 'Admin\CategoryController@destroy')->name('category.delete');
 
             Route::get('/product', 'Admin\ProductController@index')->name('product');
+            Route::get('/product/edit/{id}', 'Admin\ProductController@show')->name('product.edit');
+            Route::post('/product/edit/{id}', 'Admin\ProductController@edit')->name('product.edit.post');
+            Route::get('/product/add', 'Admin\ProductController@create')->name('product.add');
+            Route::post('/product/add', 'Admin\ProductController@store')->name('product.add.post');
+            Route::get('/product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
 
             Route::get('cart/customer', 'Admin\HomeController@cart')->name('cart.customer');
             Route::get('cart/customer/view/{customer}', 'Admin\HomeController@cartDetail')->name('cart.detail');

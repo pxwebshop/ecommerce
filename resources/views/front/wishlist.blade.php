@@ -36,7 +36,12 @@
                             </form>
                             
                             <a href="/product/detail/{{$wishlist->product->id}}">
-                                <figure class="c-block4__img"><img src="{{ $wishlist->product->thumb }}" alt=""></figure>
+                                <figure class="c-block4__img">
+                                    @if (Storage::exists($wishlist->product->thumb))
+                                        <img src="{{ asset(Storage::url($wishlist->product->thumb)) }}" >
+                                    @endif
+                                    <img  src="{{ $wishlist->product->thumb }}" alt="">
+                                </figure>
                             </a>
                         </li>
                         <li class="c-block4__name">

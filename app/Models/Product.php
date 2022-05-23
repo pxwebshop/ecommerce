@@ -19,8 +19,15 @@ class Product extends Model
         'price',
         'sale_price',
         'quantity',
-        'special',
+        'special_offer',
+        'special_product',
         'active',
+        'stock',
+        'sku',
+        'specification',
+        'image',
+        'info_delivery',
+
     ];
 
     public function scopeActive($query)
@@ -49,9 +56,9 @@ class Product extends Model
         return $query->where('special_product', 1);
     }
     
-    public function productDetail() {
-        return $this->hasOne(ProductDetail::class);
-    }
+    // public function productDetail() {
+    //     return $this->hasOne(ProductDetail::class);
+    // }
 
     public function category() {
         return $this->belongsTo(Category::class);

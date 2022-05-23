@@ -1240,15 +1240,15 @@ list1
 .c-list1__actionItem {
   display: inline-block;
   margin-right: 10px;
-  background-color: #fff;
+  background-color: #113366;
   width: 40px;
   height: 40px;
   border-radius: 50px;
   cursor: pointer;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .c-list1__actionItem:hover {
-  background-color: #113366;
+  background-color: #ed1d24;
 }
 .c-list1__actionItem:hover a {
   color: #fff;
@@ -1256,7 +1256,7 @@ list1
 .c-list1__actionItem a {
   font-size: 1.6rem;
   line-height: 2.5;
-  color: #113366;
+  color: #fff;
   opacity: 1;
 }
 .c-list1__content {

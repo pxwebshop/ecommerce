@@ -117,7 +117,7 @@
         <div class="l-container">
             <div class="c-header__navbar">
                 <ul class="c-header__menuList">
-                    <li class="c-header__menuItem"><a href="#" class="c-header__link">{{ trans('header.navbar.home') }}</a>
+                    <li class="c-header__menuItem"><a href="/" class="c-header__link">{{ trans('header.navbar.home') }}</a>
                     </li>
                     @foreach (App\Models\Category::where('active', 1)->orderBy('id', 'asc')->get() as $menuItem)
                         </li>

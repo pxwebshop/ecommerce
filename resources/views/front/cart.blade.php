@@ -42,7 +42,12 @@
                                             <li class="c-block3__product">
                                                 <a href="" class="c-remove remove-from-cart"><i class="fa-solid fa-circle-xmark"></i></a>
                                                 <a href="/product/detail/{{$details['product_id']}}">
-                                                    <figure class="c-block3__img"><img src="{{ $details['thumb'] }}" alt=""></figure>
+                                                    <figure class="c-block3__img">
+                                                        @if (Storage::exists($details['thumb']))
+                                                            <img src="{{ asset(Storage::url($details['thumb'])) }}" >
+                                                        @endif
+                                                        <img  src="{{ $details['thumb'] }}" alt="">
+                                                    </figure>
                                                 </a>
                                             </li>
                                             <li class="c-block3__name">

@@ -23,25 +23,25 @@
                 <div class="c-block1__left">
                     <div class="c-block1__content">
                         <div class="c-block1__imgList">
-                            <figure class="c-block1__imgItem">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                            <figure class="c-block1__imgItem">  
+                                <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
                             </figure>
                             <figure class="c-block1__imgItem">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                                <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
                             </figure>
                             <figure class="c-block1__imgItem">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                                <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
                             </figure>
                         </div>
                         <div class="c-block1__slider">
                             <figure class="c-block1__img">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-1.jpg" alt="">
+                                <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
                             </figure>
                             <figure class="c-block1__img">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-2.jpg" alt="">
+                                <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
                             </figure>
                             <figure class="c-block1__img">
-                                <img src="https://templates.envytheme.com/ejon/default/assets/img/quick-view/quick-view-3.jpg" alt="">
+                                <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
                             </figure>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                     <p class="c-text1 c-block1__txt">{{ $product->description }}</p>
                     <ul class="c-block1__info">
                         <li class="c-block1__stock">
-                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">Availability: </span> {{ $productDetail->stock }}</p>
+                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">Availability: </span> In Stock</p>
                         </li>
                         <li class="c-block1__stock">
-                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">SKU: </span> {{ $productDetail->sku }}</p>
+                            <p class="c-text1 c-block1__txt"><span class="c-text1--bold">SKU: </span> {{ $product->sku }}</p>
                         </li>
                     </ul>
                     {{-- <div class="c-block1__color">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="c-block1__addCart">
-                        <a href="{{ route('add.to.cart', $productDetail->id) }}" class="c-btn1 c-btn1--border">
+                        <a href="{{ route('add.to.cart', $product->id) }}" class="c-btn1 c-btn1--border">
                             <i class="fa-solid fa-cart-shopping"></i>
                             Add to cart
                         </a>
@@ -123,8 +123,8 @@
                 </ul>
                 <div class="c-block2__content">
                     <div class="c-block2__description">
-                        <h3 class="c-title6 c-block2__title">Mô tả</h2>
-                            <p class="c-text1">{{ $productDetail->specification }}</p>
+                        <h3 class="c-title6 c-block2__title">Mô tả</h3>
+                        <div class="c-text1">{!! $product->specification !!} </div>
                     </div>
                     <div class="c-block2__review">
                         <h3 class="c-title6 c-block2__title">Đánh giá</h3>
@@ -296,7 +296,7 @@
                             {{-- <li><span> Address: </span>4848 Hershell Hollow Road, Bothell, WA 89076</li>
                             <li><span> Phone: </span>+1 (514) 321-4567</li>
                             <li><span> Email: </span>hello@ejon.com</li> --}}
-                            <li>{{ $productDetail->info_delivery }}</li>
+                            <li>{{ $product->info_delivery }}</li>
                         </ul>
                     </div>
                 </div>
@@ -318,7 +318,10 @@
                                 <div class="c-list1__img">
                                     <a href="/product/detail/{{ $relatedProduct->id }}">
                                         <figure class="c-list1__image">
-                                            <img src="{{ $relatedProduct->thumb }}" alt="">
+                                            @if (Storage::exists($relatedProduct->thumb))
+                                            <img src="{{ asset(Storage::url($relatedProduct->thumb)) }}">
+                                        @endif
+                                        <img src="{{ $relatedProduct->thumb }}" alt="">
                                         </figure>
                                     </a>
                                     <div class="c-tag1">New</div>

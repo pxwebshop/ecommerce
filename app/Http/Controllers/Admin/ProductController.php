@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -28,7 +29,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::get();
+        return view('admin.product.add', [
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -39,7 +43,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $product = new Product();
+
+        if($request->hasFile('thumb')){
+            $request->validate([
+              'thumb' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            // $file = $request->file('image')->getClientOriginalName();
+            $path = $request->file('thumb')->storeAs(
+                'public/images/products', $request->file('thumb')->getClientOriginalName()
+            );
+            $product->thumb = $path;
+        }
+        // dd($request->input());
+        $product->fill($request->input())->save();
+        Toastr::success('Added successful');
+        return redirect()->route('product');
     }
 
     /**
@@ -48,9 +68,15 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Product $product, $id)
     {
-        //
+        $product = Product::find($id);
+        $categories = Category::get();
+        $category = Category::where('id',$product->category_id);
+        return view('admin.product.edit', [
+            'product' => $product,
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -59,9 +85,23 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $product, Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        if($request->hasFile('thumb')){
+            $request->validate([
+              'thumb' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            // $file = $request->file('image')->getClientOriginalName();
+            $path = $request->file('thumb')->storeAs(
+                'public/images/products', $request->file('thumb')->getClientOriginalName()
+            );
+            $product->thumb = $path;
+        }
+        // $input = $request->all();
+        $product->fill($request->input())->save();
+        Toastr::success('Updated successful');
+        return redirect()->route('product');
     }
 
     /**
@@ -82,8 +122,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $product, $id)
     {
-        //
+        $product = Product::find($id);
+        Toastr::success('Deleted successful');
+        $product->delete();
+        return redirect()->route('product');
     }
 }
