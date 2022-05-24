@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/front/toastr.min.css') }}" rel="stylesheet" type="text/css" >
 
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
+    {{-- <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">  --}}
 </head>
 
 <body>
