@@ -97,16 +97,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="menu">Images</label>
-                                        <input type="file" name="image" class="form-control" id="upload">
+                                        <input type="file" name="images[]" class="form-control" id="upload" multiple>
                                         <div id="image_show">
                                             {{-- <a href="{{ $product->image }}">
                                                 <img src="{{ asset(Storage::url($product->thumb) )}}" width="100px">
                                                 <img src="{{ $product->image }}" width="100px">
                                             </a> --}}
-                                            @if (Storage::exists($product->image))
-                                                <img src="{{ asset(Storage::url($product->image)) }}" width="100px">
+                                            @if (Storage::exists($product->images))
+                                                <img src="{{ asset(Storage::url($product->images)) }}" width="100px">
                                             @endif
-                                            <img width="100px" src="{{ $product->image }}" alt="">
+                                            <img width="100px" src="{{ $product->images }}" alt="">
                                         </div>
                                     </div>
                                     <div class="row">

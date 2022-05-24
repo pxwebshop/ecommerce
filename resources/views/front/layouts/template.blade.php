@@ -36,7 +36,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
    
     @stack('scripts')
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="{{ asset('js/front/toastr.min.js')}} "></script>
+    {{-- <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script> --}}
     {!! Toastr::message() !!}
 
     {{-- chatbot facebook --}}
