@@ -46,8 +46,49 @@ body {
 
 
 .c-alert {
-    padding: 7px 0;
-    font-size: 1.5rem;
+    padding: 3px 0 0 0;
+    font-size: 1.4rem;
     color: $colorRed1;
-    font-family: Lato();
+    @include Lato();
 }
+
+
+//typeahead
+.twitter-typeahead {
+	width: 100%;
+}
+
+.tt-menu {
+    background-color: $colorWhite;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 0.1);
+}
+
+.tt-suggestion {
+    display: flex;
+    margin: 5px;
+    border-bottom: 1px solid $colorGrey5;
+    img {
+        width: 100px;
+    }
+    a {
+        display: inline-block;
+        padding: 8px 15px;
+        line-height: 1.5;
+        font-size: 1.6rem;
+        width: 100%;
+        color: $colorBlack;
+        overflow: hidden;
+        opacity: 1;
+    }
+    &:hover {
+        background-color: $colorBlue2;
+    }
+}
+
+.list-group-item {
+    color: $colorBlack;
+    padding: 8px 15px;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+// end: typeahead

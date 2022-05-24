@@ -11,10 +11,7 @@
                     {{ trans('login.title') }}
                     </h2>
                 </div>
-                <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">{{ trans('common.breadcrumb') }}</a>
-                    <span class="c-breadcrumb1__current">/ {{ trans('login.breadcrumb') }}</a>
-                </div>
+                {{ Breadcrumbs::render(__('breadcrumbs.login')) }}</a>
             </div>
         </div>
     </section>
@@ -27,11 +24,11 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="email" name="email" class="c-input" value="{{ old('email') }}" placeholder="{{ trans('login.form.email') }}">
-                        @include('front.layouts.alert', ['field' => 'email'])
+                        @include('front._partials.alert', ['field' => 'email'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="password" class="c-input c-input__password" value="{{ old('password') }}" placeholder="{{ trans('login.form.password') }}">
-                        @include('front.layouts.alert', ['field' => 'password'])
+                        @include('front._partials.alert', ['field' => 'password'])
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">
@@ -39,7 +36,7 @@
                             <label for="check" >{{ trans('login.form.show-password') }}?</label>
                         </div>
                         <div class="c-lostPassword">
-                            <a href="#">{{ trans('login.form.lost-password') }}?</a>
+                            <a href="forgot-password">{{ trans('login.form.lost-password') }}?</a>
                         </div>
                     </div>
                     <button type="submit" class="c-btn1 c-btn1--hoverRed c-authen__btn">

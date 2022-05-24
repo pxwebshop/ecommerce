@@ -317,10 +317,48 @@ body.is-fixed {
 }
 
 .c-alert {
-  padding: 7px 0;
-  font-size: 1.5rem;
+  padding: 3px 0 0 0;
+  font-size: 1.4rem;
   color: #ed1d24;
-  font-family: Lato();
+  font-family: "Lato", sans-serif;
+}
+
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-menu {
+  background-color: #fff;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tt-suggestion {
+  display: flex;
+  margin: 5px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.tt-suggestion img {
+  width: 100px;
+}
+.tt-suggestion a {
+  display: inline-block;
+  padding: 8px 15px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  width: 100%;
+  color: #292929;
+  overflow: hidden;
+  opacity: 1;
+}
+.tt-suggestion:hover {
+  background-color: #dce3fa;
+}
+
+.list-group-item {
+  color: #292929;
+  padding: 8px 15px;
+  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
 /*------------------------------------------------------------
@@ -688,6 +726,7 @@ header
   background-color: #113366;
   height: 45px;
   width: 45px;
+  border-color: #113366;
   border-radius: 50%;
   margin-right: 5px;
   cursor: pointer;
@@ -696,6 +735,7 @@ header
   position: absolute;
   top: 14px;
   right: 10px;
+  color: #fff;
 }
 .c-header__purchase {
   width: 25%;
@@ -712,6 +752,7 @@ header
   display: inline-block;
   font-size: 2rem;
   padding: 5px;
+  position: relative;
 }
 .c-header__wishlist a, .c-header__cart a, .c-header__price a {
   opacity: 1;
@@ -720,6 +761,12 @@ header
 .c-header__wishlist a:hover, .c-header__cart a:hover, .c-header__price a:hover {
   opacity: 1;
   color: #ed1d24;
+}
+.c-header__wTxt, .c-header__cartTxt {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 1.6rem;
 }
 .c-header__sticky {
   background-color: #fff;
@@ -1193,15 +1240,15 @@ list1
 .c-list1__actionItem {
   display: inline-block;
   margin-right: 10px;
-  background-color: #fff;
+  background-color: #113366;
   width: 40px;
   height: 40px;
   border-radius: 50px;
   cursor: pointer;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .c-list1__actionItem:hover {
-  background-color: #113366;
+  background-color: #ed1d24;
 }
 .c-list1__actionItem:hover a {
   color: #fff;
@@ -1209,7 +1256,7 @@ list1
 .c-list1__actionItem a {
   font-size: 1.6rem;
   line-height: 2.5;
-  color: #113366;
+  color: #fff;
   opacity: 1;
 }
 .c-list1__content {
@@ -1817,23 +1864,27 @@ other
   font-weight: 600;
   cursor: pointer;
 }
-.c-filter__sort {
-  position: relative;
-  width: 250px;
-  text-align: right;
-}
-.c-filter__sort i {
-  margin-left: 40px;
+.c-filter__btn {
+  padding: 8px 15px;
+  margin-top: 10px;
+  float: right;
+  z-index: 1;
+  font-size: 1.5rem;
 }
 .c-filter__sortList {
   background-color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   margin-top: 10px;
-  display: none;
-  width: 250px;
+  display: block;
+  width: 268px;
   text-align: left;
   position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 .c-filter__sortItem {
   color: #656565;
@@ -1870,6 +1921,64 @@ other
   background-color: #113366;
   color: #fff;
 }
+.c-paginate svg {
+  display: none;
+}
+.c-paginate nav {
+  font-size: 1.5rem;
+}
+.c-paginate nav > div:first-child {
+  display: none;
+}
+.c-paginate nav > div:last-child {
+  margin: 30px 0;
+}
+.c-paginate nav > div:last-child div {
+  margin: 15px 0;
+}
+.c-paginate nav > div:last-child div > span > span {
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  display: inline-block;
+  background-color: #fff;
+  line-height: 35px;
+  color: #292929;
+  box-shadow: 0 2px 10px 0 #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  opacity: 1;
+  background-color: #113366;
+  color: #fff;
+}
+.c-paginate nav > div:last-child div > span > span[aria-label="Next &raquo;"], .c-paginate nav > div:last-child div > span > span[aria-label="&laquo; Previous"] {
+  display: none;
+}
+.c-paginate nav > div:last-child div > span > a {
+  width: 35px;
+  height: 35px;
+  margin: 0 3px;
+  display: inline-block;
+  background-color: #fff;
+  line-height: 35px;
+  color: #292929;
+  box-shadow: 0 2px 10px 0 #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  opacity: 1;
+}
+.c-paginate nav > div:last-child div > span > a:hover {
+  background-color: #113366;
+  color: #fff;
+  opacity: 1;
+}
+.c-paginate nav > div:last-child div > span > a[rel=next], .c-paginate nav > div:last-child div > span > a[rel=prev] {
+  display: none;
+}
 
 .c-plusMinus__quantity {
   margin: 20px 0;
@@ -1880,10 +1989,10 @@ other
 }
 .c-plusMinus__counter input {
   height: 25px;
-  color: #292929;
+  color: #656565;
   outline: 0;
   display: block;
-  border: none;
+  border: 1px solid #ccc;
   background-color: #f9f9f9;
   text-align: center;
   width: 100%;
@@ -1891,9 +2000,19 @@ other
   font-weight: 600;
   min-width: 20px;
 }
+.c-plusMinus__counter input::-webkit-inner-spin-button {
+  opacity: 1;
+  cursor: pointer;
+}
 .c-plusMinus__counter i {
   font-size: 2.5rem;
   color: #ccc;
+}
+.c-plusMinus__counter .qty_detail {
+  border: none;
+}
+.c-plusMinus__counter .qty_detail::-webkit-inner-spin-button {
+  display: none;
 }
 .c-plusMinus__plus, .c-plusMinus__minus {
   cursor: pointer;
@@ -2203,7 +2322,12 @@ other
   color: #ccc;
   font-size: 2.5rem;
   text-align: center;
+  line-height: 3.2;
   margin: auto 10px auto 0;
+  cursor: pointer;
+}
+.c-block3__product .c-remove:hover {
+  color: #ed1d24;
 }
 @media screen and (max-width: 767px) {
   .c-block3__product .c-remove {
@@ -2383,7 +2507,12 @@ other
   color: #ccc;
   font-size: 2.5rem;
   text-align: center;
+  line-height: 3.2;
+  cursor: pointer;
   margin: auto 10px auto 0;
+}
+.c-block4__product .c-remove:hover {
+  color: #ed1d24;
 }
 @media screen and (max-width: 767px) {
   .c-block4__product .c-remove {
@@ -2397,7 +2526,7 @@ other
   }
 }
 .c-block4__name {
-  width: 25%;
+  width: 30%;
 }
 @media screen and (max-width: 767px) {
   .c-block4__name {
@@ -2405,13 +2534,10 @@ other
   }
 }
 .c-block4__unitPrice {
-  width: 20%;
-}
-.c-block4__stock {
-  width: 15%;
+  width: 25%;
 }
 .c-block4__btn {
-  width: 35%;
+  width: 30%;
 }
 @media screen and (max-width: 767px) {
   .c-block4__btn {

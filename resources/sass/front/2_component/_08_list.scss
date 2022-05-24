@@ -65,14 +65,15 @@ list1
     &__actionItem {
         display: inline-block;
         margin-right: 10px;
-        background-color: $colorWhite;
+        // background-color: $colorWhite;
+        background-color: $colorBlue1;
         width: 40px;
         height: 40px;
         border-radius: 50px;
         cursor: pointer;
-        transition: 1s ease-in-out;
+        transition: 0.5s ease-in-out;
         &:hover {
-            background-color: $colorBlue1;
+            background-color: $colorRed1;
             a {
                 color: $colorWhite;
             }
@@ -80,7 +81,7 @@ list1
         a {
             font-size: 1.6rem;
             line-height: 2.5;
-            color: $colorBlue1;
+            color: $colorWhite;
             opacity: 1;
         }
     }

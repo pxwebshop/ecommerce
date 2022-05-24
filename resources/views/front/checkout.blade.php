@@ -21,7 +21,8 @@
     <section class="p-checkout__sc2">
         <div class="l-container">
             <div class="c-block5">
-                <form action="" class="c-block5__form">
+                <form action="/checkout" method="POST" class="c-block5__form">
+                    @csrf
                     <div class="c-block5__area">
                         <div class="c-block5__left">
                             <div class="c-block5__actionLogin">
@@ -35,34 +36,34 @@
                                 <div class="c-block5__name">
                                     <div class="c-group">
                                         <label for="" class="c-text1">Tên*</label><br>
-                                        <input type="text" class="c-input">
+                                        <input type="text" name="firstName" class="c-input" required>
                                     </div>
                                     <div class="c-group">
                                         <label for="" class="c-text1">Họ*</label><br>
-                                        <input type="text" class="c-input">
+                                        <input type="text" name="lastName" class="c-input" required>
                                     </div>
                                 </div>
-                                <div class="c-group">
+                                {{-- <div class="c-group">
                                     <label for="" class="c-text1">Đơn Vị</label><br>
                                     <input type="text" class="c-input">
-                                </div>
+                                </div> --}}
                                 <div class="c-group">
                                     <label for="" class="c-text1">Email*</label><br>
-                                    <input type="text" class="c-input">
+                                    <input type="text" name="email" class="c-input" required>
                                 </div>
                                 <div class="c-group">
                                     <label for="" class="c-text1">Số điện thoại*</label><br>
-                                    <input type="number" class="c-input"></input>
+                                    <input type="number" name="phone" class="c-input" required>
                                 </div>
-                                <div class="c-group">
+                                {{-- <div class="c-group">
                                     <label for="" class="c-text1">Quốc gia*</label><br>
                                     <input type="text" class="c-input">
-                                </div>
+                                </div> --}}
                                 <div class="c-group">
                                     <label for="" class="c-text1">Địa chỉ*</label><br>
-                                    <input type="text" class="c-input">
+                                    <input type="text" name="address" class="c-input" required>
                                 </div>
-                                <div class="c-group">
+                                {{-- <div class="c-group">
                                     <label for="" class="c-text1">Tỉnh / Thành Phố*</label><br>
                                     <input type="text" class="c-input">
                                 </div>
@@ -73,10 +74,10 @@
                                 <div class="c-group">
                                     <label for="" class="c-text1">Postcode / Zip*</label><br>
                                     <input type="text" class="c-input">
-                                </div>
+                                </div> --}}
                                 <div class="c-group">
                                     <label for="" class="c-text1">Ghi chú*</label><br>
-                                    <textarea type="text" class="c-input" placeholder="Ghi chú đơn hàng"></textarea>
+                                    <textarea type="text" rows="4" name="note" class="c-input" placeholder="Ghi chú đơn hàng"></textarea>
                                 </div>
                             </div>
                         </div>

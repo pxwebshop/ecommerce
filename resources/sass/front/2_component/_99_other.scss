@@ -154,25 +154,34 @@ other
     &__current {
         font-weight: 600;
         cursor: pointer;
+        
     }
-
-    &__sort {
-        i {
-            margin-left: 40px;
-        }
-        position: relative;
-        width: 250px;
-        text-align: right;
+    // &__sort {
+    //     position: relative;
+    //     text-align: right;
+    //     z-index: 2;
+    // }
+    &__btn {
+        padding: 8px 15px;
+        margin-top: 10px;
+        float: right;
+        z-index: 1;
+        font-size: 1.5rem;
     }
     &__sortList {
         background-color: $colorWhite;
-        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
-        padding: 10px 0;
+        box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
+        padding: 10px;
         margin-top: 10px;
-        display: none;
-        width: 250px;
+        display: block;
+        width: 268px;
         text-align: left;
         position: absolute;
+        right: 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
     &__sortItem {
         color: $colorGrey2;
@@ -211,6 +220,64 @@ other
         background-color: $colorBlue1;
         color: $colorWhite;
     }
+    svg {
+        display: none;
+    }
+    nav {
+        font-size: 1.5rem;
+        &>div:first-child {
+            display: none;
+        }
+        &>div:last-child {
+            margin: 30px 0;
+            div {
+                margin: 15px 0;
+            }
+            div>span>span {
+                width: 35px;
+                height: 35px;
+                margin: 0 3px;
+                display: inline-block;
+                background-color: $colorWhite;
+                line-height: 35px;
+                color: $colorBlack;
+                box-shadow: 0 2px 10px 0 $colorGrey;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 50px;
+                text-align: center;
+                opacity: 1;
+                background-color: $colorBlue1;
+                color: $colorWhite;
+            }
+            div>span>span[aria-label="Next &raquo;"], div>span>span[aria-label="&laquo; Previous"]{
+                display: none;
+            }
+            div>span>a {
+                width: 35px;
+                height: 35px;
+                margin: 0 3px;
+                display: inline-block;
+                background-color: $colorWhite;
+                line-height: 35px;
+                color: $colorBlack;
+                box-shadow: 0 2px 10px 0 $colorGrey;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 50px;
+                text-align: center;
+                opacity: 1;
+                &:hover {
+                    background-color: $colorBlue1;
+                    color: $colorWhite;
+                    opacity: 1;
+                }
+            }
+            div>span>a[rel="next"], div>span>a[rel="prev"] {
+                display: none;
+            }
+        }
+    }
 }
 
 .c-plusMinus {
@@ -222,20 +289,30 @@ other
         max-width: 130px;
         input {
             height: 25px;
-            color: #292929;
+            color: $colorGrey2;
             outline: 0;
             display: block;
-            border: none;
+            border: 1px solid $colorGrey;
             background-color: $colorBg;
             text-align: center;
             width: 100%;
             font-size: 18px;
             font-weight: 600;
             min-width: 20px;
+            &::-webkit-inner-spin-button {
+                opacity: 1;
+                cursor: pointer;
+            }
         }
         i {
             font-size: 2.5rem;
             color: $colorGrey;
+        }
+        .qty_detail {
+            border: none;
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
         }
     }
     &__plus,
@@ -554,7 +631,12 @@ other
             color: $colorGrey;
             font-size: 2.5rem;
             text-align: center;
+            line-height: 3.2;
             margin: auto 10px auto 0;
+            cursor: pointer;
+            &:hover {
+                color: $colorRed1;
+            }
             @include sp {
                 font-size: 2rem;
                 width: 40%;
@@ -717,7 +799,12 @@ other
             color: $colorGrey;
             font-size: 2.5rem;
             text-align: center;
+            line-height: 3.2;
+            cursor: pointer;
             margin: auto 10px auto 0;
+            &:hover {
+                color: $colorRed1;
+            }
             @include sp {
                 font-size: 2rem;
                 width: 40%;
@@ -728,22 +815,18 @@ other
         }
     }
     &__name {
-        width: 25%;
+        width: 30%;
         @include sp {
             width: 30%;
         }
         
     }
     &__unitPrice {
-        width: 20%;
-        
-    }
-    &__stock {
-        width: 15%;
+        width: 25%;
         
     }
     &__btn {
-        width: 35%;
+        width: 30%;
         @include sp {
             width: 40%;
             .c-btn1 {

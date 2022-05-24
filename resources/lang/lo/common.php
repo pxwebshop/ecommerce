@@ -14,4 +14,6 @@ return [
     */
 
     'breadcrumb' => 'ຫນ້າທໍາອິດ',
+    'product_detail' => 'Product detail',
+    'search' => 'Search',
 ];

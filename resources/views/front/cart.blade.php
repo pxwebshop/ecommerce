@@ -34,96 +34,41 @@
                                 </ul>
                             </div>
                             <div class="c-block3__content">
-                                <ul class="c-block3__contentList">
-                                    <li class="c-block3__product">
-                                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></i></i></i></a>
-                                        <a href="/product/detail">
-                                            <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
-                                        </a>
-                                    </li>
-                                    <li class="c-block3__name">
-                                        <a href="/product/detail">Bluetooth Headphone</a>
-                                    </li>
-                                    <li class="c-block3__unitPrice">
-                                        <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                    <li class="c-block3__quantity">
-                                        <div class="c-plusMinus">
-                                            <div class="c-plusMinus__counter">
-                                                <div class="c-plusMinus__minus">
-                                                    <i class="fa-solid fa-circle-minus"></i>
+                                @php $total = 0 @endphp
+                                @if(session('cart'))
+                                    @foreach(session('cart') as $id => $details)
+                                    @php $total += $details['price'] * $details['quantity'] @endphp
+                                        <ul class="c-block3__contentList" data-id="{{ $id }}">
+                                            <li class="c-block3__product">
+                                                <a href="" class="c-remove remove-from-cart"><i class="fa-solid fa-circle-xmark"></i></a>
+                                                <a href="/product/detail/{{$details['product_id']}}">
+                                                    <figure class="c-block3__img">
+                                                        @if (Storage::exists($details['thumb']))
+                                                            <img src="{{ asset(Storage::url($details['thumb'])) }}" >
+                                                        @endif
+                                                        <img  src="{{ $details['thumb'] }}" alt="">
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="c-block3__name">
+                                                <a href="/product/detail/{{$details['product_id']}}">{{ $details['name'] }}</a>
+                                            </li>
+                                            <li class="c-block3__unitPrice">
+                                                <span class="c-block3__productPrice">{{ number_format($details['price']) }} <sup>đ</sup></span>
+                                            </li>
+                                            <li class="c-block3__quantity">
+                                                <div class="c-plusMinus">
+                                                    <div class="c-plusMinus__counter">
+                                                        <input type="number" value="{{ $details['quantity'] }}" class="update-cart quantity" >
+                                                    </div>
                                                 </div>
-                                                <input type="text" value="1">
-                                                <div class="c-plusMinus__plus">
-                                                    <i class="fa-solid fa-circle-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="c-block3__total">
-                                        <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                </ul>
-                                <ul class="c-block3__contentList">
-                                    <li class="c-block3__product">
-                                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></a>
-                                        <a href="/product/detail">
-                                            <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
-                                        </a>
-                                    </li>
-                                    <li class="c-block3__name">
-                                        <a href="/product/detail">Bluetooth Headphone</a>
-                                    </li>
-                                    <li class="c-block3__unitPrice">
-                                        <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                    <li class="c-block3__quantity">
-                                        <div class="c-plusMinus">
-                                            <div class="c-plusMinus__counter">
-                                                <div class="c-plusMinus__minus">
-                                                    <i class="fa-solid fa-circle-minus"></i>
-                                                </div>
-                                                <input type="text" value="1">
-                                                <div class="c-plusMinus__plus">
-                                                    <i class="fa-solid fa-circle-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="c-block3__total">
-                                        <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                </ul>
-                                <ul class="c-block3__contentList">
-                                    <li class="c-block3__product">
-                                        <a href="#" class="c-remove"><i class="fa-solid fa-circle-xmark"></i></i></i></a>
-                                        <a href="/product/detail">
-                                            <figure class="c-block3__img"><img src="https://templates.envytheme.com/ejon/default/assets/img/cart/cart-1.png" alt=""></figure>
-                                        </a>
-                                    </li>
-                                    <li class="c-block3__name">
-                                        <a href="/product/detail">Bluetooth Headphone</a>
-                                    </li>
-                                    <li class="c-block3__unitPrice">
-                                        <span class="c-block3__productPrice">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                    <li class="c-block3__quantity">
-                                        <div class="c-plusMinus">
-                                            <div class="c-plusMinus__counter">
-                                                <div class="c-plusMinus__minus">
-                                                    <i class="fa-solid fa-circle-minus"></i>
-                                                </div>
-                                                <input type="text" value="1">
-                                                <div class="c-plusMinus__plus">
-                                                    <i class="fa-solid fa-circle-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="c-block3__total">
-                                        <span class="c-block3__productPriceTotal">1.990.000 <sup>đ</sup></span>
-                                    </li>
-                                </ul>
+                                            </li>
+                                            <li class="c-block3__total">
+                                                <span class="c-block3__productPriceTotal"> {{ number_format($details['price'] * $details['quantity']) }} <sup>đ</sup></span>
+                                            </li>
+                                        </ul>
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                         <div class="c-block3__btn">
@@ -133,11 +78,11 @@
                                     Apply
                                 </button>
                             </div>
-                            <div class="c-block3__update">
+                            {{-- <div class="c-block3__update">
                                 <button href="#" class="c-btn1 c-btn1--colorBlack c-btn1--noneBorderRadius">
                                     Update Cart
                                 </button>
-                            </div>
+                            </div> --}}
                         </div>
                     </form>
                 </div>
@@ -145,17 +90,17 @@
                     <div class="c-cartTotal">
                         <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
                         <ul class="c-cartTotal__list">
-                            <li class="c-cartTotal__item">Subtotal
-                                <span>9.990.000 <sup>đ</sup></span>
+                            <li class="c-cartTotal__item">Total
+                                <span>{{ number_format($total) }} <sup>đ</sup></span>
                             </li>
                             <li class="c-cartTotal__item">Shipping
-                                <span>0 <sup>đ</sup></span>
+                                <span>+ 0 <sup>đ</sup></span>
                             </li>
-                            <li class="c-cartTotal__item">Total
-                                <span>9.990.000 <sup>đ</sup></span>
+                            <li class="c-cartTotal__item">Discount
+                                <span>- 0 <sup>đ</sup></span>
                             </li>
                             <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
-                                <span>9.990.000 <sup>đ</sup></span>
+                                <span> {{ number_format($total) }} <sup>đ</sup></span>
                             </li>
                         </ul>
                         <a href="/checkout" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">
@@ -175,6 +120,47 @@
     <script src="{{ asset('js/front/slick.min.js')}} "></script>
 
     <script type="text/javascript" src="{{ asset('js/front/main.js') }}"></script>
+
+    <script>
+        $(".update-cart").change(function (e) {
+            e.preventDefault();
+
+            var ele = $(this);
+
+            $.ajax({
+                url: '{{ route('update.cart') }}',
+                method: "patch",
+                data: {
+                    _token: '{{ csrf_token() }}', 
+                    id: ele.parents("ul").attr("data-id"), 
+                    quantity: ele.parents("ul").find(".quantity").val()
+                },
+                success: function (response) {
+                window.location.reload();
+                }
+            });
+        });
+
+        $(".remove-from-cart").click(function (e) {
+            e.preventDefault();
+
+            var ele = $(this);
+
+            if(confirm("Are you sure want to remove?")) {
+                $.ajax({
+                    url: '{{ route('remove.from.cart') }}',
+                    method: "DELETE",
+                    data: {
+                        _token: '{{ csrf_token() }}', 
+                        id: ele.parents("ul").attr("data-id")
+                    },
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+    </script>
     @endpush
 </main>
 @endsection

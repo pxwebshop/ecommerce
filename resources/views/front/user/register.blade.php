@@ -11,10 +11,7 @@
                         {{trans('user-register.breadcrumb')}}
                     </h2>
                 </div>
-                <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">{{trans('common.breadcrumb')}}</a>
-                    <span class="c-breadcrumb1__current">/ {{trans('user-register.breadcrumb')}}</a>
-                </div>
+                {{ Breadcrumbs::render(__('breadcrumbs.register')) }}</a>
             </div>
         </div>
     </section>
@@ -27,19 +24,19 @@
                     @csrf
                     <div class="c-group c-authen__group">
                         <input type="text" name="name" class="c-input" placeholder="{{trans('user-register.form.name')}}">
-                        @include('front.layouts.alert', ['field' => 'name'])
+                        @include('front._partials.alert', ['field' => 'name'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" name="email" class="c-input" placeholder="{{trans('user-register.form.email')}}">
-                        @include('front.layouts.alert', ['field' => 'email'])
+                        @include('front._partials.alert', ['field' => 'email'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="text" name="phone" class="c-input" placeholder="{{trans('user-register.form.phone')}}">
-                        @include('front.layouts.alert', ['field' => 'phone'])
+                        @include('front._partials.alert', ['field' => 'phone'])
                     </div>
                     <div class="c-group c-authen__group">
                         <input type="password" name="password" class="c-input c-input__password" placeholder="{{trans('user-register.form.password')}}">
-                        @include('front.layouts.alert', ['field' => 'password'])
+                        @include('front._partials.alert', ['field' => 'password'])
                     </div>
                     <div class="c-authen__option">
                         <div class="c-formCheck">
