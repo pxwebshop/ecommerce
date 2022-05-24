@@ -25,7 +25,7 @@ class Product extends Model
         'stock',
         'sku',
         'specification',
-        'image',
+        'images',
         'info_delivery',
 
     ];

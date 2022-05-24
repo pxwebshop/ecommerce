@@ -53,7 +53,7 @@ class ProductFactory extends Factory
             'active' => 1,
             'sku' => $this->faker->text(5),
             'specification' => $this->faker->paragraph,
-            'image' => $this->faker->randomElement([
+            'images' => $this->faker->randomElement([
                 'https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png',
                 'https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png',
                 'https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png',                     

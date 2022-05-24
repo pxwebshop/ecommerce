@@ -29,7 +29,7 @@ class CreateProductsTable extends Migration
             // detail
             $table->string('sku');
             $table->longText('specification');
-            $table->string('image')->nullable();
+            $table->string('images')->nullable();
             $table->string('info_delivery');
             $table->timestamps();
         });

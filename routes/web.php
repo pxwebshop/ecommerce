@@ -79,38 +79,36 @@ Route::group(['middleware' => 'locale'], function () {
 
 
     // --- ADMIN --- //
-    Route::group(['middleware' => 'admin'], function () {
-        Route::group(['prefix' => 'admin'], function () {
-            Route::get('/', 'Admin\HomeController@index');
-            Route::get('/user', 'Admin\HomeController@user')->name('user');
-            Route::get('/user/edit/{id}', 'Admin\HomeController@userEdit')->name('user.edit');
-            Route::post('/user/edit/{id}', 'Admin\HomeController@postUserEdit')->name('user.edit.post');
-            Route::get('/user/delete/{id}', 'Admin\HomeController@userDelete')->name('user.delete');
+    Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
+        Route::get('/', 'Admin\HomeController@index');
+        Route::get('/user', 'Admin\HomeController@user')->name('user');
+        Route::get('/user/edit/{id}', 'Admin\HomeController@userEdit')->name('user.edit');
+        Route::post('/user/edit/{id}', 'Admin\HomeController@postUserEdit')->name('user.edit.post');
+        Route::get('/user/delete/{id}', 'Admin\HomeController@userDelete')->name('user.delete');
 
-            Route::get('/slider', 'Admin\HomeController@slider')->name('slider');
-            Route::get('/slider/edit/{id}', 'Admin\HomeController@sliderEdit');
-            Route::post('/slider/edit/{id}', 'Admin\HomeController@postSliderEdit')->name('slider.edit.post');
-            Route::get('slider/add', 'Admin\HomeController@sliderAdd')->name('slider.add');
-            Route::post('slider/add', 'Admin\HomeController@postSliderAdd')->name('slider.add.post');
-            Route::get('slider/delete/{id}', 'Admin\HomeController@sliderDelete')->name('slider.delete');
+        Route::get('/slider', 'Admin\HomeController@slider')->name('slider');
+        Route::get('/slider/edit/{id}', 'Admin\HomeController@sliderEdit');
+        Route::post('/slider/edit/{id}', 'Admin\HomeController@postSliderEdit')->name('slider.edit.post');
+        Route::get('slider/add', 'Admin\HomeController@sliderAdd')->name('slider.add');
+        Route::post('slider/add', 'Admin\HomeController@postSliderAdd')->name('slider.add.post');
+        Route::get('slider/delete/{id}', 'Admin\HomeController@sliderDelete')->name('slider.delete');
 
-            Route::get('/category', 'Admin\CategoryController@index')->name('category');
-            Route::get('/category/add', 'Admin\CategoryController@create')->name('category.add');
-            Route::post('/category/add', 'Admin\CategoryController@store')->name('category.add.post');
-            Route::get('/category/edit/{id}', 'Admin\CategoryController@show')->name('category.edit');
-            Route::post('/category/edit/{id}', 'Admin\CategoryController@edit')->name('category.edit.post');
-            Route::get('/category/delete/{id}', 'Admin\CategoryController@destroy')->name('category.delete');
+        Route::get('/category', 'Admin\CategoryController@index')->name('category');
+        Route::get('/category/add', 'Admin\CategoryController@create')->name('category.add');
+        Route::post('/category/add', 'Admin\CategoryController@store')->name('category.add.post');
+        Route::get('/category/edit/{id}', 'Admin\CategoryController@show')->name('category.edit');
+        Route::post('/category/edit/{id}', 'Admin\CategoryController@edit')->name('category.edit.post');
+        Route::get('/category/delete/{id}', 'Admin\CategoryController@destroy')->name('category.delete');
 
-            Route::get('/product', 'Admin\ProductController@index')->name('product');
-            Route::get('/product/edit/{id}', 'Admin\ProductController@show')->name('product.edit');
-            Route::post('/product/edit/{id}', 'Admin\ProductController@edit')->name('product.edit.post');
-            Route::get('/product/add', 'Admin\ProductController@create')->name('product.add');
-            Route::post('/product/add', 'Admin\ProductController@store')->name('product.add.post');
-            Route::get('/product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
+        Route::get('/product', 'Admin\ProductController@index')->name('product');
+        Route::get('/product/edit/{id}', 'Admin\ProductController@show')->name('product.edit');
+        Route::post('/product/edit/{id}', 'Admin\ProductController@edit')->name('product.edit.post');
+        Route::get('/product/add', 'Admin\ProductController@create')->name('product.add');
+        Route::post('/product/add', 'Admin\ProductController@store')->name('product.add.post');
+        Route::get('/product/delete/{id}', 'Admin\ProductController@destroy')->name('product.delete');
 
-            Route::get('cart/customer', 'Admin\HomeController@cart')->name('cart.customer');
-            Route::get('cart/customer/view/{customer}', 'Admin\HomeController@cartDetail')->name('cart.detail');
-        });
+        Route::get('cart/customer', 'Admin\HomeController@cart')->name('cart.customer');
+        Route::get('cart/customer/view/{customer}', 'Admin\HomeController@cartDetail')->name('cart.detail');
     });
 
 });

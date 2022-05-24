@@ -98,6 +98,23 @@ class ProductController extends Controller
             );
             $product->thumb = $path;
         }
+
+        // $this->validate($request, [
+        //     'images' => 'required',
+        //     'images.*' => 'mimes:png,jpeg,jpg'
+        // ]);
+
+        // if($request->hasfile('images')) {
+        //     foreach($request->file('images') as $file) {
+        //         $filename = $file->getClientOriginalName();
+        //         $file->storeAs('public/images/products', $filename);
+        //         $data[] = $filename;
+        //     }
+        // }
+
+        // $file= new Uplo;
+        // $file->images = json_encode($data);
+
         // $input = $request->all();
         $product->fill($request->input())->save();
         Toastr::success('Updated successful');
