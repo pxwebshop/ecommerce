@@ -49,11 +49,11 @@ class CategoryController extends Controller
         $category = new Category();
         try {
             $category->fill($request->input())->save();
-            Toastr::success('Added successful');
+            Toastr::success(trans('common.added_success'));
             return redirect()->route('category');
         }
         catch (Exception $e) {
-            Toastr::error('Added failed');
+            Toastr::error(trans('common.added_error'));
             return redirect()->route('category.add');
         }
     }
@@ -84,11 +84,11 @@ class CategoryController extends Controller
         $category = Category::find($id);
         try {
             $category->fill($request->input())->save();
-            Toastr::success('Updated successful');
+            Toastr::success(trans('common.updated_success'));
             return redirect()->route('category');
         }
         catch (Exception $e) {
-            Toastr::error('Updated failed');
+            Toastr::error(trans('common.updated_error'));
             return redirect()->route('category.edit');
         }
         
@@ -115,7 +115,7 @@ class CategoryController extends Controller
     public function destroy(Category $category, $id)
     {
         $category = Category::find($id);
-        Toastr::success('Deleted successful');
+        Toastr::success(trans('common.deleted_success'));
         $category->delete();
         return redirect()->route('category');
     }

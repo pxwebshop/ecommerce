@@ -12,8 +12,8 @@
                         </h2>
                     </div>
                     <div class="c-breadcrumb1__url">
-                        <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                        <span class="c-breadcrumb1__current">/ Product</span>
+                        <a href="/" class="c-breadcrumb1__link">{{ trans('breadcrumbs.home') }}</a>
+                        <span class="c-breadcrumb1__current">/ {{ trans('breadcrumbs.product') }}</span>
                         <span class="c-breadcrumb1__current">/ {{ $category->id }}</span>
                     </div>
                 </div>

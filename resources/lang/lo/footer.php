@@ -13,35 +13,35 @@ return [
     |
     */
     'title' => [
-        'title1' => 'Get in Touch',
-        'title2' => 'Policies',
-        'title3' => 'Support',
-        'title4' => 'Join Our Newsletter'
+        'title1' => 'ຕິດຕໍ່ໄດ້',
+        'title2' => 'ນະໂຍບາຍ',
+        'title3' => 'ສະຫນັບສະຫນູນ',
+        'title4' => 'ເຂົ້າຮ່ວມຈົດຫມາຍຂ່າວຂອງພວກເຮົາ'
     ],
     'content' => [
         //get in touch
-        'add' => 'Address',
-        'add-info' => 'Khamngoi Village, Xaysetha District, Vientiane Capital',
-        'phone' => 'Phone',
+        'add' => 'ທີ່ຢູ່',
+        'add-info' => 'ບ້ານ ຄຳງອຍ, ເມືອງໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ',
+        'phone' => 'ໂທລະສັບ',
         'phone-info' => '020 28266650',
         'email' => 'Email',
         'email-info' => 'pxwebshop@gmail.com',
         // policies
-        'poli1' => 'Shipping And Delivery',
-        'poli2' => 'Payment Method',
-        'poli3' => 'How to Shop',
-        'poli4' => 'Terms And Conditions',
-        'poli5' => 'Private Policy',
-        'poli6' => 'Returns',
+        'poli1' => 'ການຂົນສົ່ງແລະການຈັດສົ່ງ',
+        'poli2' => 'ວິທີການຊໍາລະ',
+        'poli3' => 'ວິທີການຊື້',
+        'poli4' => 'ເງື່ອນໄຂແລະເງື່ອນໄຂ',
+        'poli5' => 'ນະໂຍບາຍເອກະຊົນ',
+        'poli6' => 'ກັບຄືນ',
         // support
-        'sup1' => 'My Account',
-        'sup2' => 'Order Tracking',
-        'sup3' => 'Contact Us',
-        'sup4' => 'Customer Services',
-        'sup5' => 'Help Desk',
+        'sup1' => 'ບັນ​ຊີ​ຂອງ​ຂ້ອຍ',
+        'sup2' => 'ການຕິດຕາມຄໍາສັ່ງ',
+        'sup3' => 'ຕິດ​ຕໍ່​ພວກ​ເຮົາ',
+        'sup4' => 'ບໍລິການລູກຄ້າ',
+        'sup5' => 'ໂຕະຊ່ວຍເຫຼືອ',
         // Join Our Newsletter
-        'join-txt' => 'Subscribe to the newsletter for all the latest updates',
-        'join-input' => 'Email address',
-        'join-btn' => 'Subscribe'
+        'join-txt' => 'ຈອງຈົດຫມາຍຂ່າວສໍາລັບການອັບເດດຫຼ້າສຸດທັງຫມົດ',
+        'join-input' => 'Email ທີ່ຢູ່',
+        'join-btn' => 'ຈອງ'
     ],
 ];

@@ -58,7 +58,7 @@ class ProductController extends Controller
         }
         // dd($request->input());
         $product->fill($request->input())->save();
-        Toastr::success('Added successful');
+        Toastr::success(trans('common.added_success'));
         return redirect()->route('product');
     }
 
@@ -115,7 +115,7 @@ class ProductController extends Controller
         // $product->save();
         
         $product->fill($request->input())->save();
-        Toastr::success('Updated successful');
+        Toastr::success(trans('common.updated_success'));
         return redirect()->route('product');
     }
 
@@ -140,7 +140,7 @@ class ProductController extends Controller
     public function destroy(Product $product, $id)
     {
         $product = Product::find($id);
-        Toastr::success('Deleted successful');
+        Toastr::success(trans('common.deleted_success'));
         $product->delete();
         return redirect()->route('product');
     }

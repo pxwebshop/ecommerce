@@ -36,12 +36,12 @@ class HomeController extends Controller
             $user = User::findOrFail($id);
             $input = $request->all();
             $user->fill($input)->save();
-            Toastr::success('Update successful');
+            Toastr::success(trans('common.updated_success'));
             return redirect()->route('user');
         } 
         catch(\Exception $e) {
             // dịch nó
-            Toastr::error('Update failed');
+            Toastr::error(trans('common.updated_error'));
             return redirect()->back();
         }
     }
@@ -49,11 +49,11 @@ class HomeController extends Controller
     public function userDelete($id) {
         try {
             User::where('id' ,$id)->delete();
-            Toastr::success('Delete successful');
+            Toastr::success(trans('common.deleted_success'));
             return redirect()->back();
         } 
         catch (\Exception $e) {
-            Toastr::error('Delete failed');
+            Toastr::error(trans('common.deleted_error'));
             return redirect()->back();
         }
     }
@@ -86,7 +86,7 @@ class HomeController extends Controller
         }
         // $input = $request->all();
         $slider->fill($request->input())->save();
-        Toastr::success('Updated successful');
+        Toastr::success(trans('common.updated_success'));
         return redirect()->route('slider');
     }
 
@@ -109,14 +109,14 @@ class HomeController extends Controller
         }
 
         $slider->fill($request->input())->save();
-        Toastr::success('Added successful');
+        Toastr::success(trans('common.added_success'));
         return redirect()->route('slider');
     }
 
     public function sliderDelete($id) {
         $slider = Slider::find($id);
-        Toastr::success('Deleted successful');
         $slider->delete();
+        Toastr::success(trans('common.deleted_success'));
         return redirect()->route('slider');
     }
 
@@ -142,7 +142,7 @@ class HomeController extends Controller
     public function cartStatus(Customer $customer, Request $request) {
         $customer->status = $request->input('status');
         $customer->update();
-        Toastr::success('Updated successful!');
+        Toastr::success(trans('common.updated_success'));
         return redirect()->route('cart.customer');
     }
 }

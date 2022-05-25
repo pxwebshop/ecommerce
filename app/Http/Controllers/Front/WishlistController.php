@@ -34,7 +34,7 @@ class WishlistController extends Controller
                 'user_id' => $user_id,
                 'product_id' => $product_id
             ]);
-            Toastr::success('Add to wishlist success');
+            Toastr::success(trans('common.wishlist_success'));
             return redirect()->route('wishlist');
         } 
         else {
@@ -49,7 +49,7 @@ class WishlistController extends Controller
             'product_id' => $request->id,
             'user_id' => $user_id
         ])->delete();
-        Toastr::success('Remove to wishlist success');
+        Toastr::success(trans('common.deleted_success'));
         return redirect()->route('wishlist');
     }
 }

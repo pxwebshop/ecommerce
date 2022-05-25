@@ -13,18 +13,18 @@ return [
     |
     */
 
-    'title' => 'Register',
+    'title' => 'ລົງທະບຽນ',
     'form' => [
-        'name' => 'Please enter name',
-        'email' => 'Please enter email',
-        'phone' => 'Please enter phone',
-        'password' => 'Please enter password',
-        'show-password' => 'Show your password',
-        'button' => 'Register',
-        'label-already-account' => "Already have an account?",
-        'login-account' => 'Login now!'
+        'name' => 'ກະລຸນາໃສ່ຊື່',
+        'email' => 'ກະລຸນາໃສ່ອີເມວ',
+        'phone' => 'ກະລຸນາໃສ່ໂທລະສັບ',
+        'password' => 'ກະລຸນາໃສ່ລະຫັດຜ່ານ',
+        'show-password' => 'ສະແດງລະຫັດຜ່ານຂອງທ່ານ',
+        'button' => 'ລົງທະບຽນ',
+        'label-already-account' => "ມີບັນຊີຢູ່ແລ້ວບໍ?",
+        'login-account' => 'ເຂົ້າສູ່ລະບົບດຽວນີ້!'
     ],
-    'breadcrumb' => 'Register',
-    'error' => 'You have failed to register',
-    'success' => 'Successful register',
+    'breadcrumb' => 'ລົງທະບຽນ',
+    'error' => 'ທ່ານລົ້ມເຫລວໃນການລົງທະບຽນ',
+    'success' => 'ການລົງທະບຽນສົບຜົນສໍາເລັດ',
 ];

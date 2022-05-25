@@ -15,6 +15,11 @@ return [
     'list1' => [
     ],
     'list2' => [
+        'special_discount' => 'Ưu đãi Giảm giá Đặc biệt',
+        'for' => 'cho dịp này',
+        'featured' => 'Đặc Sắc',
+        'best_price' => 'Giá Tốt Nhất và Chất Lượng Tuyệt Vời',
+        'view' => 'Xem Sản Phẩm'
     ],
     'list3' => [
     ],
@@ -24,4 +29,9 @@ return [
         'txt3' => 'Thanh toán an toàn 100%',
         'txt4' => 'Hỗ trợ khách hàng 24/7'
     ],
+    'list5' => [
+        'txt1' => 'Hàng Mới Về',
+        'title' => 'Tiện Ích Tốt Nhất',
+        'txt2' => 'Bộ Sưu Tập'
+    ]
 ];

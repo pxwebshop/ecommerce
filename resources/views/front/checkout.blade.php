@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Checkout
+                        {{ trans('breadcrumbs.checkout') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Checkout</a>
+                    <a href="/" class="c-breadcrumb1__link"> {{ trans('breadcrumbs.home') }}</a>
+                    <span class="c-breadcrumb1__current">/  {{ trans('breadcrumbs.checkout') }}</a>
                 </div>
             </div>
         </div>
@@ -32,14 +32,14 @@
 
                             </div>
                             <div class="c-block5__content">
-                                <h3 class="c-title4 c-block5__title">Chi Tiết Thanh Toán</h3>
+                                <h3 class="c-title4 c-block5__title">{{ trans('order.payment_method') }}</h3>
                                 <div class="c-block5__name">
                                     <div class="c-group">
-                                        <label for="" class="c-text1">Tên*</label><br>
+                                        <label for="" class="c-text1">{{ trans('order.checkout.firstname') }}</label><br>
                                         <input type="text" name="firstName" class="c-input" required>
                                     </div>
                                     <div class="c-group">
-                                        <label for="" class="c-text1">Họ*</label><br>
+                                        <label for="" class="c-text1">{{ trans('order.checkout.lastname') }}</label><br>
                                         <input type="text" name="lastName" class="c-input" required>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@
                                     <input type="text" name="email" class="c-input" required>
                                 </div>
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Số điện thoại*</label><br>
+                                    <label for="" class="c-text1">{{ trans('order.checkout.phone') }}</label><br>
                                     <input type="number" name="phone" class="c-input" required>
                                 </div>
                                 {{-- <div class="c-group">
@@ -60,7 +60,7 @@
                                     <input type="text" class="c-input">
                                 </div> --}}
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Địa chỉ*</label><br>
+                                    <label for="" class="c-text1">{{ trans('order.checkout.address') }}</label><br>
                                     <input type="text" name="address" class="c-input" required>
                                 </div>
                                 {{-- <div class="c-group">
@@ -76,16 +76,16 @@
                                     <input type="text" class="c-input">
                                 </div> --}}
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Ghi chú*</label><br>
-                                    <textarea type="text" rows="4" name="note" class="c-input" placeholder="Ghi chú đơn hàng"></textarea>
+                                    <label for="" class="c-text1">{{ trans('order.checkout.note') }}</label><br>
+                                    <textarea type="text" rows="4" name="note" class="c-input" placeholder="{{ trans('order.checkout.noteorder') }}"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="c-block5__right">
                             <div class="c-cartTotal">
-                                <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
+                                <h3 class="c-title4 c-cartTotal__title">{{ trans('order.cart_total') }}</h3>
                                 <ul class="c-cartTotal__list">
-                                    <li class="c-cartTotal__item">Subtotal
+                                    <li class="c-cartTotal__item">{{ trans('order.checkout.subtotal') }}
                                         {{-- <span>9.990.000 <sup>đ</sup></span> --}}
                                         @php $total = 0 @endphp
                                         @if(session('cart'))
@@ -97,10 +97,10 @@
                                         @endif
                                         <span>{{ number_format($total) }} <sup>đ</sup></span>
                                     </li>
-                                    <li class="c-cartTotal__item">Shipping
+                                    <li class="c-cartTotal__item">{{ trans('order.ship') }}
                                         <span>0 <sup>đ</sup></span>
                                     </li>
-                                    <li class="c-cartTotal__item">Total
+                                    <li class="c-cartTotal__item">{{ trans('order.cart.total') }}
                                         @php $total = 0 @endphp
                                         @if(session('cart'))
                                             {{-- @dd(session('cart')); --}}
@@ -111,7 +111,7 @@
                                         @endif
                                         <span>{{ number_format($total) }} <sup>đ</sup></span>
                                     </li>
-                                    <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
+                                    <li class="c-cartTotal__item c-cartTotal__item--size">{{ trans('order.payable') }}
                                         @php $total = 0 @endphp
                                         @if(session('cart'))
                                             {{-- @dd(session('cart')); --}}
@@ -124,13 +124,13 @@
                                     </li>
                                 </ul>
                                 <a href="/cart" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">
-                                    Process to Cart
+                                    {{ trans('order.to_cart') }}
                                 </a>
                             </div>
                             <div class="c-block5__payment">
-                                <h3 class="c-title4 c-cartTotal__title">Phương thức thanh toán</h3>
+                                <h3 class="c-title4 c-cartTotal__title">{{ trans('order.payment_method') }}</h3>
                                 <button type="submit" class="c-btn1">
-                                    Đặt hàng
+                                    {{ trans('order.checkout.order') }}
                                 </button>
                             </div>
                         </div>

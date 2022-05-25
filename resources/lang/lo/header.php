@@ -13,26 +13,26 @@ return [
     |
     */
     'heading' => [
-        'free-info' => 'Free shipping on all orders',
-        'en' => 'English',
-        'lo' => 'Laos',
-        'vi' => 'Vietnamese',
-        'login' => 'Login',
-        'logout' => 'Logout',
-        'register' => 'Register',
-        'my-acc' => "My Account",
-        'change-pass' => 'Change Password'
+        'free-info' => 'ສົ່ງຟຣີທຸກຄໍາສັ່ງ',
+        'en' => 'ພາສາອັງກິດ',
+        'lo' => 'ປະເທດລາວ',
+        'vi' => 'ຫວຽດນາມ',
+        'login' => 'ເຂົ້າ​ສູ່​ລະ​ບົບ',
+        'logout' => 'ອອກ​ຈາກ​ລະ​ບົບ',
+        'register' => 'ລົງທະບຽນ',
+        'my-acc' => "ບັນ​ຊີ​ຂອງ​ຂ້ອຍ",
+        'change-pass' => 'ປ່ຽນ​ລະ​ຫັດ​ຜ່ານ'
     ],
     'middle' => [
-        'search' => 'Search',
-        'all-cate' => "All Category"
+        'search' => 'ຊອກຫາ',
+        'all-cate' => "ໝວດໝູ່ທັງໝົດ"
     ],
     'navbar' => [
-        'home' => 'Home',
-        'office' => 'Office',
-        'luxury' => 'Luxury',
-        'graphics' => 'Graphics',
-        'contact' => 'Contact',
-        'hotline' => 'Hotline'
+        'home' => 'ບ້ານ',
+        'office' => 'ຫ້ອງການ',
+        'luxury' => 'ຫຼູຫຼາ',
+        'graphics' => 'ຮູບພາບ',
+        'contact' => 'ຕິດຕໍ່',
+        'hotline' => 'ສາຍດ່ວນ'
     ],
 ];

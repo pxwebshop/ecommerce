@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Cart
+                        {{ trans('breadcrumbs.cart') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Cart</a>
+                    <a href="/" class="c-breadcrumb1__link">{{ trans('breadcrumbs.home') }}</a>
+                    <span class="c-breadcrumb1__current">/ {{ trans('breadcrumbs.cart') }}</a>
                 </div>
             </div>
         </div>
@@ -26,11 +26,11 @@
                         <div class="c-block3__list">
                             <div class="c-block3__head">
                                 <ul class="c-block3__headList">
-                                    <li class="c-block3__product">Product</li>
-                                    <li class="c-block3__name">Name</li>
-                                    <li class="c-block3__unitPrice">Unit Price</li>
-                                    <li class="c-block3__quantity">Quantity</li>
-                                    <li class="c-block3__total">Total</li>
+                                    <li class="c-block3__product">{{ trans('breadcrumbs.product') }}</li>
+                                    <li class="c-block3__name">{{ trans('order.cart.name') }}</li>
+                                    <li class="c-block3__unitPrice">{{ trans('order.cart.price') }}</li>
+                                    <li class="c-block3__quantity">{{ trans('order.cart.quantity') }}</li>
+                                    <li class="c-block3__total">{{ trans('order.cart.total') }}</li>
                                 </ul>
                             </div>
                             <div class="c-block3__content">
@@ -75,7 +75,7 @@
                             <div class="c-block3__coupon">
                                 <input type="text" class="c-input c-block3__input" placeholder="Coupon Code">
                                 <button href="#" class="c-btn1 c-btn1--colorBlack c-btn1--noneBorderRadius c-block3__apply">
-                                    Apply
+                                    {{ trans('order.cart.apply') }}
                                 </button>
                             </div>
                             {{-- <div class="c-block3__update">
@@ -88,23 +88,23 @@
                 </div>
                 <div class="c-block3__right">
                     <div class="c-cartTotal">
-                        <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
+                        <h3 class="c-title4 c-cartTotal__title">{{ trans('order.cart_total') }}</h3>
                         <ul class="c-cartTotal__list">
-                            <li class="c-cartTotal__item">Total
+                            <li class="c-cartTotal__item">{{ trans('order.cart.total') }}
                                 <span>{{ number_format($total) }} <sup>đ</sup></span>
                             </li>
-                            <li class="c-cartTotal__item">Shipping
+                            <li class="c-cartTotal__item">{{ trans('order.ship') }}
                                 <span>+ 0 <sup>đ</sup></span>
                             </li>
-                            <li class="c-cartTotal__item">Discount
+                            <li class="c-cartTotal__item">{{ trans('order.discount') }}
                                 <span>- 0 <sup>đ</sup></span>
                             </li>
-                            <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
+                            <li class="c-cartTotal__item c-cartTotal__item--size">{{ trans('order.payable') }}
                                 <span> {{ number_format($total) }} <sup>đ</sup></span>
                             </li>
                         </ul>
                         <a href="/checkout" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">
-                            Process to Checkout
+                            {{ trans('order.to_checkout') }}
                         </a>
                     </div>
                 </div>

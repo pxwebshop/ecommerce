@@ -35,7 +35,7 @@ class CheckoutController extends Controller
             $carts = \Session::get('cart');
             if (is_null($carts))
             {
-                Toastr::error('Order Failed!');
+                Toastr::error(trans('common.order_fail'));
                 return redirect()->route('checkout');
             }
                 
@@ -61,12 +61,12 @@ class CheckoutController extends Controller
             });
 
             \Session::forget('cart');
-            Toastr::success('Order Successfull!');
+            Toastr::success(trans('common.order_success'));
             return redirect()->route('checkout');
 
         } catch (\Exception $err) {
             DB::rollBack();
-            Toastr::error('Order Failed!');
+            Toastr::error(trans('common.order_fail'));
             return redirect()->route('checkout');
         }
     }

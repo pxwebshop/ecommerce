@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'ຂໍ້ມູນປະຈຳຕົວເຫຼົ່ານີ້ບໍ່ກົງກັບບັນທຶກຂອງພວກເຮົາ.',
+    'password' => 'ລະຫັດຜ່ານທີ່ລະບຸນັ້ນບໍ່ຖືກຕ້ອງ.',
+    'throttle' => 'ພະຍາຍາມເຂົ້າສູ່ລະບົບຫຼາຍເກີນໄປ. ກະລຸນາລອງອີກຄັ້ງໃນ : ວິນາທີວິນາທີ.',
 
 ];

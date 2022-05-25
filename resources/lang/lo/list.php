@@ -15,13 +15,23 @@ return [
     'list1' => [
     ],
     'list2' => [
+        'special_discount' => 'ສ່ວນຫຼຸດພິເສດ',
+        'for' => 'ສໍາລັບໂອກາດນີ້',
+        'featured' => 'ແນະນຳ',
+        'best_price' => 'ລາຄາທີ່ດີທີ່ສຸດ & ຄຸນນະພາບດີ',
+        'view' => 'ເບິ່ງຜະລິດຕະພັນ'
     ],
     'list3' => [
     ],
     'list4' => [
-        'txt1' => 'Free Shipping Worldwide',
-        'txt2' => '30 Days Money Returns',
-        'txt3' => '100% Secure Payment',
-        'txt4' => '24/7 Customer Support'
+        'txt1' => 'ຈັດສົ່ງຟຣີທົ່ວໂລກ',
+        'txt2' => '30 ວັນຄືນເງິນ',
+        'txt3' => 'ການຈ່າຍເງິນທີ່ປອດໄພ 100%.',
+        'txt4' => 'ຊ່ວຍເຫຼືອລູກຄ້າ 24/7'
     ],
+    'list5' => [
+        'txt1' => 'ມາ​ໃຫມ່',
+        'title' => 'Gadget ທີ່ດີທີ່ສຸດ',
+        'txt2' => 'ຄໍເລັກຊັນ'
+    ]
 ];

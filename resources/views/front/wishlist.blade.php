@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Wishlist
+                        {{ trans('breadcrumbs.wishlist') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Wishlist</a>
+                    <a href="/" class="c-breadcrumb1__link">{{ trans('breadcrumbs.home') }}</a>
+                    <span class="c-breadcrumb1__current">/ {{ trans('breadcrumbs.wishlist') }}</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="l-container">
             <div class="c-block4">
                 <div class="c-block4__title">
-                    <h2 class="c-title5">My Wishlist</h2>
+                    <h2 class="c-title5">{{ trans('breadcrumbs.mywishlist') }}</h2>
                 </div>
                 @foreach ($wishlists as $wishlist)
                     <ul class="c-block4__list">
@@ -53,7 +53,7 @@
                         <li class="c-block4__btn">
                             <a href="{{ route('add.to.cart', $wishlist->product->id) }}" class="c-btn1">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                Add to Cart
+                                {{ trans('common.addtocart') }}
                             </a>
                         </li>
                     </ul>

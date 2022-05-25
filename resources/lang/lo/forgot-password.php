@@ -13,18 +13,18 @@ return [
     |
     */
 
-    'title-forgot' => 'Forgot Password',
-    'title-reset' => 'Reset Password',
+    'title-forgot' => 'ລືມລະຫັດຜ່ານ',
+    'title-reset' => 'ຣີເຊັດລະຫັດຜ່ານ',
     'form' => [
-        'email' => 'Enter email address',
-        'btn-send-link' => 'Send Password Link',
-        'btn-return-login' => 'Return Login',
-        'new-pass' => 'Enter new password',
-        'confirm-pass' => 'Confirm password',
-        'btn-reset' => "Reset Password",
+        'email' => 'ໃສ່ທີ່ຢູ່ອີເມວ',
+        'btn-send-link' => 'ສົ່ງລິ້ງລະຫັດຜ່ານ',
+        'btn-return-login' => 'ກັບຄືນເຂົ້າສູ່ລະບົບ',
+        'new-pass' => 'ໃສ່ລະຫັດຜ່ານໃໝ່',
+        'confirm-pass' => 'ຢືນ​ຢັນ​ລະ​ຫັດ',
+        'btn-reset' => "ຣີເຊັດລະຫັດຜ່ານ",
     ],
-    'error-send-link' => 'Send reset link failed, please try again!',
-    'error-reset-pass' => 'Reset password failed, please try again!',
-    'success-send-link' => 'We have e-mailed your password reset link!',
-    'success-reset-pass' => 'Reset password successfully!',
+    'error-send-link' => 'ສົ່ງລິ້ງຣີເຊັດບໍ່ສຳເລັດ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ!',
+    'error-reset-pass' => 'ຣີເຊັດລະຫັດຜ່ານບໍ່ສຳເລັດ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ!',
+    'success-send-link' => 'ພວກ​ເຮົາ​ໄດ້​ສົ່ງ​ອີ​ເມລ​໌​ເຊື່ອມ​ຕໍ່​ການ​ຕັ້ງ​ລະ​ຫັດ​ຜ່ານ​ຂອງ​ທ່ານ​!',
+    'success-reset-pass' => 'ຣີເຊັດລະຫັດຜ່ານສຳເລັດ!',
 ];

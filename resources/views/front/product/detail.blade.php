@@ -107,7 +107,7 @@
                     <div class="c-block1__addCart">
                         <a href="{{ route('add.to.cart', $product->id) }}" class="c-btn1 c-btn1--border">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            Add to cart
+                            {{ trans('common.addtocart') }}
                         </a>
                     </div>
                     <div class="c-block1__share">
@@ -128,22 +128,22 @@
             <div class="c-block2">
                 <ul class="c-block2__tabList">
                     <li class="c-block2__tabItem">
-                        <span href="#" class="c-block2__link c-block2__active">Mô tả</span>
+                        <span href="#" class="c-block2__link c-block2__active">{{ trans('common.description') }}</span>
                     </li>
                     <li class="c-block2__tabItem">
-                        <span href="#" class="c-block2__link">Đánh giá</span>
+                        <span href="#" class="c-block2__link">{{ trans('common.review') }}</span>
                     </li>
                     <li class="c-block2__tabItem">
-                        <span href="#" class="c-block2__link">Vận chuyển</span>
+                        <span href="#" class="c-block2__link">{{ trans('common.ship') }}</span>
                     </li>
                 </ul>
                 <div class="c-block2__content">
                     <div class="c-block2__description">
-                        <h3 class="c-title6 c-block2__title">Mô tả</h3>
+                        <h3 class="c-title6 c-block2__title">{{ trans('common.description') }}</h3>
                         <div class="c-text1">{!! $product->specification !!} </div>
                     </div>
                     <div class="c-block2__review">
-                        <h3 class="c-title6 c-block2__title">Đánh giá</h3>
+                        <h3 class="c-title6 c-block2__title">{{ trans('common.review') }}</h3>
                         <div class="c-block2__rate">
                             <div class="c-block2__rateLeft">
                                 <div class="c-block2__rateTxt">
@@ -323,7 +323,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    Related Product
+                    {{ trans('common.related_product') }}
                 </h2>
             </div>
             <div class="c-list1">
@@ -386,25 +386,25 @@
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-truck"></i>
-                            <p class="c-list4__txt">Free Shipping Worldwide</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt1') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-rotate-left"></i>
-                            <p class="c-list4__txt">30 Days Money Returns</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt2') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-wallet"></i>
-                            <p class="c-list4__txt">100% Secure Payment</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt3') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-headset"></i>
-                            <p class="c-list4__txt">24/7 Customer Support</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt4') }}</p>
                         </div>
                     </div>
                 </div>

@@ -8,12 +8,12 @@
             <div class="c-breadcrumb1">
                 <div class="c-breadcrumb1__title">
                     <h2 class="c-breadcrumb1__txt">
-                        Liên hệ
+                        {{ trans('contact.contact') }}
                     </h2>
                 </div>
                 <div class="c-breadcrumb1__url">
-                    <a href="/" class="c-breadcrumb1__link">Trang chủ</a>
-                    <span class="c-breadcrumb1__current">/ Liên hệ</a>
+                    <a href="/" class="c-breadcrumb1__link"> {{ trans('breadcrumbs.home') }}</a>
+                    <span class="c-breadcrumb1__current">/  {{ trans('contact.contact') }}</a>
                 </div>
             </div>
         </div>
@@ -24,60 +24,60 @@
                 <div class="c-contact__left">
                     <div class="c-contact__message">
                         <div class="c-contact__title">
-                            <h3 class="c-title4">Leave us a Message</h3>
+                            <h3 class="c-title4"> {{ trans('contact.leave_mess') }}</h3>
                             <p class="c-text1"></p>
                         </div>
                         <form class="c-contact__form">
                             <div class="c-group">
-                                <label for="" class="c-text1">Your Message*</label><br>
+                                <label for="" class="c-text1"> {{ trans('contact.your_mess') }}</label><br>
                                 <textarea type="text" class="c-input" rows="5"></textarea>
                             </div>
                             <div class="c-contact__formFlex">
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Your Name*</label><br>
+                                    <label for="" class="c-text1"> {{ trans('contact.your_name') }}</label><br>
                                     <input type="text" class="c-input">
                                 </div>
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Your Email*</label><br>
+                                    <label for="" class="c-text1"> {{ trans('contact.your_email') }}</label><br>
                                     <input type="text" class="c-input">
                                 </div>
                             </div>
                             <div class="c-contact__formFlex">
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Phone*</label><br>
+                                    <label for="" class="c-text1"> {{ trans('contact.phone') }}*</label><br>
                                     <input type="number" class="c-input">
                                 </div>
                                 <div class="c-group">
-                                    <label for="" class="c-text1">Subject*</label><br>
+                                    <label for="" class="c-text1"> {{ trans('contact.subject') }}</label><br>
                                     <input type="text" class="c-input">
                                 </div>
                             </div>
                             <button type="submit" class="c-btn1 c-btn1--hoverBlack">
-                                Gửi tin nhắn
+                                {{ trans('contact.send_mess') }}
                             </button>
                         </form>
                     </div>
                 </div>
                 <div class="c-contact__right">
-                    <h3 class="c-title5">Visit Us</h3>
+                    <h3 class="c-title5"> {{ trans('contact.visit') }}</h3>
                     <ul class="c-contact__visit">
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <span>Address: </span> 123 ABC street, Bien Hoa city, Dong Nai province, Vietnam
+                            <span> {{ trans('contact.adds') }}: </span> 123 ABC street, Bien Hoa city, Dong Nai province, Vietnam
                         </li>
                         <li>
                         <i class="fa-solid fa-phone"></i>
-                            <span>Phone: </span> 0123456789
+                            <span> {{ trans('contact.phone') }}: </span> 0123456789
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
                             <span>Email: </span> abc@gmail.com
                         </li>
                     </ul>
-                    <h4 class="c-title2">Giờ làm việc:</h4>
+                    <h4 class="c-title2"> {{ trans('contact.work_time') }}:</h4>
                     <ul class="c-contact__open">
-                        <li>Từ thứ 2 đến chủ nhật</li>
-                        <li>Từ 8:00am - 9:00pm</li>
+                        <li> {{ trans('contact.txt1') }}</li>
+                        <li>{{ trans('contact.txt2') }}</li>
                     </ul>
                 </div>
             </div>

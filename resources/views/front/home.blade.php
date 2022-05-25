@@ -15,7 +15,7 @@
                                 <p class="c-text1">{{ $slider->content }}</p>
                                 <a href="{{ route('product.all') }}" class="c-btn1">
                                     <i class="fa-solid fa-cart-shopping"></i>
-                                    Shop Now
+                                    {{ trans('common.shopnow') }}
                                 </a>
                             </div>
                             <figure class="c-slide1__img" data-aos="fade-down">
@@ -44,12 +44,12 @@
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/overview/overview-1.png" alt="">
                             </figure>
                             <div class="c-list2__content">
-                                <h3 class="c-title2">Special Discount Offer</h3>
-                                <p class="c-list2__txt">for 12-12 Festival</p>
+                                <h3 class="c-title2">{{ trans('list.list2.special_discount') }}</h3>
+                                <p class="c-list2__txt">{{ trans('list.list2.for') }}</p>
                                 <p class="c-price2">19.990.000 <sup>đ</sup></p>
                                 <a href="{{ route('product.all') }}" class="c-btn1">
                                     <i class="fa-solid fa-cart-shopping"></i>
-                                    Shop Now
+                                    {{ trans('common.shopnow') }}
                                 </a>
                             </div>
                         </div>
@@ -63,11 +63,11 @@
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/overview/overview-2.png" alt="">
                             </figure>
                             <div class="c-list2__content c-list2__content--width">
-                                <p class="c-list2__txt">Featured</p>
-                                <h3 class="c-title2">Best Price & Great Quality</h3>
+                                <p class="c-list2__txt">{{ trans('list.list2.featured') }}</p>
+                                <h3 class="c-title2">{{ trans('list.list2.best_price') }}</h3>
                                 <p class="c-price2 c-price2--discount">-50% Off</p><br>
                                 <a href="{{ route('product.all') }}" class="c-list2__btn">
-                                    View Product
+                                    {{ trans('list.list2.view') }}
                                 </a>
                             </div>
                         </div>
@@ -87,25 +87,25 @@
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-truck"></i>
-                            <p class="c-list4__txt">Free Shipping Worldwide</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt1') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-rotate-left"></i>
-                            <p class="c-list4__txt">30 Days Money Returns</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt2') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-wallet"></i>
-                            <p class="c-list4__txt">100% Secure Payment</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt3') }}</p>
                         </div>
                     </div>
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-headset"></i>
-                            <p class="c-list4__txt">24/7 Customer Support</p>
+                            <p class="c-list4__txt">{{ trans('list.list4.txt4') }}</p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    New Arrivals
+                    {{ trans('common.new_arrivals') }}
                 </h2>
             </div>
             <div class="c-list1">
@@ -178,7 +178,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    Special Offer
+                    {{ trans('common.special_offer') }}
                 </h2>
             </div>
             <div class="c-list3">
@@ -231,12 +231,12 @@
                     </div>
                     <div class="c-list5__item c-list5__item--flex">
                         <div class="c-list5__content">
-                            <div class="c-list5__txt1">New Arrival</div>
-                            <h3 class="c-list5__title">Best Gadget</h3>
-                            <div class="c-list5__txt2">Collection</div>
+                            <div class="c-list5__txt1">{{ trans('list.list5.txt1') }}</div>
+                            <h3 class="c-list5__title">{{ trans('list.list5.title') }}</h3>
+                            <div class="c-list5__txt2">{{ trans('list.list5.txt2') }}</div>
                             <a href="{{ route('product.all') }}" class="c-btn1">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                Shop Now
+                                {{ trans('common.shopnow') }}
                             </a>
                         </div>
                     </div>
@@ -254,7 +254,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    Bestsellers
+                    {{ trans('common.bestseller') }}
                 </h2>
             </div>
             <div class="c-list6">
@@ -341,7 +341,7 @@
         <div class="l-container">
             <div class="c-title1 c-title1">
                 <h2 class="c-title1__txt">
-                    Special Products
+                   {{ trans('common.special_product') }}
                 </h2>
             </div>
             <div class="c-list1">
@@ -403,7 +403,7 @@
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
-                    Latest News
+                    {{ trans('common.news') }}
                 </h2>
             </div>
             <div class="c-list7">

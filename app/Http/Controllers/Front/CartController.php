@@ -35,7 +35,7 @@ class CartController extends Controller
         }
           
         session()->put('cart', $cart);
-        Toastr::success(trans('Product added to cart successfully!'));
+        Toastr::success(trans('common.added_success'));
         return redirect()->route('cart');
     }
 
@@ -45,8 +45,7 @@ class CartController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
-            Toastr::success(trans('Cart updated successfully'));
-            //session()->flash('success', 'Cart updated successfully');
+            Toastr::success(trans('common.updated_success'));
         }
     }
 
@@ -58,7 +57,7 @@ class CartController extends Controller
                 unset($cart[$request->id]);
                 session()->put('cart', $cart);
             }
-            Toastr::success(trans('Product removed successfully'));
+            Toastr::success(trans('common.deleted_success'));
         }
     }
 }
