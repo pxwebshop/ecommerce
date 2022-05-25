@@ -103,10 +103,16 @@
                                                 <img src="{{ asset(Storage::url($product->thumb) )}}" width="100px">
                                                 <img src="{{ $product->image }}" width="100px">
                                             </a> --}}
-                                            @if (Storage::exists($product->images))
+                                            {{-- @if (Storage::exists($product->images))
                                                 <img src="{{ asset(Storage::url($product->images)) }}" width="100px">
                                             @endif
-                                            <img width="100px" src="{{ $product->images }}" alt="">
+                                            <img width="100px" src="{{ $product->images }}" alt=""> --}}
+                                            @if (!empty(json_decode($product->images, true)) )
+                                                @foreach (json_decode($product->images, true) as $image)
+                                                    <img src="{{ asset('storage/images/products/'.$image) }}" width="100px">
+                                                @endforeach
+                                            @endif
+                                            <img width="100px" src="{{ $product->images }}" alt=""> 
                                         </div>
                                     </div>
                                     <div class="row">

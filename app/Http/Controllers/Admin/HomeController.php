@@ -138,4 +138,11 @@ class HomeController extends Controller
             'carts' => $carts
         ]);
     }
+
+    public function cartStatus(Customer $customer, Request $request) {
+        $customer->status = $request->input('status');
+        $customer->update();
+        Toastr::success('Updated successful!');
+        return redirect()->route('cart.customer');
+    }
 }

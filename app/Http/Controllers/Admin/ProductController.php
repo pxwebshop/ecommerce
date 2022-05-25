@@ -99,23 +99,21 @@ class ProductController extends Controller
             $product->thumb = $path;
         }
 
-        // $this->validate($request, [
-        //     'images' => 'required',
-        //     'images.*' => 'mimes:png,jpeg,jpg'
-        // ]);
-
-        // if($request->hasfile('images')) {
-        //     foreach($request->file('images') as $file) {
-        //         $filename = $file->getClientOriginalName();
-        //         $file->storeAs('public/images/products', $filename);
-        //         $data[] = $filename;
-        //     }
-        // }
-
-        // $file= new Uplo;
-        // $file->images = json_encode($data);
-
-        // $input = $request->all();
+        if($request->hasfile('images')) {
+            $this->validate($request, [
+                'images' => 'required',
+                'images.*' => 'mimes:png,jpeg,jpg'
+            ]);
+            foreach($request->file('images') as $image) {
+                $imageName = $image->getClientOriginalName();
+                $image->storeAs('public/images/products', $imageName);
+                $data[] = $imageName;
+            }
+            $product->images = json_encode($data);
+        }
+        
+        // $product->save();
+        
         $product->fill($request->input())->save();
         Toastr::success('Updated successful');
         return redirect()->route('product');

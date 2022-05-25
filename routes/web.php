@@ -109,6 +109,7 @@ Route::group(['middleware' => 'locale'], function () {
 
         Route::get('cart/customer', 'Admin\HomeController@cart')->name('cart.customer');
         Route::get('cart/customer/view/{customer}', 'Admin\HomeController@cartDetail')->name('cart.detail');
+        Route::post('cart/customer/view/{customer}', 'Admin\HomeController@cartStatus')->name('cart.customer.status');
     });
 
 });

@@ -57,17 +57,20 @@
                       <th style="width: 1%">
                           ID
                       </th>
-                      <th style="width: 15%">
+                      <th style="width: 10%">
                         First Name
                       </th>
-                      <th style="width: 15%">
+                      <th style="width: 10%">
                         Last Name
                       </th>
                       <th style="width: 10%">
                         Phone
                       </th>
-                      <th style="width: 34%">
+                      <th style="width: 30%">
                         Email
+                      </th>
+                      <th style="width: 14%">
+                        Status
                       </th>
                       <th style="width: 15%">
                         Order Date
@@ -94,6 +97,16 @@
                     <td>
                         {{ $customer->email }}
                     </td>
+                    <td>
+                      {{-- {{ $customer->status }} --}}
+                      @if ($customer->status == 0)
+                        <span class="badge badge-success">New</span>
+                      @elseif ($customer->status == 1)
+                        <span class="badge badge-info">Confirm</span>
+                      @elseif ($customer->status == 2)
+                        <span class="badge badge-secondary">Done</span>
+                      @endif
+                  </td>
                     <td>
                       {{ $customer->updated_at }}
                     </td>

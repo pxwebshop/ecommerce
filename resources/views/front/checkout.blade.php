@@ -86,16 +86,41 @@
                                 <h3 class="c-title4 c-cartTotal__title">Cart Totals</h3>
                                 <ul class="c-cartTotal__list">
                                     <li class="c-cartTotal__item">Subtotal
-                                        <span>9.990.000 <sup>đ</sup></span>
+                                        {{-- <span>9.990.000 <sup>đ</sup></span> --}}
+                                        @php $total = 0 @endphp
+                                        @if(session('cart'))
+                                            {{-- @dd(session('cart')); --}}
+                                            @foreach(session('cart') as $id => $details)
+                                                @php $total += $details['price'] * $details['quantity'] @endphp
+                                                
+                                            @endforeach
+                                        @endif
+                                        <span>{{ number_format($total) }} <sup>đ</sup></span>
                                     </li>
                                     <li class="c-cartTotal__item">Shipping
                                         <span>0 <sup>đ</sup></span>
                                     </li>
                                     <li class="c-cartTotal__item">Total
-                                        <span>9.990.000 <sup>đ</sup></span>
+                                        @php $total = 0 @endphp
+                                        @if(session('cart'))
+                                            {{-- @dd(session('cart')); --}}
+                                            @foreach(session('cart') as $id => $details)
+                                                @php $total += $details['price'] * $details['quantity'] @endphp
+                                                
+                                            @endforeach
+                                        @endif
+                                        <span>{{ number_format($total) }} <sup>đ</sup></span>
                                     </li>
                                     <li class="c-cartTotal__item c-cartTotal__item--size">Payable Total
-                                        <span>9.990.000 <sup>đ</sup></span>
+                                        @php $total = 0 @endphp
+                                        @if(session('cart'))
+                                            {{-- @dd(session('cart')); --}}
+                                            @foreach(session('cart') as $id => $details)
+                                                @php $total += $details['price'] * $details['quantity'] @endphp
+                                                
+                                            @endforeach
+                                        @endif
+                                        <span>{{ number_format($total) }} <sup>đ</sup></span>
                                     </li>
                                 </ul>
                                 <a href="/cart" class="c-btn1 c-btn1--noneBorderRadius c-cartTotal__btnCheckout">

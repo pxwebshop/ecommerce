@@ -89,6 +89,29 @@
                 </tbody>
             </table>
         </div>
+        <div class="container">
+          <form action="{{ route('cart.customer.status', $customer) }}" method="POST">
+              <label for="status">Status:</label>
+              <select class="w-30 p-2" name="status" id="status">
+                @if ($customer->status == 0)
+                  <option value="0" selected>New</option>
+                  <option value="1">Confirm</option>
+                  <option value="2">Done</option>
+                @elseif ($customer->status == 1)
+                  <option value="0">New</option>
+                  <option value="1" selected>Confirm</option>
+                  <option value="2">Done</option>
+                @elseif ($customer->status == 2)
+                  <option value="0">New</option>
+                  <option value="1">Confirm</option>
+                  <option value="2" sected>Done</option>
+                @endif
+              </select>
+              <input class="btn btn-primary" type="submit" value="Change">
+              @csrf
+            </form>
+            <br>
+      </div>  
         <!-- /.card-body -->
       </div>
       <!-- /.card -->

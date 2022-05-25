@@ -55,6 +55,11 @@ class CheckoutController extends Controller
             // #Queue
             // // SendMail::dispatch($request->input('email'))->delay(now()->addSeconds(2));
 
+            \Mail::send('front.email.order', [], function ($message) use ($request) {
+                $message->to($request->input('email'));
+                $message->subject('Đặt Hàng Thành Công.');
+            });
+
             \Session::forget('cart');
             Toastr::success('Order Successfull!');
             return redirect()->route('checkout');

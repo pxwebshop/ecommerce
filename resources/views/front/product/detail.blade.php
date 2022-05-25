@@ -23,26 +23,42 @@
                 <div class="c-block1__left">
                     <div class="c-block1__content">
                         <div class="c-block1__imgList">
-                            <figure class="c-block1__imgItem">  
-                                <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
-                            </figure>
-                            <figure class="c-block1__imgItem">
-                                <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
-                            </figure>
-                            <figure class="c-block1__imgItem">
-                                <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
-                            </figure>
+                            @if (!empty(json_decode($product->images, true)) )
+                                @foreach (json_decode($product->images, true) as $image)          
+                                    <figure class="c-block1__imgItem">  
+                                        <img src="{{ asset('storage/images/products/'.$image) }}">
+                                    </figure>
+                                @endforeach
+                            @else
+                                <figure class="c-block1__imgItem">  
+                                    <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
+                                </figure>
+                                <figure class="c-block1__imgItem">
+                                    <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
+                                </figure>
+                                <figure class="c-block1__imgItem">
+                                    <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
+                                </figure>
+                            @endif
                         </div>
                         <div class="c-block1__slider">
-                            <figure class="c-block1__img">
-                                <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
-                            </figure>
-                            <figure class="c-block1__img">
-                                <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
-                            </figure>
-                            <figure class="c-block1__img">
-                                <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
-                            </figure>
+                            @if (!empty(json_decode($product->images, true)) )
+                                @foreach (json_decode($product->images, true) as $image)
+                                    <figure class="c-block1__img">
+                                        <img src="{{ asset('storage/images/products/'.$image) }}">
+                                    </figure>
+                                @endforeach
+                            @else
+                                <figure class="c-block1__img">
+                                    <img src="https://product.hstatic.net/1000026716/product/2_138cec9f984944fba392fc68f94bed91.png" alt="">
+                                </figure>
+                                <figure class="c-block1__img">
+                                    <img src="https://product.hstatic.net/1000026716/product/5_d5d6750f4cfc4348a58db72a16f9b4a5.png" alt="">
+                                </figure>
+                                <figure class="c-block1__img">
+                                    <img src="https://product.hstatic.net/1000026716/product/4_1b0a899b47a24b1b87ba196015853ba3.png" alt="">
+                                </figure>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -327,17 +343,21 @@
                                     <div class="c-tag1">New</div>
                                     <ul class="c-list1__actionList">
                                         <li class="c-list1__actionItem">
-                                            <a href="#">
+                                            <a href="{{ route('add.to.cart', $relatedProduct->id) }}">
                                                 <i class="fa-solid fa-cart-shopping"></i>
                                             </a>
                                         </li>
                                         <li class="c-list1__actionItem">
-                                            <a href="#">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </a>
+                                            <form action="{{route('wishlist.add')}}" method="post">
+                                                @csrf
+                                                <input name="product_id" type="hidden" value="{{ $relatedProduct->id }}" />
+                                                <a onclick="$(this).closest('form').submit();">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </a>
+                                            </form>
                                         </li>
                                         <li class="c-list1__actionItem">
-                                            <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="/product/detail/{{$relatedProduct->id}}"><i class="fa-solid fa-eye"></i></a>
                                         </li>
                                     </ul>
                                 </div>
