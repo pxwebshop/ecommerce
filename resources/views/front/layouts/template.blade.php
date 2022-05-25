@@ -18,6 +18,7 @@
 
     <link href="{{ asset('css/front/slick.min.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/front/toastr.min.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/front/aos.css') }}" rel="stylesheet" type="text/css" >
 
     {{-- <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">  --}}
 </head>
@@ -35,7 +36,12 @@
     <script src="{{ asset('js/front/jquery-ui.min.js')}} "></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
-   
+    
+    <script src="{{ asset('js/front/aos.js')}} "></script>
+    <script>
+      AOS.init();
+    </script>
+
     @stack('scripts')
     <script src="{{ asset('js/front/toastr.min.js')}} "></script>
     {{-- <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script> --}}

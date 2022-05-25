@@ -9,7 +9,7 @@
                 <div class="c-slide1__item">
                     <div class="l-container">
                         <div class="c-slide1__content">
-                            <div class="c-slide1__text">
+                            <div class="c-slide1__text" data-aos="fade-up">
                                 <b class="c-slide1__bold">Big Sale Offer</b>
                                 <h1 class="c-slide1__title">{{ $slider->title }}</h1>
                                 <p class="c-text1">{{ $slider->content }}</p>
@@ -18,7 +18,7 @@
                                     Shop Now
                                 </a>
                             </div>
-                            <figure class="c-slide1__img">
+                            <figure class="c-slide1__img" data-aos="fade-down">
                                 {{-- <img src="{{ $slider->image }}" alt=""> --}}
                                 @if (Storage::exists($slider->image))
                                     <img src="{{ asset(Storage::url($slider->image)) }}">
@@ -35,7 +35,10 @@
         <div class="l-container">
             <div class="c-list2">
                 <div class="c-list2__list">
-                    <div class="c-list2__item">
+                    <div class="c-list2__item" 
+                        data-aos="fade-right"
+                        data-aos-offset="500"
+                        data-aos-easing="ease-in-sine">
                         <div class="c-list2__wrap">
                             <figure class="c-list2__img">
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/overview/overview-1.png" alt="">
@@ -51,7 +54,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="c-list2__item">
+                    <div class="c-list2__item" 
+                        data-aos="fade-left"
+                        data-aos-offset="500"
+                        data-aos-easing="ease-in-sine">
                         <div class="c-list2__wrap c-list2__wrap--reserve">
                             <figure class="c-list2__img c-list2__img--width">
                                 <img src="https://templates.envytheme.com/ejon/default/assets/img/overview/overview-2.png" alt="">
@@ -74,7 +80,10 @@
     <section class="p-home__support">
         <div class="l-container">
             <div class="c-list4">
-                <div class="c-list4__list">
+                <div class="c-list4__list" 
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
                     <div class="c-list4__wrap">
                         <div class="c-list4__item">
                             <i class="fa-solid fa-truck"></i>
@@ -103,7 +112,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__arrivals">
+    <section class="p-home__arrivals" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
@@ -163,7 +173,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__specialOffer">
+    <section class="p-home__specialOffer" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
@@ -208,7 +219,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__collection">
+    <section class="p-home__collection" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-list5">
                 <div class="c-list5__list">
@@ -237,7 +249,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__bestseller">
+    <section class="p-home__bestseller" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
@@ -323,7 +336,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__specialOffer">
+    <section class="p-home__specialOffer" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-title1 c-title1">
                 <h2 class="c-title1__txt">
@@ -384,7 +398,8 @@
             </div>
         </div>
     </section>
-    <section class="p-home__news">
+    <section class="p-home__news" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
         <div class="l-container">
             <div class="c-title1">
                 <h2 class="c-title1__txt">
@@ -416,7 +431,7 @@
             </div>
         </div>
     </section>
-    <section class="p-home__slideBot">
+    <section class="p-home__slideBot" data-aos="zoom-in">
         <div class="c-slide2">
             <div class="l-container">
                 <div class="c-slide2__list owl-carousel">
