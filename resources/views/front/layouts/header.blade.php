@@ -120,7 +120,6 @@
                     <li class="c-header__menuItem"><a href="/" class="c-header__link">{{ trans('header.navbar.home') }}</a>
                     </li>
                     @foreach (App\Models\Category::where('active', 1)->orderBy('id', 'asc')->get() as $menuItem)
-                        </li>
                         <li class="c-header__menuItem">
                             @if ($menuItem->parent_id == 0)
                                 <a href="/product/{{ $menuItem->id }}" class="c-header__link">{{ $menuItem->name }}
@@ -167,45 +166,28 @@
                 <div class="l-container">
                     <ul class="c-header__nav__list">
                         <li class="c-header__nav__item">
-                            <a href="#" class="c-header__nav__link">{{ trans('header.navbar.hotline') }}</a>
+                            <a href="/" class="c-header__nav__link">{{ trans('breadcrumbs.home') }}</a>
                         </li>
-                        <li class="c-header__nav__item">
-                            <a href="#" class="c-header__nav__link">
-                                <span>Gaming</span>
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                            </a>
-                            <ul class="c-header__nav__subMenu">
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Asus</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Hp</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Lenovo</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Acer</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Dell</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>MSI</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Surface</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>LG</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Gigabyte</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="c-header__nav__item">
+                        @foreach (App\Models\Category::where('active', 1)->orderBy('id', 'asc')->get() as $menuItem)
+                            <li class="c-header__nav__item">
+                                @if ($menuItem->parent_id == 0)
+                                    <a style="display:inline" href="/product/{{ $menuItem->id }}" class="c-header__nav__link">{{ $menuItem->name }}
+                                    </a>
+                                    @if (!$menuItem->children->isEmpty())
+                                        <i style="float: right" class="fa-solid fa-angle-down"></i>
+                                    @endif
+                                @endif
+                                @if (!$menuItem->children->isEmpty())
+                                    <ul class="c-header__nav__subMenu">
+                                        @foreach ( $menuItem->children as $subMenuItem )
+                                            {{-- <li class="c-header__childItem"><a href="/product/{{ $menuItem->id }}/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li> --}}
+                                            <li class="c-header__nav__subItem"><a href="/product/{{ $subMenuItem->id }}" >{{ $subMenuItem->name }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                        @endforeach
+                        {{-- <li class="c-header__nav__item">
                             <a href="#" class="c-header__nav__link">
                                 <span>Macbook</span>
                                 <i class="fa-solid fa-plus"></i>
@@ -225,115 +207,7 @@
                                     <a href="#"><span>Pro 16 inch</span></a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="c-header__nav__item">
-                            <a href="#" class="c-header__nav__link">
-                                <span>{{ trans('header.navbar.office') }}</span>
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                            </a>
-                            <ul class="c-header__nav__subMenu">
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Asus</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Hp</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Lenovo</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Acer</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Dell</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>MSI</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Surface</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>LG</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Gigabyte</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="c-header__nav__item">
-                            <a href="#" class="c-header__nav__link">
-                                <span>{{ trans('header.navbar.graphics') }}</span>
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                            </a>
-                            <ul class="c-header__nav__subMenu">
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Asus</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Hp</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Lenovo</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Acer</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Dell</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>MSI</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Surface</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>LG</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Gigabyte</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="c-header__nav__item">
-                            <a href="#" class="c-header__nav__link">
-                                <span>{{ trans('header.navbar.luxury') }}</span>
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                            </a>
-                            <ul class="c-header__nav__subMenu">
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Asus</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Hp</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Lenovo</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Acer</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Dell</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>MSI</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Surface</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>LG</span></a>
-                                </li>
-                                <li class="c-header__nav__subItem">
-                                    <a href="#"><span>Gigabyte</span></a>
-                                </li>
-                            </ul>
-                        </li>
+                        </li> --}}
                         <li class="c-header__nav__item">
                             <a href="#" class="c-header__nav__link">
                                 <span>{{ trans('header.navbar.contact') }}</span>

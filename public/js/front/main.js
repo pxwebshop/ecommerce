@@ -84,7 +84,7 @@ $(document).ready(function () {
         $(".c-header__nav__btn .fa-solid").toggleClass("fa-bars fa-xmark");
     });
     $(".c-header__nav__item").on("click", function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         $(this).find("i").toggle();
         var submenu = $(this).children(".c-header__nav__subMenu");
         if ($(submenu).is(":hidden")) {

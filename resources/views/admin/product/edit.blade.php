@@ -119,23 +119,23 @@
                                         <div class="form-group col-4">
                                             <label for="inputDescription">Import Price</label>
                                             <input type="text" name="import_price"
-                                                value="{{ $product->import_price }}" class="form-control">
+                                                value="{{ number_format($product->import_price) }}" class="form-control">
                                         </div>
                                         <div class="form-group col-4">
                                             <label for="inputDescription">Price</label>
-                                            <input type="text" name="price" value="{{ $product->price }}"
+                                            <input type="text" name="price" value="{{ number_format($product->price) }}"
                                                 class="form-control">
                                         </div>
                                         <div class="form-group col-4">
                                             <label for="inputDescription">Sale Price</label>
-                                            <input type="text" name="sale_price" value="{{ $product->sale_price }}"
+                                            <input type="text" name="sale_price" value="{{ number_format($product->sale_price) }}"
                                                 class="form-control">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-4">
                                             <label for="inputDescription">Quantity</label>
-                                            <input type="text" name="quantity" value="{{ $product->quantity }}"
+                                            <input type="text" name="quantity" value="{{ number_format($product->quantity) }}"
                                                 class="form-control">
                                         </div>
                                         <div class="form-group col-4">
