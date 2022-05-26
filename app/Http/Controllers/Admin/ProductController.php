@@ -56,6 +56,19 @@ class ProductController extends Controller
             );
             $product->thumb = $path;
         }
+
+        if($request->hasfile('images')) {
+            $this->validate($request, [
+                'images' => 'required',
+                'images.*' => 'mimes:png,jpeg,jpg'
+            ]);
+            foreach($request->file('images') as $image) {
+                $imageName = $image->getClientOriginalName();
+                $image->storeAs('public/images/products', $imageName);
+                $data[] = $imageName;
+            }
+            $product->images = json_encode($data);
+        }
         // dd($request->input());
         $product->fill($request->input())->save();
         Toastr::success(trans('common.added_success'));
