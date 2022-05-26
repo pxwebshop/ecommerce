@@ -31,7 +31,7 @@
                             <span href="/login">{{ trans('header.heading.my-acc') }} ({{ @Auth::user()->name }})</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__accountList">
-                                <li class="c-header__accountItem"><a href="#">{{ trans('header.heading.my-acc') }}</a></li>
+                                {{-- <li class="c-header__accountItem"><a href="#">{{ trans('header.heading.my-acc') }}</a></li> --}}
                                 <li class="c-header__accountItem"><a
                                         href="/user/change-password">{{ trans('header.heading.change-pass') }}</a></li>
                                 <li class="c-header__accountItem"><a
