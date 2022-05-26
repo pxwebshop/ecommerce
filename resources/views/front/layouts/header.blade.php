@@ -132,7 +132,9 @@
                                 <ul class="c-header__childList">
                                     @foreach ( $menuItem->children as $subMenuItem )
                                         {{-- <li class="c-header__childItem"><a href="/product/{{ $menuItem->id }}/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li> --}}
+                                        @if ($subMenuItem->active == 1)
                                         <li class="c-header__childItem"><a href="/product/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li>
+                                        @endif
                                     @endforeach
                                 </ul>
                             @endif
