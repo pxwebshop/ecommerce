@@ -19,7 +19,7 @@ class Helper
                         <td>'. $category->created_at .'</td>
                         <td>'. $category->updated_at .'</td>
                         <td class="text-right">
-                            <a href="/admin/category/edit/'. $category->id .'" class="btn btn-info btn-sm">
+                            <a href="/admin/category/edit/'. $category->id .'" class="btn btn-warning btn-sm">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit

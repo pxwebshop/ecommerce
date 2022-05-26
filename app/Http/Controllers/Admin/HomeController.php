@@ -85,9 +85,15 @@ class HomeController extends Controller
             $slider->image = $path;
         }
         // $input = $request->all();
-        $slider->fill($request->input())->save();
-        Toastr::success(trans('common.updated_success'));
-        return redirect()->route('slider');
+        
+        try {
+            $slider->fill($request->input())->save();
+            Toastr::success(trans('common.updated_success'));
+            return redirect()->route('slider');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.updated_error'));
+            return redirect()->back();
+        }
     }
 
     public function sliderAdd() {
@@ -99,7 +105,7 @@ class HomeController extends Controller
 
         if($request->hasFile('image')){
             $request->validate([
-              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
             // $file = $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs(
@@ -108,16 +114,27 @@ class HomeController extends Controller
             $slider->image = $path;
         }
 
-        $slider->fill($request->input())->save();
-        Toastr::success(trans('common.added_success'));
-        return redirect()->route('slider');
+        try {
+            $slider->fill($request->input())->save();
+            Toastr::success(trans('common.added_success'));
+            return redirect()->route('slider');
+        } 
+        catch (\Exception $ex) {
+            Toastr::error(trans('common.added_error'));
+            return redirect()->back();
+        }
     }
 
     public function sliderDelete($id) {
-        $slider = Slider::find($id);
-        $slider->delete();
-        Toastr::success(trans('common.deleted_success'));
-        return redirect()->route('slider');
+        try {
+            $slider = Slider::find($id);
+            $slider->delete();
+            Toastr::success(trans('common.deleted_success'));
+            return redirect()->route('slider');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.deleted_error'));
+            return redirect()->route('slider');
+        }
     }
 
     public function cart() {
@@ -140,9 +157,14 @@ class HomeController extends Controller
     }
 
     public function cartStatus(Customer $customer, Request $request) {
-        $customer->status = $request->input('status');
-        $customer->update();
-        Toastr::success(trans('common.updated_success'));
-        return redirect()->route('cart.customer');
+        try {
+            $customer->status = $request->input('status');
+            $customer->update();
+            Toastr::success(trans('common.updated_success'));
+            return redirect()->route('cart.customer');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.updated_error'));
+            return redirect()->route('cart.customer');
+        }
     }
 }
