@@ -35,17 +35,17 @@
                             <div class="c-contact__formFlex">
                                 <div class="c-group">
                                     <label for="" class="c-text1"> {{ trans('contact.your_name') }}</label><br>
-                                    <input type="text" class="c-input">
+                                    <input type="text" value="{{ @Auth::user()->name }}" class="c-input">
                                 </div>
                                 <div class="c-group">
                                     <label for="" class="c-text1"> {{ trans('contact.your_email') }}</label><br>
-                                    <input type="text" class="c-input">
+                                    <input type="text" value="{{ @Auth::user()->email }}" class="c-input">
                                 </div>
                             </div>
                             <div class="c-contact__formFlex">
                                 <div class="c-group">
                                     <label for="" class="c-text1"> {{ trans('contact.phone') }}*</label><br>
-                                    <input type="number" class="c-input">
+                                    <input type="number" value="{{ @Auth::user()->phone }}" class="c-input">
                                 </div>
                                 <div class="c-group">
                                     <label for="" class="c-text1"> {{ trans('contact.subject') }}</label><br>

@@ -13,7 +13,7 @@ return [
         'detail' => 'Chi Tiết Đơn Hàng',
         'order' => 'Đơn hàng',
         'firstname' => ' Tên*',
-        'lastname' => 'Họ*',
+        'lastname' => 'Họ',
         'phone' => 'Số Điện Thoại*',
         'address' => 'Địa Chỉ*',
         'note' => 'Ghi Chú',

@@ -36,7 +36,7 @@
                                 <div class="c-block5__name">
                                     <div class="c-group">
                                         <label for="" class="c-text1">{{ trans('order.checkout.firstname') }}</label><br>
-                                        <input type="text" name="firstName" class="c-input" required>
+                                        <input type="text" name="firstName" value="{{ @Auth::user()->name }}" class="c-input" required>
                                     </div>
                                     <div class="c-group">
                                         <label for="" class="c-text1">{{ trans('order.checkout.lastname') }}</label><br>
@@ -49,11 +49,11 @@
                                 </div> --}}
                                 <div class="c-group">
                                     <label for="" class="c-text1">Email*</label><br>
-                                    <input type="text" name="email" class="c-input" required>
+                                    <input type="text" name="email" value="{{ @Auth::user()->email }}" class="c-input" required>
                                 </div>
                                 <div class="c-group">
                                     <label for="" class="c-text1">{{ trans('order.checkout.phone') }}</label><br>
-                                    <input type="number" name="phone" class="c-input" required>
+                                    <input type="number" name="phone" value="{{ @Auth::user()->phone }}" class="c-input" required>
                                 </div>
                                 {{-- <div class="c-group">
                                     <label for="" class="c-text1">Quốc gia*</label><br>

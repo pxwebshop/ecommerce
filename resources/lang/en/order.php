@@ -13,7 +13,7 @@ return [
         'detail' => 'Checkout Detail',
         'order' => 'Order',
         'firstname' => ' First Name*',
-        'lastname' => 'Last Name*',
+        'lastname' => 'Last Name',
         'phone' => 'Phone*',
         'address' => 'Address*',
         'note' => 'Note',
