@@ -38,8 +38,7 @@ class CheckoutController extends Controller
                 Toastr::error(trans('common.order_fail'));
                 return redirect()->route('checkout');
             }
-                
-            
+
             $customer = Customer::create([
                 'firstName' => $request->input('firstName'),
                 'lastName' => $request->input('lastName'),
@@ -49,13 +48,13 @@ class CheckoutController extends Controller
                 'note' => $request->input('note')
             ]);
             
-            $this->infoProductCart($carts, $customer->id);;
+            $this->infoProductCart($carts, $customer->id);
             DB::commit();
 
             // #Queue
             // // SendMail::dispatch($request->input('email'))->delay(now()->addSeconds(2));
 
-            \Mail::send('front.email.order', [], function ($message) use ($request) {
+            \Mail::send('front.email.order', $this->infoProductMail($carts, $customer->id) , function ($message) use ($request) {
                 $message->to($request->input('email'));
                 $message->subject('Đặt Hàng Thành Công.');
             });
@@ -91,5 +90,28 @@ class CheckoutController extends Controller
         }
 
         return Cart::insert($data);
+    }
+
+    protected function infoProductMail($carts, $customer_id)
+    {
+        $productId = array_keys($carts);
+        $products = Product::select('id', 'name', 'price', 'sale_price', 'thumb')
+            ->where('active', 1)
+            ->whereIn('id', $productId)
+            ->get();
+
+        $data = [];
+
+        foreach ($products as $product) {
+            $data[] = [
+                'customer_id' => $customer_id,
+                'product_id' => $product->id,
+                'pty'   => $carts[$product->id]['quantity'],
+                'price' => $product->sale_price, 
+                'name' => $product->name
+            ];
+        }
+
+        return $data;
     }
 }
