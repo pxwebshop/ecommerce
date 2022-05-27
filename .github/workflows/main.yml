@@ -46,11 +46,6 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
           script: ls
-      - name: Deploy
-        run: |
-          TEMP=$(mktemp)
-          echo "${{ secrets.SSHKEY }}" > $TEMP
-          ssh -o 'StrictHostKeyChecking no' -i $TEMP pxwebshop@gmail.com 'bash -s' < scripts/deploy.sh
         #run: |
           #echo Add other actions to build,
           #echo test, and deploy your project.s
