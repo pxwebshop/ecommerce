@@ -15,7 +15,7 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
-          username: "root"
-          host: "178.128.96.207"
-          password: "sTeam2020"
+          username: ${{ secrets.USERNAME }}
+          host: ${{ secrets.HOST }}
+          password: ${{ secrets.PASSWORD }}
           script: 'cd /var/www/xebagachanhphat.online && ./deploy.sh'
