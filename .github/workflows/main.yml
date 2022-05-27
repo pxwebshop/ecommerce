@@ -44,7 +44,8 @@ jobs:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: ls
         #run: |
           #echo Add other actions to build,
           #echo test, and deploy your project.s
