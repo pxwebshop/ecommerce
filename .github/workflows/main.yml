@@ -30,11 +30,10 @@ jobs:
         uses: appleboy/scp-action@master
         #run: echo Hello, world!
         env:
-         host: ${{ secrets.HOST }}
-         username: ${{ secrets.USERNAME }}
-         password: ${{ secrets.PASSWORD }}
-         port: ${{ secrets.PORT }}
-         script: whoami
+         HOST: ${{ secrets.HOST }}
+         USERNAME: ${{ secrets.USERNAME }}
+         KEY: ${{ secrets.SSHKEY }}
+         PORT: ${{ secrets.PORT }}
         with:
          source: "."
          target: "/var/www/xebagachanhphat.online"
@@ -42,11 +41,10 @@ jobs:
       - name: Executing remote command
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          password: ${{ secrets.PASSWORD }}
-          script: whoami
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         #run: |
           #echo Add other actions to build,
-          #echo test, and deploy your project.
+          #echo test, and deploy your project.s
