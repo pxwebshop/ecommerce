@@ -15,7 +15,7 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
-          username: root
-          host: 178.128.96.207
-          password: sTeam2020
-          script: 'RUN_YPUR_DEPLOYMENT_SCRIPT' #cd /var/www/xebagachanhphat.online && ./deploy.sh
+          username: "root"
+          host: "178.128.96.207"
+          password: "sTeam2020"
+          script: 'cd /var/www/xebagachanhphat.online && ./deploy.sh'
