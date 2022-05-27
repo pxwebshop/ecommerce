@@ -76,7 +76,12 @@
                                     <th style="width: 10%">
                                         Last Update
                                     </th>
-                                    <th style="width: 15%">
+                                    <th style="width: 15%" class="text-right">
+                                        <a class="btn btn-info btn-sm"
+                                            href="{{ route('slider.add') }}">
+                                            <i class="fa-solid fa-plus"></i>
+                                            Add New
+                                        </a>
                                     </th>
                                 </tr>
                             </thead>
@@ -112,7 +117,7 @@
                                             {{ $slider->updated_at }}
                                         </td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-info btn-sm" href="./slider/edit/{{ $slider->id }}">
+                                            <a class="btn btn-warning btn-sm" href="./slider/edit/{{ $slider->id }}">
                                                 <i class="fas fa-pencil-alt">
                                                 </i>
                                                 Edit

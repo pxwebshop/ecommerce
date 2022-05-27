@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="c-group">
                                         <label for="" class="c-text1">{{ trans('order.checkout.lastname') }}</label><br>
-                                        <input type="text" name="lastName" class="c-input" required>
+                                        <input type="text" name="lastName" class="c-input">
                                     </div>
                                 </div>
                                 {{-- <div class="c-group">

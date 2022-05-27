@@ -109,7 +109,7 @@
                                             {{ $user->updated_at }}
                                         </td>
                                         <td class="project-actions text-right">
-                                          <a class="btn btn-info btn-sm" href="./user/edit/{{ $user->id }}">
+                                          <a class="btn btn-warning btn-sm" href="./user/edit/{{ $user->id }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Edit

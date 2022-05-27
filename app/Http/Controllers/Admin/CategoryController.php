@@ -114,9 +114,14 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category, $id)
     {
-        $category = Category::find($id);
-        Toastr::success(trans('common.deleted_success'));
-        $category->delete();
-        return redirect()->route('category');
+        try {
+            $category = Category::find($id);
+            Toastr::success(trans('common.deleted_success'));
+            $category->delete();
+            return redirect()->route('category');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.deleted_error'));
+            return redirect()->route('category');
+        }
     }
 }

@@ -45,7 +45,6 @@ class ProductController extends Controller
     {
         
         $product = new Product();
-
         if($request->hasFile('thumb')){
             $request->validate([
               'thumb' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
@@ -69,10 +68,14 @@ class ProductController extends Controller
             }
             $product->images = json_encode($data);
         }
-        // dd($request->input());
-        $product->fill($request->input())->save();
-        Toastr::success(trans('common.added_success'));
-        return redirect()->route('product');
+        try {
+            $product->fill($request->input())->save();
+            Toastr::success(trans('common.added_success'));
+            return redirect()->route('product');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.added_error'));
+            return redirect()->route('product.add');
+        }
     }
 
     /**
@@ -124,12 +127,14 @@ class ProductController extends Controller
             }
             $product->images = json_encode($data);
         }
-        
-        // $product->save();
-        
-        $product->fill($request->input())->save();
-        Toastr::success(trans('common.updated_success'));
-        return redirect()->route('product');
+        try {
+            $product->fill($request->input())->save();
+            Toastr::success(trans('common.updated_success'));
+            return redirect()->route('product');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.updated_error'));
+            return redirect()->route('product');
+        }
     }
 
     /**
@@ -152,9 +157,14 @@ class ProductController extends Controller
      */
     public function destroy(Product $product, $id)
     {
-        $product = Product::find($id);
-        Toastr::success(trans('common.deleted_success'));
-        $product->delete();
-        return redirect()->route('product');
+        try {
+            $product = Product::find($id);
+            Toastr::success(trans('common.deleted_success'));
+            $product->delete();
+            return redirect()->route('product');
+        } catch (\Exception $ex) {
+            Toastr::error(trans('common.deleted_error'));
+            return redirect()->route('product');
+        }
     }
 }

@@ -31,7 +31,7 @@
                             <span href="/login">{{ trans('header.heading.my-acc') }} ({{ @Auth::user()->name }})</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="c-header__accountList">
-                                <li class="c-header__accountItem"><a href="#">{{ trans('header.heading.my-acc') }}</a></li>
+                                {{-- <li class="c-header__accountItem"><a href="#">{{ trans('header.heading.my-acc') }}</a></li> --}}
                                 <li class="c-header__accountItem"><a
                                         href="/user/change-password">{{ trans('header.heading.change-pass') }}</a></li>
                                 <li class="c-header__accountItem"><a
@@ -132,7 +132,9 @@
                                 <ul class="c-header__childList">
                                     @foreach ( $menuItem->children as $subMenuItem )
                                         {{-- <li class="c-header__childItem"><a href="/product/{{ $menuItem->id }}/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li> --}}
+                                        @if ($subMenuItem->active == 1)
                                         <li class="c-header__childItem"><a href="/product/{{ $subMenuItem->id }}" class="c-header__childLink">{{ $subMenuItem->name }}</a></li>
+                                        @endif
                                     @endforeach
                                 </ul>
                             @endif
@@ -168,7 +170,7 @@
                         <li class="c-header__nav__item">
                             <a href="/" class="c-header__nav__link">{{ trans('breadcrumbs.home') }}</a>
                         </li>
-                        @foreach (App\Models\Category::where('active', 1)->orderBy('id', 'asc')->get() as $menuItem)
+                        @foreach (App\Models\Category::where(['active' => 1, 'parent_id' => 0])->orderBy('id', 'asc')->get() as $menuItem)
                             <li class="c-header__nav__item">
                                 @if ($menuItem->parent_id == 0)
                                     <a style="display:inline" href="/product/{{ $menuItem->id }}" class="c-header__nav__link">{{ $menuItem->name }}

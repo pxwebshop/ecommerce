@@ -92,6 +92,10 @@
                                         Last Update
                                     </th>
                                     <th class="text-right">
+                                        <a class="btn btn-info btn-sm" href="{{ route('product.add') }}">
+                                            <i class="fa-solid fa-plus"></i>
+                                            Add New
+                                        </a>
                                     </th>
                                 </tr>
                             </thead>
@@ -150,7 +154,7 @@
                                             {{ $product->updated_at }}
                                         </td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-info btn-sm"
+                                            <a class="btn btn-warning btn-sm"
                                                 href="{{ route('product.edit', $product->id) }}">
                                                 <i class="fas fa-pencil-alt">
                                                 </i>
