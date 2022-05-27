@@ -32,6 +32,9 @@
                                 <a href="" style="color: #ccc;font-size: 2.5rem;text-align: center;line-height: 3.2;margin: auto 10px auto 0;cursor: pointer;" class="c-remove remove-from-cart"><i class="fa-solid fa-circle-xmark"></i></a>
                                 <a href="/product/detail/{{$details['product_id']}}">
                                     <figure class="c-block3__img" style="width: 80px;">
+                                        @if (Storage::exists($details['thumb']))
+                                            <img src="{{ asset(Storage::url($details['thumb'])) }}" >
+                                        @endif
                                         <img style="max-width: 100%;height: auto;" src="{{ $details['thumb'] }}" alt="">
                                     </figure>
                                 </a>
