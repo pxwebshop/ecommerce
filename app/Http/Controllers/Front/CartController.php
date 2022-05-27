@@ -12,6 +12,8 @@ class CartController extends Controller
     //
     public function index(Request $request)
     {
+
+// dd($value);
         return view('front/cart');
     }
 
@@ -19,9 +21,9 @@ class CartController extends Controller
     {
         //dd($request);
         $product = Product::findOrFail($id);
-          
+
         $cart = session()->get('cart', []);
-  
+
         if(isset($cart[$id])) {
             $cart[$id]['quantity']++;
         } else {
@@ -33,7 +35,7 @@ class CartController extends Controller
                 "thumb" => $product->thumb
             ];
         }
-          
+
         session()->put('cart', $cart);
         Toastr::success(trans('common.added_success'));
         return redirect()->route('cart');

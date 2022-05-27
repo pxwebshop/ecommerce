@@ -38,8 +38,8 @@ class CheckoutController extends Controller
                 Toastr::error(trans('common.order_fail'));
                 return redirect()->route('checkout');
             }
-                
-            
+
+
             $customer = Customer::create([
                 'firstName' => $request->input('firstName'),
                 'lastName' => $request->input('lastName'),
@@ -48,14 +48,15 @@ class CheckoutController extends Controller
                 'email' => $request->input('email'),
                 'note' => $request->input('note')
             ]);
-            
+
             $this->infoProductCart($carts, $customer->id);;
             DB::commit();
 
             // #Queue
             // // SendMail::dispatch($request->input('email'))->delay(now()->addSeconds(2));
+            $products = session('cart');
 
-            \Mail::send('front.email.order', [], function ($message) use ($request) {
+            \Mail::send('front.email.order', ['products' => $products], function ($message) use ($request) {
                 $message->to($request->input('email'));
                 $message->subject('Đặt Hàng Thành Công.');
             });
@@ -66,7 +67,7 @@ class CheckoutController extends Controller
 
         } catch (\Exception $err) {
             DB::rollBack();
-            Toastr::error(trans('common.order_fail'));
+            Toastr::error(trans('common.order_fail'. $err->getMessage()));
             return redirect()->route('checkout');
         }
     }
