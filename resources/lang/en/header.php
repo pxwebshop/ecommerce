@@ -13,7 +13,7 @@ return [
     |
     */
     'heading' => [
-        'free-info' => 'Free shipping on all orders',
+        'free-info' => 'xxxxxxxxxxx-Free shipping on all orders',
         'en' => 'English',
         'lo' => 'Laos',
         'vi' => 'Vietnamese',
