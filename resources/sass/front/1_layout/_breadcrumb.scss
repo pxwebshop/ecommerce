@@ -4,3 +4,23 @@ breadcrumb
 
 /*
 ------------------------------------------------------------*/
+.c-breadcrumb1 {
+    $root: &;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+        font-size: 3rem;
+        color: $colorBlack;
+    }
+    &__url {
+        margin: auto 0;
+        a {
+            font-size: 1.6rem;
+            color: $colorBlack;
+        }
+    }
+    &__current {
+        color: rgb(66 64 64 / 80%);
+        font-size: 1.6rem;
+    }
+}

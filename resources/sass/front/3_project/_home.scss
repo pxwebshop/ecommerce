@@ -1,0 +1,48 @@
+/*------------------------------------------------------------
+Page Top
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.p-home {
+    &__overview {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        @include sp() {
+            padding-top: 60px;
+        }
+    }
+    &__arrivals {
+        padding-top: 100px;
+        @include sp() {
+            padding-top: 40px;
+        }
+    }
+    &__specialOffer {
+        padding-top: 70px;
+        @include sp() {
+            padding-top: 35px;
+        }
+    }
+    &__collection {
+        padding-top: 50px;
+    }
+    &__bestseller {
+        padding-top: 100px;
+        @include sp() {
+            padding-top: 50px;
+        }
+        .c-list1 {
+            margin-top: 20px;
+        }
+    }
+    &__news {
+        padding-top: 50px;
+        @include sp() {
+            padding-top: 30px;
+        }
+    }
+    &__slideBot {
+        padding-top: 70px;
+    }
+}

@@ -1,5 +1,107 @@
 /*------------------------------------------------------------
-btn
+btn1
+------------------------------------------------------------*/
+.c-btn1 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $colorWhite;
+    display: inline-block;
+    border: none;
+    background-color: $colorBlue1;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: $colorBlue1;
+        z-index: -2;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-radius: 4px;
+        background-color: $colorWhite;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    &:hover {
+        color: $colorBlue1;
+        opacity: 1;
+        &:before {
+            width: 100%;
+        }
+    }
+    i {
+        margin-right: 5px;
+    }
+    &--hoverRed {
+        &:hover {
+            background-color: $colorRed1;
+            color: $colorWhite;
+        }
+        &:before, &:after {
+            content: none;
+        }
+    }
+    &--hoverBlack {
+        &::before {
+            background-color: $colorBlack;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--noneBorderRadius {
+        border-radius: 0;
+        &:before, &:after {
+            border-radius: 0;
+        }
+        &::before {
+            background-color: $colorBlack;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--colorBlack {
+        &:after {
+            background-color: $colorBlack;
+        }
+        &:before {
+            background-color: $colorBlue1;
+        }
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+    &--border {
+        border-radius: 0;
+        &:before, &:after {
+            border-radius: 0;
+        }
+        padding: 12px 30px;
+        border: 1px solid $colorBlue1;
+    }
+}
+/*
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+btn2
 ------------------------------------------------------------*/
 
 /*

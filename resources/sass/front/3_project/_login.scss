@@ -1,0 +1,19 @@
+.p-login {
+    &__sc1 {
+        background-color: $colorGrey6;
+        .c-breadcrumb1 {
+            padding-top: 35px;
+            padding-bottom: 32px;
+        }
+    }
+    &__sc2 {
+        margin: 30px 0 0 0;
+        .c-authen {
+            margin-bottom: 30px;
+            background-color: $colorWhite;
+        }
+    }
+    &__sc3 {
+        background-color: $colorWhite;
+    }
+}

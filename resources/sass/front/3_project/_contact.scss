@@ -1,0 +1,75 @@
+.p-contact {
+    &__sc1 {
+        padding: 35px 0 32px;
+        background-color: $colorGrey6;
+    }
+    &__sc2 {
+        padding: 50px 0;
+    }
+}
+
+.c-contact {
+    display: flex;
+    margin-left: -24px;
+    @include sp {
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    &__left {
+        width: 60%;
+    }
+    &__right {
+        width: 40%;
+        @include sp {
+            margin-top: 30px;
+        }
+    }
+    &__left, &__right {
+        padding-left: 24px;
+        @include sp {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .c-group {
+        margin-bottom: 15px;
+    }
+    &__formFlex {
+        display: flex;
+        margin-left: -24px;
+        @include sp {
+            flex-wrap: wrap;
+            margin-left: 0;
+        }
+        .c-group {
+            width: 100%;
+            padding-left: 24px;
+            @include sp {
+                padding: 0;
+            }
+        }
+    }
+
+    &__visit {
+        margin-top: 25px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $colorGrey1;
+        margin-bottom: 25px;
+        span, i {
+            color: $colorBlack;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+    }
+    &__open {
+        font-size: 1.6rem;
+        color: $colorGrey1;
+        li {
+            margin-bottom: 10px;
+            list-style-type: circle;
+            margin-left: 20px;
+        }
+    }
+}

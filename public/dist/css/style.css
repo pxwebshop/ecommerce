@@ -1,0 +1,12 @@
+.c-paginate {
+    padding-bottom: 30px;
+}
+.c-paginate svg {
+    display: none;
+}
+.c-paginate p {
+    margin-top: 15px;
+}
+.c-paginate span[aria-current="page"]  span{
+    background: linear-gradient(36deg, yellow, transparent);
+}

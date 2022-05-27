@@ -40,3 +40,12 @@ for develop
 	opacity: 0.6;
 	font-size: 8px;
 }
+
+.toast {
+	font-family: Lato();
+	opacity: 1 !important;
+}
+.toast-title, .toast-message {
+	font-size: 1.4rem;
+	line-height: 1.5;
+}

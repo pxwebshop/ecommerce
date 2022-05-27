@@ -5,5 +5,445 @@ header
 /*
 ------------------------------------------------------------*/
 .c-header {
+    $root: &;
+    z-index: 11;
+    position: relative;
+    &__heading {
+        background-color: $colorBlue1;
+        padding: 15px 0;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        height: 100%;
+        line-height: 1.5;
+        position: relative;
+        z-index: 10;
+    }
+    &__content1 {
+        display: flex;  
+        justify-content: space-between;
+        @include max-w(670px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    i {
+        margin: 0 5px;
+    }
+    &__txt {
+        text-align: center;
+        i {
+            margin-right: 5px;
+            margin-left: 0 !important;
+        }
+        @include max-w(670px) {
+            width: 100%;
+        }
+    }
+    &__option {
+        display: flex;
+        justify-content: center;
+        @include max-w(369px) {
+            flex-wrap: wrap;
+        }
+        @include max-w(670px) {
+            width: 100%;
+        }
+        
+    }
+    &__language {
+        cursor: pointer;
+        position: relative;
+    }
+    &__languageItem {
+        font-size: 1.6rem;
+        width: 150px;
+        color: $colorWhite;
+    }
+    &__languageList {
+        display: none;
+        position: absolute;
+        top: 36px;
+        height: auto;
+        background-color: $colorWhite;
+        color: $colorGrey2;
+        box-shadow: 0 0 1px $colorBlack;
+        overflow-x: hidden;
+    }
+    &__languageItem {
+        color: $colorBlack;
+        border-bottom: 1px solid $colorGrey;
+        a {
+            display: inline-block;
+            padding: 10px 40px 10px 20px;
+            width: 100%;
+            color: $colorBlack;
+            &:hover {
+                background-color: $colorBlue1;
+                color: $colorWhite !important;
+                opacity: 1;
+            }
+        }
+    }
+    &__authen {
+        padding-left: 7px;
+        margin-left: 8px;
+        border-left: 1px solid $colorWhite;
+        a {
+            color: $colorWhite;
+            opacity: 1;
+            &:hover {
+                color: $colorRed1;
+            }
+        }
+        p {
+            cursor: pointer;
+        }
+        span {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        
+    }
+    &__accountList {
+        display: none;
+        position: absolute;
+        top: 36px;
+        height: auto;
+        background-color: $colorWhite;
+        color: $colorGrey2;
+        box-shadow: 0 0 1px $colorBlack;
+        overflow: hidden;
+    }
+    &__accountItem {
+        border-bottom: 1px solid $colorGrey;
+        a {
+            display: inline-block;
+            padding: 10px 40px 10px 20px;
+            width: 100%;
+            color: $colorBlack !important;
+            &:hover {
+                background-color: $colorBlue1;
+                color: $colorWhite !important;
+                opacity: 1;
+            }
+        }
+        
+    }
+    // end: heading
 
+    // middle
+    &__middle {
+        background-color: $colorBlue4;
+    }
+    &__content2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: $colorWhite;
+        padding: 20px 0;
+    }
+    &__logo {
+        margin: auto 0;
+        width: 25%;
+        @include max-w(992px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__search {
+        width: 50%;
+        // display: flex;
+        margin: 0 auto;
+        @include max-w(992px) {
+            width: 100%;
+            margin: 20px 0 5px;
+            z-index: 1;
+        }
+    }
+    &__category{
+        display: flex;
+        width: 100%;
+        background-color: $colorGrey4;
+        padding: 2px 0 2px 5px;
+        border-radius: 10px;
+        @include max-w(555px) {
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+    }
+    &__catSelected {
+        width: 30%;
+        margin: auto;
+        height: 55px;
+        padding: 18px 5px 15px 15px;
+        background-color: $colorBlue1;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        @include max-w(555px) {
+            width: 100%;
+        }
+        .icon-down {
+            position: absolute;
+            top: 18px;
+            right: 15px;
+        }
+    }
+    &__catList {
+        display: none;
+        background-color: $colorWhite;
+        margin-top: 20px;
+        color: $colorBlack;
+        padding: 10px 0;
+        box-shadow: 0 0 5px $colorBlack;
+        height: auto;
+        @include max-w(555px) {
+            padding-top: 60px;
+            margin-top: 25px;
+        }
+    }
+    &__catItem {
+        padding: 10px 15px;
+        &:hover {
+            background-color: $colorBlue1;
+            color: $colorWhite;
+        }
+    }
+    &__input {
+        position: relative;
+        margin-left: 20px;
+        width: 70%;
+        @include max-w(555px) {
+            width: 100%;
+            margin-left: 0;
+        }
+        input {
+            border-radius: 10px;
+            border: none;
+            background-color: $colorWhite;
+            padding: 8px 15px;
+            height: 55px;
+            width: 100%;
+            font-size: 1.6rem;
+            color: $colorBlack;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+    }
+    &__btnSearch {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+        background-color: $colorBlue1;
+        height: 45px;
+        width: 45px;
+        border-color: $colorBlue1;
+        border-radius: 50%;
+        margin-right: 5px;
+        cursor: pointer;
+        i {
+            position: absolute;
+            top: 14px;
+            right: 10px;
+            color: $colorWhite;
+        }
+    }
+    &__purchase {
+        width: 25%;
+        text-align: right;
+        margin: auto;
+        @include max-w(992px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__wishlist, &__cart, &__price {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 5px;
+        position: relative;
+        a {
+            opacity: 1;
+            color: $colorWhite;
+            &:hover {
+                opacity: 1;
+                color: $colorRed1;
+            }
+        }
+        
+    }
+    &__wTxt, &__cartTxt {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        font-size: 1.6rem;
+    }
+    // end: middle
+    
+    // navbar
+    &__sticky {
+        background-color: $colorWhite;
+        z-index: 10;
+        position: sticky;
+        box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+        top: 0;
+        @include sp {
+            display: none;
+        }
+    }
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        height: 54px;
+        font-size: 1.6rem;
+        @include max-w(1140px) {
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+    }
+    &__menuList {
+        font-size: 0;
+        @include max-w(1140px) {
+            width: 100%;
+        }
+    }
+    &__menuItem {
+        display: inline-block;
+        font-size: 1.6rem;
+        position: relative;
+        &:hover {
+            background-color: $colorBlue1;
+            #{$root}__childList {
+                display: block;
+            }
+            #{$root}__link {
+                color: $colorWhite;
+                opacity: 1;
+            }
+        }
+    }
+    &__link {
+        display: inline-block;
+        line-height: 3.375;
+        font-weight: 600;
+        padding: 0 20px;
+        i {
+            margin-left: 10px;
+        }
+        @include max-w(992px) {
+            padding: 0 10px;
+        }
+    }
+    &__phone {
+        line-height: 3.375;
+        font-weight: 600;
+        span {
+            color: $colorRed1;
+        }
+        a:hover {
+            color: $colorRed1;
+        }
+        @include max-w(1140px) {
+            width: 100%;
+        }
+    }
+    &__childList {
+        position: absolute;
+        background-color: $colorWhite;
+        box-shadow: 0 0 3px $colorBlack;
+        width: 250px;
+        display: none;
+    }   
+    &__childItem {
+        width: 250px;
+        &:hover {
+            background-color: $colorBlue1;
+        }
+    }
+    &__childLink {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+        font-weight: 600;
+        &:hover {
+            color: $colorWhite;
+            opacity: 1;
+        }
+        @include max-w(992px) {
+            text-align: left;
+        }
+    }
+
+    //nav mobile
+    &__nav {
+        font-size: 1.6rem;
+        display: none;
+        position: sticky;
+        top: 0;
+        background-color: #ffff;
+        z-index: 10;
+        @include sp {
+            display: block;
+        }
+        &__content {
+            height: 54px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            position: relative;
+        }
+        &__btn {
+            margin: auto 0;
+            font-size: 3rem;
+        }
+        &__tel {
+            margin: auto 0;
+        }
+        &__menu {
+            display: none;
+            position: relative;
+            z-index: 11;
+        }
+        &__position {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &__list {
+            font-size: 1.6rem;
+            font-weight: 600;
+            box-shadow: 0 3px 3px $colorBlue1;
+            height: 250px;
+            overflow-y: scroll;
+        }
+        &__item {
+            background-color: #fff;
+            border-top: 1px solid $colorBlue3;
+            padding: 12px ;
+        }
+        &__link {
+            display: flex;
+            justify-content: space-between;
+            i:nth-child(3) {
+                display: none;
+            }
+        }
+        &__subMenu {
+            margin: 0 30px;
+            display: none;
+        }
+        &__subItem {
+            padding: 12px 0;
+            margin: 12px 0 -12px;
+            border-top: 1px solid $colorBlue3;
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
 }

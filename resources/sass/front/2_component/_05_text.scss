@@ -4,3 +4,37 @@ text
 
 /*
 ------------------------------------------------------------*/
+.c-text1 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: $colorGrey2;
+    line-height: 1.8;
+    @include max-w(991px) {
+        font-size: 1.5rem;
+    }
+    &--bold {
+        font-weight: 600;
+        color: $colorBlack;
+    }
+}
+.c-text2 {
+    &__link, &__important {
+        font-size: 1.5rem;
+        color: $colorGrey2;
+    }
+    &__link {
+        font-weight: 600;
+        opacity: 1;
+        &:hover {
+            color: $colorRed1;
+        }
+    }
+}
+
+.c-text3 {
+    &__txt {
+        font-size: 1.6rem;
+        color: $colorGrey2;
+        text-align: center;
+    }
+}

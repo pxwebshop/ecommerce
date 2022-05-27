@@ -12,3 +12,6 @@
 
 ### Chạy dự án
 `npm run watch`
+
+### Chạy lệnh
+`php artisan make:migration`

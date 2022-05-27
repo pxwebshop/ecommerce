@@ -1,3 +1,393 @@
 /*------------------------------------------------------------
-list
+list1
 ------------------------------------------------------------*/
+.c-list1 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__item {
+        width: 25%;
+        padding-left: 24px;
+        @include sp {
+            width: 50%;
+        }
+        @include max-w(576px) {
+            width: 100%;
+        }
+        &--col3 {
+            width: 33.33%;
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+    &__wrap {
+        margin-bottom: 30px;
+        &:hover {
+            #{$root}__actionList {
+                display: block;
+                height: auto;
+            }
+            .c-tag1 {
+                background-color: $colorRed1;
+            }
+            .c-price1 {
+                color: $colorRed1;
+            }
+        }
+    }
+    &__img {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__actionList {
+        position: absolute;
+        bottom: 0;
+        padding: 15px;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        display: none;
+        bottom: 10px;
+    }
+    &__actionItem {
+        display: inline-block;
+        margin-right: 10px;
+        // background-color: $colorWhite;
+        background-color: $colorBlue1;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        &:hover {
+            background-color: $colorRed1;
+            a {
+                color: $colorWhite;
+            }
+        }
+        a {
+            font-size: 1.6rem;
+            line-height: 2.5;
+            color: $colorWhite;
+            opacity: 1;
+        }
+    }
+    &__content {
+        margin-top: 15px;
+    }
+    &__name {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+}
+
+.c-list2 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+    &__item {
+        width: 50%;
+        padding-left: 24px;
+        margin-bottom: 30px;
+        transition: 1s;
+        @include sp {
+            width: 100%;
+            padding-left: 0px;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            #{$root}__price--discount {
+                background-color: $colorBlue1;
+            }
+        }
+    }
+    &__wrap {
+        background-color: $colorPink;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 35px 25px;
+        height: 100%;
+        &--reserve {
+            flex-direction: row-reverse;
+            background-color: $colorBlue2;
+        }
+    }
+    &__img,
+    &__content {
+        width: 50%;
+        padding: 12px;
+        @include max-w(992px) {
+            width: 100%;
+        }
+    }
+    &__content {
+        &--width {
+            width: 66.66667%;
+            @include max-w(992px) {
+                width: 100%;
+            }
+        }
+    }
+    &__img {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        &--width {
+            width: 33.33333%;
+            @include max-w(992px) {
+                width: 100%;
+            }
+        }
+    }
+    &__title {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: $colorGrey2;
+        line-height: 1.8;
+    }
+    &__btn {
+        color: $colorBlack;
+        font-size: 1.6rem;
+        border-bottom: 1px solid $colorBlack;
+        text-decoration: none;
+    }
+}
+
+.c-list3 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+        justify-content: space-around;
+    }
+    &__item {
+        width: 33.33%;
+        padding-left: 24px;
+        margin-bottom: 30px;
+        &:hover {
+            .c-tag2 {
+                background-color: $colorBlue1;
+            }
+        }
+        @include sp {
+            width: 50%;
+        }
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__wrap {
+        padding: 20px;
+        border: 1px solid $colorBlack;
+        height: 100%;
+    }
+    &__img {
+        position: relative;
+        text-align: center;
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__content {
+        margin-top: 25px;
+    }
+    &__name {
+        font-size: 2.2rem;
+        margin: 10px 0;
+    }
+}
+
+.c-list4 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 0 24px;
+        background-color: #fff;
+    }
+    &__wrap {
+        width: 25%;
+        border-left: 1px solid $colorGrey;
+        padding: 0 24px;
+        @include max-w(500px) {
+            width: 50%;
+            border-left: none;
+            margin-bottom: 30px;
+        }
+        &:nth-child(1) {
+            border-left: none;
+        }
+    }
+    &__item {
+        text-align: center;
+        i {
+            font-size: 3.5rem;
+            color: $colorGrey2;
+            margin-bottom: 5px;
+        }
+    }
+    &__txt {
+        margin-left: 10px;
+        color: $colorBlack;
+        font-size: 1.5rem;
+        font-weight: 500;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+}
+
+.c-list5 {
+    $root: &;
+    background-color: $colorBlue3;
+    padding: 12px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 33.33%;
+        @include sp {
+            width: 100%;
+        }
+        &--flex {
+            display: flex;
+        }
+    }
+    &__img {
+        text-align: center;
+        margin: auto;
+        img {
+            max-width: 100%;
+            display: inline-block;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    &__content {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        @include sp {
+            padding: 30px 0;
+        }
+    }
+    &__txt1 {
+        font-size: 3rem;
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+    &__title {
+        font-size: 4.5rem;
+        margin: 15px 0;
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+    &__txt2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        letter-spacing: 5px;
+        @include sp {
+            font-size: 1.5rem;
+        }
+    }
+    &__txt1, &__title, &__txt2 {
+        color: $colorBlack;
+    }
+}
+
+.c-list6 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item {
+        font-size: 1.6rem;
+        margin: 0 10px 10px;
+        font-weight: 600;
+        color: $colorBlack;
+        &:hover {
+            cursor: pointer;
+            color: $colorRed1;
+        }
+        
+    }
+    .is-active {
+        border-bottom: 1px solid $colorRed1;
+        padding-bottom: 5px;
+        color: $colorRed1;
+    }
+}
+
+.c-list7 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -24px;
+    }
+    &__wrap {
+        width: 33.33%;
+        padding-left: 24px;
+        @include max-w(576px) {
+            width: 100%;
+        }
+    }
+    &__item {
+        &:hover {
+            .c-title2 {
+                color: $colorRed1;
+            }
+        }
+    }
+    &__img {
+        overflow: hidden;
+        width: 100%;
+        cursor: pointer;
+        img {
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__content {
+        margin-top: 25px;
+        .c-title2 {
+            cursor: pointer;
+            transition: 0.5s;
+        }
+    }
+}

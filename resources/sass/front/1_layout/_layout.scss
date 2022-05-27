@@ -5,11 +5,8 @@ layout
 ------------------------------------------------------------*/
 body {
     width: 100%;
-    padding: 80px 0 0;
-    @include sp {
-        padding: 60px 0 0;
-    }
-
+    padding: 0;
+    background-color: $colorBg;
     &.is-fixed {
         position: fixed;
     }
@@ -32,13 +29,66 @@ body {
 /*
 ------------------------------------------------------------*/
 .l-container {
-    max-width: 1180px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 30px;
     position: relative;
     z-index: 2;
+    @media (min-width: 1400px){
+        max-width: 1320px;
+    }
     @include sp {
         max-width: 100%;
+        padding: 0 15px;
     }
 }
+
+
+.c-alert {
+    padding: 3px 0 0 0;
+    font-size: 1.4rem;
+    color: $colorRed1;
+    @include Lato();
+}
+
+
+//typeahead
+.twitter-typeahead {
+	width: 100%;
+}
+
+.tt-menu {
+    background-color: $colorWhite;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 0.1);
+}
+
+.tt-suggestion {
+    display: flex;
+    margin: 5px;
+    border-bottom: 1px solid $colorGrey5;
+    img {
+        width: 100px;
+    }
+    a {
+        display: inline-block;
+        padding: 8px 15px;
+        line-height: 1.5;
+        font-size: 1.6rem;
+        width: 100%;
+        color: $colorBlack;
+        overflow: hidden;
+        opacity: 1;
+    }
+    &:hover {
+        background-color: $colorBlue2;
+    }
+}
+
+.list-group-item {
+    color: $colorBlack;
+    padding: 8px 15px;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+// end: typeahead
