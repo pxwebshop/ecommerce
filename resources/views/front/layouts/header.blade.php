@@ -170,7 +170,7 @@
                         <li class="c-header__nav__item">
                             <a href="/" class="c-header__nav__link">{{ trans('breadcrumbs.home') }}</a>
                         </li>
-                        @foreach (App\Models\Category::where('active', 1)->orderBy('id', 'asc')->get() as $menuItem)
+                        @foreach (App\Models\Category::where(['active' => 1, 'parent_id' => 0])->orderBy('id', 'asc')->get() as $menuItem)
                             <li class="c-header__nav__item">
                                 @if ($menuItem->parent_id == 0)
                                     <a style="display:inline" href="/product/{{ $menuItem->id }}" class="c-header__nav__link">{{ $menuItem->name }}
